@@ -50,7 +50,7 @@ export class CarouselHomePageComponent implements OnInit {
   // pass in our bootstrap carousel config from ng bootstrap
   constructor(private data: DataService, config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
-    config.interval = 10000;
+    config.interval = 20000;
     config.wrap = true;
     config.keyboard = false;
     config.pauseOnHover = true;

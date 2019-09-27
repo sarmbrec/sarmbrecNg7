@@ -9,6 +9,7 @@ export class NavComponent implements OnInit {
 
   // typescript way
   appTitle: string = 'sarmbrec';
+  collapsed = true;
   //js way
   //appTitle = 'sarmbrec';
 
