@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule } from '@angular/forms';
 
@@ -11,7 +12,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 
 import { CarouselHomePageComponent } from './carousel-home-page/carousel-home-page.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GitHubIconLinkComponent } from './git-hub-icon-link/git-hub-icon-link.component';
+
 
 
 // The App module file is basically where all imports and generated files are recorded 
@@ -27,14 +29,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    CarouselHomePageComponent
+    CarouselHomePageComponent,
+    GitHubIconLinkComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    //BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    //HttpClientModule,
+    // FormsModule,
+    // RouterModule.forRoot([
+    //   { path: '', component: HomeComponent, pathMatch: 'full' },
+    //   { path: 'counter', component: CounterComponent },
+    //   { path: 'fetch-data', component: FetchDataComponent },
+    // ])
   ],
   providers: [],
   bootstrap: [AppComponent]

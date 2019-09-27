@@ -1,0 +1,31 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+#download-on-github {
+    position: absolute;
+    right: 1rem;
+    top: 3.25rem;
+    z-index: 10;
+    font-size: 2rem;
+    a {
+        color: $white;
+    }
+}
+
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {
+    #download-on-github {
+        right: 1.5rem;
+        top: 3rem;
+        font-size: 3rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-between(md, xl) {}

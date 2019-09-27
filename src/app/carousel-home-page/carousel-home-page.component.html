@@ -4,6 +4,9 @@
         <p>{{i+1}} - {{item.category}} {{item.title}}</p>
     </li>
 </ul> -->
+
+
+
 <section id="section-carousel" class="shadow" *ngIf="carouselItems">
     <ngb-carousel *ngIf="carouselItems" class="slide">
         <ng-template ngbSlide *ngFor="let item of carouselItems; index as i">
