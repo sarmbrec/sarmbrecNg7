@@ -1,0 +1,94 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+section#section-carousel {
+    background-color: rgba(233, 236, 239, .5);
+    background-color: rgba($dark, .9);
+    margin-bottom: 1.5rem;
+    height: 75vh;
+    width: 100%;
+    .carousel-inner {
+        .carousel-item {
+            /* Force to always be block */
+            display: block !important;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            // transform: translateX(100%);
+            opacity: 0;
+            -webkit-transition: all .5s ease-in;
+            transition: all .5s ease-in;
+            visibility: hidden;
+        }
+        .carousel-item.active {
+            position: relative;
+            // transform: translateX(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .carousel-item-background {
+        width: auto !important;
+        height: 75vh !important;
+        background-image: url('../../assets/images/backgrounds/beachhouse.jpg');
+        background-attachment: fixed;
+        background-position: left bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top: 1px solid rgba(000, 000, 000, .6);
+        border-bottom: 1px solid rgba(000, 000, 000, .6);
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            background-image: linear-gradient(to bottom, rgba($primary, .7), rgba($primary, .3));
+            background-size: cover;
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            bottom: 10%;
+            left: 10%;
+            z-index: 4;
+            padding: 0 1rem 1rem 1rem;
+            color: $dark;
+            font-size: .85rem;
+            text-align: center;
+            background-color: transparent;
+            background-image: linear-gradient(to bottom right, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
+            background-size: cover;
+            border: 1px solid rgba(233, 236, 239, .7);
+            border-radius: .25rem;
+            overflow: hidden;
+            img.logo-techstack {
+                width: auto;
+                height: 50%;
+                margin: 4rem 1.5rem 1.5rem 1.5rem;
+                // border: 1px solid #ffffff;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-between(md,
+xl) {}

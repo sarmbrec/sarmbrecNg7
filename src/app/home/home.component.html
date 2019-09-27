@@ -1,0 +1,33 @@
+<!-- <button (click)="firstClick()">Click me</button>
+
+<hr>
+
+<h2>ngClass</h2>
+<p [class.gray]="h1Style">class.gray</p>
+<p [ngClass]="{
+    'gray': h1Style,
+    'red': !h1Style
+}">ngClass</p>
+
+<hr>
+
+<h2>ngStyle</h2>
+<p [style.color]="h1Style ? 'gray':'black'">style.color</p>
+<p [ngStyle]="{
+    'color': h1Style ? 'gray':'black',
+    'font-size': !h1Style ? '1rem':'4rem'
+}">ngStyle</p>
+<hr>
+
+<button (click)="secondClick()">Second click</button> -->
+
+<!-- <h1>Home</h1> -->
+
+<app-carousel-home-page></app-carousel-home-page>
+
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+        <img [src]="user.avatar">
+        <p>{{user.first_name}} {{user.last_name}}</p>
+    </li>
+</ul>
