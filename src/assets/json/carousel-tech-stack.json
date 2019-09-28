@@ -24,9 +24,9 @@
         "category": "Front end technology",
         "title": "AngularJS",
         "logo": {
-            "url": "/assets/images/logos/AngularJS_medium.png",
-            "width": "35vw",
-            "height": "auto"
+            "url": "/assets/images/logos/AngularJS_logo_512.png",
+            "width": "",
+            "height": ""
         },
         "urlDetailView": "angularjs",
         "subTitle": "Superheroic JavaScript MVW Framework",
@@ -77,18 +77,6 @@
             {
                 "title": "Semantic HTML Guide",
                 "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-            },
-            {
-                "title": "Bootstrap 3",
-                "url": "https://getbootstrap.com/docs/3.3/"
-            },
-            {
-                "title": "Bootstrap 4",
-                "url": "https://getbootstrap.com/docs/4.3/"
-            },
-            {
-                "title": "Material Design Lite",
-                "url": "https://getmdl.io/"
             }
         ]
     },

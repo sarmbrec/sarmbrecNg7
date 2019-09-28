@@ -103,21 +103,18 @@ section#section-carousel {
             border: 1px solid rgba($light, .7);
             border-radius: .25rem;
             border-radius: .25rem;
-            overflow: hidden;
+            // overflow: hidden;
             &:hover .vertical-align-content-middle {
                 border-top: 1px solid rgba($light, .9);
                 border-bottom: 1px solid rgba($light, .9);
-                background-color: rgba($light, .5);
-                // background-color: transparent;
-                // background-image: linear-gradient(to bottom, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
-                // background-size: cover;
-                filter: grayscale(75%);
+                background-color: rgba($light, .2);
                 img.logo-techstack {
-                    margin: -5% 0 0 0;
-                    transform: rotateY(40deg) scale(1.15) translateY(-.25rem) translateX(-10rem);
+                    margin: -3rem 0 2rem -10rem;
+                    transform: rotateY(65deg) scale(1.25) translateY(0) translateX(0rem);
+                    filter: grayscale(100%);
                 }
-                ul {
-                    display: block;
+                .techstack-links {
+                    display: inline-block;
                 }
             }
             .vertical-align-content-middle {
@@ -127,8 +124,7 @@ section#section-carousel {
                 right: 0;
                 left: 0;
                 margin: auto 0 !important;
-                padding: 0;
-                width: 100%;
+                padding: 0 25%;
                 height: max-content;
                 border-top: 1px solid rgba($light, 0);
                 border-bottom: 1px solid rgba($light, 0);
@@ -141,14 +137,32 @@ section#section-carousel {
                 filter: grayscale(0%);
                 img.logo-techstack {
                     width: auto;
-                    height: 25vh;
-                    margin: 0 0 1.5rem 0;
+                    height: 20vh;
+                    margin: 0 0 1rem 0;
                     -webkit-transition: all .15s linear;
                     transition: all .15s linear;
                     transform: rotateY(0deg) scale(1) translateY(0rem) translateX(0rem);
                 }
-                ul {
+                h1 {
+                    border-bottom: 1px solid rgba($dark, .3);
+                    padding-bottom: .25rem;
+                    //max-width: 50%;
+                    margin: 0 auto 1rem auto;
+                }
+                .techstack-links {
                     display: none;
+                    text-align: left;
+                    margin: 2rem 0 0 1rem;
+                    h2 {
+                        font-size: 1rem;
+                    }
+                    ul {
+                        list-style-type: none;
+                        text-align: left;
+                        font-size: .8rem;
+                        margin: 0;
+                        padding: 0;
+                    }
                 }
             }
         }
