@@ -33,28 +33,19 @@
         "background": "/assets/images/backgrounds/emma-jenna.jpg",
         "text": "What HTML would have been, had it been designed for building web-apps.",
         "links": [{
+                "title": "Documentation",
+                "url": "https://angularjs.org/"
+            }, {
                 "title": "Styleguide",
                 "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
             },
             {
-                "title": "Developer Guide covering concepts",
+                "title": "Developer Guide",
                 "url": "https://docs.angularjs.org/guide/index"
             },
             {
-                "title": "API Reference for syntax",
+                "title": "API Reference",
                 "url": "https://docs.angularjs.org/api"
-            },
-            {
-                "title": "Documentation",
-                "url": "https://angularjs.org/"
-            },
-            {
-                "title": "Prerequisets / How to start",
-                "url": "https://www.agiletrailblazers.com/blog/modernized-technology/how-to-start-an-angularjs-application"
-            },
-            {
-                "title": "Tutorial",
-                "url": "https://docs.angularjs.org/tutorial"
             }
         ]
     },
