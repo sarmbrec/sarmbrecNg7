@@ -1,13 +1,45 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
+$min-height: 400px;
 section#section-carousel {
-    background-color: rgba(233, 236, 239, .5);
-    background-color: rgba($dark, .9);
+    // background-color: rgba(233, 236, 239, .5);
+    // background-color: rgba($dark, .9);
+    background-image: linear-gradient(to bottom, rgba($primary, .7), rgba($primary, .3));
+    background-size: cover;
     margin-bottom: 1.5rem;
     height: 75vh;
     width: 100%;
+    min-height: $min-height;
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10% !important;
+    }
     .carousel-inner {
+        position: relative;
+        // background-image: url('../../assets/images/backgrounds/beachhouse.jpg');
+        // background-attachment: fixed;
+        // background-position: left bottom;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+            //background-color: $dark;
+            // background-image: url('../../assets/images/backgrounds/emma-jenna.jpg');
+            // background-attachment: fixed;
+            // background-position: left bottom;
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // filter: grayscale(100%);
+            //background-color: transparent;
+        }
         .carousel-item {
             /* Force to always be block */
             display: block !important;
@@ -16,15 +48,14 @@ section#section-carousel {
             top: 0;
             left: 0;
             margin: 0;
-            // transform: translateX(100%);
+            min-height: $min-height;
             opacity: 0;
-            -webkit-transition: all .5s ease-in;
-            transition: all .5s ease-in;
+            -webkit-transition: all .5s ease-out;
+            transition: all .5s ease-out;
             visibility: hidden;
         }
         .carousel-item.active {
             position: relative;
-            // transform: translateX(0);
             visibility: visible;
             opacity: 1;
         }
@@ -32,7 +63,8 @@ section#section-carousel {
     .carousel-item-background {
         width: auto !important;
         height: 75vh !important;
-        background-image: url('../../assets/images/backgrounds/beachhouse.jpg');
+        min-height: $min-height;
+        background-image: none;
         background-attachment: fixed;
         background-position: left bottom;
         background-size: cover;
@@ -60,22 +92,64 @@ section#section-carousel {
             bottom: 10%;
             left: 10%;
             z-index: 4;
-            min-height: 400px;
-            padding: 0 1rem 1rem 1rem;
+            padding: 0;
             color: $dark;
             font-size: .85rem;
             text-align: center;
             background-color: transparent;
             background-image: linear-gradient(to bottom right, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
             background-size: cover;
-            border: 1px solid rgba(233, 236, 239, .7);
+            //border: 1px solid rgba(233, 236, 239, .7);
+            border: 1px solid rgba($light, .7);
+            border-radius: .25rem;
             border-radius: .25rem;
             overflow: hidden;
-            img.logo-techstack {
-                width: auto;
-                height: 50%;
-                margin: 4rem 1.5rem 1.5rem 1.5rem;
-                // border: 1px solid #ffffff;
+            &:hover .vertical-align-content-middle {
+                border-top: 1px solid rgba($light, .9);
+                border-bottom: 1px solid rgba($light, .9);
+                background-color: rgba($light, .5);
+                // background-color: transparent;
+                // background-image: linear-gradient(to bottom, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
+                // background-size: cover;
+                filter: grayscale(75%);
+                img.logo-techstack {
+                    margin: -5% 0 0 0;
+                    transform: rotateY(40deg) scale(1.15) translateY(-.25rem) translateX(-10rem);
+                }
+                ul {
+                    display: block;
+                }
+            }
+            .vertical-align-content-middle {
+                position: absolute;
+                top: 30%;
+                bottom: 30%;
+                right: 0;
+                left: 0;
+                margin: auto 0 !important;
+                padding: 0;
+                width: 100%;
+                height: max-content;
+                border-top: 1px solid rgba($light, 0);
+                border-bottom: 1px solid rgba($light, 0);
+                background-color: transparent;
+                background-size: cover;
+                -webkit-transition: all .25s ease-in-out;
+                transition: all .25s ease-in-out;
+                -webkit-perspective: 1000px;
+                perspective: 1000px;
+                filter: grayscale(0%);
+                img.logo-techstack {
+                    width: auto;
+                    height: 25vh;
+                    margin: 0 0 1.5rem 0;
+                    -webkit-transition: all .15s linear;
+                    transition: all .15s linear;
+                    transform: rotateY(0deg) scale(1) translateY(0rem) translateX(0rem);
+                }
+                ul {
+                    display: none;
+                }
             }
         }
     }
@@ -91,5 +165,4 @@ section#section-carousel {
 
 @include media-breakpoint-up(xl) {}
 
-@include media-breakpoint-between(md,
-xl) {}
+@include media-breakpoint-between(md, xl) {}

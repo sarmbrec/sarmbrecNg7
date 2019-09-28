@@ -1,14 +1,15 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-header {
-    // .bg-dark {
-    //     background-color: darken(rgba($primary, .9), 5%) !important;
-    // }
-    #navbarContent {
+a.navbar-brand img {
+    height: 75px;
+    width: auto;
+}
+
+//}
+#navbarMenuContent {
+    font-size: .85rem;
+    a {
         font-size: .85rem;
-        a {
-            font-size: .85rem;
-        }
     }
 }

@@ -1,14 +1,36 @@
 [{
         "category": "Front end technology",
-        "title": "AngularJS",
+        "title": "Angular",
         "logo": {
-            "url": "/assets/images/logos/AngularJS_logo_512.png",
+            "url": "/assets/images/logos/Angular_logo_512.png",
             "width": "",
             "height": ""
         },
+        "urlDetailView": "angular",
+        "subTitle": "One framework, mobile and desktop",
+        "background": "/assets/images/backgrounds/beachhouse.jpg",
+        "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
+        "links": [{
+                "title": "Documentation",
+                "url": "https://angular.io/"
+            },
+            {
+                "title": "Tutorial",
+                "url": "https://angular.io/start"
+            }
+        ]
+    },
+    {
+        "category": "Front end technology",
+        "title": "AngularJS",
+        "logo": {
+            "url": "/assets/images/logos/AngularJS_medium.png",
+            "width": "35vw",
+            "height": "auto"
+        },
         "urlDetailView": "angularjs",
         "subTitle": "Superheroic JavaScript MVW Framework",
-        "background": "/assets/images/backgrounds/beachhouse.jpg",
+        "background": "/assets/images/backgrounds/emma-jenna.jpg",
         "text": "What HTML would have been, had it been designed for building web-apps.",
         "links": [{
                 "title": "Styleguide",

@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log('hello from nav component')
+    //console.log('hello from nav component')
 
   }
 
