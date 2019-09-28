@@ -10,14 +10,14 @@
                                 <h2>{{item.title}} links</h2>
                                 <ul>
                                     <li *ngFor="let item of item.links; index as i">
-                                        <a [href]="item.url">{{item.title}}</a>
+                                        <a [href]="item.url" target="_blank">{{item.title}}</a>
                                     </li>
                                 </ul>
                             </div>
                             <h1 class="small text-muted">{{item.title}}</h1>
                             <p>{{item.text}}</p>
                             <p [hidden]="item.urlDetailView==''">
-                                <a routerLink="/{{item.urlDetailView}} " class="mt-1 btn btn-outline-dark ">Quick Start {{item.title}}</a>
+                                <a routerLink="/{{item.urlDetailView}}" class="mt-1 btn btn-outline-dark ">Quick Start {{item.title}}</a>
                             </p>
                         </div>
                     </div>

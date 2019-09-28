@@ -3,10 +3,6 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 $min-height: 400px;
 section#section-carousel {
-    // background-color: rgba(233, 236, 239, .5);
-    // background-color: rgba($dark, .9);
-    // background-image: linear-gradient(to bottom, rgba($primary, .7), rgba($primary, .3));
-    // background-size: cover;
     background-color: transparent;
     background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($primary, .1), rgba($primary, .3));
     background-size: cover;
@@ -20,11 +16,6 @@ section#section-carousel {
     }
     .carousel-inner {
         position: relative;
-        // background-image: url('../../assets/images/backgrounds/beachhouse.jpg');
-        // background-attachment: fixed;
-        // background-position: left bottom;
-        // background-size: cover;
-        // background-repeat: no-repeat;
         &:after {
             content: "";
             position: absolute;
@@ -34,14 +25,6 @@ section#section-carousel {
             width: 100%;
             height: 100%;
             opacity: .5;
-            //background-color: $dark;
-            // background-image: url('../../assets/images/backgrounds/emma-jenna.jpg');
-            // background-attachment: fixed;
-            // background-position: left bottom;
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // filter: grayscale(100%);
-            //background-color: transparent;
         }
         .carousel-item {
             /* Force to always be block */
@@ -102,23 +85,23 @@ section#section-carousel {
             background-color: transparent;
             background-image: linear-gradient(to bottom right, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
             background-size: cover;
-            //border: 1px solid rgba(233, 236, 239, .7);
             border: 1px solid rgba($light, .7);
             border-radius: .25rem;
             border-radius: .25rem;
-            // overflow: hidden;
             &:hover .vertical-align-content-middle {
                 border-top: 1px solid rgba($light, .9);
                 border-bottom: 1px solid rgba($light, .9);
                 background-color: rgba($light, .2);
                 img.logo-techstack {
-                    margin: -3rem 0 2rem -10rem;
+                    margin: -3rem 0 0 -10rem;
                     transform: rotateY(65deg) scale(1.25) translateY(0) translateX(0rem);
                     filter: grayscale(100%);
                 }
                 .techstack-links {
-                    // display: inline-block;
                     opacity: 1;
+                }
+                h1 {
+                    text-indent: -85%;
                 }
             }
             .vertical-align-content-middle {
@@ -142,7 +125,7 @@ section#section-carousel {
                 img.logo-techstack {
                     width: auto;
                     height: 20vh;
-                    margin: 0 0 1rem 0;
+                    margin: 0 0 0 0;
                     -webkit-transition: all .15s linear;
                     transition: all .15s linear;
                     transform: rotateY(0deg) scale(1) translateY(0rem) translateX(0rem);
@@ -150,29 +133,28 @@ section#section-carousel {
                 h1 {
                     border-bottom: 1px solid rgba($dark, .3);
                     padding-bottom: .25rem;
-                    //max-width: 50%;
-                    margin: 0 auto 1rem auto;
+                    margin: 1rem auto 1rem auto;
+                    text-indent: 0rem;
+                    -webkit-transition: all .15s linear;
+                    transition: all .15s linear;
                 }
                 .techstack-links {
-                    // display: none;
                     opacity: 0;
                     position: absolute;
                     top: 2rem;
                     left: 48%;
                     text-align: left;
                     margin: 0;
-                    -webkit-transition: all .5s ease-in-out;
-                    transition: all .5s ease-in-out;
+                    -webkit-transition: all .25s linear;
+                    transition: all .25s linear;
                     h2 {
                         font-size: 1rem;
                     }
                     ul {
-                        display: block; // list-style-type: none;
-                        //text-align: left;
-                        font-size: .8rem;
+                        display: block;
+                        font-size: .85rem;
+                        padding-left: 1.5rem;
                         padding-bottom: 2rem;
-                        // margin: 0 0 0 1rem;
-                        // padding: 0;
                     }
                 }
             }

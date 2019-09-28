@@ -22,6 +22,11 @@ import { HomeComponent } from './home/home.component';
 
 import { CarouselHomePageComponent } from './carousel-home-page/carousel-home-page.component';
 import { GitHubIconLinkComponent } from './git-hub-icon-link/git-hub-icon-link.component';
+import { AngularComponent } from './angular/angular.component';
+import { AngularjsComponent } from './angularjs/angularjs.component';
+import { Html5Component } from './html5/html5.component';
+import { SassComponent } from './sass/sass.component';
+import { JavascriptComponent } from './javascript/javascript.component';
 
 
 
@@ -39,7 +44,12 @@ import { GitHubIconLinkComponent } from './git-hub-icon-link/git-hub-icon-link.c
     ContactComponent,
     HomeComponent,
     CarouselHomePageComponent,
-    GitHubIconLinkComponent
+    GitHubIconLinkComponent,
+    AngularComponent,
+    AngularjsComponent,
+    Html5Component,
+    SassComponent,
+    JavascriptComponent
   ],
   imports: [
     BrowserModule,

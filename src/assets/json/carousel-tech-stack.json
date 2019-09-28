@@ -17,6 +17,10 @@
             {
                 "title": "Tutorial",
                 "url": "https://angular.io/start"
+            },
+            {
+                "title": "CLI",
+                "url": "https://angular.io/cli"
             }
         ]
     },
@@ -57,7 +61,7 @@
             "width": "",
             "height": ""
         },
-        "urlDetailView": "",
+        "urlDetailView": "html5",
         "subTitle": "Hypertext Markup Language",
         "background": "/assets/images/backgrounds/beachhousepelicans.jpg",
         "text": "The latest evolution of the standard that defines HTML",
@@ -79,7 +83,7 @@
             "width": "",
             "height": ""
         },
-        "urlDetailView": "",
+        "urlDetailView": "sass",
         "subTitle": "Syntactically Awesome Style Sheets",
         "background": "/assets/images/backgrounds/beachhouse.jpg",
         "text": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
@@ -96,7 +100,7 @@
             "width": "",
             "height": ""
         },
-        "urlDetailView": "",
+        "urlDetailView": "javascript",
         "subTitle": "Fun on a bun",
         "background": "/assets/images/backgrounds/floodedroad.jpg",
         "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
