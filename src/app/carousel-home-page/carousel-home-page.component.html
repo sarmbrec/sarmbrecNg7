@@ -6,7 +6,7 @@
                     <!-- <button id="btnToggleView" class="btn"><i class="fa fa-plus-square-o"></i></button> -->
                     <!-- [ngClass]="{'active': toggleClassActive}" -->
                     <!-- <a routerLink="/{{item.urlDetailView}}" href="#"><img [src]="item.logo.url" id="logo-techstack" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " /></a> -->
-                    <img [src]="item.logo.url" id="logo-techstack" (click)="toggleActiveClass()" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
+                    <img [src]="item.logo.url" id="logo-techstack" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
                     <h1 class="small text-muted" [ngClass]="{'active': toggleClassActive}">{{item.title}}</h1>
                     <p [ngClass]="{'active': toggleClassActive}">{{item.text}}</p>
                     <!-- <span [hidden]="" [ngClass]="{'active': toggleClassActive}"> -->
