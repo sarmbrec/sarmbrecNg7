@@ -2,25 +2,19 @@
     <ngb-carousel *ngIf="carouselItems" class="slide">
         <ng-template ngbSlide *ngFor="let item of carouselItems; index as i">
             <div class="carousel-item-background" [ngStyle]="{'background-image':'url(' + item.background + ')'}">
-                <div class="carousel-caption">
-                    <div class="vertical-align-content-middle">
-                        <div class="align-middle">
-                            <img [src]="item.logo.url" class="logo-techstack d-inline-block" [ngStyle]="{'width':item.logo.width,'height':item.logo.height}" />
-                            <div class="techstack-links">
-                                <h2>{{item.title}} links</h2>
-                                <ul>
-                                    <li *ngFor="let item of item.links; index as i">
-                                        <a [href]="item.url" target="_blank">{{item.title}}</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h1 class="small text-muted">{{item.title}}</h1>
-                            <p>{{item.text}}</p>
-                            <p [hidden]="item.urlDetailView==''">
-                                <a routerLink="/{{item.urlDetailView}}" class="mt-1 btn btn-outline-dark ">Quick Start {{item.title}}</a>
-                            </p>
-                        </div>
-                    </div>
+                <div class="carousel-caption" [ngClass]="{'active': toggleClassActive}">
+                    <!-- [ngClass]="{'active': toggleClassActive}" -->
+                    <!-- <a routerLink="/{{item.urlDetailView}}" href="#"><img [src]="item.logo.url" id="logo-techstack" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " /></a> -->
+                    <img [src]="item.logo.url" id="logo-techstack" (click)="toggleActiveClass()" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
+                    <h1 class="small text-muted" [ngClass]="{'active': toggleClassActive}">{{item.title}}</h1>
+                    <p [ngClass]="{'active': toggleClassActive}">{{item.text}}</p>
+                    <!-- <span [hidden]="" [ngClass]="{'active': toggleClassActive}"> -->
+                    <hr />
+                    <!-- <span *ngIf="item.url!=''"> -->
+                    <a *ngFor="let item of item.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" routerlink="item.url" target="_blank">{{item.title}}</a>
+                    <!-- </span> -->
+                    <a routerLink="/{{item.urlDetailView}}" class="btn btn-outline-dark">Quick Start {{item.title}}</a>
+                    <!-- </span> -->
                 </div>
             </div>
         </ng-template>

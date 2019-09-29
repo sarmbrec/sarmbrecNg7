@@ -58,14 +58,15 @@ body {
     }
 }
 
-.carousel-control-next {
-    cursor: pointer;
-}
-
-.carousel-control-prev {
-    cursor: pointer;
-}
-
+// a {
+//     cursor: pointer !important;
+// }
+// .carousel-control-next {
+//     cursor: pointer;
+// }
+// .carousel-control-prev {
+//     cursor: pointer;
+// }
 @include media-breakpoint-up(xs) {}
 
 @include media-breakpoint-up(sm) {}

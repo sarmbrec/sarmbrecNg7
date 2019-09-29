@@ -1,7 +1,7 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-$min-height: 400px;
+$min-height-section-carousel: 400px;
 section#section-carousel {
     background-color: transparent;
     background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($primary, .1), rgba($primary, .3));
@@ -9,17 +9,18 @@ section#section-carousel {
     margin-bottom: 1.5rem;
     height: 75vh;
     width: 100%;
-    min-height: $min-height;
+    min-height: $min-height-section-carousel;
     .carousel-control-prev,
     .carousel-control-next {
         width: 10% !important;
+        cursor: pointer;
     }
     .carousel-inner {
-        position: relative;
+        //position: relative;
         &:after {
             content: "";
-            position: absolute;
             display: block;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -34,127 +35,115 @@ section#section-carousel {
             top: 0;
             left: 0;
             margin: 0;
-            min-height: $min-height;
+            min-height: $min-height-section-carousel;
             opacity: 0;
-            -webkit-transition: all .5s ease-out;
-            transition: all .5s ease-out;
+            -webkit-transition: all .75s linear;
+            transition: all .75s linear;
             visibility: hidden;
-        }
-        .carousel-item.active {
-            position: relative;
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-    .carousel-item-background {
-        width: auto !important;
-        height: 75vh !important;
-        min-height: $min-height;
-        background-image: none;
-        background-attachment: fixed;
-        background-position: left bottom;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-top: 1px solid rgba(000, 000, 000, .6);
-        border-bottom: 1px solid rgba(000, 000, 000, .6);
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($primary, .3));
-            background-size: cover;
-        }
-        .carousel-caption {
-            position: absolute;
-            top: 10%;
-            right: 10%;
-            bottom: 10%;
-            left: 10%;
-            z-index: 4;
-            padding: 0;
-            color: $dark;
-            font-size: .85rem;
-            text-align: center;
-            background-color: transparent;
-            background-image: linear-gradient(to bottom right, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
-            background-size: cover;
-            border: 1px solid rgba($light, .7);
-            border-radius: .25rem;
-            border-radius: .25rem;
-            &:hover .vertical-align-content-middle {
-                border-top: 1px solid rgba($light, .9);
-                border-bottom: 1px solid rgba($light, .9);
-                background-color: rgba($light, .2);
-                img.logo-techstack {
-                    margin: -3rem 0 0 -10rem;
-                    transform: rotateY(65deg) scale(1.25) translateY(0) translateX(0rem);
-                    filter: grayscale(100%);
-                }
-                .techstack-links {
-                    opacity: 1;
-                }
-                h1 {
-                    text-indent: -85%;
-                }
+            &.active {
+                position: relative;
+                visibility: visible;
+                opacity: 1;
             }
-            .vertical-align-content-middle {
-                position: absolute;
-                top: 30%;
-                bottom: 30%;
-                right: 0;
-                left: 0;
-                margin: auto 0 !important;
-                padding: 0 25%;
-                height: max-content;
-                border-top: 1px solid rgba($light, 0);
-                border-bottom: 1px solid rgba($light, 0);
-                background-color: transparent;
+            .carousel-item-background {
+                // display: block;
+                width: auto !important;
+                height: 75vh !important;
+                min-height: $min-height-section-carousel;
+                background-image: none;
+                background-attachment: fixed;
+                background-position: left bottom;
                 background-size: cover;
-                -webkit-transition: all .25s ease-in-out;
-                transition: all .25s ease-in-out;
-                -webkit-perspective: 1000px;
-                perspective: 1000px;
-                filter: grayscale(0%);
-                img.logo-techstack {
-                    width: auto;
-                    height: 20vh;
-                    margin: 0 0 0 0;
-                    -webkit-transition: all .15s linear;
-                    transition: all .15s linear;
-                    transform: rotateY(0deg) scale(1) translateY(0rem) translateX(0rem);
-                }
-                h1 {
-                    border-bottom: 1px solid rgba($dark, .3);
-                    padding-bottom: .25rem;
-                    margin: 1rem auto 1rem auto;
-                    text-indent: 0rem;
-                    -webkit-transition: all .15s linear;
-                    transition: all .15s linear;
-                }
-                .techstack-links {
-                    opacity: 0;
+                background-repeat: no-repeat;
+                border-top: 1px solid rgba(000, 000, 000, .6);
+                border-bottom: 1px solid rgba(000, 000, 000, .6);
+                &:after {
+                    content: "";
+                    display: block;
                     position: absolute;
-                    top: 2rem;
-                    left: 48%;
-                    text-align: left;
-                    margin: 0;
-                    -webkit-transition: all .25s linear;
-                    transition: all .25s linear;
-                    h2 {
-                        font-size: 1rem;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($primary, .3));
+                    background-size: cover;
+                }
+                .carousel-caption {
+                    position: absolute;
+                    top: 10%;
+                    right: 10%;
+                    bottom: 10%;
+                    left: 10%;
+                    z-index: 4;
+                    color: $dark;
+                    font-size: .8rem;
+                    padding: 0 5%;
+                    // text-align: center;
+                    background-color: transparent;
+                    background-image: linear-gradient(to bottom right, rgba($white, 0), rgba($white, .7), rgba($white, .7), rgba($white, 0));
+                    background-size: cover;
+                    border: 1px solid rgba($light, .7);
+                    border-radius: .25rem;
+                    border-radius: .25rem;
+                    -webkit-transition: all .25s ease-in-out;
+                    transition: all .25s ease-in-out;
+                    -webkit-perspective: 1000px;
+                    perspective: 1000px;
+                    img#logo-techstack {
+                        display: inline-block;
+                        height: 135px;
+                        margin: -38px 0 -25px 0;
+                        -webkit-transition: all .15s linear;
+                        transition: all .15s linear;
+                        transform: rotateY(0deg);
+                        filter: grayscale(0%);
                     }
-                    ul {
+                    h1 {
                         display: block;
-                        font-size: .85rem;
-                        padding-left: 1.5rem;
-                        padding-bottom: 2rem;
+                        border-bottom: 1px solid rgba($dark, .3);
+                        padding-top: 1rem;
+                        padding-bottom: .25rem;
+                        margin: 1rem auto 1rem auto;
+                        text-indent: 0rem;
+                        text-align: center;
+                        -webkit-transition: all .15s linear;
+                        transition: all .15s linear;
+                    }
+                    a.btn {
+                        display: block;
+                        margin-top: 0.5rem;
+                        padding: 0.5rem 1rem;
+                        &:hover {
+                            color: $light;
+                            cursor: pointer;
+                        }
+                    }
+                    hr {
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                    }
+                    &.active {
+                        //text-align: left;
+                        img#logo-techstack {
+                            height: auto;
+                            height: 135px;
+                            margin: -34px 0 -25px -83%;
+                            transform: rotateY(45deg);
+                            align-content: left;
+                            filter: grayscale(100%);
+                        }
+                        h1 {
+                            //text-indent: -7rem;
+                            margin: -70px 0 0 31%;
+                            text-indent: .25rem;
+                            text-align: left;
+                        }
+                        p {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -162,9 +151,117 @@ section#section-carousel {
     }
 }
 
+// 320
 @include media-breakpoint-up(xs) {}
 
-@include media-breakpoint-up(sm) {}
+// 768
+@include media-breakpoint-up(sm) {
+    section#section-carousel {
+        .carousel-inner {
+            .carousel-item {
+                .carousel-item-background {
+                    .carousel-caption {
+                        -webkit-perspective: 4000px;
+                        perspective: 4000px;
+                        img#logo-techstack {
+                            height: 225px;
+                            margin: -70px 0 -25px 0;
+                        }
+                        &.active {
+                            img#logo-techstack {
+                                height: auto;
+                                height: 400px;
+                                margin: -56px 0 0 -83%;
+                            }
+                            hr {
+                                margin-left: 27%;
+                            }
+                            p {
+                                display: block;
+                                margin-left: 28%;
+                                text-align: left;
+                            }
+                            h1 {
+                                margin: -300px 0 1rem 27%;
+                            }
+                            a.btn {
+                                margin-left: 27%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // section#section-carousel {
+    //     border: 20px solid yellow;
+    //     .carousel-item-background {
+    //         .carousel-caption {
+    //             top: 10%;
+    //             right: 10%;
+    //             bottom: 10%;
+    //             left: 10%;
+    //             &:hover .vertical-align-content-middle {
+    //                 border-top: 1px solid rgba($light, .9);
+    //                 border-bottom: 1px solid rgba($light, .9);
+    //                 background-color: rgba($light, .2);
+    //                 img.logo-techstack {
+    //                     margin: -3rem 0 0 -10rem;
+    //                     transform: rotateY(65deg) scale(1.25) translateY(0) translateX(0rem);
+    //                     filter: grayscale(100%);
+    //                 }
+    //                 .techstack-links {
+    //                     opacity: 1;
+    //                     display: inline-block;
+    //                     h1 {
+    //                         text-indent: -25%;
+    //                     }
+    //                     ul {
+    //                         display: inline-block;
+    //                     }
+    //                 }
+    //             }
+    //             .vertical-align-content-middle {
+    //                 border-top: 1px solid rgba($light, 0);
+    //                 border-bottom: 1px solid rgba($light, 0);
+    //                 background-color: transparent;
+    //                 background-size: cover;
+    //                 img.logo-techstack {
+    //                     margin: 0;
+    //                 }
+    //                 h1 {
+    //                     border-bottom: 1px solid rgba($dark, .3);
+    //                     padding-bottom: .25rem;
+    //                     margin: 1rem auto 1rem auto;
+    //                     text-indent: 0rem;
+    //                     -webkit-transition: all .15s linear;
+    //                     transition: all .15s linear;
+    //                 }
+    //                 .techstack-links {
+    //                     background: Red;
+    //                     display: none;
+    //                     opacity: 0;
+    //                     // position: absolute;
+    //                     text-align: left;
+    //                     margin: 0;
+    //                     padding-left: 0;
+    //                     -webkit-transition: all .25s linear;
+    //                     transition: all .25s linear;
+    //                     h2 {
+    //                         padding-top: 1rem;
+    //                         font-size: 1rem;
+    //                     }
+    //                     ul {
+    //                         display: none;
+    //                         font-size: .85rem;
+    //                         background: transparent;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
 
 @include media-breakpoint-up(md) {}
 

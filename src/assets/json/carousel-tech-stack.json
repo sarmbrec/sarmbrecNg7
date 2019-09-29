@@ -1,6 +1,6 @@
 [{
         "category": "Front end technology",
-        "title": "Angular",
+        "title": "Angular 7",
         "logo": {
             "url": "/assets/images/logos/Angular_logo_512.png",
             "width": "",
@@ -26,35 +26,6 @@
     },
     {
         "category": "Front end technology",
-        "title": "AngularJS",
-        "logo": {
-            "url": "/assets/images/logos/AngularJS_logo_512.png",
-            "width": "",
-            "height": ""
-        },
-        "urlDetailView": "angularjs",
-        "subTitle": "Superheroic JavaScript MVW Framework",
-        "background": "/assets/images/backgrounds/emma-jenna.jpg",
-        "text": "What HTML would have been, had it been designed for building web-apps.",
-        "links": [{
-                "title": "Documentation",
-                "url": "https://angularjs.org/"
-            }, {
-                "title": "Styleguide",
-                "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
-            },
-            {
-                "title": "Developer Guide",
-                "url": "https://docs.angularjs.org/guide/index"
-            },
-            {
-                "title": "API Reference",
-                "url": "https://docs.angularjs.org/api"
-            }
-        ]
-    },
-    {
-        "category": "Front end technology",
         "title": "HTML 5",
         "logo": {
             "url": "/assets/images/logos/HTML5_Badge_512.png",
@@ -75,6 +46,29 @@
             }
         ]
     },
+    {
+        "category": "Front end technology",
+        "title": "AngularJS",
+        "logo": {
+            "url": "/assets/images/logos/AngularJS_logo_512.png",
+            "width": "",
+            "height": ""
+        },
+        "urlDetailView": "angularjs",
+        "subTitle": "Superheroic JavaScript MVW Framework",
+        "background": "/assets/images/backgrounds/emma-jenna.jpg",
+        "text": "What HTML would have been, had it been designed for building web-apps.",
+        "links": [{
+                "title": "Documentation",
+                "url": "https://angularjs.org/"
+            },
+            {
+                "title": "Styleguide",
+                "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
+            }
+        ]
+    },
+
     {
         "category": "Front end technology",
         "title": "SASS",

@@ -12,8 +12,13 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbCarouselConfig } fr
 })
 export class CarouselHomePageComponent implements OnInit {
 
-  // cast our var as an object
-  carouselItems: {};
+  //define the carousel items object
+  private carouselItems: {};
+  
+  
+  //define the toogle property
+  private toggleClassActive : boolean = false;
+
   //images = [];
   
   //paused = false;
@@ -50,7 +55,7 @@ export class CarouselHomePageComponent implements OnInit {
   // pass in our bootstrap carousel config from ng bootstrap
   constructor(private data: DataService, config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
-    config.interval = 7000;
+    config.interval = 0;
     config.wrap = true;
     config.keyboard = false;
     config.pauseOnHover = true;
@@ -64,5 +69,29 @@ export class CarouselHomePageComponent implements OnInit {
        console.log('ngOnInit | carouselItems = ', this.carouselItems)
     });
   }
+
+
+
+  //define your method
+  toggleActiveClass(){
+
+    //this.status = !this.status;      
+    //if you just want to toggle the class; change toggle variable.
+    this.toggleClassActive = !this.toggleClassActive;
+
+    console.log('toggleActiveClass() | toggleClassActive = ', this.toggleClassActive)
+    //console.log('toggleActiveClass() | status = ', this.status)
+ }
+
+//  toggleActiveClass(event: any, class: string) {
+//   const hasClass = event.target.classList.contains(class);
+
+//   if(hasClass) {
+//     this.renderer.removeClass(event.target, class);
+//   } else {
+//     this.renderer.addClass(event.target, class);
+//   }
+// }
+
 
 }

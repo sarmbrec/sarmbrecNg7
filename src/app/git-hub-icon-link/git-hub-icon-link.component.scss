@@ -3,9 +3,9 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 #download-on-github {
     position: absolute;
-    right: 1rem;
-    top: 3.25rem;
-    z-index: 10;
+    right: 4rem;
+    top: .25rem;
+    z-index: 1030;
     font-size: 2rem;
     a {
         color: $white;

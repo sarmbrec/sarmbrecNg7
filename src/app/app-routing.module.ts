@@ -19,10 +19,6 @@ const routes: Routes = [
   {path: 'html5', component: Html5Component},
   {path: 'javascript', component: JavascriptComponent},
   {path: 'sass', component: SassComponent}
-  // {path:  "", redirectTo: "home"},
-  // {path: "home", pathMatch: "full", component: HomeComponent},
-  // {path: "about", pathMatch: "full", component: AboutComponent},
-  // {path: "contact", pathMatch: "full", component: ContactComponent} 
 ];
 
 @NgModule({
