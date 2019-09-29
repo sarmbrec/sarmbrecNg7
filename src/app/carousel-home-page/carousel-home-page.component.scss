@@ -174,11 +174,15 @@ section#section-carousel {
                             margin-top: 2rem;
                             margin-bottom: 2rem;
                         }
+                        a.btn {
+                            margin-top: 4rem;
+                        }
                         &.active {
                             img#logo-techstack {
                                 height: auto;
                                 height: 400px;
-                                margin: -56px 0 0 -83%;
+                                margin-top: -56px;
+                                margin-left: -83%;
                             }
                             hr {
                                 margin-left: 27%;
@@ -189,10 +193,13 @@ section#section-carousel {
                                 text-align: left;
                             }
                             h1 {
-                                margin: -300px 0 1rem 27%;
+                                margin-top: -300px;
+                                margin-left: 27%;
+                                margin-bottom: 1.5rem;
                             }
                             a.btn {
                                 margin-left: 27%;
+                                margin-top: 1rem;
                             }
                         }
                     }
