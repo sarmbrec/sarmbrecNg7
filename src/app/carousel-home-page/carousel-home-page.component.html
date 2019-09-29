@@ -12,7 +12,7 @@
                     <!-- <span [hidden]="" [ngClass]="{'active': toggleClassActive}"> -->
                     <hr />
                     <!-- <span *ngIf="item.url!=''"> -->
-                    <a *ngFor="let item of item.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" routerlink="item.url" target="_blank">{{item.title}}</a>
+                    <a *ngFor="let item of item.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" [href]="item.url" target="_blank">{{item.title}}</a>
                     <!-- </span> -->
                     <a routerLink="/{{item.urlDetailView}}" class="btn btn-outline-dark">Quick Start {{item.title}}</a>
                     <!-- </span> -->
