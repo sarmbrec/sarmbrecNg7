@@ -90,6 +90,19 @@
         "title": "AngularJS",
         "subTitle": "Superheroic JavaScript MVW Framework",
         "text": "What HTML would have been, had it been designed for building web-apps.",
+        "logo": "/assets/images/logos/AngularJS_logo_512.png",
+        "techStack": {
+            "url": "angularjs",
+            "links": [{
+                    "title": "Creating from scratch guide",
+                    "url": "https://angular.io/"
+                },
+                {
+                    "title": "Creating from visual studio guide",
+                    "url": "https://angular.io/start"
+                }
+            ]
+        },
         "links": [{
                 "title": "Styleguide",
                 "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
@@ -121,23 +134,8 @@
                 "title": "View on github",
                 "url": "https://github.com/angular/angular.js"
             }
-        ],
+        ]
 
-        "logo": "/assets/images/logos/HTML5_Badge_512.png",
-
-
-        "techStack": {
-            "url": "angularjs",
-            "links": [{
-                    "title": "Creating from scratch guide",
-                    "url": "https://angular.io/"
-                },
-                {
-                    "title": "Creating from visual studio guide",
-                    "url": "https://angular.io/start"
-                }
-            ]
-        }
     },
     {
         "category": "Front end technology",

@@ -22,10 +22,36 @@ section#knowledge-base {
             filter: grayscale(100%);
             opacity: .7;
         }
+        .card-subtitle {
+            font-size: .7rem;
+            color: lighten($dark, 35%);
+            line-height: 1.25;
+            margin-bottom: .5rem;
+        }
+        .card-text {
+            font-size: .75rem;
+            color: lighten($dark, 15%);
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
         a {
             text-decoration: underline;
+            font-size: .825rem;
             &:hover {
                 text-decoration: none;
+            }
+            &:before {
+                content: "\f054";
+                font-family: "FontAwesome";
+                font-weight: 200;
+                font-size: .65rem;
+                color: lighten($dark, 35%);
+                margin-right: .25rem;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
             }
         }
     }
