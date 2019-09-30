@@ -331,7 +331,7 @@
         "title": "SQL Server",
         "subTitle": "Intelligence and security are built in",
         "text": "A relational database management system (RDBMS) developed and marketed by Microsoft. As a database server, the primary function of the SQL Server is to store and retrieve data used by other applications.",
-        "logo": "/assets/images/logos/sql_server_logo_512.png",
+        "logo": "/assets/images/logos/sql_server_logo2_512.png",
         "techStack": {
             "url": "sqlserver",
             "links": [{
