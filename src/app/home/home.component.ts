@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  h1Style: boolean = false;
+  //h1Style: boolean = false;
 
   users: Object;
 
@@ -18,17 +18,17 @@ export class HomeComponent implements OnInit {
     // on component load
     this.data.getUsers().subscribe(data => {
       this.users = data
-      //console.log('HomeComponent | data = ', data)
+      console.log('HomeComponent | data = ', data)
     })
   }
 
-  firstClick() {
-    this.h1Style = true;
-  }
+  // firstClick() {
+  //   this.h1Style = true;
+  // }
 
-  secondClick() {
-    this.data.serviceSecondClick();
-  }
+  // secondClick() {
+  //   this.data.serviceSecondClick();
+  // }
 
 
 }

@@ -28,6 +28,7 @@ import { Html5Component } from './html5/html5.component';
 import { SassComponent } from './sass/sass.component';
 import { JavascriptComponent } from './javascript/javascript.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -51,7 +52,8 @@ import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.componen
     Html5Component,
     SassComponent,
     JavascriptComponent,
-    KnowledgeBaseComponent
+    KnowledgeBaseComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
