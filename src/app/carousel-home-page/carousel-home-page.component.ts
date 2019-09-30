@@ -66,7 +66,7 @@ export class CarouselHomePageComponent implements OnInit {
     // call our service to get results back from api
     this.data.getCarouselTechStack().subscribe(data => {      
        this.carouselItems = data;
-       console.log('ngOnInit | carouselItems = ', this.carouselItems)
+      //  console.log('ngOnInit | carouselItems = ', this.carouselItems)
     });
   }
 

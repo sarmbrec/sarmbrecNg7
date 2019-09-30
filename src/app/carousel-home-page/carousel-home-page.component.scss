@@ -161,31 +161,34 @@ section#section-carousel {
             .carousel-item {
                 .carousel-item-background {
                     .carousel-caption {
-                        -webkit-perspective: 4000px;
-                        perspective: 4000px;
+                        // -webkit-perspective: 3000px;
+                        // perspective: 3000px;
                         h1 {
                             margin: 2rem auto 2rem auto;
                         }
                         img#logo-techstack {
                             height: 225px;
-                            margin: -70px 0 -25px 0;
+                            margin: -50px 0 -25px 0;
                         }
                         hr {
-                            margin-top: 2rem;
-                            margin-bottom: 2rem;
+                            margin: 2rem 8rem;
                         }
                         a.btn {
                             margin-top: 4rem;
+                            max-width: 50%;
+                            margin-left: auto;
+                            margin-right: auto;
                         }
                         &.active {
                             img#logo-techstack {
                                 height: auto;
-                                height: 400px;
-                                margin-top: -56px;
+                                height: 275px;
+                                margin-top: -25px;
                                 margin-left: -83%;
                             }
                             hr {
                                 margin-left: 27%;
+                                margin-right: 0;
                             }
                             p {
                                 display: block;
@@ -193,13 +196,16 @@ section#section-carousel {
                                 text-align: left;
                             }
                             h1 {
-                                margin-top: -300px;
+                                font-size: 1rem;
+                                margin-top: -210px;
                                 margin-left: 27%;
                                 margin-bottom: 1.5rem;
                             }
                             a.btn {
+                                max-width: 40%;
                                 margin-left: 27%;
                                 margin-top: 1rem;
+                                margin-right: 0;
                             }
                         }
                     }

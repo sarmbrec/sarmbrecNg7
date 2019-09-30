@@ -27,6 +27,7 @@ import { AngularjsComponent } from './angularjs/angularjs.component';
 import { Html5Component } from './html5/html5.component';
 import { SassComponent } from './sass/sass.component';
 import { JavascriptComponent } from './javascript/javascript.component';
+import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 
 
 
@@ -49,7 +50,8 @@ import { JavascriptComponent } from './javascript/javascript.component';
     AngularjsComponent,
     Html5Component,
     SassComponent,
-    JavascriptComponent
+    JavascriptComponent,
+    KnowledgeBaseComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@
                     <!-- <span *ngIf="item.url!=''"> -->
                     <a *ngFor="let item of item.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" [href]="item.url" target="_blank">{{item.title}}</a>
                     <!-- </span> -->
-                    <a routerLink="/{{item.urlDetailView}}" class="btn btn-outline-dark">Quick Start {{item.title}}</a>
+                    <a routerLink="/{{item.urlDetailView}}" class="btn btn-primary">My {{item.title}} Resources</a>
                     <!-- </span> -->
                 </div>
             </div>
