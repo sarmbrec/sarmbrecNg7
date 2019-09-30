@@ -1,4 +1,4 @@
-<section id="knowledge-base">
+<section id="knowledge-base" *ngIf="knowledgeBase">
     <div class="container">
 
         <h1 class="mb-0">Knowledge base</h1>
@@ -11,21 +11,18 @@
         </nav> -->
 
         <div class="card-columns">
-            <div class="card shadow-sm animated fadeIn delay-3s" *ngFor="let item of myResult; index as i">
+            <div class="card shadow-sm animated fadeIn delay-3s" *ngFor="let item of knowledgeBase; index as i">
                 <div class="card-body">
+                    <img *ngIf="item.logo" [src]="item.logo" class="logo">
                     <h3 class="card-title">{{item.title}}</h3>
                     <h6 class="card-subtitle mb-2 text-muted">{{item.subTitle}}</h6>
                     <p class="card-text">{{item.text}}</p>
-                    <ul *ngIf="item.links">
+                    <!-- <ul *ngIf="item.links">
                         <li *ngFor="let link of item.links; index as a"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
-                    </ul>
-
-                    <a [hidden]="!item.techStack" routerLink="item.techStack.url" class="btn btn-secondary">My {{item.title}} Resources</a>
-
+                    </ul> -->
+                    <a *ngIf="item.techStack" routerLink="/{{item.techStack.url}}">My {{item.title}} Resources</a>
                 </div>
             </div>
         </div>
-
-
     </div>
 </section>

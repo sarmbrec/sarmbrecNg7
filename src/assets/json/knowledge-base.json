@@ -122,6 +122,10 @@
                 "url": "https://github.com/angular/angular.js"
             }
         ],
+
+        "logo": "/assets/images/logos/HTML5_Badge_512.png",
+
+
         "techStack": {
             "url": "angularjs",
             "links": [{
@@ -152,7 +156,7 @@
     },
     {
         "category": "Front end technology",
-        "title": "Accessablity",
+        "title": "Accessability",
         "subTitle": "ADA Compliancy",
         "text": "Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these.",
         "links": [{

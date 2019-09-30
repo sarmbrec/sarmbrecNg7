@@ -9,15 +9,15 @@ import {NgForm} from '@angular/forms';
 export class KnowledgeBaseComponent implements OnInit {
 
   //define the result object
-  private myResult: {};
+  knowledgeBase: {};
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
     //TODO: seperate this out to its own services for knowledge base
     this.data.getKnowledgeBase().subscribe(data => {      
-      this.myResult = data;
-       console.log('ngOnInit | myResult = ', this.myResult)
+      this.knowledgeBase = data;
+      //  console.log('ngOnInit | myResult = ', this.myResult)
    });
 
   }

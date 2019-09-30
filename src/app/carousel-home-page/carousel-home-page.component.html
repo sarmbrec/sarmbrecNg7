@@ -1,4 +1,4 @@
-<section id="section-carousel" class="shadow" *ngIf="carouselItems">
+<section id="section-carousel" *ngIf="carouselItems">
     <ngb-carousel *ngIf="carouselItems" class="slide">
         <ng-template ngbSlide *ngFor="let item of carouselItems; index as i">
             <div class="carousel-item-background" [ngStyle]="{'background-image':'url(' + item.background + ')'}">

@@ -2,13 +2,14 @@
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 #download-on-github {
-    position: absolute;
+    position: fixed;
     right: 4rem;
     top: .25rem;
     z-index: 1030;
     font-size: 2rem;
     a {
         color: $white;
+        text-shadow: 0.015rem 0.25rem 0.75rem rgba($dark, .5);
     }
 }
 
