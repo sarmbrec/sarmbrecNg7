@@ -13,11 +13,11 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource, NgbCarouselConfig } fr
 export class CarouselHomePageComponent implements OnInit {
 
   //define the carousel items object
-  private carouselItems: {};
+  carouselItems: {};
   
   
   //define the toogle property
-  private toggleClassActive : boolean = false;
+  toggleClassActive : boolean = false;
 
   //images = [];
   
