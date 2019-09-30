@@ -15,10 +15,11 @@ section#knowledge-base {
     .card-body {
         font-size: .9rem;
         .logo {
+            display: inline-block;
             height: 30px;
             width: auto;
-            float: right;
-            margin: -.5rem -.5rem 0 0;
+            float: left;
+            margin: -.5rem .25rem 0 -.5rem;
             filter: grayscale(100%);
             opacity: .7;
         }
