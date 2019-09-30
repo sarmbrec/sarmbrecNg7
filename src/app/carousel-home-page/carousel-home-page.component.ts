@@ -79,7 +79,7 @@ export class CarouselHomePageComponent implements OnInit {
     //if you just want to toggle the class; change toggle variable.
     this.toggleClassActive = !this.toggleClassActive;
 
-    console.log('toggleActiveClass() | toggleClassActive = ', this.toggleClassActive)
+    //console.log('toggleActiveClass() | toggleClassActive = ', this.toggleClassActive)
     //console.log('toggleActiveClass() | status = ', this.status)
  }
 

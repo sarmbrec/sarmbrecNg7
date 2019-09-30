@@ -3,71 +3,71 @@
         <div class="row">
             <div class="col-md-4 order-md-2 mb-4 mb-md-0">
 
-                <!-- <div class="card mb-4">
+                <div class="card mb-4">
                     <div class="card-body">
                         <img src="../../assets/images/logos/AngularJS_medium.png" class="img-fluid" />
-
-                        <div *ngFor="let link of linksArray">a{{link.title}}</div>
-
-
                     </div>
-                    <div *ngIf="linksArray" class="list-group list-group-flush">
-                        <a *ngFor="let link of linksArray; index as i" class="list-group-item list-group-item-action py-2" [href]="link.url" target="_blank">{{link.title}}</a>
+                    <div *ngIf="knowledgeBaseAngularJS.links && knowledgeBaseAngularJS.links.length > 0" class="list-group list-group-flush">
+                        <a *ngFor="let link of knowledgeBaseAngularJS.links; index as i" class="list-group-item list-group-item-action py-2" [href]="link.url" target="_blank">{{link.title}}</a>
                     </div>
-                </div> -->
+                </div>
 
                 <h5>Guides</h5>
-                <div class="list-group">
-                    <!-- <a *ngFor="let link of myResult; index as i" ng-repeat="link in $ctrl.techStackAngularjs.techStack.links" class="list-group-item list-group-item-action py-2" href="{{link.url}}">{{link.title}}</a> -->
+                <div class="list-group" *ngIf="linksArr && linksArr.length > 0">
+                    <a *ngFor="let link of linksArr;" class="list-group-item list-group-item-action py-2" [href]="link.url" target="_blank">{{link.title}}</a>
                 </div>
                 <hr class="mt-4 mb-4" />
-                <!-- <ul class="">
+                <ul class="">
                     <li><a href="https://git-scm.com/downloads" target="_blank">Download git</a> - You need git to clone the angular-seed repository.</li>
                     <li><a href="https://nodejs.org/" target="_blank">Download node.js</a> - You must have Node.js and its package manager (npm) installed.</li>
                     <li>npm install bootstrap</li>
                     <li>npm install popper.js --save</li>
                     <li>git commit -m 'Some message about the change'</li>
                     <li>git push origin 'branch-name'</li>
-                    <li>git clone
-                        <former directory>
-                            <new directory>
-                    </li>
-                </ul> -->
+                    <li>git clone &lt;former directory&gt;&lt;new directory&gt;</li>
+                </ul>
             </div>
             <div class="col-md-8 order-md-1">
-                <!-- <h1>{{knowledgeBaseAngularJS[0].title}}</h1>
-                <p class="lead font-weight-light">{{knowledgeBaseAngularJS[0].subTitle}}</p>
-                <p>{{knowledgeBaseAngularJS[0].text}}</p>
+                <h1>{{knowledgeBaseAngularJS.title}}</h1>
+                <p class="lead font-weight-light">{{knowledgeBaseAngularJS.subTitle}}</p>
+                <p>{{knowledgeBaseAngularJS.text}}</p>
 
                 <hr class="mt-4 mb-4" />
                 <div class="alert bg-light small border-dark">
                     <i class="fa fa-exclamation-circle mr-2 fa-2x align-middle"></i>Note copying the AngularJS files from node_modules to app/lib makes it easier to serve the files by a web server.
-                </div> -->
-                <!-- 
+                </div>
+
                 <hr class="mt-4 mb-4" />
-                <h2>Create AngularJS Application</h2>
+
+
+
+                <h2>Create AngularJS Application</h2>{{showAngularJSTab}}
                 <ul class="nav nav-tabs" id="angularjs-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link" ng-class="{'active': $ctrl.showAngularJSTab=='sarmbrec'}" data-ng-click="$ctrl.ShowHideAngularJSTab($event)" href="" data-category="sarmbrec" role="tab" aria-controls="sarmbrec" aria-selected="true">
+                        <a class="nav-link active">test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [class]="{'active': showAngularJSTab=='sarmbrec' ? true : false}" (click)="ShowHideAngularJSTab($event)" routerlink="" data-category="sarmbrec" role="tab" aria-controls="sarmbrec" aria-selected="true">
                             <i class="fa fa-rebel mr-1"></i> My seed app
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" ng-class="{'active': $ctrl.showAngularJSTab=='google'}" data-ng-click="$ctrl.ShowHideAngularJSTab($event)" href="" data-category="google" role="tab" aria-controls="google" aria-selected="false">
+                        <a class="nav-link" [class]="{'active': showAngularJSTab=='google'}" (click)="ShowHideAngularJSTab($event)" href="" data-category="google" role="tab" aria-controls="google" aria-selected="false">
                             <i class="fa fa-google mr-1"></i> AngularJS seed app
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" ng-class="{'active': $ctrl.showAngularJSTab=='cdn'}" data-ng-click="$ctrl.ShowHideAngularJSTab($event)" href="" data-category="cdn" role="tab" aria-controls="cdn" aria-selected="false">
+                        <a class="nav-link" [class]="{'active': showAngularJSTab=='cdn'}" (click)="ShowHideAngularJSTab($event)" href="" data-category="cdn" role="tab" aria-controls="cdn" aria-selected="false">
                             <i class="fa fa-server mr-1"></i> Popular CDNs
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" ng-class="{'active': $ctrl.showAngularJSTab=='read'}" data-ng-click="$ctrl.ShowHideAngularJSTab($event)" href="" data-category="read" role="tab" aria-controls="read" aria-selected="false">
+                        <a class="nav-link" [class]="{'active': showAngularJSTab=='read'}" (click)="ShowHideAngularJSTab($event)" href="" data-category="read" role="tab" aria-controls="read" aria-selected="false">
                             <i class="fa fa-bookmark-o mr-1"></i> Read more
                         </a>
                     </li>
                 </ul>
+                <!-- 
                 <div class="tab-content">
                     <div class="tab-pane p-4" ng-class="{'active': $ctrl.showAngularJSTab=='sarmbrec'}" role="tabpanel" aria-labelledby="sarmbrec">
                         <h6><i class="fa fa-github align-middle text-muted mr-2 fa-2x"></i>AngularJS Seed App</h6>

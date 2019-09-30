@@ -8,39 +8,36 @@ import { DataService } from '../data.service';
 })
 export class AngularjsComponent implements OnInit {
 
-  
-  knowledgeBaseAngularJS: {};
-  //private linksArr: {};
+  //appTitle: string = 'sarmbrec';
+  knowledgeBaseAngularJS = {};
+  linksArr = [];
+  showAngularJSTab: string = 'sarmbrec';
+  showTab: string = 'getting-started';
   //private knowledgeBase: {};
 
   constructor(private data: DataService) { }
 
-  ngOnInit() {
+
+  
+  ShowHideAngularJSTab (event) {
+    //console.log('event.target.getAttribute = ', event.target.getAttribute('data-category'))
+    this.showAngularJSTab = event.target.getAttribute('data-category');
+  };
 
 
+  ShowHideTab(event) {
+    //console.log('event.target.getAttribute = ', event.target.getAttribute('data-category'))
+    this.showTab = event.target.getAttribute('data-category');
+  };
+
+
+  ngOnInit() {   
     this.data.getKnowledgeBaseAngularJS().subscribe(data => {      
       this.knowledgeBaseAngularJS = data;
-      console.log('ngOnInit | knowledgeBaseAngularJS = ', this.knowledgeBaseAngularJS)
-      buildLinksArray(data);
-      //this.linksArr = this.data.links;
-      //console.log('ngOnInit | linksArr = ', this.linksArr)
+      this.linksArr = this.knowledgeBaseAngularJS.techStack.links;
+      //console.log('ngOnInit | knowledgeBaseAngularJS = ', this.knowledgeBaseAngularJS)
    });
-
-
-   function buildLinksArray(data: Object){
-
-    //this.linksArr = data.links;
-    console.log('buildLinksArray | data = ', data)
-
-   }
-
-//    this.data.getKnowledgeBase().subscribe(data => {  
-         
-//     this.knowledgeBase = data;
-//      console.log('ngOnInit | knowledgeBase = ', this.knowledgeBase)
-//  });
-
-
   }
+
 
 }
