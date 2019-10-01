@@ -22,8 +22,8 @@ section#knowledge-base {
             filter: grayscale(100%);
             opacity: .7;
             transform: scale(1);
-            -webkit-transition: all .15s linear;
-            transition: all .15s linear;
+            -webkit-transition: all .1s linear;
+            transition: all .1s linear;
             &:hover {
                 opacity: 1;
                 transform: scale(1.3);

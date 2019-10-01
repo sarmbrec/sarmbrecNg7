@@ -164,8 +164,8 @@ section#section-carousel {
             .carousel-item {
                 .carousel-item-background {
                     .carousel-caption {
-                        // -webkit-perspective: 3000px;
-                        // perspective: 3000px;
+                        -webkit-perspective: 3000px;
+                        perspective: 3000px;
                         h1 {
                             margin: 2rem auto 2rem auto;
                         }
@@ -185,7 +185,7 @@ section#section-carousel {
                         &.active {
                             img#logo-techstack {
                                 height: auto;
-                                height: 275px;
+                                height: 300px;
                                 margin-top: -25px;
                                 margin-left: -83%;
                             }
