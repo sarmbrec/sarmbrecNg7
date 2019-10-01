@@ -1,18 +1,21 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-#download-on-github {
+#social-icon-links {
     position: fixed;
-    right: 4rem;
-    top: .25rem;
+    right: 3rem;
+    top: .23rem;
     z-index: 1030;
     font-size: 2rem;
     a {
+        display: inline-block;
+        margin-right: .5rem;
         opacity: .5;
         color: $white;
         text-shadow: 0.015rem 0.25rem 0.75rem rgba($dark, .5);
         transition: all .15s linear;
         -webkit-transition: all .15s linear;
+        line-height: 1;
         &:hover {
             opacity: 1;
         }
@@ -24,10 +27,14 @@
 @include media-breakpoint-up(sm) {}
 
 @include media-breakpoint-up(md) {
-    #download-on-github {
+    #social-icon-links {
         right: 1.5rem;
-        top: 3rem;
+        top: 3.5rem;
         font-size: 3rem;
+        a {
+            display: block;
+            margin-bottom: .75rem;
+        }
     }
 }
 
