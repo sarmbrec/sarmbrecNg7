@@ -8,8 +8,14 @@
     z-index: 1030;
     font-size: 2rem;
     a {
+        opacity: .5;
         color: $white;
         text-shadow: 0.015rem 0.25rem 0.75rem rgba($dark, .5);
+        transition: all .15s linear;
+        -webkit-transition: all .15s linear;
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
