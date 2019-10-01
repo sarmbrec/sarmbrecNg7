@@ -133,7 +133,7 @@
     {
         "category": "Front end",
         "title": "AngularJS",
-        "subTitle": "Superheroic JavaScript MVW Framework",
+        "subTitle": "Superheroic JavaScript MVWhatever Framework",
         "text": "What HTML would have been, had it been designed for building web-apps.",
         "logo": "/assets/images/logos/AngularJS_logo_512.png",
         "techStack": {
@@ -212,12 +212,12 @@
     },
     {
         "category": "Front end",
-        "title": "Accessability",
+        "title": "Accessibility",
         "subTitle": "ADA Compliancy",
         "text": "Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these.",
         "logo": "/assets/images/logos/accessablitiy_logo_512.png",
         "techStack": {
-            "url": "accessability",
+            "url": "accessibility",
             "links": [{
                 "title": "",
                 "url": ""

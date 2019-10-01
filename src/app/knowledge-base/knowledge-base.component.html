@@ -11,16 +11,20 @@
         </nav> -->
 
         <div class="card-columns">
-            <div class="card shadow-sm animated fadeIn delay-3s" *ngFor="let item of knowledgeBase; index as i">
+            <div class="card shadow-sm" *ngFor="let item of knowledgeBase; index as i">
                 <div class="card-body">
                     <img *ngIf="item.logo" [src]="item.logo" class="logo">
                     <h3 class="card-title">{{item.title}}</h3>
                     <h6 class="card-subtitle">{{item.subTitle}}</h6>
+                    <hr class="mt-1 mb-2">
                     <p class="card-text">{{item.text}}</p>
-                    <!-- <ul *ngIf="item.links">
+                    <a *ngIf="item.techStack" class="btn btn-light btn-outline-dark btn-block" routerLink="/{{item.techStack.url}}">My {{item.title}} Resources</a>
+                    <hr class="mt-3 mb-2" *ngIf="item.links" />
+
+                    <ul id="ul-item-links" *ngIf="item.links">
                         <li *ngFor="let link of item.links; index as a"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
-                    </ul> -->
-                    <a *ngIf="item.techStack" routerLink="/{{item.techStack.url}}">My {{item.title}} Resources</a>
+                    </ul>
+
                 </div>
             </div>
         </div>
