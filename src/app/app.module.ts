@@ -22,13 +22,15 @@ import { HomeComponent } from './home/home.component';
 
 import { CarouselHomePageComponent } from './carousel-home-page/carousel-home-page.component';
 import { GitHubIconLinkComponent } from './git-hub-icon-link/git-hub-icon-link.component';
-import { AngularComponent } from './angular/angular.component';
+// import { AngularComponent } from './angular/angular.component';
 import { AngularjsComponent } from './angularjs/angularjs.component';
-import { Html5Component } from './html5/html5.component';
-import { SassComponent } from './sass/sass.component';
-import { JavascriptComponent } from './javascript/javascript.component';
+// import { Html5Component } from './html5/html5.component';
+// import { SassComponent } from './sass/sass.component';
+// import { JavascriptComponent } from './javascript/javascript.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { FooterComponent } from './footer/footer.component';
+import { KnowledgeBaseDetailComponent } from './knowledge-base-detail/knowledge-base-detail.component';
+import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 
 
 
@@ -47,20 +49,22 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CarouselHomePageComponent,
     GitHubIconLinkComponent,
-    AngularComponent,
+    //AngularComponent,
     AngularjsComponent,
-    Html5Component,
-    SassComponent,
-    JavascriptComponent,
+    //Html5Component,
+    //SassComponent,
+    //JavascriptComponent,
     KnowledgeBaseComponent,
-    FooterComponent
+    FooterComponent,
+    KnowledgeBaseDetailComponent,
+    KbDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    AppRoutingModule,
     //BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     //HttpClientModule,
     // FormsModule,
@@ -69,6 +73,7 @@ import { FooterComponent } from './footer/footer.component';
     //   { path: 'counter', component: CounterComponent },
     //   { path: 'fetch-data', component: FetchDataComponent },
     // ])
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

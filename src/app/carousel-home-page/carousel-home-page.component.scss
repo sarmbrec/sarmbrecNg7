@@ -99,6 +99,9 @@ section#section-carousel {
                         transition: all .15s linear;
                         transform: rotateY(0deg);
                         filter: grayscale(0%);
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                     h1 {
                         display: block;

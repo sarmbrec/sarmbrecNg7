@@ -1,12 +1,15 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-a.navbar-brand img {
-    height: 75px;
-    width: auto;
+a.navbar-brand {
+    opacity: .7;
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear;
+    &:hover {
+        opacity: 1;
+    }
 }
 
-//}
 #navbarMenuContent {
     font-size: .85rem;
     a {
