@@ -1,19 +1,30 @@
-<div class="container">
+<div class="container" *ngIf="kbDetail">
     <div class="row">
         <div class="col-12">
 
+            <h1>{{kbDetail.title}}</h1>
 
-            <p>kb-detail works!</p>
 
-            <p>
-                <a [routerLink]="['/kb', 'angularjs']">AngularJS</a>
+            <p class="lead">
+                <a [routerLink]="['/kb', 'angularjs']">{{kbDetail.subTitle}}</a>
             </p>
+            <p class="">
+                {{kbDetail.text}}
+            </p>
+            <p>
+                knowledgeBase = {{knowledgeBase}}
+            </p>
+            <!-- <p>
+                test = {{test}}
+                <br> {{test.title}}
+            </p>
+            
             <p>
                 kbDetailId = {{kbDetailId}}
             </p>
             <p>
                 kbDetailCategory = {{kbDetailCategory}}
-            </p>
+            </p> -->
 
         </div>
     </div>

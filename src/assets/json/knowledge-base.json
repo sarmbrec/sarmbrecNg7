@@ -71,7 +71,7 @@
         "title": "JavaScript",
         "logo": "/assets/images/logos/js_logo_512.png",
         "techStack": {
-            "url": "sass",
+            "url": "javascript",
             "links": [{
                 "title": "JavaScript MDN",
                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
@@ -114,7 +114,7 @@
         "text": "An open-source programming language developed and maintained by Microsoft.",
         "logo": "/assets/images/logos/typescript_logo_512.png",
         "techStack": {
-            "url": "sass",
+            "url": "typescript",
             "links": [{
                 "title": "JavaScript MDN",
                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"

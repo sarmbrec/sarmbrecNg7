@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 // import { switchMap } from 'rxjs/operators';
-// import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 // import { Observable } from 'rxjs';
 // import { Kb } from '../kb';
-// import { DataService } from 'src/app/data.service';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-kb-detail',
@@ -12,54 +12,80 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KbDetailComponent implements OnInit {
 
+  knowledgeBase: any;
   //kb$: Observable<Kb>;
   kbDetailCategory: string = "";
   kbDetailId: string = "";
-  knowledgeBase: {};
+  kbDetail: any;
+  http: any;
+
+
+
+  arrayObj: [];
+  objectData: any;
+
+
 
 
   constructor(
-    // private data: DataService,
-    // private route: ActivatedRoute,
-    // private router: Router,
+    private data: DataService,
+    private route: ActivatedRoute,
+     private router: Router,
     //private service: KbService
   ) { }
 
   ngOnInit() {
 
-  //   this.data.getKnowledgeBase().subscribe(data => {      
-  //     this.knowledgeBase = data;
-  //     console.log('KbDetailComponent | ngOnInit | knowledgeBase = ', this.knowledgeBase)
-      
-  //     this.kbDetailId = this.route.snapshot.params.id;
-  //     this.kbDetailCategory = data[0].find(hero => hero.id === +id)
-  //  });
+    // this.kbDetailCategory = .data.getKnowledgeBase().subscribe(data => {      
+    //   this.knowledgeBase = data;
+    //   this.http.get('/users/'+this.kbDetailId)
+    // });
 
-
-  //  this.route.paramMap.subscribe(params => {
-
-      
-
-  //     // this.products.forEach((p: Product) => {
-  //     //   if (p.id == params.id) {
-  //     //     this.product = p;
-  //     //   }
-  //     // });
-  //   });
-
-    
-  //  this.route.paramMap.subscribe(params => {
-  //   this.knowledgeBase.forEach((p: this.knowledgeBase: any) => {
-  //     if (p.id == params.id) {
-  //       this.kbDetailId = p;
+  //   function findObjectByKey(array, key, value) {
+  //     for (var i = 0; i < array.length; i++) {
+  //         if (array[i][key] === value) {
+  //             return array[i];
+  //         }
   //     }
-  //   });
-  //});
+  //     return null;
+  // }
 
-    // this.hero$ = this.route.paramMap.pipe(
-    //   switchMap((params: ParamMap) =>
-    //     this.service.getHero(params.get('id')))
-    // );
+
+
+
+
+
+  
+    this.data.getKnowledgeBase().subscribe(data => {      
+
+      //this.knowledgeBase = data.json()['results'];
+
+        
+      this.kbDetailId = this.route.snapshot.params.id;       
+      this.knowledgeBase = data;
+
+      //console.log('data = ', data)
+      //console.log('KbDetailComponent | ngOnInit | knowledgeBase = ', this.knowledgeBase);
+      
+      //convert to array
+      //let coins = [];
+      for (let key in this.knowledgeBase) {
+        if(this.knowledgeBase[key].techStack.url === this.kbDetailId){
+          console.log(this.knowledgeBase[key].techStack.url, ' === ', this.kbDetailId)
+          console.log(this.knowledgeBase[key].title)
+          return this.kbDetail = this.knowledgeBase[key];
+         
+        }
+        // console.log(data[key].title)
+        // coins.push(data[key]);
+
+      }
+
+
+
+  });
+
+
   }
 
 }
