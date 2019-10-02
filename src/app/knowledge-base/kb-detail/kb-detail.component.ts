@@ -14,6 +14,7 @@ export class KbDetailComponent implements OnInit {
 
   //kb$: Observable<Kb>;
   kbDetailCategory: string = "";
+  kbDetailId: string = "";
   knowledgeBase: {};
 
 
@@ -26,25 +27,25 @@ export class KbDetailComponent implements OnInit {
 
   ngOnInit() {
 
-    this.data.getKnowledgeBase().subscribe(data => {      
-      this.knowledgeBase = data;
-      console.log('KbDetailComponent | ngOnInit | knowledgeBase = ', this.knowledgeBase)
+  //   this.data.getKnowledgeBase().subscribe(data => {      
+  //     this.knowledgeBase = data;
+  //     console.log('KbDetailComponent | ngOnInit | knowledgeBase = ', this.knowledgeBase)
       
-      this.kbDetailCategory = this.route.snapshot.params.id;
+  //     this.kbDetailId = this.route.snapshot.params.id;
+  //     this.kbDetailCategory = data[0].find(hero => hero.id === +id)
+  //  });
 
-   });
 
-
-   this.route.paramMap.subscribe(params => {
+  //  this.route.paramMap.subscribe(params => {
 
       
 
-      // this.products.forEach((p: Product) => {
-      //   if (p.id == params.id) {
-      //     this.product = p;
-      //   }
-      // });
-    });
+  //     // this.products.forEach((p: Product) => {
+  //     //   if (p.id == params.id) {
+  //     //     this.product = p;
+  //     //   }
+  //     // });
+  //   });
 
     
   //  this.route.paramMap.subscribe(params => {
