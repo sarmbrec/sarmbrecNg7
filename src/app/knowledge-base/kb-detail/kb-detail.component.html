@@ -2,21 +2,29 @@
     <div class="container" *ngIf="kbDetail">
         <div class="row">
 
-            <div class="col-8">
-                <h1>Knowledge Base</h1>
-                <h2>{{kbDetail.title}}</h2>
-                <p class="">{{kbDetail.subTitle}}</p>
-                <p class="">
-                    {{kbDetail.text}}
-                </p>
-            </div>
 
             <!-- <p class="lead">
             <a [routerLink]="['/kb', 'angularjs']">{{kbDetail.subTitle}}</a>
         </p> -->
 
+            <h1>Knowledge Base</h1>
+            <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
+            <ul id="ul-links" class="list-group" *ngIf="kbDetail.links">
+                <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
+            </ul>
+            <h2>{{kbDetail.title}}</h2>
+            <p class="">{{kbDetail.subTitle}}</p>
+            <p class="">
+                {{kbDetail.text}}
+            </p>
 
-            <div class="col-4">
+
+
+
+            <hr>
+            <hr>
+            <hr>
+            <div class="col-md-4 order-md-1">
 
                 <div class="text-center">
                     <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
@@ -43,6 +51,16 @@
                 </div>
 
             </div>
+
+            <div class="col-8-md order-md-2">
+                <h1>Knowledge Base</h1>
+                <h2>{{kbDetail.title}}</h2>
+                <p class="">{{kbDetail.subTitle}}</p>
+                <p class="">
+                    {{kbDetail.text}}
+                </p>
+            </div>
+
 
 
             <p>

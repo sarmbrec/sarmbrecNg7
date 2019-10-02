@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { KnowledgeBaseDetailComponent } from './knowledge-base-detail/knowledge-base-detail.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DefaultAngularLandingPageComponent } from './default-angular-landing-page/default-angular-landing-page.component';
 
 // The App module file is basically where all imports and generated files are recorded 
 // with their configuration metadata in the NgModule object. 
@@ -38,7 +39,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FooterComponent,
     KnowledgeBaseDetailComponent,
     KbDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DefaultAngularLandingPageComponent
   ],
   imports: [
     BrowserModule,

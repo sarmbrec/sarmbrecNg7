@@ -7,9 +7,17 @@ section#kb-detail {
     background-size: cover;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    position: relative;
+    h1 {
+        font-size: .75rem;
+        border-bottom: 1px solid darken($light, 1%);
+    }
     img#logo {
+        // position: absolute;
+        // left: 0;
+        // right: 0;
+        //margin: 0 auto;
         width: 25vw;
         height: auto;
-        margin: 0 auto;
     }
 }
