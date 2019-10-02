@@ -1,9 +1,9 @@
-import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Kb } from '../kb';
-import { DataService } from 'src/app/data.service';
+// import { switchMap } from 'rxjs/operators';
+// import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+// import { Observable } from 'rxjs';
+// import { Kb } from '../kb';
+// import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-kb-detail',
@@ -19,9 +19,9 @@ export class KbDetailComponent implements OnInit {
 
 
   constructor(
-    private data: DataService,
-    private route: ActivatedRoute,
-    private router: Router,
+    // private data: DataService,
+    // private route: ActivatedRoute,
+    // private router: Router,
     //private service: KbService
   ) { }
 
