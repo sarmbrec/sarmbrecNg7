@@ -34,7 +34,7 @@ export class AngularjsComponent implements OnInit {
   ngOnInit() {   
     this.data.getKnowledgeBaseAngularJS().subscribe(data => {      
       this.knowledgeBaseAngularJS = data;
-      this.linksArr = this.knowledgeBaseAngularJS.techStack.links;
+      //this.linksArr = this.knowledgeBaseAngularJS.techStack.links;
       //console.log('ngOnInit | knowledgeBaseAngularJS = ', this.knowledgeBaseAngularJS)
    });
   }

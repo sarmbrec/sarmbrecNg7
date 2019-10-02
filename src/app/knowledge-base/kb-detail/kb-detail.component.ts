@@ -13,25 +13,15 @@ import { DataService } from 'src/app/data.service';
 export class KbDetailComponent implements OnInit {
 
   knowledgeBase: any;
-  //kb$: Observable<Kb>;
+  
   kbDetailCategory: string = "";
   kbDetailId: string = "";
   kbDetail: any;
-  http: any;
-
-
-
-  arrayObj: [];
-  objectData: any;
-
-
-
 
   constructor(
     private data: DataService,
     private route: ActivatedRoute,
-     private router: Router,
-    //private service: KbService
+    private router: Router
   ) { }
 
   ngOnInit() {
