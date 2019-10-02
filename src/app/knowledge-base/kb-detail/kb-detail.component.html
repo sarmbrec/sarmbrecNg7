@@ -1,16 +1,50 @@
-<div class="container" *ngIf="kbDetail">
-    <div class="row">
-        <div class="col-12">
+<section id="kb-detail">
+    <div class="container" *ngIf="kbDetail">
+        <div class="row">
 
-            <h1>{{kbDetail.title}}</h1>
+            <div class="col-8">
+                <h1>Knowledge Base</h1>
+                <h2>{{kbDetail.title}}</h2>
+                <p class="">{{kbDetail.subTitle}}</p>
+                <p class="">
+                    {{kbDetail.text}}
+                </p>
+            </div>
+
+            <!-- <p class="lead">
+            <a [routerLink]="['/kb', 'angularjs']">{{kbDetail.subTitle}}</a>
+        </p> -->
 
 
-            <p class="lead">
-                <a [routerLink]="['/kb', 'angularjs']">{{kbDetail.subTitle}}</a>
-            </p>
-            <p class="">
-                {{kbDetail.text}}
-            </p>
+            <div class="col-4">
+
+                <div class="text-center">
+                    <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
+                </div>
+                <hr class="mt-2 mb-2">
+                <ul id="ul-item-links" class="list-group" *ngIf="kbDetail.links">
+                    <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
+                </ul>
+
+
+                <div class="card shadow">
+                    <div class="card-body">
+
+                        <h3 class="card-title">{{kbDetail.title}}</h3>
+                        <h6 class="card-subtitle">{{kbDetail.subTitle}}</h6>
+
+                        <p class="card-text">{{kbDetail.text}}</p>
+                        <!-- <a *ngIf="item.techStack" class="btn btn-light btn-outline-dark btn-block" routerLink="/{{item.techStack.url}}">My {{item.title}} Resources</a> -->
+                        <!-- <a [routerLink]="['/hero', hero.id]"> -->
+                        <a *ngIf="kbDetail.techStack" class="btn btn-light btn-outline-dark btn-block" [routerLink]="['/kb',kbDetail.techStack.url]">My {{kbDetail.title}} Resources</a>
+                        <hr class="mt-3 mb-2" *ngIf="kbDetail.links">
+
+                    </div>
+                </div>
+
+            </div>
+
+
             <p>
                 knowledgeBase = {{knowledgeBase}}
             </p>
@@ -28,4 +62,5 @@
 
         </div>
     </div>
-</div>
+
+</section>

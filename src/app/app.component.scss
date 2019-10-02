@@ -8,6 +8,7 @@ body,
 html {
     height: 100%;
     margin: 0 auto;
+    background: $light;
 }
 
 body {
@@ -68,6 +69,11 @@ body {
     }
     &.gray-scale-25 {
         filter: grayscale(25%);
+    }
+    code {
+        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+        font-size: 12px;
+        font-weight: normal;
     }
 }
 
