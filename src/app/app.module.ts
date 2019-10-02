@@ -1,5 +1,3 @@
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,8 +19,6 @@ import { FooterComponent } from './footer/footer.component';
 import { KnowledgeBaseDetailComponent } from './knowledge-base-detail/knowledge-base-detail.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
 
 // The App module file is basically where all imports and generated files are recorded 
 // with their configuration metadata in the NgModule object. 
@@ -51,14 +47,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     NgbModule,
     AppRoutingModule,
     //BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    //HttpClientModule,
     // FormsModule,
     // RouterModule.forRoot([
     //   { path: '', component: HomeComponent, pathMatch: 'full' },
     //   { path: 'counter', component: CounterComponent },
     //   { path: 'fetch-data', component: FetchDataComponent },
-    // ])
-    
+    // ])   
   ],
   providers: [],
   bootstrap: [AppComponent]
