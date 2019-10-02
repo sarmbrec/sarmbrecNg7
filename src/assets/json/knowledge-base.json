@@ -82,6 +82,9 @@
         "links": [{
             "title": "JavaScript MDN",
             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        }, {
+            "title": "Loading 3d models",
+            "url": "https://threejs.org/docs/index.html#manual/en/introduction/Loading-3D-models"
         }]
     },
     {

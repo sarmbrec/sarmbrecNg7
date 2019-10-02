@@ -13,11 +13,13 @@
         opacity: .5;
         color: $white;
         text-shadow: 0.015rem 0.25rem 0.75rem rgba($dark, .5);
-        transition: all .15s linear;
-        -webkit-transition: all .15s linear;
+        transition: all .12s linear;
+        -webkit-transition: all .12s linear;
         line-height: 1;
+        transform: scale(1);
         &:hover {
             opacity: 1;
+            transform: scale(1.1);
         }
     }
 }
@@ -28,9 +30,9 @@
 
 @include media-breakpoint-up(md) {
     #social-icon-links {
-        right: 1.5rem;
+        right: 1.15rem;
         top: 3.5rem;
-        font-size: 3rem;
+        font-size: 2.75rem;
         a {
             display: block;
             margin-bottom: .75rem;

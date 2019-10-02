@@ -18,8 +18,6 @@
                     <h6 class="card-subtitle">{{item.subTitle}}</h6>
                     <hr class="mt-1 mb-2">
                     <p class="card-text">{{item.text}}</p>
-                    <a class="btn btn-light btn-outline-success btn-block" routerLink="/kb/angularjs">test</a>
-
                     <!-- <a *ngIf="item.techStack" class="btn btn-light btn-outline-dark btn-block" routerLink="/{{item.techStack.url}}">My {{item.title}} Resources</a> -->
                     <!-- <a [routerLink]="['/hero', hero.id]"> -->
                     <a *ngIf="item.techStack" class="btn btn-light btn-outline-dark btn-block" [routerLink]="['/kb',item.techStack.url]">My {{item.title}} Resources</a>
