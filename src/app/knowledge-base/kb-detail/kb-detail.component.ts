@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KbDetailComponent implements OnInit {
 
+  showTab: string = 'getting-started';
+
   constructor() { }
 
   ngOnInit() {
