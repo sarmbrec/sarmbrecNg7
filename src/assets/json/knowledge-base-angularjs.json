@@ -39,12 +39,16 @@
     "techStack": {
         "url": "angularjs",
         "links": [{
-                "title": "Creating from scratch guide",
+                "title": "Documentation",
                 "url": "https://angular.io/"
             },
             {
-                "title": "Creating from visual studio guide",
+                "title": "Tutorial",
                 "url": "https://angular.io/start"
+            },
+            {
+                "title": "CLI",
+                "url": "https://angular.io/cli"
             }
         ]
     }

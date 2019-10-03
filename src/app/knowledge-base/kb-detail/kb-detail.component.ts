@@ -62,7 +62,7 @@ export class KbDetailComponent implements OnInit {
       for (let key in this.knowledgeBase) {
         if(this.knowledgeBase[key].techStack.url === this.kbDetailId){
           console.log(this.knowledgeBase[key].techStack.url, ' === ', this.kbDetailId)
-          console.log(this.knowledgeBase[key].title)
+          console.log(this.knowledgeBase[key])
           return this.kbDetail = this.knowledgeBase[key];
          
         }

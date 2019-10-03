@@ -2,7 +2,7 @@
     <div class="container" *ngIf="kbDetail">
         <div class="row">
 
-            <div class="col-md-3 order-md-2 text-center">
+            <div class="col-md-4 order-md-2 text-center">
                 <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
                 <!-- <hr class="mt-2 mb-2"> -->
                 <ul id="ul-item-links" class="list-group text-left" *ngIf="kbDetail.links">
@@ -14,7 +14,7 @@
 
             </div>
 
-            <div class="col-md-9 order-md-1">
+            <div class="col-md-8 order-md-1">
                 <h1>{{kbDetail.title}}</h1>
                 <div class="kb">Knowledge Base</div>
                 <h2>header 2</h2>
