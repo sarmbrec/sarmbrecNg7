@@ -18,7 +18,7 @@ section#kb-detail {
     .kb {
         color: darken($light, 25%);
         font-size: .75rem;
-        // margin-bottom: 2rem;
+        margin-bottom: .5rem;
         padding-right: .25rem;
         text-align: right;
     }
@@ -27,13 +27,43 @@ section#kb-detail {
         // border-bottom: 1px solid darken($light, 25%);
         //margin-bottom: 2rem;
     }
-    img#logo {
-        // position: absolute;
-        // left: 0;
-        // right: 0;
-        //margin: 0 auto;
-        width: 200px;
-        height: auto;
-        margin-bottom: 1rem;
+    .card {
+        text-align: center;
+        img#logo {
+            // position: absolute;
+            // left: 0;
+            // right: 0;
+            //margin: 0 auto;
+            width: 200px;
+            height: auto;
+            margin: 1rem auto;
+        }
+        .sub-title {
+            font-size: .75rem;
+            color: darken($light, 25%);
+        }
+        ul#ul-item-links {
+            li {
+                padding: 0;
+                a {
+                    display: block;
+                    text-align: left;
+                    padding: .75rem 1rem;
+                    font-size: .8rem;
+                    color: rgba($dark, 1);
+                    background-color: transparent;
+                    -webkit-transition: all .1s linear;
+                    transition: all .1s linear;
+                    border-left: 5px solid transparent;
+                    &:hover {
+                        // color: rgba($white, .8);
+                        text-decoration: none;
+                        // background-color: lighten($dark, 15%);
+                        background-color: $light;
+                        border-left: 5px solid $primary;
+                    }
+                }
+            }
+        }
     }
 }

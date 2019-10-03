@@ -208,12 +208,16 @@
             ]
         },
         "links": [{
-                "title": "Documentation",
-                "url": "https://angular.io/"
+                "title": "Angular Docs",
+                "url": "https://angular.io/docs"
             },
             {
-                "title": "Tutorial",
+                "title": "Getting Started with Angular",
                 "url": "https://angular.io/start"
+            },
+            {
+                "title": "CLI command-language syntax",
+                "url": "https://angular.io/cli"
             }
         ]
     },
