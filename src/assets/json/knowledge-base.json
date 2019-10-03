@@ -200,6 +200,10 @@
                 {
                     "title": "Tutorial",
                     "url": "https://angular.io/start"
+                },
+                {
+                    "title": "CLI",
+                    "url": "https://angular.io/cli"
                 }
             ]
         },

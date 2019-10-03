@@ -2,71 +2,45 @@
     <div class="container" *ngIf="kbDetail">
         <div class="row">
 
-
-            <!-- <p class="lead">
-            <a [routerLink]="['/kb', 'angularjs']">{{kbDetail.subTitle}}</a>
-        </p> -->
-
-            <h1>Knowledge Base</h1>
-            <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
-            <ul id="ul-links" class="list-group" *ngIf="kbDetail.links">
-                <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
-            </ul>
-            <h2>{{kbDetail.title}}</h2>
-            <p class="">{{kbDetail.subTitle}}</p>
-            <p class="">
-                {{kbDetail.text}}
-            </p>
-
-
-
-
-            <hr>
-            <hr>
-            <hr>
-            <div class="col-md-4 order-md-1">
-
-                <div class="text-center">
-                    <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
-                </div>
-                <hr class="mt-2 mb-2">
-                <ul id="ul-item-links" class="list-group" *ngIf="kbDetail.links">
-                    <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
+            <div class="col-md-3 order-md-2 text-center">
+                <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
+                <!-- <hr class="mt-2 mb-2"> -->
+                <ul id="ul-item-links" class="list-group text-left" *ngIf="kbDetail.links">
+                    <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a">
+                        <a [href]="link.url" class="" target="_blank">{{link.title}}</a>
+                    </li>
                 </ul>
 
 
-                <div class="card shadow">
-                    <div class="card-body">
-
-                        <h3 class="card-title">{{kbDetail.title}}</h3>
-                        <h6 class="card-subtitle">{{kbDetail.subTitle}}</h6>
-
-                        <p class="card-text">{{kbDetail.text}}</p>
-                        <!-- <a *ngIf="item.techStack" class="btn btn-light btn-outline-dark btn-block" routerLink="/{{item.techStack.url}}">My {{item.title}} Resources</a> -->
-                        <!-- <a [routerLink]="['/hero', hero.id]"> -->
-                        <a *ngIf="kbDetail.techStack" class="btn btn-light btn-outline-dark btn-block" [routerLink]="['/kb',kbDetail.techStack.url]">My {{kbDetail.title}} Resources</a>
-                        <hr class="mt-3 mb-2" *ngIf="kbDetail.links">
-
-                    </div>
-                </div>
-
             </div>
 
-            <div class="col-8-md order-md-2">
-                <h1>Knowledge Base</h1>
-                <h2>{{kbDetail.title}}</h2>
+            <div class="col-md-9 order-md-1">
+                <h1>{{kbDetail.title}}</h1>
+                <div class="kb">Knowledge Base</div>
+                <h2>header 2</h2>
                 <p class="">{{kbDetail.subTitle}}</p>
                 <p class="">
                     {{kbDetail.text}}
                 </p>
+
+
+                <div class="alert alert-info">
+                    I think i need child parent route here so i can do html templates as dynamic content for this section
+                </div>
+
             </div>
 
+            <!-- <div class="col-12 order-md-3">
+                <div class="alert alert-info">
+                    I think i need child parent route here so i can do html templates as dynamic content for this section
+                </div>
+            </div> -->
 
-
+            <!-- 
             <p>
                 knowledgeBase = {{knowledgeBase}}
             </p>
-            <!-- <p>
+            <p>
                 test = {{test}}
                 <br> {{test.title}}
             </p>
