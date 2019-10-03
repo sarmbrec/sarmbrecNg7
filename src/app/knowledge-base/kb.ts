@@ -1,4 +1,5 @@
 export class Kb {
   category: string;
-  name: string;
+  title: string;
+  subTitle: string;
 }

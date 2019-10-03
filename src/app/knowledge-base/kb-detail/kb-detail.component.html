@@ -2,13 +2,28 @@
     <div class="container" *ngIf="kbDetail">
         <div class="row">
 
+
+
             <div class="col-md-8 order-2 order-md-1">
                 <h1>{{kbDetail.title}}</h1>
                 <div class="kb">Knowledge Base</div>
+
+
+                <nav>
+                    <a href="">Getting Started</a>
+                </nav>
+
                 <!-- <p class="">
                     {{kbDetail.text}}
                 </p> -->
-                <h2>Requirements</h2>
+
+
+                <hr class="mt-4 mb-4" />
+
+                <app-heroes></app-heroes>
+
+
+                <!-- <h2>Requirements</h2>
                 <ul class="">
                     <li><a href="https://git-scm.com/downloads" target="_blank">Download git</a> - You need git to clone the angular-seed repository.</li>
                     <li><a href="https://nodejs.org/" target="_blank">Download node.js</a> - You must have Node.js and its package manager (npm) installed.</li>
@@ -23,10 +38,10 @@
                         <li>git commit -m &quot;Some message about the change&quot;</li>
                         <li>git push -u origin &quot;branch-name&quot;</li>
                     </ul>
-                </code>
+                </code> -->
 
                 <hr class="mt-4 mb-4" />
-
+                <!-- 
 
                 <h2>Create AngularJS Application</h2>
                 <ul class="nav nav-tabs" id="angularjs-tabs" role="tablist">
@@ -63,18 +78,18 @@
 
                         <h3>Clone seed</h3>
                         <code>
-                                git clone https://github.com/sarmbrec/sarmbrec-angularjs-seed.git
-                                <br />
-                                cd sarmbrec-angularjs-seed
-                            </code>
+                            git clone https://github.com/sarmbrec/sarmbrec-angularjs-seed.git
+                            <br />
+                            cd sarmbrec-angularjs-seed
+                        </code>
 
 
                         <h3>…or push an existing repository from the command line</h3>
                         <code>
-                                git remote add origin https://github.com/sarmbrec/sarmbrec-angularjs-seed.git
-                                <br />
-                                git push -u origin master
-                            </code>
+                            git remote add origin https://github.com/sarmbrec/sarmbrec-angularjs-seed.git
+                            <br />
+                            git push -u origin master
+                        </code>
 
 
                         <h3>…or create a new repository on the command line</h3>
@@ -184,6 +199,7 @@
                     </div>
                 </div>
 
+            -->
                 <div class="alert alert-info">
                     I think i need child parent route here so i can do html templates as dynamic content for this section
                 </div>
@@ -194,9 +210,9 @@
 
             <div class="col-md-4 order-1 order-md-2">
 
-                <div class="card">
+                <!-- <div class="card">
                     <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
-                    <!-- <hr class="mt-2 mb-2"> -->
+
                     <p class="sub-title">{{kbDetail.subTitle}}</p>
                     <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.links">
                         <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a">
@@ -204,6 +220,22 @@
                         </li>
                     </ul>
                 </div>
+
+
+                <nav class="mt-2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="">Getting Started</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="">Getting Started</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="">Getting Started</a>
+                        </li>
+                    </ul>
+                </nav>
+
 
                 <hr class="mt-4 mb-4" />
                 <h3>Requirements</h3>
@@ -223,31 +255,8 @@
                         </ul>
                     </code>
 
-                <hr class="mt-4 mb-4" />
+                <hr class="mt-4 mb-4" /> -->
             </div>
-
-
-            <div class="col-12 order-md-3">
-                <div class="alert alert-info">
-                    I think i need child parent route here so i can do html templates as dynamic content for this section
-                </div>
-            </div>
-
-            <!-- 
-            <p>
-                knowledgeBase = {{knowledgeBase}}
-            </p>
-            <p>
-                test = {{test}}
-                <br> {{test.title}}
-            </p>
-            
-            <p>
-                kbDetailId = {{kbDetailId}}
-            </p>
-            <p>
-                kbDetailCategory = {{kbDetailCategory}}
-            </p> -->
 
         </div>
     </div>

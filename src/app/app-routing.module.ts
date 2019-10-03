@@ -6,9 +6,9 @@ import { AboutComponent } from './about/about.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { AngularjsComponent } from './angularjs/angularjs.component';
-
 import { DefaultAngularLandingPageComponent } from './default-angular-landing-page/default-angular-landing-page.component';
 import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { HeroesComponent } from './heroes/heroes.component';
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'angularjs', component: AngularjsComponent},
   {path: 'applandingpage', component: DefaultAngularLandingPageComponent},
   {path: 'angularjs', component: AngularjsComponent},
+  {path: 'heroes', component: HeroesComponent},
   {path: '', component: HomeComponent, pathMatch: "full"},
   { path: '**', component: PageNotFoundComponent }
 ];

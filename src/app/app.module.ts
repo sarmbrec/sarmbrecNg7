@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule } from '@angular/forms';
-//import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -20,6 +20,8 @@ import { KnowledgeBaseDetailComponent } from './knowledge-base-detail/knowledge-
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DefaultAngularLandingPageComponent } from './default-angular-landing-page/default-angular-landing-page.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 // The App module file is basically where all imports and generated files are recorded 
 // with their configuration metadata in the NgModule object. 
@@ -40,7 +42,9 @@ import { DefaultAngularLandingPageComponent } from './default-angular-landing-pa
     KnowledgeBaseDetailComponent,
     KbDetailComponent,
     PageNotFoundComponent,
-    DefaultAngularLandingPageComponent
+    DefaultAngularLandingPageComponent,
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -48,8 +52,9 @@ import { DefaultAngularLandingPageComponent } from './default-angular-landing-pa
     ReactiveFormsModule,
     NgbModule,
     AppRoutingModule,
+    FormsModule
     //BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    // FormsModule,
+    
     // RouterModule.forRoot([
     //   { path: '', component: HomeComponent, pathMatch: 'full' },
     //   { path: 'counter', component: CounterComponent },

@@ -17,6 +17,12 @@ export class DataService {
 //     return this.http.get('../assets/json/knowledge-base.json').map(res => res.json());
 //   }
 
+getHero(id: number): Observable<Hero> {
+  // TODO: send the message _after_ fetching the hero
+  //this.messageService.add(`HeroService: fetched hero id=${id}`);
+  return of(HEROES.find(hero => hero.id === id));
+}
+
   getKB(): Observable<any> {
     const api = '../assets/json/kb.json';
     return this.http.get(api);    
