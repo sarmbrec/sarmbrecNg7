@@ -16,7 +16,7 @@ import { GitHubIconLinkComponent } from './git-hub-icon-link/git-hub-icon-link.c
 import { AngularjsComponent } from './angularjs/angularjs.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { FooterComponent } from './footer/footer.component';
-import { KnowledgeBaseDetailComponent } from './knowledge-base-detail/knowledge-base-detail.component';
+
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DefaultAngularLandingPageComponent } from './default-angular-landing-page/default-angular-landing-page.component';
@@ -39,8 +39,7 @@ import { MessagesComponent } from './messages/messages.component';
     GitHubIconLinkComponent,
     AngularjsComponent,
     KnowledgeBaseComponent,
-    FooterComponent,
-    KnowledgeBaseDetailComponent,
+    FooterComponent,    
     KbDetailComponent,
     PageNotFoundComponent,
     DefaultAngularLandingPageComponent,

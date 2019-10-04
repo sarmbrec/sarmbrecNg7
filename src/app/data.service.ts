@@ -15,6 +15,16 @@ export class DataService {
   getKnowledgeBase(){
     return this.http.get('../assets/json/knowledge-base.json');
   }
+
+  getCarouselTechStack(){
+    return this.http.get('../assets/json/carousel-tech-stack.json');
+  }
+    
+  getUsers(){
+    return this.http.get('https://reqres.in/api/users');
+  }
+
+
 // getKBase(): Observable<any>{
 //     return this.http.get('../assets/json/knowledge-base.json').map(res => res.json());
 //   }
@@ -31,19 +41,9 @@ export class DataService {
   //   return of(HEROES.find(hero => hero.id === id));    
   //   return this.http.get(api);    
   // }
-  getKnowledgeBaseAngularJS(){
-    return this.http.get('../assets/json/knowledge-base-angularjs.json');
-  }
-
-  getCarouselTechStack(){
-    return this.http.get('../assets/json/carousel-tech-stack.json');
-  }
-    
-  getUsers(){
-    return this.http.get('https://reqres.in/api/users');
-  }
-
-
+  // getKnowledgeBaseAngularJS(){
+  //   return this.http.get('../assets/json/knowledge-base-angularjs.json');
+  // }
   // getKb(): Observable<Kb[]> {
   //   // TODO: send the message _after_ fetching the heroes
   //   this.messageService.add('KbService: fetched Kb');
