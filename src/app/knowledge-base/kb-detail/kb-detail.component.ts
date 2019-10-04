@@ -24,36 +24,36 @@ export class KbDetailComponent implements OnInit {
   kbDetail: any;
 
   constructor(
-    private data: DataService,
     private route: ActivatedRoute,
+    private dataService: DataService,
     private location: Location
   ) { }
 
   ngOnInit(): void {
   
-    this.getKbData();
-    // this.data.getKnowledgeBase().subscribe(data => {
-    //   this.kbDetailId = this.route.snapshot.params.id;       
-    //   this.knowledgeBase = data;
-    //   for (let key in this.knowledgeBase) {
-    //     if(this.knowledgeBase[key].techStack.url === this.kbDetailId){
-    //       console.log(this.knowledgeBase[key].techStack.url, ' === ', this.kbDetailId)
-    //       console.log(this.knowledgeBase[key])
-    //       return this.kbDetail = this.knowledgeBase[key];         
-    //     }
-    //   }
-    // });
+    //this.getKbData();
+    this.dataService.getKnowledgeBase().subscribe(data => {
+      this.kbDetailId = this.route.snapshot.params.id;       
+      this.knowledgeBase = data;
+      for (let key in this.knowledgeBase) {
+        if(this.knowledgeBase[key].techStack.url === this.kbDetailId){
+          console.log(this.knowledgeBase[key].techStack.url, ' === ', this.kbDetailId)
+          console.log(this.knowledgeBase[key])
+          return this.kbDetail = this.knowledgeBase[key];         
+        }
+      }
+    });
 
   }
 
-  getKbData(): void {
+  // getKbData(): void {
 
-    // + converts id to a number
-    //const id = +this.route.snapshot.paramMap.get('id');
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log('id = ', id)
-
-  }
+  //   // + converts id to a number
+  //   //const id = +this.route.snapshot.paramMap.get('id');
+  //   const id = this.route.snapshot.paramMap.get('id');
+  //   console.log('id = ', id)
+  //   this.dataService.getKB(id).subscribe
+  // }
 
 
 }

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { Hero } from './hero';
+import { HEROES } from './mock-heroes';
 
 
 @Injectable({
@@ -17,19 +19,21 @@ export class DataService {
 //     return this.http.get('../assets/json/knowledge-base.json').map(res => res.json());
 //   }
 
-getHero(id: number): Observable<Hero> {
-  // TODO: send the message _after_ fetching the hero
-  //this.messageService.add(`HeroService: fetched hero id=${id}`);
-  return of(HEROES.find(hero => hero.id === id));
-}
+// getHero(id: number): Observable<Hero> {
+//   // TODO: send the message _after_ fetching the hero
+//   //this.messageService.add(`HeroService: fetched hero id=${id}`);
+//   return of(HEROES.find(hero => hero.id === id));
+// }
 
-  getKB(): Observable<any> {
-    const api = '../assets/json/kb.json';
-    return this.http.get(api);    
-  }
-  getKnowledgeBaseAngularJS(){
-    return this.http.get('../assets/json/knowledge-base-angularjs.json');
-  }
+  // getKB(id: string): Observable<any> {
+  //   const api = '../assets/json/kb.json';
+  //   this.messageService.add(`HeroService: fetched hero id=${id}`);
+  //   return of(HEROES.find(hero => hero.id === id));    
+  //   return this.http.get(api);    
+  // }
+  // getKnowledgeBaseAngularJS(){
+  //   return this.http.get('../assets/json/knowledge-base-angularjs.json');
+  // }
 
   getCarouselTechStack(){
     return this.http.get('../assets/json/carousel-tech-stack.json');
