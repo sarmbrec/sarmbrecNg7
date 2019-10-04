@@ -4,22 +4,76 @@
 section#page-not-found {
     height: 90vh;
     width: 100%;
-    background-color: transparent;
-    background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($primary, .1), rgba($primary, .3));
+    background-image: url("../../assets/images/backgrounds/floodedroad.jpg");
+    background-attachment: scroll;
+    background-position: left bottom;
     background-size: cover;
-    h1 {
+    background-repeat: no-repeat;
+    color: rgba($light, 1);
+    position: relative;
+    &:before {
+        content: "";
         display: block;
-        border-bottom: 1px solid rgba($light, .7);
-        color: rgba($light, .7);
-        font-size: 10rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background-image: linear-gradient(to bottom, rgba($primary, 1) 15%, rgba($primary, .2), rgba($primary, .4));
+        background-size: cover;
+    }
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        display: inline-block;
+        color: rgba($light, .3);
+        font-size: 7rem;
         letter-spacing: -4px;
+        margin-bottom: 0;
+        line-height: 1;
     }
     h2 {
+        text-align: right;
+        margin-left: 1rem;
+        font-family: 'Montserrat';
+        font-size: .8rem;
+        color: rgba($light, .7);
         display: inline-block;
     }
-    #clip-art {
-        display: inline-block;
-        height: 250px;
-        width: auto;
+    .lead {
+        margin: 4.5rem 0 0 0;
+        font-size: .8rem;
+        text-align: right;
+        color: rgba($light, .7);
+        font-style: italic;
     }
 }
+
+// 320
+@include media-breakpoint-up(xs) {}
+
+// 768
+@include media-breakpoint-up(sm) {
+    section#page-not-found {
+        // background-position: right bottom;
+        h1 {
+            font-size: 25vh;
+            letter-spacing: -4px;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-between(md,
+xl) {}
