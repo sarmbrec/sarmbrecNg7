@@ -31,6 +31,11 @@ export class KbDetailComponent implements OnInit {
 
   ngOnInit(): void {
   
+      const id = this.route.snapshot.paramMap.get('id');
+    console.log('id = ', id)
+
+    //stephen pick up here and pass id into service try to use find to return item from array
+
     //this.getKbData();
     this.dataService.getKnowledgeBase().subscribe(data => {
       this.kbDetailId = this.route.snapshot.params.id;       
@@ -57,3 +62,22 @@ export class KbDetailComponent implements OnInit {
 
 
 }
+
+// use this for detail dynamic content to load html?????
+// import { Component, Input } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+
+// @Component({
+//   selector: 'app-root',
+//   template: `
+//             <div [innerHtml]="myTemplate">
+//             </div>
+//           `,
+//   styleUrls: ['./app.component.css']
+// })
+// export class AppComponent {
+//   private myTemplate: any = '';
+//   constructor(http: HttpClient) {
+//     http.get('/service-path', {responseType: 'text'}).subscribe(data => this.myTemplate = data);
+//   }
+// }

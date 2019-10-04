@@ -31,9 +31,9 @@ export class DataService {
   //   return of(HEROES.find(hero => hero.id === id));    
   //   return this.http.get(api);    
   // }
-  // getKnowledgeBaseAngularJS(){
-  //   return this.http.get('../assets/json/knowledge-base-angularjs.json');
-  // }
+  getKnowledgeBaseAngularJS(){
+    return this.http.get('../assets/json/knowledge-base-angularjs.json');
+  }
 
   getCarouselTechStack(){
     return this.http.get('../assets/json/carousel-tech-stack.json');

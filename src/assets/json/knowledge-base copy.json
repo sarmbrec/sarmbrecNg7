@@ -1,97 +1,4 @@
-[
-
-
-    {
-        "category": "Front end",
-        "title": "Angular",
-        "subTitle": "One framework, mobile and desktop",
-        "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
-        "logo": "/assets/images/logos/Angular_logo_512.png",
-
-
-
-
-        "requirements": [{
-                "text": "You need git to clone the repository.",
-                "link": {
-                    "title": "Download git",
-                    "url": "https://git-scm.com/downloads"
-                }
-            },
-            {
-                "text": "You must have Node.js and its package manager (npm) installed.",
-                "link": {
-                    "title": "Download node.js",
-                    "url": "https://nodejs.org/"
-                }
-            }
-        ],
-
-
-
-
-        "officialdocs": [{
-                "title": "Bootstrap 3",
-                "url": "https://getbootstrap.com/docs/3.3/"
-            },
-            {
-                "title": "Bootstrap 4",
-                "url": "https://getbootstrap.com/docs/4.3/"
-            },
-            {
-                "title": "Material Design Lite",
-                "url": "https://getmdl.io/"
-            }
-        ],
-
-        "tools": [{
-                "title": "Semantic HTML Validator",
-                "url": "https://validator.w3.org/nu/#textarea"
-            },
-            {
-                "title": "Semantic HTML Guide",
-                "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-            }
-        ],
-
-
-
-
-        "techStack": {
-            "url": "angular",
-            "links": [{
-                    "title": "Documentation",
-                    "url": "https://angular.io/"
-                },
-                {
-                    "title": "Tutorial",
-                    "url": "https://angular.io/start"
-                },
-                {
-                    "title": "CLI",
-                    "url": "https://angular.io/cli"
-                }
-            ]
-        },
-        "links": [{
-                "title": "Angular Docs",
-                "url": "https://angular.io/docs"
-            },
-            {
-                "title": "Getting Started with Angular",
-                "url": "https://angular.io/start"
-            },
-            {
-                "title": "CLI command-language syntax",
-                "url": "https://angular.io/cli"
-            }
-        ]
-    },
-
-
-
-
-    {
+[{
         "category": "Front end",
         "title": "HTML 5",
         "subTitle": "Hypertext Markup Language",
@@ -278,7 +185,42 @@
         ]
 
     },
-
+    {
+        "category": "Front end",
+        "title": "Angular",
+        "subTitle": "One framework, mobile and desktop",
+        "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
+        "logo": "/assets/images/logos/Angular_logo_512.png",
+        "techStack": {
+            "url": "angular",
+            "links": [{
+                    "title": "Documentation",
+                    "url": "https://angular.io/"
+                },
+                {
+                    "title": "Tutorial",
+                    "url": "https://angular.io/start"
+                },
+                {
+                    "title": "CLI",
+                    "url": "https://angular.io/cli"
+                }
+            ]
+        },
+        "links": [{
+                "title": "Angular Docs",
+                "url": "https://angular.io/docs"
+            },
+            {
+                "title": "Getting Started with Angular",
+                "url": "https://angular.io/start"
+            },
+            {
+                "title": "CLI command-language syntax",
+                "url": "https://angular.io/cli"
+            }
+        ]
+    },
     {
         "category": "Front end",
         "title": "Accessibility",
