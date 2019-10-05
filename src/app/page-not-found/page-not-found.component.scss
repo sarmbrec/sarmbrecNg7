@@ -6,11 +6,13 @@ section#page-not-found {
     width: 100%;
     background-image: url("../../assets/images/backgrounds/floodedroad.jpg");
     background-attachment: scroll;
-    background-position: left bottom;
+    background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
     color: rgba($light, 1);
     position: relative;
+    -webkit-transition: al .1s linear;
+    transition: all .1s linear;
     &:before {
         content: "";
         display: block;

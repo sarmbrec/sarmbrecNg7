@@ -1,63 +1,47 @@
-[
-
-
-    {
+[{
         "category": "Front end",
         "title": "Angular",
         "subTitle": "One framework, mobile and desktop",
         "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
         "logo": "/assets/images/logos/Angular_logo_512.png",
 
-
-
-
-        "requirements": [{
-                "text": "You need git to clone the repository.",
-                "link": {
-                    "title": "Download git",
-                    "url": "https://git-scm.com/downloads"
+        "requirements": {
+            "links": [{
+                    "text": "You need Git to clone the repository.",
+                    "downloadLink": {
+                        "title": "Download Git",
+                        "url": "https://git-scm.com/downloads"
+                    }
+                },
+                {
+                    "text": "You must have Node.js and its package manager (npm) installed.",
+                    "downloadLink": {
+                        "title": "Download Node.js",
+                        "url": "https://nodejs.org/"
+                    }
+                },
+                {
+                    "text": "CLI Overview and Command Reference",
+                    "downloadLink": {
+                        "title": "Install Angular CLI",
+                        "url": "https://angular.io/cli"
+                    }
+                },
+                {
+                    "text": "Terminal Command",
+                    "codeBlock": "npm install -g @angular/cli"
+                },
+                {
+                    "text": "Install Visual Code for editing.",
+                    "downloadLink": {
+                        "title": "Download Visual Code",
+                        "url": "https://code.visualstudio.com/"
+                    }
                 }
-            },
-            {
-                "text": "You must have Node.js and its package manager (npm) installed.",
-                "link": {
-                    "title": "Download node.js",
-                    "url": "https://nodejs.org/"
-                }
-            }
-        ],
+            ]
+        },
 
-
-
-
-        "officialdocs": [{
-                "title": "Bootstrap 3",
-                "url": "https://getbootstrap.com/docs/3.3/"
-            },
-            {
-                "title": "Bootstrap 4",
-                "url": "https://getbootstrap.com/docs/4.3/"
-            },
-            {
-                "title": "Material Design Lite",
-                "url": "https://getmdl.io/"
-            }
-        ],
-
-        "tools": [{
-                "title": "Semantic HTML Validator",
-                "url": "https://validator.w3.org/nu/#textarea"
-            },
-            {
-                "title": "Semantic HTML Guide",
-                "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-            }
-        ],
-
-
-
-
-        "techStack": {
+        "officialdocs": {
             "url": "angular",
             "links": [{
                     "title": "Documentation",
@@ -66,6 +50,10 @@
                 {
                     "title": "Tutorial",
                     "url": "https://angular.io/start"
+                },
+                {
+                    "title": "Style Guide",
+                    "url": "https://angular.io/guide/styleguide"
                 },
                 {
                     "title": "CLI",
@@ -97,7 +85,7 @@
         "subTitle": "Hypertext Markup Language",
         "text": "The latest evolution of the standard that defines HTML",
         "logo": "/assets/images/logos/HTML5_Badge_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "html5",
             "links": [{
                     "title": "Semantic HTML Validator",
@@ -129,7 +117,7 @@
         "subTitle": "Syntactically Awesome Style Sheets",
         "text": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
         "logo": "/assets/images/logos/sass_logo2_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "sass",
             "links": [{
                 "title": "Sass",
@@ -147,7 +135,7 @@
         "subTitle": "Cascading Style Sheets",
         "text": "The latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1",
         "logo": "/assets/images/logos/css3_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "sass",
             "links": [{
                 "title": "Sass",
@@ -163,7 +151,7 @@
         "category": "Front end",
         "title": "JavaScript",
         "logo": "/assets/images/logos/js_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "javascript",
             "links": [{
                 "title": "JavaScript MDN",
@@ -186,7 +174,7 @@
         "subTitle": "Fun on a bun",
         "text": "A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.",
         "logo": "/assets/images/logos/jquery_logo2_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "jquery",
             "links": [{
                 "title": "JavaScript MDN",
@@ -209,7 +197,7 @@
         "subTitle": "Designed for development of large applications",
         "text": "An open-source programming language developed and maintained by Microsoft.",
         "logo": "/assets/images/logos/typescript_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "typescript",
             "links": [{
                 "title": "JavaScript MDN",
@@ -232,7 +220,7 @@
         "subTitle": "Superheroic JavaScript MVWhatever Framework",
         "text": "What HTML would have been, had it been designed for building web-apps.",
         "logo": "/assets/images/logos/AngularJS_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "angularjs",
             "links": [{
                     "title": "Creating from scratch guide",
@@ -285,7 +273,7 @@
         "subTitle": "ADA Compliancy",
         "text": "Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these.",
         "logo": "/assets/images/logos/accessablitiy_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "accessibility",
             "links": [{
                 "title": "",
@@ -328,7 +316,7 @@
         "subTitle": "How people build software",
         "text": "Brings together the world's largest community of developers to discover, share, and build better software.",
         "logo": "/assets/images/logos/github_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "github",
             "links": [{
                 "title": "",
@@ -355,7 +343,7 @@
         "subTitle": "Free. Cross-platform. Open source.",
         "text": "A framework for building web apps and services with .NET and C#.",
         "logo": "/assets/images/logos/Visual_Studio_Logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "aspnet",
             "links": [{
                 "title": "",
@@ -378,7 +366,7 @@
         "subTitle": "Free. Cross-platform. Open source.",
         "text": "A framework for building web apps and services with .NET and C#.",
         "logo": "/assets/images/logos/csharp_logo2_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "csharp",
             "links": [{
                 "title": "",
@@ -401,7 +389,7 @@
         "subTitle": "Intelligence and security are built in",
         "text": "A relational database management system (RDBMS) developed and marketed by Microsoft. As a database server, the primary function of the SQL Server is to store and retrieve data used by other applications.",
         "logo": "/assets/images/logos/sql_server_logo2_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "sqlserver",
             "links": [{
                 "title": "",
@@ -424,7 +412,7 @@
         "subTitle": "Things that make life easier",
         "text": "",
         "logo": "/assets/images/logos/tools_logo_512.png",
-        "techStack": {
+        "officialdocs": {
             "url": "tools",
             "links": [{
                 "title": "HEX to RGBA converter",

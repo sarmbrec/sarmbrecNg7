@@ -23,6 +23,7 @@ import { DefaultAngularLandingPageComponent } from './default-angular-landing-pa
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { KbHtmlContentComponent } from './knowledge-base/kb-html-content/kb-html-content.component';
 
 // The App module file is basically where all imports and generated files are recorded 
 // with their configuration metadata in the NgModule object. 
@@ -45,7 +46,8 @@ import { MessagesComponent } from './messages/messages.component';
     DefaultAngularLandingPageComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    KbHtmlContentComponent
   ],
   imports: [
     BrowserModule,

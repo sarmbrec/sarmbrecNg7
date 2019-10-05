@@ -41,8 +41,8 @@ export class KbDetailComponent implements OnInit {
       this.kbDetailId = this.route.snapshot.params.id;       
       this.knowledgeBase = data;
       for (let key in this.knowledgeBase) {
-        if(this.knowledgeBase[key].techStack.url === this.kbDetailId){
-          console.log(this.knowledgeBase[key].techStack.url, ' === ', this.kbDetailId)
+        if(this.knowledgeBase[key].officialdocs.url === this.kbDetailId){
+          console.log(this.knowledgeBase[key].officialdocs.url, ' === ', this.kbDetailId)
           console.log(this.knowledgeBase[key])
           return this.kbDetail = this.knowledgeBase[key];         
         }

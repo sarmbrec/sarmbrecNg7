@@ -36,7 +36,7 @@
         }
     ],
     "logo": "/assets/images/logos/AngularJS_logo_512.png",
-    "techStack": {
+    "officialdocs": {
         "url": "angularjs",
         "links": [{
                 "title": "Creating from scratch guide",

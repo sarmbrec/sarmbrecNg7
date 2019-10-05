@@ -5,15 +5,25 @@
 
 
             <div class="col-md-8 order-2 order-md-1">
-                <h1>{{kbDetail.title}}</h1>
+
+                <h1 *ngIf="kbDetail.title">{{kbDetail.title}}</h1>
+
                 <div class="kb">Knowledge Base</div>
 
-                <p class="">
-                    {{kbDetail.text}}
-                </p>
 
+                <!-- <hr class="mt-4 mb-4" /> -->
 
-                <hr class="mt-4 mb-4" />
+                <h2>Getting Started</h2>
+                <p *ngIf="kbDetail.text" [innerHTML]=kbDetail.text></p>
+                <h3 *ngIf="kbDetail.requirements">Requirements</h3>
+                <ol id="ul-requirement-links" class="" *ngIf="kbDetail.requirements && kbDetail.requirements.links">
+                    <li class="m-2 mt-0" *ngFor="let link of kbDetail.requirements.links">
+                        <span [innerHTML]="link.text"></span>
+                        <br>
+                        <a *ngIf="link.downloadLink" [href]="link.downloadLink.url" class="" target="_blank">{{link.downloadLink.title}}</a>
+                        <code *ngIf="link.codeBlock">{{link.codeBlock}}</code>
+                    </li>
+                </ol>
 
 
                 <!-- 

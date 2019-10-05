@@ -35,7 +35,7 @@ body {
         }
         h2 {
             font-family: 'Lato-Light', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 300;
             line-height: 1.5;
         }
@@ -80,6 +80,12 @@ body {
         font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
         font-size: 12px;
         font-weight: normal;
+        background: $light;
+        border: 1px solid darken($light, 15%);
+        border-radius: .25rem;
+        padding: 1rem;
+        width: 100%;
+        display: block;
     }
 }
 
