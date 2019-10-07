@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+//import { DataService } from '../data.service';
+import { KnowledgeBaseService } from './knowledge-base.service';
 import {NgForm} from '@angular/forms';
 @Component({
   selector: 'app-knowledge-base',
@@ -11,13 +12,16 @@ export class KnowledgeBaseComponent implements OnInit {
   //define the result object
   knowledgeBase: {};
 
-  constructor(private data: DataService) { }
+  constructor(
+    //private data: DataService,
+    private kbData: KnowledgeBaseService
+    ) { }
 
   ngOnInit() {
     //TODO: seperate this out to its own services for knowledge base
-    this.data.getKnowledgeBase().subscribe(data => {      
+    this.kbData.getKnowledgeBase().subscribe(data => {      
       this.knowledgeBase = data;
-      //  console.log('ngOnInit | myResult = ', this.myResult)
+      console.log('ngOnInit | KnowledgeBaseComponent = ', this.knowledgeBase)
    });
 
   }

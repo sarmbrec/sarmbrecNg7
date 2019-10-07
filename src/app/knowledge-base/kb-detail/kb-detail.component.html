@@ -13,17 +13,9 @@
 
                 <!-- <hr class="mt-4 mb-4" /> -->
 
-                <h2>Getting Started</h2>
-                <p *ngIf="kbDetail.text" [innerHTML]=kbDetail.text></p>
-                <h3 *ngIf="kbDetail.requirements">Requirements</h3>
-                <ol id="ul-requirement-links" class="" *ngIf="kbDetail.requirements && kbDetail.requirements.links">
-                    <li class="m-2 mt-0" *ngFor="let link of kbDetail.requirements.links">
-                        <span [innerHTML]="link.text"></span>
-                        <br>
-                        <a *ngIf="link.downloadLink" [href]="link.downloadLink.url" class="" target="_blank">{{link.downloadLink.title}}</a>
-                        <code *ngIf="link.codeBlock">{{link.codeBlock}}</code>
-                    </li>
-                </ol>
+
+                <app-kb-html-content></app-kb-html-content>
+                <div [innerHtml]="kbHtml"></div>
 
 
                 <!-- 
@@ -206,23 +198,22 @@
                     </ul>
                 </div>
 
-
                 <nav class="mt-2">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <a href="">Getting Started</a>
+                            <a style="cursor: pointer" role="button" (click)="getKbData($event, 'kb-html-angular.getstarted.html')">Getting Started</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="">Getting Started</a>
+                            <a style="cursor: pointer" role="button" (click)="getKbData($event, 'test.html')">Test File</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="">Getting Started</a>
+                            <a [routerLink]="">Getting Started</a>
                         </li>
                     </ul>
                 </nav>
 
+                <hr class="mt-4 mb-4">
 
-                <hr class="mt-4 mb-4" />
                 <h3>Requirements</h3>
                 <ul class="">
                     <li><a href="https://git-scm.com/downloads" target="_blank">Download git</a> - You need git to clone the angular-seed repository.</li>
@@ -232,15 +223,21 @@
                 <hr class="mt-4 mb-4" />
                 <h3>Git commands</h3>
                 <code>
-                        <ul class="">
-                            <li>npm install bootstrap --save</li>
-                            <li>npm install popper.js --save</li>
-                            <li>git commit -m &quot;Some message about the change&quot;</li>
-                            <li>git push -u origin &quot;branch-name&quot;</li>
-                        </ul>
-                    </code>
+                    <ul>
+                        <li>npm install bootstrap --save</li>
+                        <li>npm install popper.js --save</li>
+                        <li>git commit -m &quot;Some message about the change&quot;</li>
+                        <li>git push -u origin &quot;branch-name&quot;</li>
+                    </ul>
+                </code>
 
                 <hr class="mt-4 mb-4" />
+
+                <h3>Fix for powershell</h3>
+                <p>
+                    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+                </p>
+
                 <!-- -->
             </div>
 

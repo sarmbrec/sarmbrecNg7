@@ -12,9 +12,9 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getKnowledgeBase(){
-    return this.http.get('../assets/json/knowledge-base.json');
-  }
+  // getKnowledgeBase(){
+  //   return this.http.get('../assets/json/knowledge-base.json');
+  // }
 
   getCarouselTechStack(){
     return this.http.get('../assets/json/carousel-tech-stack.json');
