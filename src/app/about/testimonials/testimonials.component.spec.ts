@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GitHubIconLinkComponent } from './git-hub-icon-link.component';
+import { TestimonialsComponent } from './testimonials.component';
 
-describe('GitHubIconLinkComponent', () => {
-  let component: GitHubIconLinkComponent;
-  let fixture: ComponentFixture<GitHubIconLinkComponent>;
+describe('TestimonialsComponent', () => {
+  let component: TestimonialsComponent;
+  let fixture: ComponentFixture<TestimonialsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GitHubIconLinkComponent ]
+      declarations: [ TestimonialsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GitHubIconLinkComponent);
+    fixture = TestBed.createComponent(TestimonialsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

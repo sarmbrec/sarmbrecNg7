@@ -1,0 +1,36 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+// // users fake api list
+// ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//     li {
+//         background: rgb(238, 238, 238);
+//         padding: 2rem;
+//         border-radius: 4px;
+//         margin-bottom: 7px;
+//         display: grid;
+//         grid-template-columns: 60px auto;
+//         p {
+//             font-weight: bold;
+//             margin-left: 20px;
+//         }
+//         img {
+//             border-radius: 50%;
+//             width: 100%;
+//         }
+//     }
+// }
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-between(md, xl) {}

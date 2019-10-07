@@ -12,18 +12,18 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselHomePageComponent } from './carousel-home-page/carousel-home-page.component';
-import { GitHubIconLinkComponent } from './git-hub-icon-link/git-hub-icon-link.component';
-import { AngularjsComponent } from './angularjs/angularjs.component';
+import { SocialComponent } from './nav/social/social.component';
+
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DefaultAngularLandingPageComponent } from './default-angular-landing-page/default-angular-landing-page.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+
 import { MessagesComponent } from './messages/messages.component';
 import { KbHtmlContentComponent } from './knowledge-base/kb-html-content/kb-html-content.component';
+import { TestimonialsComponent } from './about/testimonials/testimonials.component';
 
 // The App module file is basically where all imports and generated files are recorded 
 // with their configuration metadata in the NgModule object. 
@@ -37,17 +37,18 @@ import { KbHtmlContentComponent } from './knowledge-base/kb-html-content/kb-html
     ContactComponent,
     HomeComponent,
     CarouselHomePageComponent,
-    GitHubIconLinkComponent,
-    AngularjsComponent,
+    SocialComponent,
+    
     KnowledgeBaseComponent,
     FooterComponent,    
     KbDetailComponent,
     PageNotFoundComponent,
     DefaultAngularLandingPageComponent,
-    HeroesComponent,
-    HeroDetailComponent,
+    
+    
     MessagesComponent,
-    KbHtmlContentComponent
+    KbHtmlContentComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,

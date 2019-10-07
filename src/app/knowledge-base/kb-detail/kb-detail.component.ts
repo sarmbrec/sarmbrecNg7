@@ -1,15 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { DataService } from 'src/app/data.service';
+import { DataService } from 'src/app/services/data.service';
 import { KnowledgeBaseService } from '../knowledge-base.service';
-//import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { Kb } from '../kb';
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Observable } from 'rxjs';
-// import { Kb } from '../kb';
-// import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-kb-detail',
@@ -23,7 +17,6 @@ export class KbDetailComponent implements OnInit {
   kbDetailCategory: string = "";
   kbDetailId: string = "";
   kbDetail: any;
-  //http: any;
   kbHtml: any;
   kbHtmlId: any;
 
@@ -37,7 +30,7 @@ export class KbDetailComponent implements OnInit {
 
   ngOnInit(): void {
   
-    const id = this.route.snapshot.paramMap.get('id');
+    //const id = this.route.snapshot.paramMap.get('id');
     //console.log('id = ', id)
 
     //stephen pick up here and pass id into service try to use find to return item from array
