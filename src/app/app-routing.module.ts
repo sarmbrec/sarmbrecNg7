@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 
-import { DefaultAngularLandingPageComponent } from './default-angular-landing-page/default-angular-landing-page.component';
+import { DefaultAngularLandingPageComponent } from './home/default-angular-landing-page/default-angular-landing-page.component';
 import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [

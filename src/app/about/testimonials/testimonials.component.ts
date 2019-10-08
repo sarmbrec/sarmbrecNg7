@@ -19,7 +19,7 @@ export class TestimonialsComponent implements OnInit {
     // on component load
     this.data.getUsers().subscribe(data => {
       this.users = data
-      //console.log('HomeComponent | data = ', data)
+      console.log('TestimonialsComponent | data = ', data)
     })
     
   }

@@ -1,0 +1,13 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+section#about {
+    background-color: $light;
+    font-size: .925rem;
+    //background-color: lighten($light, 50%);
+    // background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($primary, .1), rgba($primary, .3)), url("../../assets/images/backgrounds/picnic-table.jpg");
+    //background-image: linear-gradient(to bottom, rgba($primary, 1), rgba($white, 1), rgba($primary, .3));
+    //background-position: left bottom;
+    //background-size: cover;
+    //background-attachment: fixed;
+}

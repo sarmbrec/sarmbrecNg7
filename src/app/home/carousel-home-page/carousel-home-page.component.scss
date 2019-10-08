@@ -218,7 +218,17 @@ section#section-carousel {
     }
 }
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+    section#section-carousel {
+        .carousel-inner {
+            .carousel-item {
+                .carousel-item-background {
+                    background-position: right bottom;
+                }
+            }
+        }
+    }
+}
 
 @include media-breakpoint-up(lg) {}
 

@@ -3,19 +3,12 @@
         <ng-template ngbSlide *ngFor="let item of carouselItems; index as i">
             <div class="carousel-item-background" [ngStyle]="{'background-image':'url(' + item.background + ')'}">
                 <div class="carousel-caption" [ngClass]="{'active': toggleClassActive}" (click)="toggleActiveClass()">
-                    <!-- <button id="btnToggleView" class="btn"><i class="fa fa-plus-square-o"></i></button> -->
-                    <!-- [ngClass]="{'active': toggleClassActive}" -->
-                    <!-- <a routerLink="/{{item.urlDetailView}}" href="#"><img [src]="item.logo.url" id="logo-techstack" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " /></a> -->
                     <img [src]="item.logo.url" id="logo-techstack" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
                     <h1 class="small text-muted" [ngClass]="{'active': toggleClassActive}">{{item.title}}</h1>
                     <p [ngClass]="{'active': toggleClassActive}">{{item.text}}</p>
-                    <!-- <span [hidden]="" [ngClass]="{'active': toggleClassActive}"> -->
                     <hr />
-                    <!-- <span *ngIf="item.url!=''"> -->
                     <a *ngFor="let item of item.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" [href]="item.url" target="_blank">{{item.title}}</a>
-                    <!-- </span> -->
                     <a [routerLink]="['/kb', item.urlDetailView]" class="btn btn-primary ">My {{item.title}} Resources</a>
-                    <!-- </span> -->
                 </div>
             </div>
         </ng-template>
