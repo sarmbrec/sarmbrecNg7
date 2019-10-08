@@ -7,12 +7,10 @@ import {ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselHomePageComponent } from './home/carousel-home-page/carousel-home-page.component';
-import { SocialComponent } from './nav/social/social.component';
 
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { FooterComponent } from './footer/footer.component';
@@ -35,20 +33,15 @@ import { SocialLinksComponent } from './header/social-links/social-links.compone
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    CarouselHomePageComponent,
-    SocialComponent,
-    
+    CarouselHomePageComponent,    
     KnowledgeBaseComponent,
     FooterComponent,    
     KbDetailComponent,
     PageNotFoundComponent,
-    DefaultAngularLandingPageComponent,
-    
-    
+    DefaultAngularLandingPageComponent,      
     MessagesComponent,
     KbHtmlContentComponent,
     TestimonialsComponent,

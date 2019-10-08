@@ -11,8 +11,8 @@
         display: inline-block;
         margin-right: .5rem;
         opacity: .5;
-        color: $white;
-        text-shadow: 0.015rem 0.25rem 0.75rem rgba($dark, .5);
+        color: lighten($secondary, 20%);
+        // text-shadow: 0.015rem 0.015rem 0.015rem rgba($dark, .5);
         transition: all .12s linear;
         -webkit-transition: all .12s linear;
         line-height: 1;
@@ -30,9 +30,10 @@
 
 @include media-breakpoint-up(md) {
     #social-icon-links {
-        right: 1.15rem;
-        top: 3.5rem;
-        font-size: 2.75rem;
+        // position: absolute;
+        right: .65rem;
+        top: 3.75rem;
+        font-size: 2.5rem;
         z-index: 900;
         a {
             display: block;
