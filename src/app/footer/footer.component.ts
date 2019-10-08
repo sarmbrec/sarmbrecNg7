@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-//import { AppComponent } from '../app.component';
-//import { HomeComponent } from '../home/home.component';
+// import { AppComponent } from '../app.component';
+// import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-footer',
@@ -11,17 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   // access other components and share data
-  //users: any;
-  //title = new AppComponent().title;
-  //usersList = new HomeComponent(this.users);
-  
+  // users: any;
+  // title = new AppComponent().title;
+  // usersList = new HomeComponent(this.users);
   constructor() { }
 
   ngOnInit() {
-
-    
-
-
   }
 
 }

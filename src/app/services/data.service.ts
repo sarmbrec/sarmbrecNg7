@@ -6,13 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getCarouselTechStack(){
+  getCarouselTechStack() {
     return this.http.get('../../assets/json/carousel-tech-stack.json');
   }
-    
-  getUsers(){
+
+  getUsers() {
     return this.http.get('https://reqres.in/api/users?page=2&per_page=3&total=24');
   }
 

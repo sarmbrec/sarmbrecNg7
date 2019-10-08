@@ -12,16 +12,16 @@ export class ContactComponent implements OnInit {
   submitted = false;
   success = false;
 
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder) {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       message: ['', Validators.required],
-    })
+    });
   }
 
   onSubmit() {
     this.submitted = true;
-    if(this.contactForm.invalid){
+    if (this.contactForm.invalid) {
       return;
     }
     this.success = true;

@@ -7,10 +7,8 @@ import { AppComponent } from '../../app.component';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
-  collapsed: boolean = true;
-
-  appTitle: string = new AppComponent().title;
+  collapsed = true;
+  appTitle = new AppComponent().title;
 
   constructor() { }
 

@@ -17,12 +17,12 @@ const routes: Routes = [
 
   {path: 'applandingpage', component: DefaultAngularLandingPageComponent},
 
-  {path: '', component: HomeComponent, pathMatch: "full"},
+  {path: '', component: HomeComponent, pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  //imports: [RouterModule.forRoot(routes, {enableTracing: true})],
+  // imports: [RouterModule.forRoot(routes, {enableTracing: true})],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

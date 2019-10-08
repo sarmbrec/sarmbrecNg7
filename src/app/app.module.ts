@@ -26,9 +26,9 @@ import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { SocialLinksComponent } from './header/social-links/social-links.component';
 
-// The App module file is basically where all imports and generated files are recorded 
-// with their configuration metadata in the NgModule object. 
-// As a footnote, all components go into declarations, services into providers and 
+// The App module file is basically where all imports and generated files are recorded
+// with their configuration metadata in the NgModule object.
+// As a footnote, all components go into declarations, services into providers and
 // modules into imports.
 @NgModule({
   declarations: [
@@ -36,12 +36,12 @@ import { SocialLinksComponent } from './header/social-links/social-links.compone
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    CarouselHomePageComponent,    
+    CarouselHomePageComponent,
     KnowledgeBaseComponent,
-    FooterComponent,    
+    FooterComponent,
     KbDetailComponent,
     PageNotFoundComponent,
-    DefaultAngularLandingPageComponent,      
+    DefaultAngularLandingPageComponent,
     MessagesComponent,
     KbHtmlContentComponent,
     TestimonialsComponent,
@@ -56,13 +56,12 @@ import { SocialLinksComponent } from './header/social-links/social-links.compone
     NgbModule,
     AppRoutingModule,
     FormsModule
-    //BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    
+    // BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     // RouterModule.forRoot([
     //   { path: '', component: HomeComponent, pathMatch: 'full' },
     //   { path: 'counter', component: CounterComponent },
     //   { path: 'fetch-data', component: FetchDataComponent },
-    // ])   
+    // ])
   ],
   providers: [],
   bootstrap: [AppComponent]
