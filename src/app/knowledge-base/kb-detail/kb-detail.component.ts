@@ -34,10 +34,10 @@ export class KbDetailComponent implements OnInit {
     });
   }
 
-  getKbData(event: any, url: string) {
+  getKbData(url: string) {
     this.kbService.getKbHtmlContent(url).subscribe(data => {
       this.kbHtml = data;
-      // console.log('this.kbHtml = ', this.kbHtml);
+      // console.log('getKbData | url: string = ', url, ' | this.kbHtml = ', this.kbHtml);
     });
   }
 

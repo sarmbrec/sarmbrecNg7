@@ -18,6 +18,6 @@ export class KnowledgeBaseService {
 
   getKbHtmlContent(url: string) {
     // console.log('getKbHtmlContent | url = ', url)
-    return this.httpClient.get('"../assets/kbHtml/' + url, {responseType: 'text' as 'json'});
+    return this.httpClient.get('../assets/kbHtml/' + url, {responseType: 'text' as 'json'});
   }
 }
