@@ -24,6 +24,9 @@ import { DefaultAngularLandingPageComponent } from './home/default-angular-landi
 import { MessagesComponent } from './messages/messages.component';
 import { KbHtmlContentComponent } from './knowledge-base/kb-html-content/kb-html-content.component';
 import { TestimonialsComponent } from './about/testimonials/testimonials.component';
+import { HeaderComponent } from './header/header.component';
+import { NavBarComponent } from './header/nav-bar/nav-bar.component';
+import { SocialLinksComponent } from './header/social-links/social-links.component';
 
 // The App module file is basically where all imports and generated files are recorded 
 // with their configuration metadata in the NgModule object. 
@@ -48,7 +51,10 @@ import { TestimonialsComponent } from './about/testimonials/testimonials.compone
     
     MessagesComponent,
     KbHtmlContentComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    HeaderComponent,
+    NavBarComponent,
+    SocialLinksComponent
   ],
   imports: [
     BrowserModule,
