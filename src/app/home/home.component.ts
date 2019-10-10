@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { KnowledgeBaseService } from '../knowledge-base/knowledge-base.service';
 import { KbInterface } from '../knowledge-base/kb';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +9,16 @@ import { KbInterface } from '../knowledge-base/kb';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  someData$: Observable<KbInterface[]>;
+  
+  constructor(
+    private kbData: KnowledgeBaseService
+  ) { }
 
-
-  constructor() { }
-
-  ngOnInit() {
-
-  }
+  public ngOnInit(): void {
+    this.someData$ = this.kbData.getKnowledgeBaseAsynch();
+  }  
+  
+  
 
 }

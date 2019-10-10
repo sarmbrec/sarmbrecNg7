@@ -1,15 +1,12 @@
 <app-carousel-home-page></app-carousel-home-page>
-
-
-<app-knowledge-base></app-knowledge-base>
-<!-- <app-knowledge-base (onItemSelected)="selectItem($event)" [items]="someData$ | async"></app-knowledge-base>
-
-<div *ngIf="!selectedItem">no selected item</div>
-<div *ngIf="selectedItem">you selected {{selectedItem.firstName}}</div>
- -->
-
-<!-- Unwrap observable 
-<app-knowledge-base [items]="someData$ | async"></app-knowledge-base>
-<div *ngIf="!selectedItem">no selected item</div>
-<div *ngIf="selectedItem">you selected {{selectedItem.firstName}}</div>
-<app-knowledge-base (onItemSelected)="selectItem($event)" [items]="someData$ | async"></app-knowledge-base> -->
+<!-- <app-knowledge-base></app-knowledge-base> -->
+<section class="bg-light pt-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Knowledge base</h1>
+                <app-kb-list-cards (onItemSelected)="selectItem($event)" [items]="someData$ | async"></app-kb-list-cards>
+            </div>
+        </div>
+    </div>
+</section>

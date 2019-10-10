@@ -36,8 +36,6 @@ section#section-carousel {
             margin: 0;
             min-height: $min-height-section-carousel;
             opacity: 0;
-            -webkit-transition: all .75s linear;
-            transition: all .75s linear;
             visibility: hidden;
             &.active {
                 position: relative;
@@ -45,7 +43,6 @@ section#section-carousel {
                 opacity: 1;
             }
             .carousel-item-background {
-                // display: block;
                 width: auto !important;
                 height: 75vh !important;
                 min-height: $min-height-section-carousel;
@@ -54,8 +51,8 @@ section#section-carousel {
                 background-position: center bottom;
                 background-size: cover;
                 background-repeat: no-repeat;
-                border-top: 1px solid rgba(000, 000, 000, .6);
-                border-bottom: 1px solid rgba(000, 000, 000, .6);
+                // border-top: 1px solid rgba(000, 000, 000, .6);
+                // border-bottom: 1px solid rgba(000, 000, 000, .6);
                 &:after {
                     content: "";
                     display: block;
@@ -219,15 +216,20 @@ section#section-carousel {
 }
 
 @include media-breakpoint-up(md) {
-    section#section-carousel {
-        .carousel-inner {
-            .carousel-item {
-                .carousel-item-background {
-                    background-position: right bottom;
-                }
-            }
-        }
-    }
+    // section#section-carousel {
+    //     .carousel-inner {
+    //         .carousel-item {
+    //             .carousel-item-background {
+    //                 background-position: right bottom;
+    //                 background-size: 100% 100%;
+    //                 &:hover {
+    //                     background-position: left bottom;
+    //                     background-size: 150% 150%;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 @include media-breakpoint-up(lg) {}

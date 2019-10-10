@@ -15,7 +15,7 @@
             <span *ngIf="!selectedItem">no selected item</span>
             <span *ngIf="selectedItem">you selected {{selectedItem.subTitle}}</span>
         </nav>
-        <app-kb-list-cards (onItemSelected)="selectItem($event)" [items]="someData$ | async">gg</app-kb-list-cards>
+        <app-kb-list-cards (onItemSelected)="selectItem($event)" [items]="someData$ | async"></app-kb-list-cards>
 
 
     </div>
