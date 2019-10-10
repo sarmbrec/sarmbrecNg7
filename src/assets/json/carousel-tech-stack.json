@@ -2,7 +2,7 @@
         "category": "Front end technology",
         "title": "Angular 7",
         "logo": {
-            "url": "/assets/images/logos/Angular_logo_512.png",
+            "url": "/assets/images/logos/technology/Angular_logo_512.png",
             "width": "",
             "height": ""
         },
@@ -28,7 +28,7 @@
         "category": "Front end technology",
         "title": "HTML 5",
         "logo": {
-            "url": "/assets/images/logos/HTML5_Badge_512.png",
+            "url": "/assets/images/logos/technology/HTML5_Badge_512.png",
             "width": "",
             "height": ""
         },
@@ -50,7 +50,7 @@
         "category": "Front end technology",
         "title": "AngularJS",
         "logo": {
-            "url": "/assets/images/logos/AngularJS_logo_512.png",
+            "url": "/assets/images/logos/technology/AngularJS_logo_512.png",
             "width": "",
             "height": ""
         },
@@ -73,7 +73,7 @@
         "category": "Front end technology",
         "title": "SASS",
         "logo": {
-            "url": "/assets/images/logos/sass_logo2_512.png",
+            "url": "/assets/images/logos/technology/sass_logo2_512.png",
             "width": "",
             "height": ""
         },
@@ -90,7 +90,7 @@
         "category": "Front end technology",
         "title": "JavaScript",
         "logo": {
-            "url": "/assets/images/logos/js_logo_512.png",
+            "url": "/assets/images/logos/technology/js_logo_512.png",
             "width": "",
             "height": ""
         },

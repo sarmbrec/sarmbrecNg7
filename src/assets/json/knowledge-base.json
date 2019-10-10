@@ -3,7 +3,7 @@
         "title": "Angular",
         "subTitle": "One framework, mobile and desktop",
         "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
-        "logo": "/assets/images/logos/Angular_logo_512.png",
+        "logo": "/assets/images/logos/technology/Angular_logo_512.png",
         "requirements": {
             "links": [{
                     "text": "You need Git to clone the repository.",
@@ -78,7 +78,7 @@
         "title": "HTML 5",
         "subTitle": "Hypertext Markup Language",
         "text": "The latest evolution of the standard that defines HTML",
-        "logo": "/assets/images/logos/HTML5_Badge_512.png",
+        "logo": "/assets/images/logos/technology/HTML5_Badge_512.png",
         "officialdocs": {
             "url": "html5",
             "links": [{
@@ -110,7 +110,7 @@
         "title": "SASS",
         "subTitle": "Syntactically Awesome Style Sheets",
         "text": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
-        "logo": "/assets/images/logos/sass_logo2_512.png",
+        "logo": "/assets/images/logos/technology/sass_logo2_512.png",
         "officialdocs": {
             "url": "sass",
             "links": [{
@@ -128,7 +128,7 @@
         "title": "CSS3",
         "subTitle": "Cascading Style Sheets",
         "text": "The latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1",
-        "logo": "/assets/images/logos/css3_logo_512.png",
+        "logo": "/assets/images/logos/technology/css3_logo_512.png",
         "officialdocs": {
             "url": "CSS3",
             "links": [{
@@ -146,7 +146,7 @@
         "title": "JavaScript",
         "subTitle": "The programming language of HTML and the Web.",
         "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
-        "logo": "/assets/images/logos/js_logo_512.png",
+        "logo": "/assets/images/logos/technology/js_logo_512.png",
         "officialdocs": {
             "url": "javascript",
             "links": [{
@@ -197,7 +197,7 @@
         "title": "jQuery",
         "subTitle": "Fun on a bun",
         "text": "A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.",
-        "logo": "/assets/images/logos/jquery_logo2_512.png",
+        "logo": "/assets/images/logos/technology/jquery_logo2_512.png",
         "officialdocs": {
             "url": "jquery",
             "links": [{
@@ -220,7 +220,7 @@
         "title": "TypeScript",
         "subTitle": "Designed for development of large applications",
         "text": "An open-source programming language developed and maintained by Microsoft.",
-        "logo": "/assets/images/logos/typescript_logo_512.png",
+        "logo": "/assets/images/logos/technology/typescript_logo_512.png",
         "officialdocs": {
             "url": "typescript",
             "links": [{
@@ -243,7 +243,7 @@
         "title": "AngularJS",
         "subTitle": "Superheroic JavaScript MVWhatever Framework",
         "text": "What HTML would have been, had it been designed for building web-apps.",
-        "logo": "/assets/images/logos/AngularJS_logo_512.png",
+        "logo": "/assets/images/logos/technology/AngularJS_logo_512.png",
         "officialdocs": {
             "url": "angularjs",
             "links": [{
@@ -296,7 +296,7 @@
         "title": "Accessibility",
         "subTitle": "ADA Compliancy",
         "text": "Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these.",
-        "logo": "/assets/images/logos/accessablitiy_logo_512.png",
+        "logo": "/assets/images/logos/technology/accessablitiy_logo_512.png",
         "officialdocs": {
             "url": "accessibility",
             "links": [{
@@ -339,7 +339,7 @@
         "title": "GitHub",
         "subTitle": "How people build software",
         "text": "Brings together the world's largest community of developers to discover, share, and build better software.",
-        "logo": "/assets/images/logos/github_logo_512.png",
+        "logo": "/assets/images/logos/technology/github_logo_512.png",
         "officialdocs": {
             "url": "github",
             "links": [{
@@ -366,7 +366,7 @@
         "title": "ASP.NET MVC 5",
         "subTitle": "Free. Cross-platform. Open source.",
         "text": "A framework for building web apps and services with .NET and C#.",
-        "logo": "/assets/images/logos/Visual_Studio_Logo_512.png",
+        "logo": "/assets/images/logos/technology/Visual_Studio_Logo_512.png",
         "officialdocs": {
             "url": "aspnet",
             "links": [{
@@ -389,7 +389,7 @@
         "title": "C#",
         "subTitle": "Free. Cross-platform. Open source.",
         "text": "A framework for building web apps and services with .NET and C#.",
-        "logo": "/assets/images/logos/csharp_logo2_512.png",
+        "logo": "/assets/images/logos/technology/csharp_logo2_512.png",
         "officialdocs": {
             "url": "csharp",
             "links": [{
@@ -412,7 +412,7 @@
         "title": "SQL Server",
         "subTitle": "Intelligence and security are built in",
         "text": "A relational database management system (RDBMS) developed and marketed by Microsoft. As a database server, the primary function of the SQL Server is to store and retrieve data used by other applications.",
-        "logo": "/assets/images/logos/sql_server_logo2_512.png",
+        "logo": "/assets/images/logos/technology/sql_server_logo2_512.png",
         "officialdocs": {
             "url": "sqlserver",
             "links": [{
@@ -435,7 +435,7 @@
         "title": "Online tools",
         "subTitle": "Things that make life easier",
         "text": "",
-        "logo": "/assets/images/logos/tools_logo_512.png",
+        "logo": "/assets/images/logos/technology/tools_logo_512.png",
         "officialdocs": {
             "url": "tools",
             "links": [{
