@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { KnowledgeBaseService } from '../knowledge-base.service';
+import { KbInterface } from '../kb';
 
 @Component({
   selector: 'app-kb-detail',
@@ -11,12 +12,14 @@ import { KnowledgeBaseService } from '../knowledge-base.service';
 export class KbDetailComponent implements OnInit {
 
   knowledgeBase: any;
-  kbDetailCategory = '';
-  kbDetailId = '';
+  //kbDetailCategory: string;
+  kbDetailId: string;
   kbDetail: any;
   kbHtml: any;
-  kbHtmlId: any;
+  //kbHtmlId: any;
 
+  @Input() items: KbInterface; 
+  
   constructor(
     private route: ActivatedRoute,
     private kbService: KnowledgeBaseService,

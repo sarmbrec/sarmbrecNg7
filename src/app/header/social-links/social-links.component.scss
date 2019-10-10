@@ -12,11 +12,12 @@
         margin-right: .5rem;
         opacity: .5;
         color: lighten($secondary, 20%);
+        //mix-blend-mode: color-dodge;
         // text-shadow: 0.015rem 0.015rem 0.015rem rgba($dark, .5);
-        transition: all .12s linear;
-        -webkit-transition: all .12s linear;
         line-height: 1;
         transform: scale(1);
+        transition: all .12s linear;
+        -webkit-transition: all .12s linear;
         &:hover {
             opacity: 1;
             transform: scale(1.1);

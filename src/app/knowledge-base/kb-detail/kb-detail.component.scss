@@ -3,8 +3,6 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 section#kb-detail {
     background-color: $white;
-    // background-image: linear-gradient(to bottom, rgba($white, 1) 10%, rgba($white, .3), rgba($white, .7));
-    // background-size: cover;
     padding-top: 1rem;
     padding-bottom: 1rem;
     position: relative;
@@ -30,18 +28,9 @@ section#kb-detail {
         padding-right: .25rem;
         text-align: right;
     }
-    //h2 {
-    // color: lighten($dark, 25%);
-    // border-bottom: 1px solid darken($light, 25%);
-    //margin-bottom: 2rem;
-    //}
     .card {
         text-align: center;
         img#logo {
-            // position: absolute;
-            // left: 0;
-            // right: 0;
-            //margin: 0 auto;
             width: 80%;
             height: auto;
             margin: 1rem auto;
@@ -64,9 +53,7 @@ section#kb-detail {
                     transition: all .1s linear;
                     border-left: 0px solid transparent;
                     &:hover {
-                        // color: rgba($white, .8);
                         text-decoration: none;
-                        // background-color: lighten($dark, 15%);
                         background-color: $light;
                         border-left: 5px solid $primary;
                     }

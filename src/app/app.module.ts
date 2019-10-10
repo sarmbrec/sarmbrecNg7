@@ -5,26 +5,26 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselHomePageComponent } from './home/carousel-home-page/carousel-home-page.component';
-
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { FooterComponent } from './footer/footer.component';
-
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DefaultAngularLandingPageComponent } from './home/default-angular-landing-page/default-angular-landing-page.component';
-
 import { MessagesComponent } from './messages/messages.component';
 import { KbHtmlContentComponent } from './knowledge-base/kb-html-content/kb-html-content.component';
 import { TestimonialsComponent } from './about/testimonials/testimonials.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { SocialLinksComponent } from './header/social-links/social-links.component';
+import { NgObservableComponent } from './ng-observable/ng-observable.component';
+import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-cards.component';
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -47,7 +47,9 @@ import { SocialLinksComponent } from './header/social-links/social-links.compone
     TestimonialsComponent,
     HeaderComponent,
     NavBarComponent,
-    SocialLinksComponent
+    SocialLinksComponent,
+    NgObservableComponent,
+    KbListCardsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,13 +57,8 @@ import { SocialLinksComponent } from './header/social-links/social-links.compone
     ReactiveFormsModule,
     NgbModule,
     AppRoutingModule,
-    FormsModule
-    // BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    // RouterModule.forRoot([
-    //   { path: '', component: HomeComponent, pathMatch: 'full' },
-    //   { path: 'counter', component: CounterComponent },
-    //   { path: 'fetch-data', component: FetchDataComponent },
-    // ])
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

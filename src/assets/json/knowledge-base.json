@@ -4,7 +4,6 @@
         "subTitle": "One framework, mobile and desktop",
         "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
         "logo": "/assets/images/logos/Angular_logo_512.png",
-
         "requirements": {
             "links": [{
                     "text": "You need Git to clone the repository.",
@@ -40,7 +39,6 @@
                 }
             ]
         },
-
         "officialdocs": {
             "url": "angular",
             "links": [{
@@ -75,10 +73,6 @@
             }
         ]
     },
-
-
-
-
     {
         "category": "Front end",
         "title": "HTML 5",
@@ -136,10 +130,10 @@
         "text": "The latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1",
         "logo": "/assets/images/logos/css3_logo_512.png",
         "officialdocs": {
-            "url": "sass",
+            "url": "CSS3",
             "links": [{
-                "title": "Sass",
-                "url": "https://sass-lang.com/"
+                "title": "All CSS specifications",
+                "url": "https://www.w3.org/Style/CSS/specs.en.html"
             }]
         },
         "links": [{
@@ -150,6 +144,8 @@
     {
         "category": "Front end",
         "title": "JavaScript",
+        "subTitle": "The programming language of HTML and the Web.",
+        "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
         "logo": "/assets/images/logos/js_logo_512.png",
         "officialdocs": {
             "url": "javascript",
@@ -158,15 +154,43 @@
                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             }]
         },
-        "subTitle": "Fun on a bun",
-        "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
         "links": [{
-            "title": "JavaScript MDN",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-        }, {
-            "title": "Loading 3d models",
-            "url": "https://threejs.org/docs/index.html#manual/en/introduction/Loading-3D-models"
-        }]
+                "title": "JavaScript MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+                "title": "What is ECMAScript 5?",
+                "url": "https://www.w3schools.com/js/js_es5.asp"
+            },
+            {
+                "title": "What is ECMAScript 6?",
+                "url": "https://www.w3schools.com/js/js_es6.asp"
+            },
+            {
+                "title": "Arrow function",
+                "url": "https://www.w3schools.com/js/js_arrow_function.asp"
+            },
+            {
+                "title": "Classes",
+                "url": "https://www.w3schools.com/js/js_classes.asp"
+            },
+            {
+                "title": "Debugging",
+                "url": "https://www.w3schools.com/js/js_debugging.asp"
+            },
+            {
+                "title": "Style Guide",
+                "url": "https://www.w3schools.com/js/js_conventions.asp"
+            },
+            {
+                "title": "Best Practices",
+                "url": "https://www.w3schools.com/js/js_best_practices.asp"
+            },
+            {
+                "title": "Loading 3d models",
+                "url": "https://threejs.org/docs/index.html#manual/en/introduction/Loading-3D-models"
+            }
+        ]
     },
     {
         "category": "Front end",

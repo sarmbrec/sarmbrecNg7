@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { KbInterface } from './kb';
 // import { KbHtmlClass } from './kb-detail/kb-html-class';
 
 @Injectable({
@@ -16,8 +18,20 @@ export class KnowledgeBaseService {
     return this.httpClient.get('../assets/json/knowledge-base.json');
   }
 
+  getKnowledgeBaseAsynch(): Observable<KbInterface[]> {    
+    return this.httpClient.get<KbInterface[]>('../assets/json/knowledge-base.json');
+  }
+
+
+
+
+
+
+
   getKbHtmlContent(url: string) {
     // console.log('getKbHtmlContent | url = ', url)
     return this.httpClient.get('../assets/kbHtml/' + url, {responseType: 'text' as 'json'});
   }
+
+
 }
