@@ -7,6 +7,7 @@
             <h3 *ngIf="item.company" class="card-company">{{item.company}}</h3>
             <hr *ngIf="item.text" class="mt-1 mb-2">
             <p *ngIf="item.text" class="card-text">{{item.text}}</p>
+            <p class="card-text"><a [href]="item.company">View achievements</a></p>
         </div>
     </div>
 </div>

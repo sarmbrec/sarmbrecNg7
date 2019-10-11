@@ -32,7 +32,7 @@
             font-size: .8rem;
         }
         .card-title {
-            font-size: .7rem;
+            font-size: .79rem;
             // color: lighten($dark, 35%);
             line-height: 1.25;
             margin-bottom: .5rem;
@@ -51,23 +51,23 @@
         }
         a {
             text-decoration: underline;
-            font-size: .825rem;
+            font-size: .775rem;
             &.btn {
                 text-decoration: none;
             }
-            &:not(.btn):before {
-                content: "\f054";
-                font-family: "FontAwesome";
-                font-weight: 200;
-                font-size: .65rem;
-                color: lighten($dark, 35%);
-                margin-right: .25rem;
-                display: inline-block;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-            }
+            // &:not(.btn):before {
+            //     content: "\f054";
+            //     font-family: "FontAwesome";
+            //     font-weight: 200;
+            //     font-size: .65rem;
+            //     color: lighten($dark, 35%);
+            //     margin-right: .25rem;
+            //     display: inline-block;
+            //     font-style: normal;
+            //     font-variant: normal;
+            //     text-rendering: auto;
+            //     -webkit-font-smoothing: antialiased;
+            // }
             &:hover {
                 text-decoration: none;
             }

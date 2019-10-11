@@ -27,6 +27,7 @@ import { NgObservableComponent } from './ng-observable/ng-observable.component';
 import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-cards.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ExperienceListComponent } from './experience/experience-list/experience-list.component';
+import { ChartsModule } from 'ng2-charts';
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -62,7 +63,8 @@ import { ExperienceListComponent } from './experience/experience-list/experience
     NgbModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
