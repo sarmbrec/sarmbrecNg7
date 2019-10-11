@@ -25,6 +25,8 @@ import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { SocialLinksComponent } from './header/social-links/social-links.component';
 import { NgObservableComponent } from './ng-observable/ng-observable.component';
 import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-cards.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceListComponent } from './experience/experience-list/experience-list.component';
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -49,7 +51,9 @@ import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-car
     NavBarComponent,
     SocialLinksComponent,
     NgObservableComponent,
-    KbListCardsComponent
+    KbListCardsComponent,
+    ExperienceComponent,
+    ExperienceListComponent
   ],
   imports: [
     BrowserModule,

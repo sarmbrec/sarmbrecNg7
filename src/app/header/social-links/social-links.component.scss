@@ -21,6 +21,8 @@
         &:hover {
             opacity: 1;
             transform: scale(1.1);
+            color: lighten($secondary, 100%);
+            text-shadow: .25rem .25rem .75rem rgba($black, .5);
         }
     }
 }

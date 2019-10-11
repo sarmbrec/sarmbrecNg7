@@ -1,0 +1,12 @@
+<div class="card-columns" *ngIf="items">
+    <div class="card shadow-sm" *ngFor="let item of items">
+        <div class="card-body">
+            <img *ngIf="item.logo" [src]="item.logo" class="logo" (click)="showInfo(item)">
+            <h3 *ngIf="item.jobtitle" class="card-title">{{item.jobtitle}}</h3>
+            <hr *ngIf="item.company" class="mt-1 mb-2">
+            <h3 *ngIf="item.company" class="card-company">{{item.company}}</h3>
+            <hr *ngIf="item.text" class="mt-1 mb-2">
+            <p *ngIf="item.text" class="card-text">{{item.text}}</p>
+        </div>
+    </div>
+</div>

@@ -8,12 +8,12 @@ import { KbInterface } from './kb';
 })
 
 export class KnowledgeBaseService {
-  messageService: any;
+  //messageService: any;
   constructor(
     private httpClient: HttpClient
   ) { }
 
-  // TODO:  remove if not used
+  // TODO:  remove if not used - used on kb detail need to use observable instead....
   getKnowledgeBase() {
     return this.httpClient.get('../assets/json/knowledge-base.json');
   }

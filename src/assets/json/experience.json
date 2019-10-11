@@ -1,0 +1,63 @@
+[{
+        "company": "Portfolio Recovery Associates",
+        "jobtitle": "Senior Software Engineer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/pra.png"
+
+    },
+    {
+        "company": "True Health Diagnostics",
+        "jobtitle": "Lead UX Developer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/truehealth.png"
+
+    },
+    {
+        "company": "Health Diagnostic Laboratory",
+        "jobtitle": "Senior Web Developer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/hdl.png"
+
+    },
+    {
+        "company": "GE Healthcare",
+        "jobtitle": "Software Engineer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/gehealthcare.png"
+
+    },
+    {
+        "company": "Randstad / Harland Clark / Walmart / Office Max",
+        "jobtitle": "UI/UX Designer / Developer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/walmart.png"
+
+    },
+    {
+        "company": "Celerity / Capital One",
+        "jobtitle": "UI/UX Designer / Developer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/capitalone.png"
+    },
+    {
+        "company": "Circuit City",
+        "jobtitle": "Programmer Analyst",
+        "text": "",
+        "logo": "/assets/images/logos/experience/circuitcity.png"
+
+    },
+    {
+        "company": "Global Web Solutions",
+        "jobtitle": "Web Developer / Designer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/globalwebsolutions.png"
+
+    },
+    {
+        "company": "First Union National Bank",
+        "jobtitle": "Web Developer / Officer",
+        "text": "",
+        "logo": "/assets/images/logos/experience/firstunion.png"
+
+    }
+]
