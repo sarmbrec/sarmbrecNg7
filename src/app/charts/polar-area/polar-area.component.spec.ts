@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { KbHtmlContentComponent } from './kb-html-content.component';
+import { PolarAreaComponent } from './polar-area.component';
 
-describe('KbHtmlContentComponent', () => {
-  let component: KbHtmlContentComponent;
-  let fixture: ComponentFixture<KbHtmlContentComponent>;
+describe('PolarAreaComponent', () => {
+  let component: PolarAreaComponent;
+  let fixture: ComponentFixture<PolarAreaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KbHtmlContentComponent ]
+      declarations: [ PolarAreaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(KbHtmlContentComponent);
+    fixture = TestBed.createComponent(PolarAreaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

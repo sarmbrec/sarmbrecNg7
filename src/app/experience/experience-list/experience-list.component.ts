@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { ExperienceInterface } from '../experience';
+import { ExperienceInterface } from '../../interfaces/experience';
 
 @Component({
   selector: 'app-experience-list',
@@ -13,8 +13,9 @@ export class ExperienceListComponent {
 
   constructor() { }
 
-  // public itemClicked(item: ExperienceInterface): void {
-  //   this.onItemSelected.next(item);
-  // }
+  public itemClicked(item: ExperienceInterface): void {
+    this.onItemSelected.next(item);
+  }
+
 
 }

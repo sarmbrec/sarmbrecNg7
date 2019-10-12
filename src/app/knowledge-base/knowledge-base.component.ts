@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { KnowledgeBaseService } from './knowledge-base.service';
-import { KbInterface } from './kb';
+import { DataService } from '../services/data.service';
+import { KbInterface } from '../interfaces/kb';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,16 +10,16 @@ import { Observable } from 'rxjs';
 })
 
 export class KnowledgeBaseComponent implements OnInit {
-  someData$: Observable<KbInterface[]>;
+  kbstack$: Observable<KbInterface[]>;
   selectedItem: KbInterface;  
   onItemSelected: any;
 
   constructor(
-    private kbData: KnowledgeBaseService
+    private service: DataService
   ) { }
 
   public ngOnInit(): void {
-    this.someData$ = this.kbData.getKnowledgeBaseAsynch();
+    this.kbstack$ = this.service.getKnowledgeBaseAsync();
   }  
   
   public selectItem(item: KbInterface): void {

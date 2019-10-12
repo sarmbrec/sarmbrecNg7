@@ -8,7 +8,7 @@
                     <p [ngClass]="{'active': toggleClassActive}">{{item.text}}</p>
                     <hr />
                     <a *ngFor="let item of item.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" [href]="item.url" target="_blank">{{item.title}}</a>
-                    <a [routerLink]="['/kb', item.urlDetailView]" class="btn btn-primary ">My {{item.title}} Resources</a>
+                    <a [routerLink]="['/knowledge', item.urlDetailView]" class="btn btn-primary ">My {{item.title}} Resources</a>
                 </div>
             </div>
         </ng-template>

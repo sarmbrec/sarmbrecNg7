@@ -18,7 +18,7 @@ import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DefaultAngularLandingPageComponent } from './home/default-angular-landing-page/default-angular-landing-page.component';
 import { MessagesComponent } from './messages/messages.component';
-import { KbHtmlContentComponent } from './knowledge-base/kb-html-content/kb-html-content.component';
+
 import { TestimonialsComponent } from './about/testimonials/testimonials.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
@@ -28,6 +28,13 @@ import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-car
 import { ExperienceComponent } from './experience/experience.component';
 import { ExperienceListComponent } from './experience/experience-list/experience-list.component';
 import { ChartsModule } from 'ng2-charts';
+import { RemoveWhiteSpacesPipe } from './embrace-the-pipe/remove-white-spaces.pipe';
+import { ExperienceDetailComponent } from './experience/experience-detail/experience-detail.component';
+import { ChartsComponent } from './charts/charts.component';
+import { PolarAreaComponent } from './charts/polar-area/polar-area.component';
+import { BarComponent } from './charts/bar/bar.component';
+import { KbJumbotronComponent } from './knowledge-base/kb-jumbotron/kb-jumbotron.component';
+import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/experience-jumbotron.component';
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -46,7 +53,7 @@ import { ChartsModule } from 'ng2-charts';
     PageNotFoundComponent,
     DefaultAngularLandingPageComponent,
     MessagesComponent,
-    KbHtmlContentComponent,
+    
     TestimonialsComponent,
     HeaderComponent,
     NavBarComponent,
@@ -54,7 +61,14 @@ import { ChartsModule } from 'ng2-charts';
     NgObservableComponent,
     KbListCardsComponent,
     ExperienceComponent,
-    ExperienceListComponent
+    ExperienceListComponent,
+    RemoveWhiteSpacesPipe,
+    ExperienceDetailComponent,
+    ChartsComponent,
+    PolarAreaComponent,
+    BarComponent,
+    KbJumbotronComponent,
+    ExperienceJumbotronComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<section id="experience-detail" *ngIf="detail$ | async as detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h1>{{detail.jobtitle}}</h1>
+
+                <hr>
+
+                <span class="company">{{detail.company}}</span>
+
+                <p *ngIf="detail.agency">
+                    {{detail.agency}}
+                </p>
+
+                <p *ngIf="detail.text">
+                    {{detail.text}}
+                </p>
+
+                <hr>
+
+                <ul>
+                    <li *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
+                </ul>
+
+            </div>
+            <div class="col-md-6">
+                <img [src]="['/assets/images/logos/experience/' + detail.logo]">
+                <hr>
+                <app-polar-area></app-polar-area>
+                <hr>
+                <app-bar></app-bar>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,22 +1,24 @@
-<section id="knowledge-base" *ngIf="someData$">
+<section id="knowledge-base" *ngIf="kbstack$ | async">
+
+    <app-kb-jumbotron></app-kb-jumbotron>
+
     <div class="container">
-
-        <h1 class="mb-0">Knowledge base</h1>
-
-        <!-- do app card another style list component for home page -->
-        <!-- do app card list component -->
-        <nav class="navbar navbar-light bg-light mb-2 p-2">
-            <form class="form-inline">
-                <label>
-                    <i class="fa fa-search search-icon"></i>
-                    <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
-                </label>
-            </form>
-            <span *ngIf="!selectedItem">no selected item</span>
-            <span *ngIf="selectedItem">you selected {{selectedItem.subTitle}}</span>
-        </nav>
-        <app-kb-list-cards (onItemSelected)="selectItem($event)" [items]="someData$ | async"></app-kb-list-cards>
-
-
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-0">Knowledge base</h1>
+                <nav class="navbar navbar-light bg-light mb-2 p-2">
+                    <form class="form-inline">
+                        <label>
+                            <i class="fa fa-search search-icon"></i>
+                            <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+                        </label>
+                    </form>
+                    <span *ngIf="!selectedItem">no selected item</span>
+                    <span *ngIf="selectedItem">you selected {{selectedItem.subTitle}}</span>
+                </nav>
+                <app-kb-list-cards (onItemSelected)="selectItem($event)" [items]="kbstack$ | async"></app-kb-list-cards>
+            </div>
+        </div>
     </div>
+
 </section>

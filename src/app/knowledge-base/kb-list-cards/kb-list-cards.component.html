@@ -4,21 +4,20 @@
             <img *ngIf="item.logo" [src]="item.logo" class="logo" (click)="itemClicked(item)">
             <h3 *ngIf="item.title" class="card-title">{{item.title}}</h3>
             <h6 *ngIf="item.subTitle" class="card-subtitle">{{item.subTitle}}</h6>
-            <hr class="mt-1 mb-2">
+            <hr *ngIf="item.text" class="mt-1 mb-2">
             <p *ngIf="item.text" class="card-text">{{item.text}}</p>
-            <hr class="mt-2 mb-3" *ngIf="item.officialdocs.url">
-            <a *ngIf="item.officialdocs.url" class="btn btn-light btn-outline-dark btn-block" [routerLink]="['/kb',item.officialdocs.url]">My {{item.title}} Resources</a>
-
+            <hr *ngIf="item.officialdocs.url" class="mt-2 mb-3">
+            <a *ngIf="item.officialdocs.url" class="btn btn-light btn-outline-dark btn-block" [routerLink]="['/knowledge',item.officialdocs.url]">My {{item.title}} Resources</a>
             <!-- <ng-container *ngIf="item.officialdocs.links"> -->
-            <hr class="mt-3 mb-2" *ngIf="item.officialdocs.links">
+            <!-- <hr class="mt-3 mb-2" *ngIf="item.officialdocs.links">
             <ul id="ul-item-links" *ngIf="item.officialdocs.links">
                 <li *ngFor="let link of item.officialdocs.links"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
-            </ul>
+            </ul> -->
             <!-- </ng-container> -->
             <!-- <hr class="mt-3 mb-2" *ngIf="item.links">
-                <ul id="ul-item-links" *ngIf="item.links">
-                    <li *ngFor="let link of item.links"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
-                </ul> -->
+            <ul id="ul-item-links" *ngIf="item.links">
+                <li *ngFor="let link of item.links"><a [href]="link.url" target="_blank">{{link.title}}</a></li>
+            </ul> -->
         </div>
     </div>
 </div>

@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienceService } from './experience.service';
-import { ExperienceInterface } from './experience';
+import { DataService } from '../services/data.service';
+import { ExperienceInterface } from '../interfaces/experience';
 import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-experience',
@@ -11,14 +10,14 @@ import { Observable } from 'rxjs';
 })
 export class ExperienceComponent implements OnInit {
 
-  experienceData$: Observable<ExperienceInterface[]>;
-  
+  experiences$: Observable<ExperienceInterface[]>;
+
   constructor(
-    private expData: ExperienceService
+    private dataService: DataService
   ) { }
 
   public ngOnInit(): void {
-    this.experienceData$ = this.expData.getExperienceAsynch();
+    this.experiences$ = this.dataService.getExperienceAsync();
   }  
 
 }

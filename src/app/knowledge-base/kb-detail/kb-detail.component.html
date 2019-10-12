@@ -1,4 +1,4 @@
-<section id="kb-detail" *ngIf="kbDetail">
+<section id="kb-detail" *ngIf="detail$ | async as kbDetail">
     <div class="container">
         <div class="row">
             <div class="col-md-8 order-2 order-md-1">
@@ -6,8 +6,6 @@
                 <div class="kb">Knowledge Base</div>
                 <div class="card">
                     <div class="card-body">
-                        <app-kb-html-content></app-kb-html-content>
-
                         <div [innerHtml]="kbHtml"></div>
                     </div>
                 </div>

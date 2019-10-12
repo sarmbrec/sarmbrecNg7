@@ -1,0 +1,38 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+.albert-einstein {
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .5), rgba($white, .1), rgba($primary, .3)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    background-attachment: fixed;
+    background-color: $primary;
+    margin: 0;
+    p {
+        &.lead {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            text-shadow: .25rem .25rem .75rem rgba($black, .7);
+            line-height: 1.25;
+            // font-style: italic;
+        }
+        font-size: 1.25rem;
+        text-shadow: .1rem .1rem .5rem $black;
+        color: $light;
+    }
+}
+
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-between(md,
+xl) {}

@@ -1,15 +1,25 @@
 <app-carousel-home-page></app-carousel-home-page>
-
-<app-experience></app-experience>
-
-<app-knowledge-base></app-knowledge-base>
-<!-- <section class="bg-light pt-4 pb-4">
+<section id="experienceCards" class="bg-light p-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Knowledge base</h1>
-                <app-kb-list-cards [items]="someData$ | async"></app-kb-list-cards>
+                <h1 class="sr-only">Knowledge Base</h1>
+                <app-experience-list [items]="experienceCards$ | async"></app-experience-list>
+
             </div>
         </div>
     </div>
-</section> -->
+</section>
+<app-experience-jumbotron></app-experience-jumbotron>
+<section id="knowledgeBaseCards" class="bg-white p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="sr-only">Knowledge Base</h1>
+                <app-kb-list-cards [items]="knowledgeBaseCards$ | async"></app-kb-list-cards>
+                <!-- <app-kb-list-cards (onItemSelected)="selectItem($event)" [items]="knowledgeBaseCards$ | async"></app-kb-list-cards> -->
+            </div>
+        </div>
+    </div>
+</section>
+<app-kb-jumbotron></app-kb-jumbotron>

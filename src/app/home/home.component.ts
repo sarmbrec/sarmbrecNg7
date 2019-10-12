@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-// import { KnowledgeBaseService } from '../knowledge-base/knowledge-base.service';
-// import { KbInterface } from '../knowledge-base/kb';
-// import { Observable } from 'rxjs';
+import { KnowledgeBaseComponent } from '../knowledge-base/knowledge-base.component';
+import { KbListCardsComponent } from '../knowledge-base/kb-list-cards/kb-list-cards.component';
+ import { DataService } from '../services/data.service';
+ import { KbInterface } from '../interfaces/kb';
+ import { Observable } from 'rxjs';
+ import { ExperienceInterface } from '../interfaces/experience';
+
 
 @Component({
   selector: 'app-home',
@@ -9,14 +13,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // someData$: Observable<KbInterface[]>;
+  knowledgeBaseCards$: Observable<KbInterface[]>;
+  experienceCards$: Observable<ExperienceInterface[]>;
+
+  // access other components and share data
+  // title = new AppComponent().title;
+  //kbstack: any = new KbListCardsComponent();
+
   
   constructor(
-    // private kbData: KnowledgeBaseService
+     private service: DataService
   ) { }
 
   public ngOnInit(): void {
-    // this.someData$ = this.kbData.getKnowledgeBaseAsynch();
+     
+
+    //console.log(this.kbstack)
+    this.knowledgeBaseCards$ = this.service.getKnowledgeBaseAsync();
+    this.experienceCards$ = this.service.getExperienceAsync();
+
+    //this.knowledgeBase$ = this.kbstack;
+
   }  
   
   

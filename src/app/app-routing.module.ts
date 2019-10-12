@@ -6,15 +6,18 @@ import { AboutComponent } from './about/about.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceDetailComponent } from './experience/experience-detail/experience-detail.component';
+
 import { DefaultAngularLandingPageComponent } from './home/default-angular-landing-page/default-angular-landing-page.component';
 import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'kb', component: KnowledgeBaseComponent},
-  {path: 'kb/:id', component: KbDetailComponent},
-  {path: 'ex', component: ExperienceComponent},
+  {path: 'knowledge', component: KnowledgeBaseComponent},
+  {path: 'knowledge/:id', component: KbDetailComponent},
+  {path: 'experience', component: ExperienceComponent},
+  {path: 'experience/:id', component: ExperienceDetailComponent},
   {path: 'applandingpage', component: DefaultAngularLandingPageComponent},
 
   {path: '', component: HomeComponent, pathMatch: 'full'},

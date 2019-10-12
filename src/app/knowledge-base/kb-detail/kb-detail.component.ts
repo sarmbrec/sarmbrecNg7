@@ -1,7 +1,10 @@
+import { switchMap } from 'rxjs/operators';
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { KnowledgeBaseService } from '../knowledge-base.service';
-import { KbInterface } from '../kb';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs';
+
+import { DataService } from '../../services/data.service';
+import { KbInterface } from '../../interfaces/kb';
 
 @Component({
   selector: 'app-kb-detail',
@@ -10,35 +13,27 @@ import { KbInterface } from '../kb';
 })
 
 export class KbDetailComponent implements OnInit {
-
-  knowledgeBase: any;
-  //kbDetailCategory: string;
-  kbDetailId: string;
-  kbDetail: any;
+  detail$: Observable<KbInterface>;
   kbHtml: any;
-  //kbHtmlId: any;
 
   @Input() items: KbInterface; 
   
   constructor(
     private route: ActivatedRoute,
-    private kbService: KnowledgeBaseService,
+    private service: DataService,
   ) { }
 
   ngOnInit(): void {
-    this.kbService.getKnowledgeBase().subscribe(data => {
-      this.kbDetailId = this.route.snapshot.params.id;
-      this.knowledgeBase = data;
-      for (const key in this.knowledgeBase) {
-        if (this.knowledgeBase[key].officialdocs.url === this.kbDetailId) {
-          return this.kbDetail = this.knowledgeBase[key];
-        }
-      }
-    });
+
+    this.detail$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.service.geKnowledgeBaseDetailAsync(params.get('id')))
+    );
+
   }
 
   getKbData(url: string) {
-    this.kbService.getKbHtmlContent(url).subscribe(data => {
+    this.service.getKbHtmlContent(url).subscribe(data => {
       this.kbHtml = data;
       // console.log('getKbData | url: string = ', url, ' | this.kbHtml = ', this.kbHtml);
     });

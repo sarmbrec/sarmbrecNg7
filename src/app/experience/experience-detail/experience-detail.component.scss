@@ -1,10 +1,13 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-section#experience {
-    background-color: $light;
+section#experience-detail {
+    background-color: $white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        color: $dark;
     }
 }
 

@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { KbInterface } from '../kb';
+import { KbInterface } from '../../interfaces/kb';
 
 @Component({
   selector: 'app-kb-list-cards',

@@ -55,21 +55,29 @@
             &.btn {
                 text-decoration: none;
             }
-            // &:not(.btn):before {
-            //     content: "\f054";
-            //     font-family: "FontAwesome";
-            //     font-weight: 200;
-            //     font-size: .65rem;
-            //     color: lighten($dark, 35%);
-            //     margin-right: .25rem;
-            //     display: inline-block;
-            //     font-style: normal;
-            //     font-variant: normal;
-            //     text-rendering: auto;
-            //     -webkit-font-smoothing: antialiased;
-            // }
+            &:not(.btn):before {
+                //content: "\f054";
+                content: "\f0c1";
+                font-family: "FontAwesome";
+                font-weight: 200;
+                font-size: .8rem;
+                color: lighten($dark, 35%);
+                margin-right: .25rem;
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                opacity: .5;
+                -webkit-transition: all .15s ease-out;
+                transition: all .15s ease-out;
+            }
             &:hover {
                 text-decoration: none;
+                &:not(.btn):before {
+                    opacity: 1;
+                    color: $secondary;
+                }
             }
         }
     }
@@ -93,20 +101,8 @@
     }
 }
 
-@include media-breakpoint-up(lg) {
-    .card-columns {
-        column-count: 3;
-    }
-}
+@include media-breakpoint-up(lg) {}
 
-@include media-breakpoint-up(xl) {
-    .card-columns {
-        column-count: 4;
-    }
-}
+@include media-breakpoint-up(xl) {}
 
-@include media-breakpoint-between(md, xl) {
-    // .card-columns {
-    //     column-count: 3;
-    // }
-}
+@include media-breakpoint-between(md, xl) {}
