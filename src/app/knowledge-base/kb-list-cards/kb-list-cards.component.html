@@ -1,7 +1,7 @@
 <div class="card-columns" *ngIf="items">
     <div class="card shadow-sm" *ngFor="let item of items">
         <div class="card-body">
-            <img *ngIf="item.logo" [src]="item.logo" class="logo" (click)="itemClicked(item)">
+            <img *ngIf="item.logo" [src]="baseUrl + item.logo" class="logo" (click)="itemClicked(item)">
             <h3 *ngIf="item.title" class="card-title">{{item.title}}</h3>
             <h6 *ngIf="item.subTitle" class="card-subtitle">{{item.subTitle}}</h6>
             <hr *ngIf="item.text" class="mt-1 mb-2">

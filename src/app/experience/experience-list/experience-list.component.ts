@@ -1,6 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ExperienceInterface } from '../../interfaces/experience';
 
+import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-experience-list',
   templateUrl: './experience-list.component.html',
@@ -8,6 +10,8 @@ import { ExperienceInterface } from '../../interfaces/experience';
 })
 export class ExperienceListComponent {
   
+  baseUrl = environment.baseUrl;
+
   @Input() items: ExperienceInterface;
   @Output() onItemSelected = new EventEmitter<ExperienceInterface>();
 
