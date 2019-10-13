@@ -3,7 +3,7 @@
         <ng-template ngbSlide *ngFor="let item of carouselItems; index as i">
             <div class="carousel-item-background" [ngStyle]="{'background-image':'url(' + item.background + ')'}">
                 <div class="carousel-caption" [ngClass]="{'active': toggleClassActive}" (click)="toggleActiveClass()">
-                    {{baseUrl}}<img [src]="baseUrl + item.logo.url" id="logo-techstack" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
+                    <img [src]="baseUrl + item.logo.url" id="logo-techstack" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
                     <h1 class="small text-muted" [ngClass]="{'active': toggleClassActive}">{{item.title}}</h1>
                     <p [ngClass]="{'active': toggleClassActive}">{{item.text}}</p>
                     <hr />
