@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-md-4 order-1 order-md-2">
-                <div class="card">
+                <div class="card">{{baseUrl}}
                     <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" id="logo">
                     <p class="sub-title">{{kbDetail.subTitle}}</p>
                     <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.links">
