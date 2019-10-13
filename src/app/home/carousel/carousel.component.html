@@ -1,7 +1,7 @@
-<section id="section-carousel" *ngIf="carouselItems">
-    <ngb-carousel *ngIf="carouselItems" class="slide">
+<section id="section-carousel" *ngIf="carouselData$ | async">
+    <ngb-carousel *ngIf="carouselData$ | async as carouselItems" class="slide">
         <ng-template ngbSlide *ngFor="let item of carouselItems; index as i">
-            <div class="carousel-item-background" [ngStyle]="{'background-image':'url(' + item.background + ')'}">
+            <div class="carousel-item-background" [ngStyle]="{'background-image':'url(' + baseUrl + item.background + ')'}">
                 <div class="carousel-caption" [ngClass]="{'active': toggleClassActive}" (click)="toggleActiveClass()">
                     <img [src]="baseUrl + item.logo.url" id="logo-techstack" [ngClass]="{'active': toggleClassActive}" [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
                     <h1 class="small text-muted" [ngClass]="{'active': toggleClassActive}">{{item.title}}</h1>

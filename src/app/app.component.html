@@ -3,7 +3,10 @@
     <app-header></app-header>
 </header>
 <main>
-    <router-outlet></router-outlet>
+    <!-- <router-outlet></router-outlet> -->
+    <div [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
 </main>
 <footer>
     <app-footer></app-footer>

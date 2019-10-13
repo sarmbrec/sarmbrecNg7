@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-4 order-1 order-md-2">
                 <div class="card">
-                    <img *ngIf="kbDetail.logo" [src]="kbDetail.logo" id="logo">
+                    <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" id="logo">
                     <p class="sub-title">{{kbDetail.subTitle}}</p>
                     <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.links">
                         <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a">

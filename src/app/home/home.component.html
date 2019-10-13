@@ -1,5 +1,5 @@
-<app-carousel></app-carousel>
-<section id="experienceCards" class="bg-light p-5">
+<app-carousel *ngIf="knowledgeBaseCards$ | async"></app-carousel>
+<section id="experienceCards" class="bg-light p-5" *ngIf="experienceCards$ | async">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -9,8 +9,8 @@
         </div>
     </div>
 </section>
-<app-experience-jumbotron></app-experience-jumbotron>
-<section id="knowledgeBaseCards" class="bg-white p-5">
+<app-experience-jumbotron *ngIf="experienceCards$ | async"></app-experience-jumbotron>
+<section id="knowledgeBaseCards" class="bg-white p-5" *ngIf="knowledgeBaseCards$ | async">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -1,11 +1,13 @@
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -34,7 +36,6 @@ import { KbJumbotronComponent } from './knowledge-base/kb-jumbotron/kb-jumbotron
 import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/experience-jumbotron.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { ListComponent } from './about/testimonials/list/list.component';
-
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -72,6 +73,7 @@ import { ListComponent } from './about/testimonials/list/list.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,

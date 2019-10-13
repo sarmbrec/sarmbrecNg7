@@ -2,7 +2,8 @@
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 .albert-einstein {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .5), rgba($white, .1), rgba($primary, .3)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
+    // background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .5), rgba($white, .1), rgba($primary, .3)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

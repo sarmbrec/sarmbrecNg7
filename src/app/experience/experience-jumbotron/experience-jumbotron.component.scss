@@ -2,7 +2,7 @@
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 .steve-jobs {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .5), rgba($black, .6), rgba($primary, .4)), url("../../../assets/images/backgrounds/steve-jobs-garage.jpg");
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), url("../../../assets/images/backgrounds/steve-jobs-garage.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;

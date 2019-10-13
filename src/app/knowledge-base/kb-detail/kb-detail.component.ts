@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 import { DataService } from '../../services/data.service';
 import { KbInterface } from '../../interfaces/kb';
 
+import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-kb-detail',
   templateUrl: './kb-detail.component.html',
@@ -16,6 +18,8 @@ export class KbDetailComponent implements OnInit {
   detail$: Observable<KbInterface>;
   kbHtml: any;
 
+  baseUrl = environment.baseUrl;
+  
   @Input() items: KbInterface; 
   
   constructor(

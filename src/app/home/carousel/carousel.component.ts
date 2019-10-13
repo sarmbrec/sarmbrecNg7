@@ -4,6 +4,10 @@ import { NgbCarousel, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from '../../../environments/environment';
 
+import { Carousel } from '../../interfaces/carousel';
+import { Observable } from 'rxjs';
+
+
 @Component({
   selector: 'app-carousel',
   encapsulation: ViewEncapsulation.None,
@@ -13,9 +17,10 @@ import { environment } from '../../../environments/environment';
 })
 export class CarouselComponent implements OnInit {
 
-  carouselItems: {};
+  //carouselItems: {};
   toggleClassActive = false;
-  
+  carouselData$: Observable<Carousel[]>;
+
   baseUrl = environment.baseUrl;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
@@ -28,10 +33,11 @@ export class CarouselComponent implements OnInit {
    }
 
    ngOnInit() {
-    this.service.getCarouselTechStack().subscribe(service => {
-       this.carouselItems = service;
-       console.log('this.carouselItems = ', this.carouselItems)
-    });
+    // this.service.getCarouselTechStack().subscribe(service => {
+    //    this.carouselItems = service;
+    //    console.log('this.carouselItems = ', this.carouselItems)
+    // });
+    this.carouselData$ = this.service.getCarouselListAsync();
   }
 
   toggleActiveClass() {

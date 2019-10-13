@@ -6,6 +6,7 @@ import { ExperienceInterface } from '../interfaces/experience';
 import { KbInterface } from '../interfaces/kb';
 import { FakeUsersListInterface } from '../interfaces/fake-users-list';
 import { environment } from '../../environments/environment';
+import { Carousel } from '../interfaces/carousel';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,10 @@ export class DataService {
 
   getCarouselTechStack() {
     return this.httpClient.get(this.baseUrl + 'assets/json/carousel-tech-stack.json');
+  }
+
+  getCarouselListAsync(): Observable<Carousel[]> {
+    return this.httpClient.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json'); 
   }
 
   getFakeUsersList() {

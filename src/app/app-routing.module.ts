@@ -11,7 +11,7 @@ import { DefaultAngularLandingPageComponent } from './home/default-angular-landi
 import { PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent },//, data: {animation: 'FilterPage'}
   { path: 'contact', component: ContactComponent },
   { path: 'knowledge', component: KnowledgeBaseComponent },
   { path: 'knowledge/:id', component: KbDetailComponent },
