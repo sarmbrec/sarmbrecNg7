@@ -1,9 +1,28 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
+section#experienceCards {
+    background-color: lighten($black, 90%);
+    padding: 1rem 0;
+}
+
+section#knowledgeBaseCards {
+    background-color: lighten($black, 95%);
+    padding: 1rem 0;
+}
+
 @include media-breakpoint-up(xs) {}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+    section#experienceCards {
+        background-color: lighten($black, 85%);
+        padding: 2rem 0;
+    }
+    section#knowledgeBaseCards {
+        background-color: lighten($black, 85%);
+        padding: 2rem 0;
+    }
+}
 
 @include media-breakpoint-up(md) {}
 

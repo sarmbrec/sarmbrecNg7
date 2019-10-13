@@ -3,7 +3,7 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 .albert-einstein {
     // background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .5), rgba($white, .1), rgba($primary, .3)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,23 +11,50 @@
     background-attachment: fixed;
     background-color: $primary;
     margin: 0;
+    padding-top: 45vh;
+    text-align: right;
     p {
+        font-weight: 100;
+        font-size: 1.1rem;
+        text-shadow: .1rem .1rem .5rem $black;
+        color: $light;
         &.lead {
             font-family: 'Roboto', sans-serif;
-            font-size: 3rem;
+            font-size: 1.75rem;
             text-shadow: .25rem .25rem .75rem rgba($black, .7);
             line-height: 1.25;
             // font-style: italic;
         }
-        font-size: 1.25rem;
-        text-shadow: .1rem .1rem .5rem $black;
-        color: $light;
     }
 }
 
 @include media-breakpoint-up(xs) {}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+    .albert-einstein {
+        // background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .5), rgba($white, .1), rgba($primary, .3)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
+        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), url("../../../assets/images/backgrounds/albert-einstein.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        background-attachment: fixed;
+        background-color: $primary;
+        margin: 0;
+        p {
+            &.lead {
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                text-shadow: .25rem .25rem .75rem rgba($black, .7);
+                line-height: 1.25;
+                // font-style: italic;
+            }
+            font-size: 1.25rem;
+            text-shadow: .1rem .1rem .5rem $black;
+            color: $light;
+        }
+    }
+}
 
 @include media-breakpoint-up(md) {}
 

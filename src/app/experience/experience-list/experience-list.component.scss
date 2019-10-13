@@ -91,19 +91,19 @@
 
 @include media-breakpoint-up(sm) {
     .card-columns {
-        column-count: 1;
+        column-count: 2;
     }
 }
 
 @include media-breakpoint-up(md) {
     .card-columns {
-        column-count: 1;
+        column-count: 2;
     }
 }
 
 @include media-breakpoint-up(lg) {
     .card-columns {
-        column-count: 2;
+        column-count: 3;
     }
 }
 

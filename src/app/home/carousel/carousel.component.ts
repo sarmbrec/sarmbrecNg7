@@ -26,7 +26,7 @@ export class CarouselComponent implements OnInit {
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
   constructor(private service: DataService, config: NgbCarouselConfig) {
-    config.interval = 0;
+    config.interval = 7000;
     config.wrap = true;
     config.keyboard = false;
     config.pauseOnHover = true;
