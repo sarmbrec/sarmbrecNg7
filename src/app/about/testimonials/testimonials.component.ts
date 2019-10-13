@@ -3,6 +3,7 @@ import { DataService } from '../../services/data.service';
 
 import { FakeUsersListInterface } from '../../interfaces/fake-users-list';
 import { Observable } from 'rxjs';
+//import demodata from '../assets/demo.json';
 
 @Component({
   selector: 'app-testimonials',
