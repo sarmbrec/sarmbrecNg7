@@ -219,3 +219,71 @@ section#section-carousel {
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-between(md, xl) {}
+
+// mobile landscape, exclude tablets
+// TODO: not good for pixel 2XL - 3 pixels off, need to fix in responsiveness of component and not breakpoints....
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (max-device-height: 414px) and (orientation: landscape) {
+    section#section-carousel {
+        .carousel-indicators {
+            display: none;
+        }
+        .carousel-inner {
+            .carousel-item {
+                .carousel-item-background {
+                    .carousel-caption {
+                        h1 {
+                            margin: 1rem auto 1rem auto;
+                        }
+                        img#logo-techstack {
+                            height: 75px;
+                            margin: -25px 0 -25px 0;
+                        }
+                        hr {
+                            margin: .5rem 4rem;
+                        }
+                        a.btn {
+                            margin-top: 1rem;
+                            max-width: 75%;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        &.active {
+                            img#logo-techstack {
+                                width: auto;
+                                height: 100px;
+                                margin-top: -25px;
+                                margin-left: -83%;
+                            }
+                            hr {
+                                margin-left: 0;
+                                margin-right: 0;
+                            }
+                            p {
+                                display: block;
+                                margin-left: 20%;
+                                text-align: left;
+                                font-size: .75rem;
+                            }
+                            h1 {
+                                font-size: .7rem;
+                                margin-top: -55px;
+                                margin-left: 20%;
+                                margin-bottom: .5rem;
+                            }
+                            a.btn {
+                                display: inline-block;
+                                width: 45%;
+                                margin: .25rem;
+                                //margin-left: 25%;
+                                //margin-top: .5rem;
+                                //margin-right: 0;
+                                padding: .25rem;
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
