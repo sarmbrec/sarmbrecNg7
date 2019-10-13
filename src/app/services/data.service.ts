@@ -4,10 +4,12 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/internal/operators/map';
 import { ExperienceInterface } from '../interfaces/experience';
 import { KbInterface } from '../interfaces/kb';
+import { FakeUsersListInterface } from '../interfaces/fake-users-list';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
 
   constructor(
@@ -18,9 +20,16 @@ export class DataService {
     return this.httpClient.get('../../assets/json/carousel-tech-stack.json');
   }
 
-  getUsers() {
-    return this.httpClient.get('https://reqres.in/api/users?page=2&per_page=3&total=24');
+  getFakeUsersList() {
+    return this.httpClient.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
   }
+
+  getFakeUsersListAsync(): Observable<FakeUsersListInterface[]> {
+    //return this.httpClient.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
+    return this.httpClient.get<FakeUsersListInterface[]>('https://reqres.in/api/users?page=2&per_page=6&total=12'); 
+  }
+
+
 
   getExperienceAsync(): Observable<ExperienceInterface[]> {
     return this.httpClient.get<ExperienceInterface[]>('../assets/json/experience.json');    

@@ -1,0 +1,13 @@
+<div class="card" *ngIf="items">
+    <div class="card-body">
+        <!-- <div *ngFor="let item of items | keyvalue">
+            Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+        </div> -->
+        <ul>
+            <li *ngFor="let item of items['data']">
+                <img [src]="item.avatar">
+                <p>{{item.first_name}} {{item.last_name}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

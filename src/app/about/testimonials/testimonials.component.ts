@@ -1,17 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+
+import { FakeUsersListInterface } from '../../interfaces/fake-users-list';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-testimonials',
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss']
 })
+
 export class TestimonialsComponent implements OnInit {
-  users: object;
-  constructor(private data: DataService) {}
+  
+  //users: any;
+  fakeUsersList$: Observable<FakeUsersListInterface[]>;
+  fakeUsersListData$: Observable<FakeUsersListInterface["data"]>;
+  constructor(private service: DataService) {}
+  
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-      this.users = data;
-      // console.log('TestimonialsComponent | data = ', data)
-    });
+    // synchronis
+    //this.service.getFakeUsersList().subscribe(data => {this.users = data;});
+    // async
+    this.fakeUsersList$ = this.service.getFakeUsersListAsync();
+    this.fakeUsersListData$ = this.fakeUsersList$["data"];
+    
+
+    // log observable
+    // this.fakeUsersList$.subscribe(res => {
+    //   console.log('res = ', res);
+    //   this.fakeUsersList$ = res.data;
+    //   console.log('this.fakeUsersList$ = ', this.fakeUsersList$);
+      
+    // });
+
+
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { AppComponent } from '../app.component';
+import { AppComponent } from '../app.component';
 // import { HomeComponent } from '../home/home.component';
 
 @Component({
@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
 
   // access other components and share data
   // users: any;
-  // title = new AppComponent().title;
+  title = new AppComponent().title;
   // usersList = new HomeComponent(this.users);
   constructor() { }
 

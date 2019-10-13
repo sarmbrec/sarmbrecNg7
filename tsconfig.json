@@ -22,6 +22,6 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "enableIvy": false //TODO: ask James if this is correct in order to use async pipe with ng7
+    "enableIvy": false // TODO: ask James if this is correct in order to use async pipe with ng7
   }
 }

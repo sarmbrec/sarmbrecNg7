@@ -3,22 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-import {ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { CarouselHomePageComponent } from './home/carousel-home-page/carousel-home-page.component';
 import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.component';
 import { FooterComponent } from './footer/footer.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DefaultAngularLandingPageComponent } from './home/default-angular-landing-page/default-angular-landing-page.component';
 import { MessagesComponent } from './messages/messages.component';
-
 import { TestimonialsComponent } from './about/testimonials/testimonials.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
@@ -35,6 +32,9 @@ import { PolarAreaComponent } from './charts/polar-area/polar-area.component';
 import { BarComponent } from './charts/bar/bar.component';
 import { KbJumbotronComponent } from './knowledge-base/kb-jumbotron/kb-jumbotron.component';
 import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/experience-jumbotron.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
+import { ListComponent } from './about/testimonials/list/list.component';
+
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -46,14 +46,12 @@ import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    CarouselHomePageComponent,
     KnowledgeBaseComponent,
     FooterComponent,
     KbDetailComponent,
     PageNotFoundComponent,
     DefaultAngularLandingPageComponent,
-    MessagesComponent,
-    
+    MessagesComponent,    
     TestimonialsComponent,
     HeaderComponent,
     NavBarComponent,
@@ -68,7 +66,9 @@ import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/
     PolarAreaComponent,
     BarComponent,
     KbJumbotronComponent,
-    ExperienceJumbotronComponent
+    ExperienceJumbotronComponent,
+    CarouselComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +78,7 @@ import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    ChartsModule
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

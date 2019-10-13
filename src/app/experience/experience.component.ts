@@ -13,11 +13,11 @@ export class ExperienceComponent implements OnInit {
   experiences$: Observable<ExperienceInterface[]>;
 
   constructor(
-    private dataService: DataService
+    private service: DataService
   ) { }
 
   public ngOnInit(): void {
-    this.experiences$ = this.dataService.getExperienceAsync();
+    this.experiences$ = this.service.getExperienceAsync();
   }  
 
 }
