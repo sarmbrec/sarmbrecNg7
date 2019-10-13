@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { NgbCarousel, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
+import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'app-carousel',
   encapsulation: ViewEncapsulation.None,
@@ -14,6 +16,8 @@ export class CarouselComponent implements OnInit {
   carouselItems: {};
   toggleClassActive = false;
   
+  baseUrl = environment.baseUrl;
+
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
   constructor(private service: DataService, config: NgbCarouselConfig) {
