@@ -1,16 +1,14 @@
 <section id="experience" *ngIf="experiences$ | async">
 
-    <app-experience-jumbotron></app-experience-jumbotron>
+    <app-experience-jumbotron *ngIf="experiences$ | async"></app-experience-jumbotron>
 
-
-    <div class="container">
+    <div class="container" *ngIf="experiences$ | async">
         <div class="row">
-            <div class="col-12">
-                <h1 class="mb-0">Experience</h1>
-
+            <div class="col-12 py-4">
+                <h1>Experience</h1>
                 <app-experience-list [items]="experiences$ | async"></app-experience-list>
-                <!-- <app-experience-detail></app-experience-detail> -->
             </div>
         </div>
     </div>
+
 </section>
