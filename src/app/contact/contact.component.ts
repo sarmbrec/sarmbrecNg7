@@ -17,6 +17,8 @@ export class ContactComponent {
 
 
 
+  appTitle = new AppComponent().title;
+  
   powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
 
   model = new ContactInterface('Dr IQ', 'test@sarmbrec.com', this.powers[0], 'Chuck Overstreet says hello');
