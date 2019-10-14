@@ -16,6 +16,7 @@ import { Observable } from 'rxjs';
 export class ContactComponent {
 
 
+  appTitle = new AppComponent().title;
 
   appTitle = new AppComponent().title;
   
