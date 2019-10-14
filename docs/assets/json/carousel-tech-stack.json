@@ -1,0 +1,106 @@
+[{
+        "category": "Front end technology",
+        "title": "Angular 7",
+        "logo": {
+            "url": "/assets/images/logos/technology/Angular_logo_512.png",
+            "width": "",
+            "height": ""
+        },
+        "urlDetailView": "angular",
+        "subTitle": "One framework, mobile and desktop",
+        "background": "/assets/images/backgrounds/beachhouse.jpg",
+        "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
+        "links": [{
+                "title": "Documentation",
+                "url": "https://angular.io/"
+            },
+            {
+                "title": "Tutorial",
+                "url": "https://angular.io/start"
+            },
+            {
+                "title": "CLI",
+                "url": "https://angular.io/cli"
+            }
+        ]
+    },
+    {
+        "category": "Front end technology",
+        "title": "HTML 5",
+        "logo": {
+            "url": "/assets/images/logos/technology/HTML5_Badge_512.png",
+            "width": "",
+            "height": ""
+        },
+        "urlDetailView": "html5",
+        "subTitle": "Hypertext Markup Language",
+        "background": "/assets/images/backgrounds/beachhousepelicans.jpg",
+        "text": "The latest evolution of the standard that defines HTML",
+        "links": [{
+                "title": "Semantic HTML Validator",
+                "url": "https://validator.w3.org/nu/#textarea"
+            },
+            {
+                "title": "Semantic HTML Guide",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+            }
+        ]
+    },
+    {
+        "category": "Front end technology",
+        "title": "AngularJS",
+        "logo": {
+            "url": "/assets/images/logos/technology/AngularJS_logo_512.png",
+            "width": "",
+            "height": ""
+        },
+        "urlDetailView": "angularjs",
+        "subTitle": "Superheroic JavaScript MVW Framework",
+        "background": "/assets/images/backgrounds/emma-jenna.jpg",
+        "text": "What HTML would have been, had it been designed for building web-apps.",
+        "links": [{
+                "title": "Documentation",
+                "url": "https://angularjs.org/"
+            },
+            {
+                "title": "Styleguide",
+                "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
+            }
+        ]
+    },
+
+    {
+        "category": "Front end technology",
+        "title": "SASS",
+        "logo": {
+            "url": "/assets/images/logos/technology/sass_logo2_512.png",
+            "width": "",
+            "height": ""
+        },
+        "urlDetailView": "sass",
+        "subTitle": "Syntactically Awesome Style Sheets",
+        "background": "/assets/images/backgrounds/beachhouse.jpg",
+        "text": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
+        "links": [{
+            "title": "Sass",
+            "url": "https://sass-lang.com/"
+        }]
+    },
+    {
+        "category": "Front end technology",
+        "title": "JavaScript",
+        "logo": {
+            "url": "/assets/images/logos/technology/js_logo_512.png",
+            "width": "",
+            "height": ""
+        },
+        "urlDetailView": "javascript",
+        "subTitle": "Fun on a bun",
+        "background": "/assets/images/backgrounds/floodedroad.jpg",
+        "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
+        "links": [{
+            "title": "JavaScript MDN",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        }]
+    }
+]
