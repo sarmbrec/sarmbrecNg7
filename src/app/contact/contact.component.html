@@ -23,18 +23,12 @@
                     </div>
 
 
-<<<<<<< HEAD
-                    <!-- <div class="form-group">
-                        <label for="alterEgo">Alter Ego</label>
-                        <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
-=======
                     <div class="form-group">
                         <label for="name">Email address</label>
                         <input type="email" class="form-control" id="_replyto" name="_replyto" formControlName="_replyto" aria-describedby="_replytoFeedback" placeholder="Enter your email address">
 
                         <!-- <label for="alterEgo">Email</label>
                         <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo"> -->
->>>>>>> master
                     </div>
 
                     <div class="form-group">
@@ -43,82 +37,15 @@
 
                         <!-- <label for="power">Hero Power</label>
                         <select class="form-control" id="power" required [(ngModel)]="model.power" name="power">
-<<<<<<< HEAD
-                        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-                      </select>
-                    </div> -->
-=======
-                        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option> -->
-                        </select>
+                        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option
+                        </select>> -->
                     </div>
->>>>>>> master
 
                     <button type="submit" class="btn btn-success">Submit</button>
 
                 </form>
 
 
-
-                <!-- <div class="alert alert-warning">
-                    <i class="fa fa-exclamation-circle fa-3x mr-4 align-middle"></i>This page is currently under construction and may not be fully functional.
-                </div> -->
-
-
-
-                <!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                    !-- <form (ngSubmit)="onSubmit()" method="POST" action="https://formspree.io/sarmbrec@gmail.com" method="POST"> --
-
-                    <h5 *ngIf="success">Your form is valid!</h5>
-
-                    <div *ngIf="submitted" class="results">
-                        <strong>Name:</strong>
-                        <span>{{ contactForm.controls.name.value }}</span>
-                        <strong>Message:</strong>
-                        <span>{{ contactForm.controls.message.value }}</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" formControlName="name" aria-describedby="nameFeedback" placeholder="Enter your name">
-                        !-- required --
-                        <small id="nameFeedback" class="form-text text-muted">a</small>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div *ngIf="submitted && contactForm.controls.name.errors" class="error">
-                            <div *ngIf="contactForm.controls.name.errors.required">Please enter your name.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Email address</label>
-                        <input type="email" class="form-control" id="_replyto" name="_replyto" formControlName="_replyto" aria-describedby="_replytoFeedback" placeholder="Enter your email address">
-                        !-- required --
-                        <small id="_replytoFeedback" class="form-text text-muted">a</small>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div *ngIf="submitted && contactForm.controls.email.errors" class="error">
-                            <div *ngIf="contactForm.controls.email.errors.required">Please enter your email address.</div>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="name">Message</label>
-                        <textarea formControlName="message" id="message" name="message" class="form-control" aria-describedby="messageFeedback"></textarea>
-                        <small id="messageFeedback" class="form-text text-muted">a</small>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div *ngIf="submitted && contactForm.controls.message.errors" class="error">
-                            <div *ngIf="contactForm.controls.message.errors.required">Please enter your message.</div>
-                        </div>
-                    </div>
-
-                    <button type="submit" value="Send message" class="btn btn-primary"><i class="fa fa-send-o mr-1"></i>Send</button>
-
-                </form> -->
 
             </div>
             <div class="col-12 col-md-4">

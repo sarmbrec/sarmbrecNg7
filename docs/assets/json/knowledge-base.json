@@ -1,0 +1,477 @@
+[{
+        "category": "Front end",
+        "title": "Angular",
+        "subTitle": "One framework, mobile and desktop",
+        "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
+        "logo": "assets/images/logos/technology/Angular_logo_512.png",
+        "requirements": {
+            "links": [{
+                    "text": "You need Git to clone the repository.",
+                    "downloadLink": {
+                        "title": "Download Git",
+                        "url": "https://git-scm.com/downloads"
+                    }
+                },
+                {
+                    "text": "You must have Node.js and its package manager (npm) installed.",
+                    "downloadLink": {
+                        "title": "Download Node.js",
+                        "url": "https://nodejs.org/"
+                    }
+                },
+                {
+                    "text": "CLI Overview and Command Reference",
+                    "downloadLink": {
+                        "title": "Install Angular CLI",
+                        "url": "https://angular.io/cli"
+                    }
+                },
+                {
+                    "text": "Terminal Command",
+                    "codeBlock": "npm install -g @angular/cli"
+                },
+                {
+                    "text": "Install Visual Code for editing.",
+                    "downloadLink": {
+                        "title": "Download Visual Code",
+                        "url": "https://code.visualstudio.com/"
+                    }
+                }
+            ]
+        },
+        "officialdocs": {
+            "url": "angular",
+            "links": [{
+                    "title": "Documentation",
+                    "url": "https://angular.io/"
+                },
+                {
+                    "title": "Tutorial",
+                    "url": "https://angular.io/start"
+                },
+                {
+                    "title": "Style Guide",
+                    "url": "https://angular.io/guide/styleguide"
+                },
+                {
+                    "title": "CLI",
+                    "url": "https://angular.io/cli"
+                }
+            ]
+        },
+        "tutorials": {
+            "links": [{
+                    "title": "Angular University",
+                    "url": "https://www.youtube.com/channel/UC3cEGKhg3OERn-ihVsJcb7A"
+                },
+                {
+                    "title": "Deployment",
+                    "url": "https://angular.io/guide/deployment"
+                }
+            ]
+        },
+        "links": [{
+                "title": "Angular Docs",
+                "url": "https://angular.io/docs"
+            },
+            {
+                "title": "Getting Started with Angular",
+                "url": "https://angular.io/start"
+            },
+            {
+                "title": "CLI command-language syntax",
+                "url": "https://angular.io/cli"
+            }
+        ]
+    },
+
+
+
+
+
+
+
+    {
+        "category": "Front end",
+        "title": "HTML 5",
+        "subTitle": "Hypertext Markup Language",
+        "text": "The latest evolution of the standard that defines HTML",
+        "logo": "assets/images/logos/technology/HTML5_Badge_512.png",
+        "officialdocs": {
+            "url": "html5",
+            "links": [{
+                    "title": "Semantic HTML Validator",
+                    "url": "https://validator.w3.org/nu/#textarea"
+                },
+                {
+                    "title": "Semantic HTML Guide",
+                    "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+                }
+            ]
+        },
+        "links": [{
+                "title": "Bootstrap 3",
+                "url": "https://getbootstrap.com/docs/3.3/"
+            },
+            {
+                "title": "Bootstrap 4",
+                "url": "https://getbootstrap.com/docs/4.3/"
+            },
+            {
+                "title": "Material Design Lite",
+                "url": "https://getmdl.io/"
+            }
+        ]
+    },
+    {
+        "category": "Front end",
+        "title": "SASS",
+        "subTitle": "Syntactically Awesome Style Sheets",
+        "text": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
+        "logo": "assets/images/logos/technology/sass_logo2_512.png",
+        "officialdocs": {
+            "url": "sass",
+            "links": [{
+                "title": "Sass",
+                "url": "https://sass-lang.com/"
+            }]
+        },
+        "links": [{
+            "title": "Sass",
+            "url": "https://sass-lang.com/"
+        }]
+    },
+    {
+        "category": "Front end",
+        "title": "CSS3",
+        "subTitle": "Cascading Style Sheets",
+        "text": "The latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1",
+        "logo": "assets/images/logos/technology/css3_logo_512.png",
+        "officialdocs": {
+            "url": "CSS3",
+            "links": [{
+                "title": "All CSS specifications",
+                "url": "https://www.w3.org/Style/CSS/specs.en.html"
+            }]
+        },
+        "links": [{
+            "title": "All CSS specifications",
+            "url": "https://www.w3.org/Style/CSS/specs.en.html"
+        }]
+    },
+    {
+        "category": "Front end",
+        "title": "JavaScript",
+        "subTitle": "The programming language of HTML and the Web.",
+        "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
+        "logo": "assets/images/logos/technology/js_logo_512.png",
+        "officialdocs": {
+            "url": "javascript",
+            "links": [{
+                "title": "JavaScript MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            }]
+        },
+        "links": [{
+                "title": "JavaScript MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+                "title": "What is ECMAScript 5?",
+                "url": "https://www.w3schools.com/js/js_es5.asp"
+            },
+            {
+                "title": "What is ECMAScript 6?",
+                "url": "https://www.w3schools.com/js/js_es6.asp"
+            },
+            {
+                "title": "Arrow function",
+                "url": "https://www.w3schools.com/js/js_arrow_function.asp"
+            },
+            {
+                "title": "Classes",
+                "url": "https://www.w3schools.com/js/js_classes.asp"
+            },
+            {
+                "title": "Debugging",
+                "url": "https://www.w3schools.com/js/js_debugging.asp"
+            },
+            {
+                "title": "Style Guide",
+                "url": "https://www.w3schools.com/js/js_conventions.asp"
+            },
+            {
+                "title": "Best Practices",
+                "url": "https://www.w3schools.com/js/js_best_practices.asp"
+            },
+            {
+                "title": "Loading 3d models",
+                "url": "https://threejs.org/docs/index.html#manual/en/introduction/Loading-3D-models"
+            }
+        ]
+    },
+    {
+        "category": "Front end",
+        "title": "jQuery",
+        "subTitle": "Fun on a bun",
+        "text": "A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.",
+        "logo": "assets/images/logos/technology/jquery_logo2_512.png",
+        "officialdocs": {
+            "url": "jquery",
+            "links": [{
+                "title": "JavaScript MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            }]
+        },
+        "links": [{
+                "title": "Documentation",
+                "url": "https://jquery.com/"
+            },
+            {
+                "title": "API Documentation",
+                "url": "https://api.jquery.com/"
+            }
+        ]
+    },
+    {
+        "category": "Front end",
+        "title": "TypeScript",
+        "subTitle": "Designed for development of large applications",
+        "text": "An open-source programming language developed and maintained by Microsoft.",
+        "logo": "assets/images/logos/technology/typescript_logo_512.png",
+        "officialdocs": {
+            "url": "typescript",
+            "links": [{
+                "title": "JavaScript MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            }]
+        },
+        "links": [{
+                "title": "Javascript that scales",
+                "url": "https://www.typescriptlang.org/"
+            },
+            {
+                "title": "TypeScript in 5 minutes",
+                "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+            }
+        ]
+    },
+    {
+        "category": "Front end",
+        "title": "AngularJS",
+        "subTitle": "Superheroic JavaScript MVWhatever Framework",
+        "text": "What HTML would have been, had it been designed for building web-apps.",
+        "logo": "assets/images/logos/technology/AngularJS_logo_512.png",
+        "officialdocs": {
+            "url": "angularjs",
+            "links": [{
+                    "title": "Creating from scratch guide",
+                    "url": "https://angular.io/"
+                },
+                {
+                    "title": "Creating from visual studio guide",
+                    "url": "https://angular.io/start"
+                }
+            ]
+        },
+        "links": [{
+                "title": "Styleguide",
+                "url": "https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md"
+            },
+            {
+                "title": "Developer Guide covering concepts",
+                "url": "https://docs.angularjs.org/guide/index"
+            },
+            {
+                "title": "API Reference for syntax",
+                "url": "https://docs.angularjs.org/api"
+            },
+            {
+                "title": "Documentation",
+                "url": "https://angularjs.org/"
+            },
+            {
+                "title": "Prerequisets / How to start",
+                "url": "https://www.agiletrailblazers.com/blog/modernized-technology/how-to-start-an-angularjs-application"
+            },
+            {
+                "title": "Tutorial",
+                "url": "https://docs.angularjs.org/tutorial"
+            }, {
+                "title": "Documentation",
+                "url": "https://angularjs.org/"
+            },
+            {
+                "title": "View on github",
+                "url": "https://github.com/angular/angular.js"
+            }
+        ]
+
+    },
+
+    {
+        "category": "Front end",
+        "title": "Accessibility",
+        "subTitle": "ADA Compliancy",
+        "text": "Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these.",
+        "logo": "assets/images/logos/technology/accessablitiy_logo_512.png",
+        "officialdocs": {
+            "url": "accessibility",
+            "links": [{
+                "title": "",
+                "url": ""
+            }]
+        },
+        "links": [{
+                "title": "Web Content Accessibility Guidelines (WCAG) 2.0",
+                "url": "https://www.w3.org/TR/WCAG20/"
+            },
+            {
+                "title": "Aria W3C",
+                "url": "https://www.w3.org/WAI/standards-guidelines/aria/"
+            },
+            {
+                "title": "Aria MDN",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+            },
+            {
+                "title": "Lighthouse Web",
+                "url": "https://web.dev/measure?gclid=CjwKCAjwwvfrBRBIEiwA2nFiPVs_xUQP_D_Jz2L3f3R61vGvRbTg2kP4d-Ra3LGqL3k57MrLgnivtBoCdEsQAvD_BwE"
+            },
+            {
+                "title": "Lighthouse Chrome Dev Tools",
+                "url": "https://developers.google.com/web/tools/lighthouse/"
+            },
+            {
+                "title": "Axe Deque",
+                "url": "https://www.deque.com/axe/"
+            },
+            {
+                "title": "Axe Chrome Store",
+                "url": "https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US"
+            }
+        ]
+    },
+    {
+        "category": "Source Control",
+        "title": "GitHub",
+        "subTitle": "How people build software",
+        "text": "Brings together the world's largest community of developers to discover, share, and build better software.",
+        "logo": "assets/images/logos/technology/github_logo_512.png",
+        "officialdocs": {
+            "url": "github",
+            "links": [{
+                "title": "GitHub Pages",
+                "url": "https://pages.github.com/"
+            }]
+        },
+        "links": [{
+                "title": "My Repositories",
+                "url": "https://github.com/sarmbrec"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/"
+            },
+            {
+                "title": "GitHub adding to existing repository",
+                "url": "https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line"
+            },
+            {
+                "title": "https://sarmbrec.github.io/",
+                "url": "https://sarmbrec.github.io/"
+            },
+            {
+                "title": "https://sarmbrec.github.io/sarmbrecNg7/",
+                "url": "https://sarmbrec.github.io/sarmbrecNg7/"
+            }
+        ]
+    },
+    {
+        "category": "Back end",
+        "title": "ASP.NET MVC 5",
+        "subTitle": "Free. Cross-platform. Open source.",
+        "text": "A framework for building web apps and services with .NET and C#.",
+        "logo": "assets/images/logos/technology/Visual_Studio_Logo_512.png",
+        "officialdocs": {
+            "url": "aspnet",
+            "links": [{
+                "title": "",
+                "url": ""
+            }]
+        },
+        "links": [{
+                "title": "Microsoft",
+                "url": "https://dotnet.microsoft.com/apps/aspnet"
+            },
+            {
+                "title": "ASP.NET",
+                "url": "https://asp.net/"
+            }
+        ]
+    },
+    {
+        "category": "Back end",
+        "title": "C#",
+        "subTitle": "Free. Cross-platform. Open source.",
+        "text": "A framework for building web apps and services with .NET and C#.",
+        "logo": "assets/images/logos/technology/csharp_logo2_512.png",
+        "officialdocs": {
+            "url": "csharp",
+            "links": [{
+                "title": "",
+                "url": ""
+            }]
+        },
+        "links": [{
+                "title": "Microsoft",
+                "url": "https://dotnet.microsoft.com/apps/aspnet"
+            },
+            {
+                "title": "ASP.NET",
+                "url": "https://asp.net/"
+            }
+        ]
+    },
+    {
+        "category": "Back end",
+        "title": "SQL Server",
+        "subTitle": "Intelligence and security are built in",
+        "text": "A relational database management system (RDBMS) developed and marketed by Microsoft. As a database server, the primary function of the SQL Server is to store and retrieve data used by other applications.",
+        "logo": "assets/images/logos/technology/sql_server_logo2_512.png",
+        "officialdocs": {
+            "url": "sqlserver",
+            "links": [{
+                "title": "",
+                "url": ""
+            }]
+        },
+        "links": [{
+                "title": "SQL Server - Microsoft",
+                "url": "https://www.microsoft.com/en-us/sql-server/default.aspx"
+            },
+            {
+                "title": "ASP.NET MVC - Databases",
+                "url": "https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_databases.htm"
+            }
+        ]
+    },
+    {
+        "category": "tools",
+        "title": "Online tools",
+        "subTitle": "Things that make life easier",
+        "text": "",
+        "logo": "assets/images/logos/technology/tools_logo_512.png",
+        "officialdocs": {
+            "url": "tools",
+            "links": [{
+                "title": "HEX to RGBA converter",
+                "url": "http://hex2rgba.devoth.com/"
+            }]
+        },
+        "links": [{
+            "title": "HEX to RGBA converter",
+            "url": "http://hex2rgba.devoth.com/"
+        }]
+    }
+]
