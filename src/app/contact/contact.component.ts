@@ -16,6 +16,7 @@ import { Observable } from 'rxjs';
 export class ContactComponent {
 
 
+  appTitle = new AppComponent().title;
 
   powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
 
