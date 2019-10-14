@@ -7,6 +7,16 @@ import { KbInterface } from '../interfaces/kb';
 import { FakeUsersListInterface } from '../interfaces/fake-users-list';
 import { environment } from '../../environments/environment';
 import { Carousel } from '../interfaces/carousel';
+import { ContactInterface } from '../interfaces/contact';
+import { catchError } from 'rxjs/operators';
+import { HttpHeaders } from '@angular/common/http';
+
+const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+        //'Authorization': 'my-auth-token'
+      })
+    };
 
 @Injectable({
   providedIn: 'root'
@@ -15,32 +25,53 @@ import { Carousel } from '../interfaces/carousel';
 export class DataService {
 
   baseUrl = environment.baseUrl;
+  handleError: any;
 
+  
   constructor(
-    private httpClient: HttpClient
-  ) { }
+    private http: HttpClient
+  ) { 
+
+    
+  
+    
+  }
+
+
+  /** POST: add a new hero to the database */
+sendEmailContactForm (contactInterface: ContactInterface): Observable<ContactInterface> {
+  
+  console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!')
+  
+  return this.http.post<ContactInterface>('https://formspree.io/sarmbrec@gmail.com', contactInterface, httpOptions)
+    .pipe(
+      catchError(this.handleError('contactInterface', contactInterface))
+    );
+}
+
+
 
   getCarouselTechStack() {
-    return this.httpClient.get(this.baseUrl + 'assets/json/carousel-tech-stack.json');
+    return this.http.get(this.baseUrl + 'assets/json/carousel-tech-stack.json');
   }
 
   getCarouselListAsync(): Observable<Carousel[]> {
-    return this.httpClient.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json'); 
+    return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json'); 
   }
 
   getFakeUsersList() {
-    return this.httpClient.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
+    return this.http.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
   }
 
   getFakeUsersListAsync(): Observable<FakeUsersListInterface[]> {
-    //return this.httpClient.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
-    return this.httpClient.get<FakeUsersListInterface[]>('https://reqres.in/api/users?page=2&per_page=6&total=12'); 
+    //return this.http.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
+    return this.http.get<FakeUsersListInterface[]>('https://reqres.in/api/users?page=2&per_page=6&total=12'); 
   }
 
 
 
   getExperienceAsync(): Observable<ExperienceInterface[]> {
-    return this.httpClient.get<ExperienceInterface[]>(this.baseUrl + 'assets/json/experience.json');    
+    return this.http.get<ExperienceInterface[]>(this.baseUrl + 'assets/json/experience.json');    
   }
   
   getExperienceDetailAsync(id: string) {
@@ -50,7 +81,7 @@ export class DataService {
   }
 
   getKnowledgeBaseAsync(): Observable<KbInterface[]> {    
-    return this.httpClient.get<KbInterface[]>(this.baseUrl + 'assets/json/knowledge-base.json');
+    return this.http.get<KbInterface[]>(this.baseUrl + 'assets/json/knowledge-base.json');
   }
 
   geKnowledgeBaseDetailAsync(id: string) {
@@ -63,7 +94,7 @@ export class DataService {
   // TODO: convert to async
   getKbHtmlContent(url: string) {
     // console.log('getKbHtmlContent | url = ', url)
-    return this.httpClient.get(this.baseUrl + 'assets/kbHtml/' + url, {responseType: 'text' as 'json'});
+    return this.http.get(this.baseUrl + 'assets/kbHtml/' + url, {responseType: 'text' as 'json'});
   }
 
 }
