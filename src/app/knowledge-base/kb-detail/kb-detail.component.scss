@@ -2,10 +2,10 @@
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 section#kb-detail {
-    background-color: $white;
+    background-color: $light;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    position: relative;
+    //position: relative;
     font-size: .875rem;
     line-height: 1.25;
     h1 {
@@ -20,7 +20,7 @@ section#kb-detail {
             margin-bottom: .5rem;
         }
     }
-    .kb {
+    .parent-section {
         color: darken($light, 25%);
         font-size: .75rem;
         margin-top: -20px;

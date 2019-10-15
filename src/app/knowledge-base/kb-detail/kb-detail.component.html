@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-8 order-2 order-md-1">
                 <h1 *ngIf="kbDetail.title">{{kbDetail.title}}</h1>
-                <div class="kb">Knowledge Base</div>
+                <div class="parent-section">Knowledge Base</div>
                 <div class="card">
                     <div class="card-body">
                         <div [innerHtml]="kbHtml"></div>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-md-4 order-1 order-md-2">
-                <div class="card">{{baseUrl}}
+                <div class="card">
                     <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" id="logo">
                     <p class="sub-title">{{kbDetail.subTitle}}</p>
                     <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.links">
@@ -35,12 +35,12 @@
                         </li>
                     </ul>
                 </nav>
-                <hr class="mt-4 mb-4">
+                <!-- <hr class="mt-4 mb-4">
                 <h3>Requirements</h3>
-                <ul>
+                <nav><ul>
                     <li><a href="https://git-scm.com/downloads" target="_blank">Download git</a> - You need git to clone the angular-seed repository.</li>
                     <li><a href="https://nodejs.org/" target="_blank">Download node.js</a> - You must have Node.js and its package manager (npm) installed.</li>
-                </ul>
+                </ul></nav>
                 <hr class="mt-4 mb-4" />
                 <h3>Git commands</h3>
                 <code>
@@ -55,7 +55,7 @@
                 <h3>Fix for powershell</h3>
                 <p>
                     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-                </p>
+                </p> -->
             </div>
         </div>
     </div>

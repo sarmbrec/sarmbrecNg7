@@ -1,35 +1,88 @@
 <section id="experience-detail" *ngIf="detail$ | async as detail">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8 order-2 order-md-1">
 
-                <h1>{{detail.jobtitle}}</h1>
+                <h1 *ngIf="detail.jobtitle">{{detail.jobtitle}}</h1>
 
-                <hr>
+                <div class="parent-section">Experience</div>
 
-                <span class="company">{{detail.company}}</span>
+                <h2 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency"> / {{detail.agency}}</span></h2>
 
-                <p *ngIf="detail.agency">
-                    {{detail.agency}}
-                </p>
+                <hr *ngIf="detail.text">
 
                 <p *ngIf="detail.text">
                     {{detail.text}}
                 </p>
 
-                <hr>
+                <hr *ngIf="detail.achievements">
 
-                <ul>
-                    <li *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
+                <ul class="list-unstyled mx-3 text-justify">
+                    <li class="mb-3" *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
                 </ul>
 
+                <!-- <div class="card">
+                    <div class="card-body">
+                    </div>
+                </div> -->
             </div>
-            <div class="col-md-6">
-                <img [src]="['assets/images/logos/experience/' + detail.logo]">
+            <div class="col-md-4 order-1 order-md-2">
+                <img *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]" id="logo">
                 <hr>
                 <app-polar-area></app-polar-area>
                 <hr>
                 <app-bar></app-bar>
+
+                <div class="card">
+
+
+
+                    <!-- <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" id="logo">
+                    <p class="sub-title">{{kbDetail.subTitle}}</p>
+                    <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.links">
+                        <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a">
+                            <a [href]="link.url" class="" target="_blank">{{link.title}}</a>
+                        </li>
+                    </ul>
+                    <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.tutorials">
+                        <li class="list-group-item" *ngFor="let link of kbDetail.tutorials.links; index as a">
+                            <a [href]="link.url" class="" target="_blank">{{link.title}}</a>
+                        </li>
+                    </ul> -->
+                </div>
+                <nav class="mt-2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a [routerLink]="" style="cursor: pointer" role="button" (click)="getKbData('kb-angular-getstarted.html')">Getting Started</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a [routerLink]="" style="cursor: pointer" role="button" (click)="getKbData('test.html')">Test File</a>
+                        </li>
+                    </ul>
+                </nav>
+                <hr class="mt-4 mb-4">
+                <!-- <h3>Requirements</h3>
+                <nav>
+                    <ul>
+                        <li><a href="https://git-scm.com/downloads" target="_blank">Download git</a> - You need git to clone the angular-seed repository.</li>
+                        <li><a href="https://nodejs.org/" target="_blank">Download node.js</a> - You must have Node.js and its package manager (npm) installed.</li>
+                    </ul>
+                </nav>
+                <hr class="mt-4 mb-4" />
+                <h3>Git commands</h3>
+                <code>
+                        <ul>
+                            <li>npm install bootstrap --save</li>
+                            <li>npm install popper.js --save</li>
+                            <li>git commit -m &quot;Some message about the change&quot;</li>
+                            <li>git push -u origin &quot;branch-name&quot;</li>
+                        </ul>
+                    </code>
+                <hr class="mt-4 mb-4" />
+                <h3>Fix for powershell</h3>
+                <p>
+                    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+                </p> -->
             </div>
         </div>
     </div>
