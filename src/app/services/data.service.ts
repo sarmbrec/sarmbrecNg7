@@ -8,7 +8,6 @@ import { FakeUsersListInterface } from '../interfaces/fake-users-list';
 import { environment } from '../../environments/environment';
 import { Carousel } from '../interfaces/carousel';
 import { ContactInterface } from '../interfaces/contact';
-import { catchError } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 
 const httpOptions = {
@@ -26,39 +25,23 @@ export class DataService {
 
   baseUrl = environment.baseUrl;
   handleError: any;
-
   
   constructor(
     private http: HttpClient
-  ) { 
+  ) {}
 
-    
-  
-    
+  sendEmailContactForm (contactInterface: ContactInterface): Observable<ContactInterface> {  
+    // TO DO, GETTING A 403 RESPONSE - NEED TO FIND EMAIL SERVICE THAT ALLOWS API ACCESS FOR FREE
+    // uses https://formspree.io/ for email 
+    console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!');    
+    return this.http.post<ContactInterface>('https://formspree.io/sarmbrec@gmail.com', contactInterface, httpOptions);
   }
-
-
-  /** POST: add a new hero to the database */
-sendEmailContactForm (contactInterface: ContactInterface): Observable<ContactInterface> {
   
-  console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!')
-  
-  return this.http.post<ContactInterface>('https://formspree.io/sarmbrec@gmail.com', contactInterface, httpOptions)
-    .pipe(
-      catchError(this.handleError('contactInterface', contactInterface))
-    );
-}
-
-
-
-  getCarouselTechStack() {
-    return this.http.get(this.baseUrl + 'assets/json/carousel-tech-stack.json');
-  }
-
   getCarouselListAsync(): Observable<Carousel[]> {
     return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json'); 
   }
 
+  // TODO: convert to async
   getFakeUsersList() {
     return this.http.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
   }
@@ -67,8 +50,6 @@ sendEmailContactForm (contactInterface: ContactInterface): Observable<ContactInt
     //return this.http.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
     return this.http.get<FakeUsersListInterface[]>('https://reqres.in/api/users?page=2&per_page=6&total=12'); 
   }
-
-
 
   getExperienceAsync(): Observable<ExperienceInterface[]> {
     return this.http.get<ExperienceInterface[]>(this.baseUrl + 'assets/json/experience.json');    

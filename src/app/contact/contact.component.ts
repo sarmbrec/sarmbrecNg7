@@ -19,18 +19,43 @@ export class ContactComponent {
   
 
   appTitle = new AppComponent().title;
-  
-  powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
-
-  model = new ContactInterface('Dr IQ', 'test@sarmbrec.com', this.powers[0], 'Chuck Overstreet says hello');
-
   submitted = false;
+  contactForm: FormGroup;
+  contactform$: Observable<ContactInterface>;
+  //contactform$: Observable<ContactInterface>;
 
-  onSubmit() { this.submitted = true; }
+
+
+  
+
+  //powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
+  //model = new ContactInterface('Dr IQ', 'test@sarmbrec.com', this.powers[0], 'Chuck Overstreet says hello');
+
+
+  onSubmit() { 
+    this.submitted = true;
+
+    console.log('form submitted: ', this.contactForm)
+
+    // uses https://formspree.io/ for email api
+    this.contactform$ = this.service.sendEmailContactForm(this.contactForm.value); 
+    
+    // log observable
+    this.contactform$.subscribe(res => {
+      console.log('res = ', res);
+      // this.contactform$ = {
+      //   "email" = 'string',
+      //   message: 'string',
+      //   name: 'string',
+      //   _replyto: 'string'
+      // };
+      console.log('this.contactform$ = ', this.contactform$);      
+    });
+}
 
   // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
-
+  //get diagnostic() { return JSON.stringify(this.contactForm); }
+  get diagnostic() { return this.contactForm; }
   // contactForm: FormGroup;
   // submitted = false;
   // success = false;
@@ -39,17 +64,28 @@ export class ContactComponent {
 
   // contactform$: Observable<ContactInterface>;
 
-  // constructor(
-  //   private service: DataService,
-  //   private formBuilder: FormBuilder) {
-  //   this.contactForm = this.formBuilder.group({
-  //     name: ['', Validators.required],
-  //     email: ['', Validators.required],
-  //     message: ['', Validators.required],
-  //     _replyto: ['', Validators.required]
-  //   });
-  // }
+  constructor(
+    private service: DataService,
+    private formBuilder: FormBuilder) {
+    this.contactForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      message: ['', Validators.required],
+      _replyto: ['', Validators.required]
+    });
+  }
 
+
+
+
+
+
+
+
+
+
+
+  // -----------------------------------------------------------------------------------
   // onSubmit() {
 
   //   // TODO: Use EventEmitter with form value
@@ -65,9 +101,9 @@ export class ContactComponent {
   //   }
   //   this.success = true;
     
-  //   // uses https://formspree.io/ for email api
-  //   this.contactform$ = this.service.sendEmailContactForm(this.contactForm.value);
 
+  // // uses https://formspree.io/ for email api
+  // this.contactform$ = this.service.sendEmailContactForm(this.contactForm.value);
 
 
 
