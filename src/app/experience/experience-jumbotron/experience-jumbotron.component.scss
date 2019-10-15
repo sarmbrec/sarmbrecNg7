@@ -3,7 +3,7 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 @import "../../../assets/css/variables";
 .steve-jobs {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-url;
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-steve-jobs;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,7 +23,7 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             font-size: 7rem;
-            font text-shadow: .25rem .25rem .55rem rgba($black, .7);
+            text-shadow: .25rem .25rem .55rem rgba($black, .7);
             line-height: 1.25;
             opacity: 1;
             small {
@@ -40,7 +40,7 @@
 
 @include media-breakpoint-up(md) {
     .steve-jobs {
-        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-url;
+        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-steve-jobs;
         background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
