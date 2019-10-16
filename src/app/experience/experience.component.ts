@@ -18,6 +18,6 @@ export class ExperienceComponent implements OnInit {
 
   public ngOnInit(): void {
     this.experiences$ = this.service.getExperienceAsync();
-  }  
+  }
 
 }

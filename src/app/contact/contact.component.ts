@@ -32,14 +32,14 @@ export class ContactComponent {
   //model = new ContactInterface('Dr IQ', 'test@sarmbrec.com', this.powers[0], 'Chuck Overstreet says hello');
 
 
-  onSubmit() { 
+  onSubmit() {
     this.submitted = true;
 
-    console.log('form submitted: ', this.contactForm)
+    console.log('form submitted: ', this.contactForm);
 
     // uses https://formspree.io/ for email api
-    this.contactform$ = this.service.sendEmailContactForm(this.contactForm.value); 
-    
+    this.contactform$ = this.service.sendEmailContactForm(this.contactForm.value);
+
     // log observable
     this.contactform$.subscribe(res => {
       console.log('res = ', res);
@@ -49,7 +49,7 @@ export class ContactComponent {
       //   name: 'string',
       //   _replyto: 'string'
       // };
-      console.log('this.contactform$ = ', this.contactform$);      
+      console.log('this.contactform$ = ', this.contactform$);
     });
 }
 

@@ -2,10 +2,8 @@ import { switchMap } from 'rxjs/operators';
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
-
 import { DataService } from '../../services/data.service';
 import { KbInterface } from '../../interfaces/kb';
-
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -19,27 +17,24 @@ export class KbDetailComponent implements OnInit {
   kbHtml: any;
 
   baseUrl = environment.baseUrl;
-  
-  @Input() items: KbInterface; 
-  
+
+  @Input() items: KbInterface;
+
   constructor(
     private route: ActivatedRoute,
     private service: DataService,
   ) { }
 
   ngOnInit(): void {
-
     this.detail$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.service.geKnowledgeBaseDetailAsync(params.get('id')))
     );
-
   }
 
   getKbData(url: string) {
     this.service.getKbHtmlContent(url).subscribe(data => {
       this.kbHtml = data;
-      // console.log('getKbData | url: string = ', url, ' | this.kbHtml = ', this.kbHtml);
     });
   }
 

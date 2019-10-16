@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
-
-//import '../../node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js';
-//import * as pluginDataLabels from '../node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js/node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.js';
 import { Label } from 'ng2-charts';
+import { ExperienceInterface } from '../../interfaces/experience';
 
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss']
 })
+
 export class BarComponent implements OnInit {
+
+
+  //@Input() items: ExperienceInterface;
+  // @Input() items: SomeType;
+  //@Output() onItemSelected = new EventEmitter<SomeType>();
 
   public barChartOptions: ChartOptions = {
     responsive: true,

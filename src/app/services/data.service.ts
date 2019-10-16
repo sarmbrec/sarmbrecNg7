@@ -24,21 +24,25 @@ export class DataService {
 
   baseUrl = environment.baseUrl;
   handleError: any;
-  
+
   constructor(
     private http: HttpClient
   ) {}
 
-  sendEmailContactForm (contactInterface: ContactInterface): Observable<ContactInterface> {  
+  sendEmailContactForm(contactInterface: ContactInterface): Observable<ContactInterface> {
     // TO DO, GETTING A 403 RESPONSE - NEED TO FIND EMAIL SERVICE THAT ALLOWS API ACCESS FOR FREE
     // uses https://formspree.io/ for email 
-    console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!');    
+    console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!');
     return this.http.post<ContactInterface>('https://formspree.io/sarmbrec@gmail.com', contactInterface, httpOptions);
   }
-  
+
   getCarouselListAsync(): Observable<Carousel[]> {
-    return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json'); 
+    return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json');
   }
+
+  // getTechUsedChartDataAsync(): Observable<ChartTechnologyUsed[]> {
+  //   return this.http.get<ChartTechnologyUsed[]>(this.baseUrl + 'assets/json/experience.json');
+  // }
 
   // TODO: convert to async
   getFakeUsersList() {
@@ -53,11 +57,11 @@ export class DataService {
   getExperienceAsync(): Observable<ExperienceInterface[]> {
     return this.http.get<ExperienceInterface[]>(this.baseUrl + 'assets/json/experience.json');    
   }
-  
+
   getExperienceDetailAsync(id: string) {
     return this.getExperienceAsync().pipe(
       map((data: ExperienceInterface[]) => data.find(item => item.company.toLowerCase().replace(/ /g, '') === id))      
-    ); 
+    );
   }
 
   getKnowledgeBaseAsync(): Observable<KbInterface[]> {    

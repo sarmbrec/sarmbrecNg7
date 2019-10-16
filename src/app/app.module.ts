@@ -36,6 +36,7 @@ import { KbJumbotronComponent } from './knowledge-base/kb-jumbotron/kb-jumbotron
 import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/experience-jumbotron.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { ListComponent } from './about/testimonials/list/list.component';
+import { TechnologyUsedComponent } from './charts/technology-used/technology-used.component';
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -69,7 +70,8 @@ import { ListComponent } from './about/testimonials/list/list.component';
     KbJumbotronComponent,
     ExperienceJumbotronComponent,
     CarouselComponent,
-    ListComponent
+    ListComponent,
+    TechnologyUsedComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class KnowledgeBaseComponent implements OnInit {
   kbstack$: Observable<KbInterface[]>;
-  selectedItem: KbInterface;  
+  selectedItem: KbInterface;
   onItemSelected: any;
 
   constructor(
@@ -20,8 +20,8 @@ export class KnowledgeBaseComponent implements OnInit {
 
   public ngOnInit(): void {
     this.kbstack$ = this.service.getKnowledgeBaseAsync();
-  }  
-  
+  }
+
   public selectItem(item: KbInterface): void {
     this.selectedItem = item;
   }
