@@ -11,25 +11,32 @@
             </div>
 
             <div class="col-12 col-sm-6 col-md-8">
+
                 <h2 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency"> / {{detail.agency}}</span></h2>
                 <ng-container *ngIf="detail.description">
                     <p *ngFor="let item of detail.description">
                         {{item.text}}
                     </p>
                 </ng-container>
+
+                <hr class="mt-4">
+
                 <h3>Achievements</h3>
                 <ul class="pl-4" *ngIf="detail.achievements">
                     <li class="mb-1" *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
                 </ul>
 
-                <hr class="my-3">
+                <hr class="mt-4">
+
                 <div>
                     <h3>Technologies</h3>
                     <div style="display: block">
                         <canvas baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                     </div>
                 </div>
-                <hr class="my-3">
+
+
+                <hr class="mt-2 mb-4">
 
             </div>
 
