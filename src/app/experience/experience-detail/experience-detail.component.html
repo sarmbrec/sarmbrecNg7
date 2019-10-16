@@ -10,7 +10,7 @@
                 <div class="parent-section">Experience</div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-8">
+            <div class="col-12 col-md-6 col-lg-8">
 
                 <h2 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency"> / {{detail.agency}}</span></h2>
                 <ng-container *ngIf="detail.description">
@@ -41,7 +41,7 @@
             </div>
 
 
-            <div class="ml-auto col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="card">
                     <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
                     <div class="text-center company-small">{{detail.company}}</div>
