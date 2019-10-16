@@ -24,7 +24,8 @@
             { "text": "Implemented daily team code reviews for guidance and collaberation." },
             { "text": "Rapid prototyping of clickable concepts." },
             { "text": "User experience audits and enhancements." },
-            { "text": "ADA accessability and compliancy for (WCAG) 2.0" }
+            { "text": "ADA accessability and compliancy for (WCAG) 2.0" },
+            { "text": "Designed and developed a virtual assistant using the W3C speech synthesis and speech recognition APIs." }
         ],
         "technologies": [{
                 "title": "ASP.Net MVC 5",
@@ -32,11 +33,11 @@
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 75
             },
             {
                 "title": "jQuery",
-                "amountUsed": 90
+                "amountUsed": 100
             },
             {
                 "title": "Knockout JS",

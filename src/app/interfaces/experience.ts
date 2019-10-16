@@ -6,4 +6,5 @@ export interface ExperienceInterface {
   logo: string;
   dates: object;
   achievements: object;
+  technologies: any;
 }
