@@ -24,7 +24,7 @@
             { "text": "Implemented daily team code reviews for guidance and collaberation." },
             { "text": "Rapid prototyping of clickable concepts." },
             { "text": "User experience audits and enhancements." },
-            { "text": "ADA compliancy." }
+            { "text": "ADA accessability and compliancy for (WCAG) 2.0" }
         ],
         "technologies": [{
                 "title": "ASP.Net MVC 5",
