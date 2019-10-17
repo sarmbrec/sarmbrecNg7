@@ -9,7 +9,7 @@
                         <div class="parent-section">Experience</div>
                     </div>
 
-                    <div class="col-12 col-lg-8 text-justify">
+                    <div class="col-12">
                         <h2 *ngIf="detail.jobtitle">{{detail.jobtitle}}</h2>
                         <ng-container *ngIf="detail.description">
                             <p *ngFor="let item of detail.description">
@@ -18,71 +18,72 @@
                         </ng-container>
                     </div>
 
-                    <div class="col-12 col-lg-4 text-justify" *ngIf="detail.technologies">
-                        <h3>Technologies</h3>
-                        <div class="badge border bg-white shadow-sm m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</div>
-                    </div>
-
-
-
-
-                    <div class="col-12 col-lg-6 text-justify">
+                    <div class="col-12 col-lg-6">
                         <h3>Contributions</h3>
                         <ul class="pl-4" *ngIf="detail.contributions">
                             <li class="mb-1" *ngFor="let contribution of detail.contributions">{{contribution.text}}</li>
                         </ul>
                     </div>
 
-                    <div class="col-12 col-lg-6 text-justify">
+                    <div class="col-12 col-lg-6">
                         <h3>Achievements</h3>
                         <ul class="pl-4" *ngIf="detail.achievements">
                             <li class="mb-1" *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
                         </ul>
                     </div>
 
+                    <div class="col-12" *ngIf="detail.technologies">
+                        <h3>Technologies</h3>
+                        <div class="badge border bg-white shadow-sm m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</div>
+                    </div>
 
-
-                    <div class="col-12 col-lg-10 offset-lg-1">
+                    <div class="col-12">
                         <div>
                             <h3>Knowledge Base</h3>
                             <div style="display: block">
-                                <canvas baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+                                <canvas height="75px" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                             </div>
                         </div>
+                        <hr class="my-3">
                     </div>
-
-                    <!-- <div class="col-12 col-lg-5" *ngIf="detail.technologies">
-                        <h3>Technical Skills</h3>
-                        <span class="badge badge-light m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</span>
-                    </div> -->
 
                 </div>
             </div>
 
-            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
-                <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
-                <hr class="m-0">
-                <div class="small text-muted text-left my-2 mx-3">
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3">
+
+                <div class="card text-center">
+                    <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
+                </div>
+
+                <hr class="my-3">
+
+                <div class="small text-muted my-3 mx-3">
                     <dt>Company:</dt>
                     <dd>{{detail.company}}</dd>
                     <ng-container *ngIf="detail.agency">
                         <dt>Agency:</dt>
                         <dd>
-                            <img class="logo w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
-                            <br> {{detail.agency.title}}
+                            {{detail.agency.title}}
+                            <br>
+                            <img class="w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
                         </dd>
                     </ng-container>
                     <dt>Position:</dt>
                     <dd>{{detail.jobtitle}}</dd>
+                    <dt>Location:</dt>
+                    <dd>{{detail.location}}</dd>
                     <dt>Employed:</dt>
-                    <dd>{{detail.dates.startYear}} - {{detail.dates.endYear}}</dd>
+                    <dd>{{detail.employed.startYear}} - {{detail.employed.endYear}}</dd>
                     <dt>Supported:</dt>
                     <dd>
-                        <span #developedFor *ngFor="let i of detail.developedFor; let last = last">{{i}}<span *ngIf="!last">, </span></span>
+                        <span #supported *ngFor="let i of detail.supported; let last = last">{{i}}<span *ngIf="!last">, </span></span>
                     </dd>
-
                 </div>
-                <hr class="m-0 mb-3">
+
+                <hr class="my-3">
+
+                <h4>Work History</h4>
                 <div class="card">
                     <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
                         <li class="list-group-item" *ngFor="let item of items">
@@ -94,65 +95,11 @@
                     </ul>
                 </div>
 
+                <hr class="my-3">
+
             </div>
         </div>
 
     </div>
 
-    <!-- <app-polar-area></app-polar-area> -->
-
-
 </section>
-
-
-
-
-
-
-<!-- <div class="d-flex border-bottom">
-                        <div class="flex-fill align-self-end">
-                            <h2 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency"> / {{detail.agency}}</span></h2>
-                        </div>
-                        <div class="flex-fill align-self-center text-right">
-                            <img class="small-logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
-                        </div>
-                    </div> -->
-
-<!-- <hr *ngIf="detail.text">
-                    <p *ngIf="detail.text">
-                        {{detail.text}}
-                    </p> -->
-
-<!-- <ng-container *ngIf="detail.achievements">
-                        <h3>Achievements</h3>
-                        <ul class="list-unstyled ml-4" *ngIf="detail.achievements">
-                            <li class="mb-3" *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
-                        </ul>
-                    </ng-container> -->
-
-<!-- <ng-container *ngIf="detail.technologies">
-                        <h3>Technologies</h3>
-                        <ul class="list-group list-group-flush" *ngIf="detail.technologies">
-                            <li class="list-group-item" *ngFor="let item of detail.technologies">
-                                {{item.title}} / <small class="text-muted">{{item.amountUsed}}%</small>
-                            </li>
-                        </ul>
-                    </ng-container> -->
-
-<!-- <hr>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex border-bottom">
-                                <div class="flex-fill align-self-start">
-                                    <ul class="list-group list-group-flush" *ngIf="detail.technologies">
-                                        <li class="list-group-item" *ngFor="let item of detail.technologies">
-                                            {{item.title}} / <small class="text-muted">{{item.amountUsed}}%</small>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="flex-fill align-self-center">
-                                    <app-polar-area></app-polar-area>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->

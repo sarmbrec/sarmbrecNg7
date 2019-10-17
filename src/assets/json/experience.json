@@ -1,36 +1,51 @@
 [{
         "company": "Portfolio Recovery Associates",
+        "logo": "pra.png",
         "jobtitle": "Senior Software Engineer",
-        "text": "",
+        "employed": { "startYear": "2017", "endYear": "2019" },
+        "supported": ["ios", "android", "windows", "chrome", "safari", "firefox", "edge", "ie 11"],
+        "location": "Remote / Glen Allen",
         "description": [
-            { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers." },
-            { "text": "I focused mainly on front end design and development while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development utizilizing async requests to internal APIs." },
+            { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers and grow the business." },
+            { "text": "My main duties focused on front end design and development while learning ASP.Net MVC 5. My average tasks per sprint included full stack development utizilizing async requests to internal APIs." },
             { "text": "Working closely with our product owner and stake holders, we designed and developed new features focusing on our user's experiences, satisfaction, abandonment, and conversions." }
         ],
-        "logo": "pra.png",
-        "dates": {
-            "startYear": "2017",
-            "endYear": "2019"
-        },
-        "developedFor": ["ios", "android", "chrome", "firefox", "edge", "ie 11", "safari"],
         "achievements": [
-            { "text": "Lead corporate redesign of prapay.com." },
-            { "text": "Lead redesign of payment process user experience for the United Kingdom prapay.com web application." },
+            { "text": "Lead corporate redesign of prapay.com.  Initial average increase of $3.5 million in monthly income via payments made through web application after redesign." },
+            { "text": "Lead redesign of payment process user experience for the United Kingdom prapay.com web application.  Initial monthly increase of $1 million in income through payments made." },
             { "text": "Lead User eXperience and User Interface design initiatives for new features." },
             { "text": "Designed and developed a virtual assistant using the W3C speech synthesis and speech recognition APIs." }
         ],
         "contributions": [
-            { "text": "Standardized developer guidelines for front end coding." },
-            { "text": "Balsamic wireframing during concept phases" },
-            { "text": "Bootstrap 4 / SASS / jQuery for rapid prototyping and final builds." },
+            { "text": "Standardized developer guidelines for front end coding per best practices." },
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Bootstrap 4 / SASS / jQuery for rapid prototyping for clickables demos and final builds." },
             { "text": "Implemented daily team code reviews for guidance and collaberation." },
-            { "text": "Rapid prototyping of clickable concepts." },
-            { "text": "User experience audits and enhancements." },
-            { "text": "ADA accessability and compliancy for (WCAG) 2.0" }
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experience and increase conversions for the web application." }
         ],
         "technologies": [{
-                "title": "ASP.Net MVC 5",
-                "amountUsed": 70
+                "title": ".Net MVC 5",
+                "amountUsed": 60
+            }, {
+                "title": "C# 6",
+                "amountUsed": 60
+            }, {
+                "title": "Razor",
+                "amountUsed": 60
+            },
+            {
+                "title": "HTML 5",
+                "amountUsed": 85
+            },
+            {
+                "title": "SASS",
+                "amountUsed": 80
+            },
+            {
+                "title": "Bootstrap 4",
+                "amountUsed": 85
             },
             {
                 "title": "Javascript",
@@ -45,24 +60,20 @@
                 "amountUsed": 40
             },
             {
-                "title": "HTML 5",
-                "amountUsed": 85
-            },
-            {
-                "title": "Bootstrap 4",
-                "amountUsed": 85
-            },
-            {
-                "title": "SASS",
-                "amountUsed": 80
-            },
-            {
-                "title": "Balsamiq",
-                "amountUsed": 80
-            },
-            {
-                "title": "Angular",
+                "title": "Angular 7",
                 "amountUsed": 60
+            },
+            {
+                "title": "Typescript",
+                "amountUsed": 50
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
             },
             {
                 "title": "GitHub",
@@ -73,50 +84,32 @@
                 "amountUsed": 85
             },
             {
-                "title": "Gimp",
-                "amountUsed": 35
-            },
-            {
-                "title": "JSON",
-                "amountUsed": 85
-            },
-            {
-                "title": "AJAX",
-                "amountUsed": 85
-            },
-            {
-                "title": "XML",
-                "amountUsed": 60
-            },
-            {
                 "title": "WCAG 2.0",
                 "amountUsed": 80
             },
             {
-                "title": "Typescript",
-                "amountUsed": 50
+                "title": "Balsamiq",
+                "amountUsed": 80
+            },
+            {
+                "title": "Gimp",
+                "amountUsed": 35
             }
-
         ]
     },
-
-
     {
         "company": "True Health Diagnostics",
         "agency": { "title": "Atlantic Resource Group", "logo": "atlanticresourcegroup.png" },
-        "jobtitle": "Lead UX Developer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "truehealth.png",
-        "dates": {
-            "startYear": "2014",
-            "endYear": "2017"
-        },
-        "developedFor": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "jobtitle": "Lead UX Developer",
+        "employed": { "startYear": "2016", "endYear": "2017" },
+        "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "location": "Remote / City of Richmond",
+        "description": [
+            { "text": "True Health Diagnostics purchased Health Diagnostic Laboratories and I was offered the position of Lead UX Developer." },
+            { "text": "My main duties focused on front end design and development.  I worked very closely with our executives, product owners, and stake holders to help design and develop both new applications and enhancements to our current ones." },
+            { "text": "I had the pleaseure of working with many extremely knowledgeable and creative people during my time with True Health and HDL growing both professionaly and personaly with them." }
+        ],
         "achievements": [
             { "text": "Lead front end application development utilizing Bootstrap 3, Google Material Design Lite, AngularJS, LESS, JavaScript, jQuery, AJAX, JSON, and Thymeleaf for applications built with Java." },
             { "text": "Lead integration of responsive designs with single page and MVC applications." },
@@ -125,68 +118,21 @@
             { "text": "Lead wire framing mock ups for new applications." },
             { "text": "Lead front end initiative to modularize JavaScript files, implement separation of concerns and D.R.Y methodologies." }
         ],
-        "technologies": [
-
-
-            {
-                "title": "jQuery",
-                "amountUsed": 25
+        "contributions": [
+            { "text": "Standardized developer guidelines for front end coding per best practices." },
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Bootstrap 4 / SASS / jQuery for rapid prototyping for clickables demos and final builds." },
+            { "text": "Implemented daily team code reviews for guidance and collaberation." },
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experience and increase conversions for the web application." }
+        ],
+        "technologies": [{
+                "title": "Thymeleaf",
+                "amountUsed": 85
             },
             {
                 "title": "HTML 5",
-                "amountUsed": 25
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3",
-                "amountUsed": 50
-            },
-            {
-                "title": "Javascript",
-                "amountUsed": 25
-            },
-            {
-                "title": "Google Material Design Lite",
-                "amountUsed": 25
-            },
-            {
-                "title": "AngularJS",
-                "amountUsed": 25
-            },
-
-
-
-
-
-            {
-                "title": "ASP.Net MVC 5",
-                "amountUsed": 60
-            },
-            {
-                "title": "SQL Server",
-                "amountUsed": 40
-            },
-            {
-                "title": "Javascript",
-                "amountUsed": 85
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 85
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 60
-            },
-            {
-                "title": "HTML 5",
-                "amountUsed": 85
-            },
-            {
-                "title": "Bootstrap 4",
                 "amountUsed": 85
             },
             {
@@ -194,24 +140,28 @@
                 "amountUsed": 80
             },
             {
-                "title": "Balsamiq",
+                "title": "LESS",
                 "amountUsed": 80
             },
             {
-                "title": "Angular",
+                "title": "Bootstrap 3",
+                "amountUsed": 85
+            },
+            {
+                "title": "Bootstrap 4",
+                "amountUsed": 85
+            },
+            {
+                "title": "Javascript",
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "AngularJS",
                 "amountUsed": 60
-            },
-            {
-                "title": "Git",
-                "amountUsed": 60
-            },
-            {
-                "title": "Team Foundation",
-                "amountUsed": 65
-            },
-            {
-                "title": "Gimp",
-                "amountUsed": 50
             },
             {
                 "title": "JSON",
@@ -222,64 +172,126 @@
                 "amountUsed": 85
             },
             {
-                "title": "XML",
-                "amountUsed": 60
+                "title": "GitHub",
+                "amountUsed": 70
             },
             {
                 "title": "WCAG 2.0",
                 "amountUsed": 80
             },
             {
-                "title": "Typescript",
+                "title": "Balsamiq",
+                "amountUsed": 80
+            },
+            {
+                "title": "Photoshop",
                 "amountUsed": 70
+            },
+            {
+                "title": "Illistrator",
+                "amountUsed": 35
             }
         ]
     },
+
+
+
+
+
     {
         "company": "Health Diagnostic Laboratory",
-        "jobtitle": "Senior Web Developer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "hdl.png",
-        "dates": {
-            "startYear": "2014",
-            "endYear": "2015"
-        },
+        "jobtitle": "Senior Web Developer",
+        "employed": { "startYear": "2014", "endYear": "2016" },
+        "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "location": "Remote / City of Richmond",
+        "description": [
+            { "text": "Health Diagnostic Laboratories and I was offered the position of Lead UX Developer." },
+            { "text": "My main duties focused on front end design and development.  I worked very closely with our executives, product owners, and stake holders to help design and develop both new applications and enhancements to our current ones." },
+            { "text": "I had the pleaseure of working with many extremely knowledgeable and creative people during my time with True Health and HDL growing both professionaly and personaly with them." }
+        ],
         "achievements": [
-            { "text": "Worked with leadership to design and develop web sites to expand the business and brand." },
-            { "text": "Developed and enhanced internal applications to increase user productivity through usability." },
-            { "text": "Sole Front End resource for all development utilizing HTML 5, CSS 3, Bootstrap 3, JavaScript, JQUERY and Grails." }
+            { "text": "Front end application development utilizing Bootstrap 3, Google Material Design Lite, AngularJS, LESS, JavaScript, jQuery, AJAX, JSON, and Thymeleaf for applications built with Java." },
+            { "text": "Integration of responsive designs with single page and MVC applications." },
+            { "text": "Lead front end initiative to modularize JavaScript files, implement separation of concerns and D.R.Y methodologies." }
+        ],
+        "contributions": [
+            { "text": "Standardized developer guidelines for front end coding per best practices." },
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Bootstrap 4 / SASS / jQuery for rapid prototyping for clickables demos and final builds." },
+            { "text": "Implemented daily team code reviews for guidance and collaberation." },
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experience and increase conversions for the web application." }
         ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 25
+                "title": "Thymeleaf",
+                "amountUsed": 85
             },
             {
                 "title": "HTML 5",
-                "amountUsed": 25
+                "amountUsed": 85
             },
             {
-                "title": "Knockout JS",
-                "amountUsed": 10
+                "title": "SASS",
+                "amountUsed": 80
             },
             {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
+                "title": "LESS",
+                "amountUsed": 80
+            },
+            {
+                "title": "Bootstrap 3",
+                "amountUsed": 85
+            },
+            {
+                "title": "Bootstrap 4",
+                "amountUsed": 85
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "AngularJS",
+                "amountUsed": 60
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
+            },
+            {
+                "title": "GitHub",
+                "amountUsed": 70
+            },
+            {
+                "title": "WCAG 2.0",
+                "amountUsed": 80
+            },
+            {
+                "title": "Balsamiq",
+                "amountUsed": 80
+            },
+            {
+                "title": "Photoshop",
+                "amountUsed": 70
+            },
+            {
+                "title": "Illistrator",
+                "amountUsed": 35
             }
         ]
     },
+
+
     {
         "company": "GE Healthcare",
         "jobtitle": "Software Engineer",

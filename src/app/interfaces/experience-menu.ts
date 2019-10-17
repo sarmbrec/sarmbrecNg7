@@ -1,11 +1,11 @@
 export interface ExperienceMenuInterface {
   company: string;
-  agency: string;
+  // agency: string;
   jobtitle: string;
-  text: string;
-  logo: string;
-  dates: any;
-  achievements: any;
-  contributions: any;
-  technologies: any;
+  // text: string;
+  // logo: string;
+  // employed: any;
+  // achievements: any;
+  // contributions: any;
+  // technologies: any;
 }

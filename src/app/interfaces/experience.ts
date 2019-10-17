@@ -4,7 +4,7 @@ export interface ExperienceInterface {
   jobtitle: string;
   text: string;
   logo: string;
-  dates: any;
+  employed: any;
   achievements: any;
   contributions: any;
   technologies: any;

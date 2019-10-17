@@ -2,13 +2,11 @@ import { switchMap } from 'rxjs/operators';
 import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
-
 import { DataService } from '../../services/data.service';
 import { ExperienceInterface } from '../../interfaces/experience';
-import { Label, SingleDataSet } from 'ng2-charts';
+import { Label } from 'ng2-charts';
 import { ChartType, ChartDataSets, ChartOptions } from 'chart.js';
-import { Color, BaseChartDirective } from 'ng2-charts';
-import { ExperienceComponent } from '../experience.component';
+import { Color } from 'ng2-charts';
 import { ExperienceMenuInterface } from '../../interfaces/experience-menu';
 
 
@@ -19,24 +17,17 @@ import { ExperienceMenuInterface } from '../../interfaces/experience-menu';
 })
 
 export class ExperienceDetailComponent implements OnInit {
-
-  // experienceMenu = [];
   experiencesMenu$: Observable<ExperienceMenuInterface[]>;
-  // experiences: any;
-
   detail$: Observable<ExperienceInterface>;
   barChartOptions: ChartOptions = {};
   barChartLabels: Label[] = [];
-  barChartData: ChartDataSets[];
+  barChartData: ChartDataSets[] = [];
   chartColors: Color[] = [];
-  chartTechData = [] = [];
+  chartTechData = [];
   barChartType: ChartType = 'bar'; // 'horizontalBar';
   barChartLegend = false;
 
-  public myChart: Chart;
-
-  @ViewChildren('developedFor') items: QueryList<any>;
-  // @ViewChildren('experienceList') experiences: QueryList<ExperienceInterface>;
+  @ViewChildren('supported') items: QueryList<any>;
 
   constructor(
     private route: ActivatedRoute,
@@ -44,45 +35,17 @@ export class ExperienceDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.experiencesMenu$ = this.service.getExperiencesMenuAsync();
-
-    // if (this.chartTechData) {
-    //   this.chartTechData.destroy();
-    // }
-    // console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
-    // this.experiencesMenu$.subscribe(response => {
-    //   console.log('this.experiencesMenu$ = ', this.experiencesMenu$);
-    // });
-    // this.experiences = this.service.getExperienceAsync().subscribe(response => {
-    //   //console.log('this.experienceMenu = ', response)
-    //   for (const item of response) {
-    //     console.log(item.company);
-    //     this.experienceMenu.push(item.company);
-    //     // console.log(this.experienceMenu);
-    //   }
-    // });
-
     this.detail$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.service.getExperienceDetailAsync(params.get('id')))
     );
-
     this.detail$.subscribe(response => {
-
-      console.log('this.detail$ response  = ', response);
-
-      // console.log('this.barChartLabels  = ', this.barChartLabels);
-      // console.log('this.chartTechData  = ', this.chartTechData);
-      // console.log('this.experienceMenu = ', this.experienceMenu)
-
+      this.chartTechData = [];
+      this.barChartLabels = [];
       for (const item of response.technologies) {
         this.barChartLabels.push(item.title);
         this.chartTechData.push(item.amountUsed);
-        // console.log(item);
-        // console.log(this.barChartLabels);
-        // console.log(this.chartTechData);
       }
-
       this.barChartOptions = {
         title: {
           display: false,
@@ -102,7 +65,7 @@ export class ExperienceDetailComponent implements OnInit {
           xAxes: [{
             display: true,
             gridLines: {
-              display: true
+              display: false
             },
             ticks: {
               display: true,
@@ -123,13 +86,6 @@ export class ExperienceDetailComponent implements OnInit {
             }
           }]
         }
-        // ,
-        // plugins: {
-        //   datalabels: {
-        //     anchor: 'end',
-        //     align: 'end',
-        //   }
-        // }
       };
       this.barChartData = [
         {
@@ -138,15 +94,11 @@ export class ExperienceDetailComponent implements OnInit {
       ];
       this.chartColors = [
         {
-          borderColor: 'rgba(0, 123, 255, 1)',
+          borderColor: 'rgba(0, 123, 255, .3)',
           borderWidth: 1,
-          backgroundColor: 'rgba(0, 123, 255, 0.3)'
+          backgroundColor: 'rgba(0, 123, 255, 0.1)'
         },
       ];
-
     });
-
-
   }
-
 }
