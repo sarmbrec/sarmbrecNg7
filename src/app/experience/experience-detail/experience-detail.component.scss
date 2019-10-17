@@ -36,12 +36,6 @@ section#experience-detail {
         padding: 0;
         border-bottom: 1px solid rgba($secondary, .5);
     }
-    ol {
-        padding-left: .75rem;
-        li {
-            margin-bottom: .5rem;
-        }
-    }
     .parent-section {
         color: darken($light, 25%);
         font-size: .75rem;
@@ -50,16 +44,10 @@ section#experience-detail {
         padding-right: .25rem;
         text-align: right;
     }
-    img.small-logo {
-        height: 50px;
-        width: auto;
-        filter: grayscale(100%);
-        opacity: .5;
-    }
     img.logo {
         height: auto;
         width: 75%;
-        margin: auto;
+        margin: 0;
         //filter: grayscale(100%);
         //opacity: .5;
     }
@@ -67,20 +55,17 @@ section#experience-detail {
         font-size: .7rem;
         color: darken($light, 25%);
     }
-    .card {
-        .small {
-            font-size: .7rem;
-        }
-        dt {
-            display: block;
-        }
-        dd {
-            display: block;
-            padding-left: 1rem;
-        }
+    .small {
+        font-size: .7rem;
+    }
+    dt {
+        display: block;
+    }
+    dd {
+        display: block;
+        margin-left: .5rem;
     }
     ul#nav-experiences {
-        margin-top: 1rem;
         li {
             padding: 0;
             a {
@@ -89,22 +74,21 @@ section#experience-detail {
                 padding: .75rem 1rem;
                 font-size: .8rem;
                 color: rgba($dark, 1);
-                font-weight: normal;
+                font-weight: 600;
                 background-color: transparent;
-                -webkit-transition: all .1s linear;
-                transition: all .1s linear;
+                -webkit-transition: all .15s linear;
+                transition: all .15s linear;
                 // border-left: 0px solid transparent;
                 &:hover {
-                    background-color: $light;
-                    color: $dark;
-                    font-weight: 500;
+                    //font-weight: 600;
+                    background-color: darken($light, 5%);
+                    color: $black;
                     text-decoration: none;
                     // border-left: 5px solid $primary;
                 }
                 &.active {
-                    background-color: $light;
-                    color: $black;
-                    font-weight: 500;
+                    background-color: $secondary;
+                    color: $light;
                     pointer-events: none;
                     // border-left: 5px solid $primary;
                 }

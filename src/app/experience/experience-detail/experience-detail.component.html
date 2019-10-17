@@ -4,7 +4,7 @@
             <div class="col-12 col-sm-7 col-md-8 col-lg-9">
                 <div class="row">
 
-                    <div class="col-12">
+                    <div class="col-12 mt-3">
                         <h1 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency">/ <small>{{detail.agency.title}}</small></span></h1>
                         <div class="parent-section">Experience</div>
                     </div>
@@ -59,39 +59,39 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-5 col-md-4 col-lg-3">
-
-                <div class="card mt-4 mt-lg-0">
-                    <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
-                    <hr class="mb-1">
-                    <!-- <div class="company-small my-2 mx-3">{{detail.company}}</div> -->
-                    <div class="small text-muted my-2 mx-3">
-                        <dt>Company:</dt>
-                        <dd>{{detail.company}}</dd>
-                        <ng-container *ngIf="detail.agency">
-                            <dt>Agency:</dt>
-                            <dd>
-                                <img class="logo w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
-                                <br> {{detail.agency.title}}
-                            </dd>
-                        </ng-container>
-                        <dt>Position:</dt>
-                        <dd>{{detail.jobtitle}}</dd>
-                        <dt>Employed:</dt>
-                        <dd>{{detail.dates.startYear}} - {{detail.dates.endYear}}</dd>
-                        <dt>Supported:</dt>
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 text-center">
+                <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
+                <hr class="m-0">
+                <div class="small text-muted text-left my-2 mx-3">
+                    <dt>Company:</dt>
+                    <dd>{{detail.company}}</dd>
+                    <ng-container *ngIf="detail.agency">
+                        <dt>Agency:</dt>
                         <dd>
-                            <span #developedFor *ngFor="let i of detail.developedFor; let last = last">{{i}}<span *ngIf="!last">, </span></span>
+                            <img class="logo w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
+                            <br> {{detail.agency.title}}
                         </dd>
+                    </ng-container>
+                    <dt>Position:</dt>
+                    <dd>{{detail.jobtitle}}</dd>
+                    <dt>Employed:</dt>
+                    <dd>{{detail.dates.startYear}} - {{detail.dates.endYear}}</dd>
+                    <dt>Supported:</dt>
+                    <dd>
+                        <span #developedFor *ngFor="let i of detail.developedFor; let last = last">{{i}}<span *ngIf="!last">, </span></span>
+                    </dd>
 
-                    </div>
-
+                </div>
+                <hr class="m-0 mb-3">
+                <div class="card">
                     <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
                         <li class="list-group-item" *ngFor="let item of items">
-                            <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">{{item.company}}</a>
+                            <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">
+                                {{item.company}}
+                                <small><br>{{item.jobtitle}}</small>
+                            </a>
                         </li>
                     </ul>
-
                 </div>
 
             </div>
