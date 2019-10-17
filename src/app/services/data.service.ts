@@ -32,7 +32,7 @@ export class DataService {
 
   sendEmailContactForm(contactInterface: ContactInterface): Observable<ContactInterface> {
     // TO DO, GETTING A 403 RESPONSE - NEED TO FIND EMAIL SERVICE THAT ALLOWS API ACCESS FOR FREE
-    // uses https://formspree.io/ for email 
+    // uses https://formspree.io/ for email
     console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!');
     return this.http.post<ContactInterface>('https://formspree.io/sarmbrec@gmail.com', contactInterface, httpOptions);
   }
@@ -69,7 +69,7 @@ export class DataService {
   }
 
   geKnowledgeBaseDetailAsync(id: string) {
-    //console.log('geKnowledgeBaseDetailAsync id = ', id);
+    // console.log('geKnowledgeBaseDetailAsync id = ', id);
     return this.getKnowledgeBaseAsync().pipe(
       map((data: KbInterface[]) => data.find(item => item.title.toLowerCase().replace(/ /g, '') === id))
     );

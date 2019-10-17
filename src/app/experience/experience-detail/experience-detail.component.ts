@@ -20,9 +20,9 @@ import { ExperienceMenuInterface } from '../../interfaces/experience-menu';
 
 export class ExperienceDetailComponent implements OnInit {
 
-  //experienceMenu = [];
+  // experienceMenu = [];
   experiencesMenu$: Observable<ExperienceMenuInterface[]>;
-  //experiences: any;
+  // experiences: any;
 
   detail$: Observable<ExperienceInterface>;
   barChartOptions: ChartOptions = {};
@@ -36,7 +36,7 @@ export class ExperienceDetailComponent implements OnInit {
 
 
   @ViewChildren('developedFor') items: QueryList<any>;
-  //@ViewChildren('experienceList') experiences: QueryList<ExperienceInterface>;
+  // @ViewChildren('experienceList') experiences: QueryList<ExperienceInterface>;
 
   constructor(
     private route: ActivatedRoute,
@@ -47,11 +47,11 @@ export class ExperienceDetailComponent implements OnInit {
 
     this.experiencesMenu$ = this.service.getExperiencesMenuAsync();
 
-    //console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
+    // console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
 
-    this.experiencesMenu$.subscribe(response => {
-      console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
-    });
+    // this.experiencesMenu$.subscribe(response => {
+    //   console.log('this.experiencesMenu$ = ', this.experiencesMenu$);
+    // });
     // this.experiences = this.service.getExperienceAsync().subscribe(response => {
     //   //console.log('this.experienceMenu = ', response)
     //   for (const item of response) {
@@ -82,7 +82,7 @@ export class ExperienceDetailComponent implements OnInit {
       this.barChartOptions = {
         title: {
           display: false,
-          //text: '% used',
+          // text: '% used',
           position: 'bottom'
         },
         layout: {
