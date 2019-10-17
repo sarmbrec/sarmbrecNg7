@@ -5,15 +5,11 @@
                 <div class="row">
 
                     <div class="col-12">
-                        <h1 *ngIf="detail.company">
-                            {{detail.company}}
-                            <span *ngIf="detail.agency">
-                                        / <small>{{detail.agency.title}}</small>
-                                    </span></h1>
+                        <h1 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency">/ <small>{{detail.agency.title}}</small></span></h1>
                         <div class="parent-section">Experience</div>
                     </div>
 
-                    <div class="col-7">
+                    <div class="col-12 col-lg-8 text-justify">
                         <h2 *ngIf="detail.jobtitle">{{detail.jobtitle}}</h2>
                         <ng-container *ngIf="detail.description">
                             <p *ngFor="let item of detail.description">
@@ -22,26 +18,31 @@
                         </ng-container>
                     </div>
 
-                    <div class="col-5" *ngIf="detail.technologies">
-                        <h3>Technology Utilized</h3>
-                        <span class="badge badge-light m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</span>
+                    <div class="col-12 col-lg-4 text-justify" *ngIf="detail.technologies">
+                        <h3>Technologies</h3>
+                        <div class="badge border bg-white shadow-sm m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</div>
                     </div>
 
-                    <div class="col-12 col-md-6">
+
+
+
+                    <div class="col-12 col-lg-6 text-justify">
                         <h3>Contributions</h3>
                         <ul class="pl-4" *ngIf="detail.contributions">
                             <li class="mb-1" *ngFor="let contribution of detail.contributions">{{contribution.text}}</li>
                         </ul>
                     </div>
 
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-lg-6 text-justify">
                         <h3>Achievements</h3>
                         <ul class="pl-4" *ngIf="detail.achievements">
                             <li class="mb-1" *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
                         </ul>
                     </div>
 
-                    <div class="col-12">
+
+
+                    <div class="col-12 col-lg-10 offset-lg-1">
                         <div>
                             <h3>Knowledge Base</h3>
                             <div style="display: block">
@@ -62,32 +63,36 @@
 
                 <div class="card mt-4 mt-lg-0">
                     <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
-                    <div class="text-center company-small">{{detail.company}}</div>
-                    <hr class="my-2">
+                    <hr class="mb-1">
+                    <!-- <div class="company-small my-2 mx-3">{{detail.company}}</div> -->
                     <div class="small text-muted my-2 mx-3">
+                        <dt>Company:</dt>
+                        <dd>{{detail.company}}</dd>
+                        <ng-container *ngIf="detail.agency">
+                            <dt>Agency:</dt>
+                            <dd>
+                                <img class="logo w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
+                                <br> {{detail.agency.title}}
+                            </dd>
+                        </ng-container>
                         <dt>Position:</dt>
                         <dd>{{detail.jobtitle}}</dd>
-                        <dt>Active:</dt>
+                        <dt>Employed:</dt>
                         <dd>{{detail.dates.startYear}} - {{detail.dates.endYear}}</dd>
                         <dt>Supported:</dt>
                         <dd>
                             <span #developedFor *ngFor="let i of detail.developedFor; let last = last">{{i}}<span *ngIf="!last">, </span></span>
                         </dd>
-                        <ng-container *ngIf="detail.agency">
-                            <dt>Agency:</dt>
-                            <dd>
-                                {{detail.agency.title}}
-                                <img class="logo w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
-                            </dd>
-                        </ng-container>
-                    </div>
-                </div>
 
-                <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
-                    <li class="list-group-item" *ngFor="let item of items">
-                        <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">{{item.company}}</a>
-                    </li>
-                </ul>
+                    </div>
+
+                    <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
+                        <li class="list-group-item" *ngFor="let item of items">
+                            <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">{{item.company}}</a>
+                        </li>
+                    </ul>
+
+                </div>
 
             </div>
         </div>

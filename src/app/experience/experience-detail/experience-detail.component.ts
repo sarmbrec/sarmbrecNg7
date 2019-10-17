@@ -29,11 +29,11 @@ export class ExperienceDetailComponent implements OnInit {
   barChartLabels: Label[] = [];
   barChartData: ChartDataSets[];
   chartColors: Color[] = [];
-  chartTechData = [];
+  chartTechData = [] = [];
   barChartType: ChartType = 'bar'; // 'horizontalBar';
   barChartLegend = false;
 
-
+  public myChart: Chart;
 
   @ViewChildren('developedFor') items: QueryList<any>;
   // @ViewChildren('experienceList') experiences: QueryList<ExperienceInterface>;
@@ -47,8 +47,10 @@ export class ExperienceDetailComponent implements OnInit {
 
     this.experiencesMenu$ = this.service.getExperiencesMenuAsync();
 
+    // if (this.chartTechData) {
+    //   this.chartTechData.destroy();
+    // }
     // console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
-
     // this.experiencesMenu$.subscribe(response => {
     //   console.log('this.experiencesMenu$ = ', this.experiencesMenu$);
     // });
@@ -69,6 +71,8 @@ export class ExperienceDetailComponent implements OnInit {
 
       console.log('this.detail$ response  = ', response);
 
+      // console.log('this.barChartLabels  = ', this.barChartLabels);
+      // console.log('this.chartTechData  = ', this.chartTechData);
       // console.log('this.experienceMenu = ', this.experienceMenu)
 
       for (const item of response.technologies) {
