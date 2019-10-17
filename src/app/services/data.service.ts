@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/internal/operators/map';
 import { ExperienceInterface } from '../interfaces/experience';
+import { ExperienceMenuInterface } from '../interfaces/experience-menu';
 import { KbInterface } from '../interfaces/kb';
 import { FakeUsersListInterface } from '../interfaces/fake-users-list';
 import { environment } from '../../environments/environment';
@@ -40,39 +41,38 @@ export class DataService {
     return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json');
   }
 
-  // getTechUsedChartDataAsync(): Observable<ChartTechnologyUsed[]> {
-  //   return this.http.get<ChartTechnologyUsed[]>(this.baseUrl + 'assets/json/experience.json');
-  // }
-
   // TODO: convert to async
   getFakeUsersList() {
     return this.http.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
   }
 
   getFakeUsersListAsync(): Observable<FakeUsersListInterface[]> {
-    //return this.http.get('https://reqres.in/api/users?page=2&per_page=6&total=12');
-    return this.http.get<FakeUsersListInterface[]>('https://reqres.in/api/users?page=2&per_page=6&total=12'); 
+    return this.http.get<FakeUsersListInterface[]>('https://reqres.in/api/users?page=2&per_page=6&total=12');
   }
 
   getExperienceAsync(): Observable<ExperienceInterface[]> {
-    return this.http.get<ExperienceInterface[]>(this.baseUrl + 'assets/json/experience.json');    
+    return this.http.get<ExperienceInterface[]>(this.baseUrl + 'assets/json/experience.json');
   }
 
   getExperienceDetailAsync(id: string) {
     return this.getExperienceAsync().pipe(
-      map((data: ExperienceInterface[]) => data.find(item => item.company.toLowerCase().replace(/ /g, '') === id))      
+      map((data: ExperienceInterface[]) => data.find(item => item.company.toLowerCase().replace(/ /g, '') === id))
     );
   }
 
-  getKnowledgeBaseAsync(): Observable<KbInterface[]> {    
+  getExperiencesMenuAsync() {
+    return this.http.get<ExperienceMenuInterface[]>(this.baseUrl + 'assets/json/experience.json');
+  }
+
+  getKnowledgeBaseAsync(): Observable<KbInterface[]> {
     return this.http.get<KbInterface[]>(this.baseUrl + 'assets/json/knowledge-base.json');
   }
 
   geKnowledgeBaseDetailAsync(id: string) {
-    console.log('geKnowledgeBaseDetailAsync id = ',id)
+    //console.log('geKnowledgeBaseDetailAsync id = ', id);
     return this.getKnowledgeBaseAsync().pipe(
-      map((data: KbInterface[]) => data.find(item => item.title.toLowerCase().replace(/ /g, '') === id))      
-    ); 
+      map((data: KbInterface[]) => data.find(item => item.title.toLowerCase().replace(/ /g, '') === id))
+    );
   }
 
   // TODO: convert to async

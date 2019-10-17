@@ -6,11 +6,7 @@
             <hr *ngIf="item.company" class="mt-1 mb-2">
             <h3 *ngIf="item.company" class="card-company">{{item.company}}</h3>
             <hr *ngIf="item.text" class="mt-1 mb-2">
-            <!-- <h3 *ngIf="item.agency" class="card-agency">{{item.agency}}</h3>
-            <hr *ngIf="item.agency" class="mt-1 mb-2"> -->
             <p *ngIf="item.text" class="card-text">{{item.text}}</p>
-            <!-- <hr class="mt-1 mb-2">
-             <app-charts></app-charts> -->
             <hr class="mt-1 mb-2">
             <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]">View achievements</a>
         </div>

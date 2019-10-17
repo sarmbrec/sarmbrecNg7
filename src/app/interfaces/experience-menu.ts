@@ -1,4 +1,4 @@
-export interface ExperienceInterface {
+export interface ExperienceMenuInterface {
   company: string;
   agency: string;
   jobtitle: string;

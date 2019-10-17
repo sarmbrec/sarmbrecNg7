@@ -8,6 +8,9 @@ import { ExperienceInterface } from '../../interfaces/experience';
 import { Label, SingleDataSet } from 'ng2-charts';
 import { ChartType, ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, BaseChartDirective } from 'ng2-charts';
+import { ExperienceComponent } from '../experience.component';
+import { ExperienceMenuInterface } from '../../interfaces/experience-menu';
+
 
 @Component({
   selector: 'app-experience-detail',
@@ -16,6 +19,10 @@ import { Color, BaseChartDirective } from 'ng2-charts';
 })
 
 export class ExperienceDetailComponent implements OnInit {
+
+  //experienceMenu = [];
+  experiencesMenu$: Observable<ExperienceMenuInterface[]>;
+  //experiences: any;
 
   detail$: Observable<ExperienceInterface>;
   barChartOptions: ChartOptions = {};
@@ -26,8 +33,10 @@ export class ExperienceDetailComponent implements OnInit {
   barChartType: ChartType = 'bar'; // 'horizontalBar';
   barChartLegend = false;
 
-  @ViewChildren('developedFor') items: QueryList<any>;
 
+
+  @ViewChildren('developedFor') items: QueryList<any>;
+  //@ViewChildren('experienceList') experiences: QueryList<ExperienceInterface>;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,13 +45,31 @@ export class ExperienceDetailComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.experiencesMenu$ = this.service.getExperiencesMenuAsync();
+
+    //console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
+
+    this.experiencesMenu$.subscribe(response => {
+      console.log('this.experiencesMenu$ = ', this.experiencesMenu$)
+    });
+    // this.experiences = this.service.getExperienceAsync().subscribe(response => {
+    //   //console.log('this.experienceMenu = ', response)
+    //   for (const item of response) {
+    //     console.log(item.company);
+    //     this.experienceMenu.push(item.company);
+    //     // console.log(this.experienceMenu);
+    //   }
+    // });
+
     this.detail$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => this.service.getExperienceDetailAsync(params.get('id')))
     );
 
     this.detail$.subscribe(response => {
 
-      // console.log('response  = ', response);
+      console.log('this.detail$ response  = ', response);
+
+      // console.log('this.experienceMenu = ', this.experienceMenu)
 
       for (const item of response.technologies) {
         this.barChartLabels.push(item.title);
@@ -51,7 +78,6 @@ export class ExperienceDetailComponent implements OnInit {
         // console.log(this.barChartLabels);
         // console.log(this.chartTechData);
       }
-
 
       this.barChartOptions = {
         title: {
@@ -76,6 +102,7 @@ export class ExperienceDetailComponent implements OnInit {
             },
             ticks: {
               display: true,
+              fontSize: 10,
               beginAtZero: true
             }
           }],
@@ -87,7 +114,7 @@ export class ExperienceDetailComponent implements OnInit {
             },
             ticks: {
               display: true,
-              fontSize: 8,
+              fontSize: 9,
               beginAtZero: true
             }
           }]
@@ -100,7 +127,6 @@ export class ExperienceDetailComponent implements OnInit {
         //   }
         // }
       };
-      //this.barChartLabels = ['HTML 5', 'JavaScript', 'jQuery', 'SASS', 'ASP.Net'];
       this.barChartData = [
         {
           data: this.chartTechData

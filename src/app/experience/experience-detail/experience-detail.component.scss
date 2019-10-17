@@ -34,6 +34,7 @@ section#experience-detail {
         color: $dark;
         margin: 1.5rem 0 1rem 0;
         padding: 0;
+        border-bottom: 1px solid rgba($secondary, .5);
     }
     ol {
         padding-left: .75rem;
@@ -78,6 +79,16 @@ section#experience-detail {
         //     font-size: .75rem;
         //     color: darken($light, 25%);
         // }
+        .small {
+            font-size: .7rem;
+        }
+        dt {
+            display: block;
+        }
+        dd {
+            display: block;
+            padding-left: 1rem;
+        }
         ul {
             li {
                 padding: 0;
@@ -96,6 +107,21 @@ section#experience-detail {
                         background-color: $light;
                         border-left: 5px solid $primary;
                     }
+                }
+            }
+        }
+    }
+    #nav-experiences {
+        margin-top: 1rem;
+        li {
+            padding: 0;
+            a {
+                display: block;
+                padding: .5rem 1rem;
+                background: transparent;
+                &.active {
+                    background: $light;
+                    color: $dark;
                 }
             }
         }
