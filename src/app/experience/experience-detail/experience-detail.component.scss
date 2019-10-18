@@ -3,29 +3,32 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 section#experience-detail {
     background-color: $light;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     font-size: .875rem;
-    line-height: 1.25;
+    line-height: 1.5;
     h1 {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         display: block;
         color: $dark;
-        line-height: 1.2;
+        line-height: 1;
         border-bottom: 1px solid darken($light, 25%);
-        margin-bottom: .15rem;
+        margin-bottom: 1.15rem;
         small {
-            font-size: .9rem;
-            line-height: 1;
+            margin-bottom: -1rem;
+            font-size: .75rem;
+            line-height: .75;
             white-space: nowrap;
+            display: block;
+            color: darken($light, 25%);
+            padding-left: .25rem;
         }
     }
     h2 {
         font-family: 'Lato-Thin', sans-serif;
         font-weight: 100;
         color: $dark;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         padding: 0;
     }
     h3 {

@@ -4,12 +4,12 @@
             <div class="col-12 col-sm-7 col-md-8 col-lg-9">
                 <div class="row">
 
-                    <div class="col-12 mt-3">
-                        <h1 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency">/ <small>{{detail.agency.title}}</small></span></h1>
+                    <div class="col-12 mt-3" *ngIf="detail.company || detail.agency.title">
+                        <h1 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency"><small><br>{{detail.agency.title}}</small></span></h1>
                         <div class="parent-section">Experience</div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12" *ngIf="detail.contributions || detail.jobtitle">
                         <h2 *ngIf="detail.jobtitle">{{detail.jobtitle}}</h2>
                         <ng-container *ngIf="detail.description">
                             <p *ngFor="let item of detail.description">
@@ -18,16 +18,16 @@
                         </ng-container>
                     </div>
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" *ngIf="detail.contributions">
                         <h3>Contributions</h3>
-                        <ul class="pl-4" *ngIf="detail.contributions">
+                        <ul class="pl-4">
                             <li class="mb-1" *ngFor="let contribution of detail.contributions">{{contribution.text}}</li>
                         </ul>
                     </div>
 
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" *ngIf="detail.achievements">
                         <h3>Achievements</h3>
-                        <ul class="pl-4" *ngIf="detail.achievements">
+                        <ul class="pl-4">
                             <li class="mb-1" *ngFor="let achievement of detail.achievements">{{achievement.text}}</li>
                         </ul>
                     </div>
@@ -37,11 +37,11 @@
                         <div class="badge border bg-white shadow-sm m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12" *ngIf="barChartData">
                         <div>
                             <h3>Knowledge Base</h3>
-                            <div style="display: block">
-                                <canvas height="75px" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+                            <div style="display: block;">
+                                <canvas height="90px" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                             </div>
                         </div>
                         <hr class="my-3">
@@ -52,38 +52,12 @@
 
             <div class="col-12 col-sm-5 col-md-4 col-lg-3">
 
-                <div class="card text-center">
+                <div class="card text-center" *ngIf="detail.logo">
                     <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
                 </div>
-
                 <hr class="my-3">
 
-                <div class="small text-muted my-3 mx-3">
-                    <dt>Company:</dt>
-                    <dd>{{detail.company}}</dd>
-                    <ng-container *ngIf="detail.agency">
-                        <dt>Agency:</dt>
-                        <dd>
-                            {{detail.agency.title}}
-                            <br>
-                            <img class="w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
-                        </dd>
-                    </ng-container>
-                    <dt>Position:</dt>
-                    <dd>{{detail.jobtitle}}</dd>
-                    <dt>Location:</dt>
-                    <dd>{{detail.location}}</dd>
-                    <dt>Employed:</dt>
-                    <dd>{{detail.employed.startYear}} - {{detail.employed.endYear}}</dd>
-                    <dt>Supported:</dt>
-                    <dd>
-                        <span #supported *ngFor="let i of detail.supported; let last = last">{{i}}<span *ngIf="!last">, </span></span>
-                    </dd>
-                </div>
-
-                <hr class="my-3">
-
-                <h4>Work History</h4>
+                <h4 class="sr-only">Work History</h4>
                 <div class="card">
                     <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
                         <li class="list-group-item" *ngFor="let item of items">
@@ -94,6 +68,42 @@
                         </li>
                     </ul>
                 </div>
+                <hr class="my-3">
+
+                <div class="small text-muted my-3 mx-3">
+                    <ng-container *ngIf="detail.company">
+                        <dt>Company:</dt>
+                        <dd>{{detail.company}}</dd>
+                    </ng-container>
+                    <ng-container *ngIf="detail.agency">
+                        <dt *ngIf="detail.company != 'Circuit City'">Agency:</dt>
+                        <dd>
+                            <!-- {{detail.agency.title}}<br> -->
+                            <img class="w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
+                        </dd>
+                    </ng-container>
+                    <ng-container *ngIf="detail.jobtitle">
+                        <dt>Position:</dt>
+                        <dd>{{detail.jobtitle}}</dd>
+                    </ng-container>
+                    <ng-container *ngIf="detail.location">
+                        <dt>Location:</dt>
+                        <dd>{{detail.location}}</dd>
+                    </ng-container>
+                    <ng-container *ngIf="detail.employed.startYear && detail.employed.endYear">
+                        <dt>Employed:</dt>
+                        <dd>{{detail.employed.startYear}} - {{detail.employed.endYear}}</dd>
+                        <dt>Supported:</dt>
+                        <dd>
+                            <span #supported *ngFor="let item of detail.supported; let last = last">
+                                {{item}}
+                                <span *ngIf="!last">, </span>
+                            </span>
+                        </dd>
+                    </ng-container>
+                </div>
+
+
 
                 <hr class="my-3">
 
