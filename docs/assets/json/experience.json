@@ -1,36 +1,136 @@
 [{
         "company": "Portfolio Recovery Associates",
+        "logo": "pra.png",
         "jobtitle": "Senior Software Engineer",
-        "text": "",
+        "employed": { "startYear": "2017", "endYear": "2019" },
+        "supported": ["ios", "android", "windows", "chrome", "safari", "firefox", "edge", "ie 11"],
+        "location": "Remote / Glen Allen",
         "description": [
-            { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers." },
-            { "text": "I focused mainly on front end design and development while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development utizilizing async requests to internal APIs." },
+            { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers and grow the business." },
+            { "text": "I was full stack development utilizing my front end design and development skills while learning ASP.Net MVC 5. My tasks for all sprints included full stack development utizilizing async requests to internal APIs to retrieve JSON data and pass it back to the view model to be displayed in the view." },
+            { "text": "A main responsibility was to research and document new features.  Identifying a need or hinderance, envisioning a solution, researching both, documenting findings, and architecting out how to apply it to the current system." },
             { "text": "Working closely with our product owner and stake holders, we designed and developed new features focusing on our user's experiences, satisfaction, abandonment, and conversions." }
         ],
-        "logo": "pra.png",
-        "dates": {
-            "startYear": "2017",
-            "endYear": "2019"
-        },
-        "developedFor": ["ios", "android", "chrome", "firefox", "edge", "ie 11", "safari"],
         "achievements": [
-            { "text": "Lead corporate redesign of prapay.com." },
-            { "text": "Lead redesign of payment process user experience for the United Kingdom prapay.com web application." },
+            { "text": "Lead corporate redesign of prapay.com.  Initial average increase of $3.5 million in monthly income via payments made through web application after redesign." },
+            { "text": "Lead redesign of payment process user experience for the United Kingdom prapay.com web application.  Initial monthly increase of $1 million in income through payments made." },
             { "text": "Lead User eXperience and User Interface design initiatives for new features." },
             { "text": "Designed and developed a virtual assistant using the W3C speech synthesis and speech recognition APIs." }
         ],
         "contributions": [
-            { "text": "Standardized developer guidelines for front end coding." },
-            { "text": "Balsamic wireframing during concept phases" },
-            { "text": "Bootstrap 4 / SASS / jQuery for rapid prototyping and final builds." },
+            { "text": "Standardized developer guidelines for front end coding per best practices." },
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Bootstrap 4 / SASS / jQuery for rapid prototyping for clickables demos and final builds." },
             { "text": "Implemented daily team code reviews for guidance and collaberation." },
-            { "text": "Rapid prototyping of clickable concepts." },
-            { "text": "User experience audits and enhancements." },
-            { "text": "ADA accessability and compliancy for (WCAG) 2.0" }
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experience and increase conversions for the web application." }
         ],
         "technologies": [{
-                "title": "ASP.Net MVC 5",
+                "title": "HTML 5",
+                "amountUsed": 85
+            }, {
+                "title": "SASS",
+                "amountUsed": 80
+            }, {
+                "title": "Bootstrap 4",
+                "amountUsed": 85
+            }, {
+                "title": "Bootstrap 3",
+                "amountUsed": 85
+            }, {
+                "title": "Javascript",
+                "amountUsed": 85
+            }, {
+                "title": "jQuery",
+                "amountUsed": 85
+            }, {
+                "title": "Knockout JS",
+                "amountUsed": 25
+            }, {
+                "title": "Angular 7",
+                "amountUsed": 25
+            }, {
+                "title": "Typescript",
+                "amountUsed": 25
+            }, {
+                "title": "JSON",
+                "amountUsed": 85
+            }, {
+                "title": "AJAX",
+                "amountUsed": 85
+            }, {
+                "title": "GitHub",
                 "amountUsed": 70
+            }, {
+                "title": "Team Foundation",
+                "amountUsed": 85
+            }, {
+                "title": "WCAG 2.0",
+                "amountUsed": 80
+            }, {
+                "title": "Balsamiq",
+                "amountUsed": 80
+            },
+            {
+                "title": "Gimp",
+                "amountUsed": 65
+            }, {
+                "title": ".Net MVC 5",
+                "amountUsed": 60
+            }, {
+                "title": "C# 6",
+                "amountUsed": 60
+            }, {
+                "title": "Razor",
+                "amountUsed": 85
+            }
+        ]
+    },
+    {
+        "company": "True Health Diagnostics",
+        "agency": { "title": "Atlantic Resource Group", "logo": "atlanticresourcegroup.png" },
+        "logo": "truehealth.png",
+        "jobtitle": "Lead UX Developer",
+        "employed": { "startYear": "2016", "endYear": "2017" },
+        "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "location": "Remote / City of Richmond",
+        "description": [
+            { "text": "True Health Diagnostics purchased Health Diagnostic Laboratories and I was offered the position of Lead UX Developer." },
+            { "text": "My duties focused on front end design and development, mainly development.  I worked with product owners, architects, java / .net developers, and stake holders to help design and develop for both new applications and enhancements to our current ones." },
+            { "text": "I had the pleasure of working with many extremely knowledgeable and creative people during my time at True Health Diagnostics and Health Diagnostic Laboratory, growing both professionaly and personaly." }
+        ],
+        "achievements": [
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experience and increase conversions for the web application." },
+            { "text": "Integrations of responsive designs with back end code for single page and MVC applications." }
+        ],
+        "contributions": [
+            { "text": "Standardized developer guidelines for front end coding per best practices." },
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Bootstrap 3 / Less / jQuery for rapid prototyping for clickables demos and final builds." },
+            { "text": "Implemented daily team code reviews for guidance and collaberation." },
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." }
+        ],
+        "technologies": [{
+                "title": "HTML 5",
+                "amountUsed": 85
+            },
+            {
+                "title": "SASS",
+                "amountUsed": 80
+            },
+            {
+                "title": "LESS",
+                "amountUsed": 80
+            },
+            {
+                "title": "Bootstrap 3",
+                "amountUsed": 85
+            },
+            {
+                "title": "Bootstrap 4",
+                "amountUsed": 85
             },
             {
                 "title": "Javascript",
@@ -41,156 +141,23 @@
                 "amountUsed": 85
             },
             {
-                "title": "Knockout JS",
-                "amountUsed": 40
-            },
-            {
-                "title": "HTML 5",
-                "amountUsed": 85
-            },
-            {
-                "title": "Bootstrap 4",
-                "amountUsed": 85
-            },
-            {
-                "title": "SASS",
-                "amountUsed": 80
-            },
-            {
-                "title": "Balsamiq",
-                "amountUsed": 80
-            },
-            {
-                "title": "Angular",
+                "title": "AngularJS",
                 "amountUsed": 60
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
             },
             {
                 "title": "GitHub",
                 "amountUsed": 70
             },
             {
-                "title": "Team Foundation",
-                "amountUsed": 85
-            },
-            {
-                "title": "Gimp",
-                "amountUsed": 35
-            },
-            {
-                "title": "JSON",
-                "amountUsed": 85
-            },
-            {
-                "title": "AJAX",
-                "amountUsed": 85
-            },
-            {
-                "title": "XML",
-                "amountUsed": 60
-            },
-            {
                 "title": "WCAG 2.0",
-                "amountUsed": 80
-            },
-            {
-                "title": "Typescript",
-                "amountUsed": 50
-            }
-
-        ]
-    },
-
-
-    {
-        "company": "True Health Diagnostics",
-        "agency": { "title": "Atlantic Resource Group", "logo": "atlanticresourcegroup.png" },
-        "jobtitle": "Lead UX Developer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
-        "logo": "truehealth.png",
-        "dates": {
-            "startYear": "2014",
-            "endYear": "2017"
-        },
-        "developedFor": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
-        "achievements": [
-            { "text": "Lead front end application development utilizing Bootstrap 3, Google Material Design Lite, AngularJS, LESS, JavaScript, jQuery, AJAX, JSON, and Thymeleaf for applications built with Java." },
-            { "text": "Lead integration of responsive designs with single page and MVC applications." },
-            { "text": "Lead push for content delivery network to serve brand files for CSS and JavaScript for all internal applications." },
-            { "text": "Lead direction for Restful API services to deliver content to front end." },
-            { "text": "Lead wire framing mock ups for new applications." },
-            { "text": "Lead front end initiative to modularize JavaScript files, implement separation of concerns and D.R.Y methodologies." }
-        ],
-        "technologies": [
-
-
-            {
-                "title": "jQuery",
-                "amountUsed": 25
-            },
-            {
-                "title": "HTML 5",
-                "amountUsed": 25
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3",
-                "amountUsed": 50
-            },
-            {
-                "title": "Javascript",
-                "amountUsed": 25
-            },
-            {
-                "title": "Google Material Design Lite",
-                "amountUsed": 25
-            },
-            {
-                "title": "AngularJS",
-                "amountUsed": 25
-            },
-
-
-
-
-
-            {
-                "title": "ASP.Net MVC 5",
-                "amountUsed": 60
-            },
-            {
-                "title": "SQL Server",
-                "amountUsed": 40
-            },
-            {
-                "title": "Javascript",
-                "amountUsed": 85
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 85
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 60
-            },
-            {
-                "title": "HTML 5",
-                "amountUsed": 85
-            },
-            {
-                "title": "Bootstrap 4",
-                "amountUsed": 85
-            },
-            {
-                "title": "SASS",
                 "amountUsed": 80
             },
             {
@@ -198,20 +165,78 @@
                 "amountUsed": 80
             },
             {
-                "title": "Angular",
+                "title": "Photoshop",
+                "amountUsed": 70
+            },
+            {
+                "title": "Illistrator",
+                "amountUsed": 35
+            },
+            {
+                "title": "Thymeleaf",
+                "amountUsed": 85
+            }
+        ]
+    },
+    {
+        "company": "Health Diagnostic Laboratory",
+        "logo": "hdl.png",
+        "jobtitle": "Senior Web Developer",
+        "employed": { "startYear": "2014", "endYear": "2016" },
+        "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "location": "Remote / City of Richmond",
+        "description": [
+            { "text": "Health Diagnostic Laboratories was an incredible place to work, they had a great mission that helped a lot of people improve their lives.  Leadership there was fantastic, and the atmosphere was extremely condusive to creating and developing." },
+            { "text": "My main duties focused on front end design and development.  I worked very closely with our executives, product owners, and stake holders to help design and develop both new applications and enhancements to our current ones." },
+            { "text": "I had the pleasure of working with many extremely knowledgeable and creative people during my time with HDL and True Health Diagnostics, growing both professionaly and personaly with them." },
+            { "text": "Health Diagnostic Laboratories was purchased by True Health Diagnostic." }
+        ],
+        "achievements": [
+            { "text": "! of first 30 applications for the first version of Apple Watch launch." },
+            { "text": "Microsite recognized by Apple." },
+            { "text": "Standardized developer guidelines for front end coding per best practices." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experience and increase conversions for the web application." },
+            { "text": "Integrations of responsive designs with back end code for single page and MVC applications." }
+        ],
+        "contributions": [
+            { "text": "Microsite development and design." },
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Bootstrap 3 / Less / jQuery for rapid prototyping for clickables demos and final builds." },
+            { "text": "Implemented daily team code reviews for guidance and collaberation." },
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." }
+        ],
+        "technologies": [{
+                "title": "HTML 5",
+                "amountUsed": 85
+            },
+            {
+                "title": "SASS",
+                "amountUsed": 80
+            },
+            {
+                "title": "LESS",
+                "amountUsed": 80
+            },
+            {
+                "title": "Bootstrap 3",
+                "amountUsed": 85
+            },
+            {
+                "title": "Bootstrap 4",
+                "amountUsed": 85
+            },
+            {
+                "title": "Javascript",
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "AngularJS",
                 "amountUsed": 60
-            },
-            {
-                "title": "Git",
-                "amountUsed": 60
-            },
-            {
-                "title": "Team Foundation",
-                "amountUsed": 65
-            },
-            {
-                "title": "Gimp",
-                "amountUsed": 50
             },
             {
                 "title": "JSON",
@@ -222,332 +247,356 @@
                 "amountUsed": 85
             },
             {
-                "title": "XML",
-                "amountUsed": 60
+                "title": "GitHub",
+                "amountUsed": 70
             },
             {
                 "title": "WCAG 2.0",
                 "amountUsed": 80
             },
             {
-                "title": "Typescript",
+                "title": "Balsamiq",
+                "amountUsed": 80
+            },
+            {
+                "title": "Photoshop",
                 "amountUsed": 70
-            }
-        ]
-    },
-    {
-        "company": "Health Diagnostic Laboratory",
-        "jobtitle": "Senior Web Developer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
-        "logo": "hdl.png",
-        "dates": {
-            "startYear": "2014",
-            "endYear": "2015"
-        },
-        "achievements": [
-            { "text": "Worked with leadership to design and develop web sites to expand the business and brand." },
-            { "text": "Developed and enhanced internal applications to increase user productivity through usability." },
-            { "text": "Sole Front End resource for all development utilizing HTML 5, CSS 3, Bootstrap 3, JavaScript, JQUERY and Grails." }
-        ],
-        "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
             },
             {
-                "title": "jQuery",
-                "amountUsed": 25
+                "title": "Illistrator",
+                "amountUsed": 35
             },
             {
-                "title": "HTML 5",
-                "amountUsed": 25
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
-            },
-            {
-                "title": "Javascript",
-                "amountUsed": 25
+                "title": "Thymeleaf",
+                "amountUsed": 85
             }
         ]
     },
     {
         "company": "GE Healthcare",
-        "jobtitle": "Software Engineer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "gehealthcare.png",
-        "dates": {
-            "startYear": "2013",
-            "endYear": "2014"
-        },
+        "jobtitle": "Software Engineer",
+        "employed": { "startYear": "2013", "endYear": "2014" },
+        "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "location": "Glen Allen",
+        "description": [
+            { "text": "Working in the medical field for GE Healthcare was amazing.  Trips to the hospitals to see our products in action was extremely gratifying and motivating to constantly improve them." },
+            { "text": "My main duties focused on front end design and development.  I worked closely with architects, product owners, and stake holders to help design and develop features that could improve the lives of medical professionals and patients." },
+            { "text": "I had the pleasure of working with many extremely knowledgeable and creative people during my time with True Health and HDL growing both professionaly and personaly with them." }
+        ],
         "achievements": [
             { "text": "Member of the Global Asset Management team, representing the face of high quality design and development practices." },
             { "text": "Partnered with the Software Center of Excellence architecture and engineering teams to implement UI solutions that are aligned and extend shared platforms and solutions." },
-            { "text": "Extensive JavaScript, JQUERY, and Angular JS development." }
+            { "text": "Extensive AngularJS development." }
+        ],
+        "contributions": [
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "AngularJS for rapid prototyping for clickables demos and final builds." },
+            { "text": "Implemented daily team code reviews for guidance and collaberation." },
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experiences." },
+            { "text": "Integrations of responsive designs with back end code for single page and MVC applications." }
         ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 25
-            },
-            {
                 "title": "HTML 5",
-                "amountUsed": 25
+                "amountUsed": 85
             },
             {
-                "title": "Knockout JS",
-                "amountUsed": 10
+                "title": "SASS",
+                "amountUsed": 80
             },
             {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
+                "title": "LESS",
+                "amountUsed": 80
+            },
+            {
+                "title": "Bootstrap 3",
+                "amountUsed": 85
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "AngularJS",
+                "amountUsed": 60
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
+            },
+            {
+                "title": "GitHub",
+                "amountUsed": 70
+            },
+            {
+                "title": "WCAG 2.0",
+                "amountUsed": 80
             }
         ]
     },
     {
+
         "company": "Harland Clarke",
-        "agency": ["Randstad"],
-        "jobtitle": "UI/UX Designer / Developer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "harlandclarke.png",
-        "dates": {
-            "startYear": "2012",
-            "endYear": "2013"
-        },
-        "achievements": [
+        "agency": { "title": "Randstad", "logo": "randstad.png" },
+        "jobtitle": "UI/UX Designer / Developer",
+        "employed": { "startYear": "2012", "endYear": "2013" },
+        "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
+        "location": "Remote / New Braunfels, TX",
+        "description": [
             { "text": "Worked closely with Senior Leadership, Management, Designers, and Developers to lead the UI/UX development of a custom 960 responsive grid system to meet their requirements for web, mobile, ASP.net and J2EE integration for their multiple ecommerce based websites including walmart.stationery.com, iprint.com, and officedepot.com." },
+            { "text": "My main duties focused on front end design and development.  I worked very closely with the Texas team to help design and develop enhancements to integrate their products." },
             { "text": "Supporting the developers' efforts to integrate resulting product with back end development." }
         ],
+        "achievements": [
+            { "text": "Lead the UI/UX development of a custom 960 responsive grid system to meet their requirements for web, mobile, ASP.net and J2EE integration for their multiple ecommerce based websites including walmart.stationery.com, iprint.com, and officedepot.com." }
+        ],
+        "contributions": [
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "AngularJS for rapid prototyping for clickables demos and final builds." },
+            { "text": "Implemented daily team code reviews for guidance and collaberation." },
+            { "text": "User experience audits and enhancements with LightHouse and Axe." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Conceived, researched, designed, and developed new features to improve our customers experiences." },
+            { "text": "Integrations of responsive designs with back end code for single page and MVC applications." }
+        ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 25
-            },
-            {
                 "title": "HTML 5",
-                "amountUsed": 25
+                "amountUsed": 85
             },
             {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
+                "title": "CSS 3",
+                "amountUsed": 80
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
+            },
+            {
+                "title": "WCAG 2.0",
+                "amountUsed": 80
             }
         ]
     },
     {
         "company": "Capital One",
-        "agency": ["Celerity"],
-        "jobtitle": "UI/UX Designer / Developer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "capitalone.png",
-        "dates": {
-            "startYear": "2010",
-            "endYear": "2012"
-        },
+        "agency": { "title": "Celerity", "logo": "celerity.png" },
+        "jobtitle": "UI/UX Designer / Developer",
+        "employed": { "startYear": "2010", "endYear": "2012" },
+        "supported": ["ios", "android", "chrome", "firefox", "ie 6", "safari"],
+        "location": "Glen Allen",
+        "description": [
+            { "text": "Capital One was an amazing place that truely embraced technology and professional growth." },
+            { "text": "The team collaboration was extremely condusive to learning and improving.  I contribute most of my best practices to my time with them." },
+            { "text": "I was able to utilized my front end strengths and grow them by working closely with team members, stake holders, and product managers." }
+        ],
         "achievements": [
             { "text": "Various tasks and duties pertaining to ecommerce for Capital One." },
-            { "text": "Lead UI/UX design and development for multiple projects while supporting multiple teams including SSP, BAU, Servicing, EOS, and the Flex Design team." },
+            { "text": "Lead UI/UX design and development for multiple projects." },
+            { "text": "Supported multiple teams including SSP, BAU, Servicing, EOS, and the Flex Design team." },
             { "text": "Developed and managed SSP build book." }
         ],
+        "contributions": [
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "Custom 960 grid, jQuery, CSS 3 for rapid prototyping for clickables demos and final builds." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Wireframed, designed, and developed new features to improve our customers experiences." },
+            { "text": "Integrations of responsive designs with back end code." }
+        ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 25
-            },
-            {
                 "title": "HTML 5",
-                "amountUsed": 25
+                "amountUsed": 85
             },
             {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
+                "title": "CSS 3",
+                "amountUsed": 80
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
+            },
+            {
+                "title": "WCAG 2.0",
+                "amountUsed": 80
             }
         ]
     },
     {
         "company": "Circuit City",
+        "logo": "firedog.png",
+        "agency": { "title": "firedog.com", "logo": "circuitcity.png" },
         "jobtitle": "Programmer Analyst",
-        "text": "",
+        "employed": { "startYear": "2008", "endYear": "2010" },
+        "supported": ["ios", "chrome", "firefox", "ie 6", "safari"],
+        "location": "Glen Allen",
         "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
-        "logo": "circuitcity.png",
-        "dates": {
-            "startYear": "2008",
-            "endYear": "2010"
-        },
-        "achievements": [
             { "text": "Worked closely with Project Managers, Business Managers, external and internal Business Units to design, develop, and maintain firedog.com." },
             { "text": "Lead design and development for firedog.com." }
         ],
+        "achievements": [
+            { "text": "Designed and developed a front end shopping cart for firedog services that was injected into circuitcity.com's checkout process cross domain." }
+        ],
+        "contributions": [
+            { "text": "Balsamic wireframing during concept phases to capture interfaces and flows." },
+            { "text": "HTML 3, jQuery, CSS 3 for rapid prototyping for clickables demos and final builds." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Wireframed, designed, and developed new features to improve our customers experiences." }
+        ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
+                "title": "HTML",
+                "amountUsed": 85
             },
             {
-                "title": "jQuery",
-                "amountUsed": 25
-            },
-            {
-                "title": "HTML 5",
-                "amountUsed": 25
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
+                "title": "CSS",
+                "amountUsed": 80
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 85
+            },
+            {
+                "title": "jQuery",
+                "amountUsed": 85
+            },
+            {
+                "title": "JSON",
+                "amountUsed": 85
+            },
+            {
+                "title": "AJAX",
+                "amountUsed": 85
+            },
+            {
+                "title": "WCAG 2.0",
+                "amountUsed": 80
             }
         ]
     },
     {
         "company": "Global Web Solutions",
-        "jobtitle": "Web Developer / Designer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "globalwebsolutions.png",
-        "dates": {
-            "startYear": "2001",
-            "endYear": "2004"
-        },
+        "jobtitle": "Web Developer / Designer",
+        "employed": { "startYear": "2001", "endYear": "2004" },
+        "supported": ["netscape", "ie 9", "safari"],
+        "location": "Glen Allen",
+        "description": [
+            { "text": "Routinely met with new and existing customers to discuss their needs, sketch out, design, and built their web sites." },
+            { "text": "" },
+            { "text": "" }
+        ],
         "achievements": [
-            { "text": "Work closely with Business Owners, Managers, and Employees to design, develop, and maintain ecommerce and informational sites for small to medium sized businesses." }
-
+            { "text": "Designed and developed many websites for local small to medium sized businesses including C&F Bank and the Richmond Braves." }
+        ],
+        "contributions": [
+            { "text": "HTML 3, jQuery, CSS 3 for rapid prototyping for clickables demos and final builds." },
+            { "text": "Full stack development with ASP, ADO, SQL, and MS Access." },
+            { "text": "Wireframed, designed, and developed new features to improve our customers experiences." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." }
         ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 20
+                "title": "ASP",
+                "amountUsed": 90
+            },
+            {
+                "title": "SQL",
+                "amountUsed": 90
+            },
+            {
+                "title": "ADO",
+                "amountUsed": 90
+            }, {
+                "title": "MS Access",
+                "amountUsed": 90
             },
             {
                 "title": "jQuery",
-                "amountUsed": 25
+                "amountUsed": 95
             },
             {
-                "title": "HTML 5",
-                "amountUsed": 25
+                "title": "HTML",
+                "amountUsed": 95
             },
             {
-                "title": "Knockout JS",
-                "amountUsed": 10
-            },
-            {
-                "title": "Bootstrap 3/4",
-                "amountUsed": 25
+                "title": "CSS",
+                "amountUsed": 95
             },
             {
                 "title": "Javascript",
-                "amountUsed": 25
+                "amountUsed": 95
             }
         ]
     },
     {
         "company": "First Union National Bank",
-        "jobtitle": "Web Developer / Officer",
-        "text": "",
-        "description": [
-            { "text": "I came onboard at the time when we were still in the MVP stage for our web application. This was very exciting and allowed for many opportunities for improvement to help our customers." },
-            { "text": "I was able to utilized my front end strengths while growing my back end skill sets with ASP.Net. My typical tasks for every sprint consisted of full stack development up to our APIs and back to the views." },
-            { "text": "Working closely with our Product Owner and Stakeholders, I designed and developed user work flows focusing on our user's experience, satisfaction, and conversions to payments." }
-        ],
         "logo": "firstunion.png",
-        "dates": {
-            "startYear": "1996",
-            "endYear": "2001"
-        },
+        "jobtitle": "Web Developer / Officer",
+        "employed": { "startYear": "1996", "endYear": "2001" },
+        "supported": ["netscape", "ie 9", "safari"],
+        "location": "Charlotte, NC",
+        "description": [
+            { "text": "" },
+            { "text": "" },
+            { "text": "" }
+        ],
         "achievements": [
-            { "text": "The design, development, expansion, and maintenance of www.firstunion.com. Ensuring team members adhered to web site style guides while performing proper coding practices and training team members when needed." }
+            { "text": "Ensuring team members adhered to web site style guides while performing proper coding practices and training team members when needed." }
+        ],
+
+        "contributions": [
+            { "text": "HTML 3, jQuery, CSS 3 for rapid prototyping for clickables demos and final builds." },
+            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Wireframed, designed, and developed new features to improve our customers experiences." }
         ],
         "technologies": [{
-                "title": "ASP.Net MVC 5 C# 6",
-                "amountUsed": 60
-            },
-            {
-                "title": "Javascript",
-                "amountUsed": 25
-            },
-            {
-                "title": "jQuery",
-                "amountUsed": 90
-            },
-            {
-                "title": "Knockout JS",
-                "amountUsed": 20
-            },
-            {
-                "title": "HTML 5",
+                "title": "HTML",
                 "amountUsed": 95
             },
             {
-                "title": "Bootstrap 4",
-                "amountUsed": 75
+                "title": "CSS",
+                "amountUsed": 95
             },
             {
-                "title": "SASS",
-                "amountUsed": 85
+                "title": "Javascript",
+                "amountUsed": 95
+            },
+            {
+                "title": "DHTML",
+                "amountUsed": 95
             }
         ]
     }
