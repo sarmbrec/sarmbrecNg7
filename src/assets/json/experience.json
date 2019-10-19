@@ -7,8 +7,8 @@
         "location": "Remote / Glen Allen",
         "description": [
             { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers and grow the business." },
-            { "text": "Performed full stack development utilizing my front end design and development skills while learning ASP.Net MVC 5. My tasks for all sprints included full stack development utizilizing async requests to internal APIs to retrieve JSON data and pass it back to the view model to be displayed in the view." },
-            { "text": "Research and documented new features.  Identifying a need or hinderance, envisioning a solution, researching both, documenting findings, and architecting out how to apply it to the current system." },
+            { "text": "Performing full stack development utilizing my front end design and development skills while learning ASP.Net MVC 5. My tasks for all sprints included full stack development utizilizing async requests to internal APIs to retrieve JSON data and pass it back to the view model to be displayed in the view." },
+            { "text": "Researching and documenting new features.  Identifying a need or hinderance, envisioning a solution, researching both, documenting findings, and architecting out how to apply it to the current system." },
             { "text": "Working closely with our product owner and stake holders, we designed and developed new features focusing on our user's experiences, satisfaction, abandonment, and conversions." }
         ],
         "achievements": [
@@ -568,7 +568,6 @@
         "location": "Charlotte, NC",
         "description": [
             { "text": "My start as a developer was at First Union.  I was working there at a help desk and started sending HTML code fixes with opened tickets.  I was offered a job as a web developer and accepted." }
-
         ],
         "achievements": [
             { "text": "Ensuring team members adhered to web site style guides while performing proper coding practices and training team members when needed." }

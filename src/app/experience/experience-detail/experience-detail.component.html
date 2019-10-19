@@ -4,6 +4,16 @@
             <div class="col-12 col-sm-7 col-md-8 col-lg-9">
                 <div class="row">
 
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                                <li class="breadcrumb-item"><a routerLink="/experience">Experience</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{detail.company}}</li>
+                            </ol>
+                        </nav>
+                    </div>
+
                     <div class="col-12" *ngIf="detail.company || detail.agency.title">
                         <div class="d-flex">
                             <!-- <i class="fa fa-chevron-left"></i> -->
@@ -43,7 +53,7 @@
                         <div class="badge border bg-white shadow-sm m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</div>
                     </div>
 
-                    <div class="col-12" *ngIf="barChartData">
+                    <div class="col-12" *ngIf="detail$ | async">
                         <div>
                             <h3>Knowledge Base</h3>
                             <div style="display: block;">
