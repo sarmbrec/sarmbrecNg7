@@ -9,7 +9,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
                                 <li class="breadcrumb-item"><a routerLink="/experience">Experience</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{detail.company}}</li>
+                                <li class="breadcrumb-item active sr-only" aria-current="page">{{detail.company}}</li>
                             </ol>
                         </nav>
                     </div>
@@ -57,7 +57,7 @@
                         <div>
                             <h3>Knowledge Base</h3>
                             <div style="display: block;">
-                                <canvas height="90px" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+                                <canvas class="kb-chart" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                             </div>
                         </div>
                         <hr class="my-3">
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-5 col-md-4 col-lg-3">
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 pt-md-4">
 
                 <div class="card text-center" *ngIf="detail.logo">
                     <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">

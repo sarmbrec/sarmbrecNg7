@@ -3,17 +3,25 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 section#experience-detail {
     background-color: $white;
-    padding: 1rem 0;
+    padding: 0;
     font-size: .875rem;
     line-height: 1.35;
     position: relative;
+    .fa {
+        // back button
+        margin: .5rem 1rem 0 -1rem;
+    }
+    .breadcrumb {
+        margin: 0 0 1.5rem 0;
+        font-size: .75rem;
+    }
     h1 {
         font-size: 1.3rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         display: block;
         color: $dark;
-        line-height: 1;
+        line-height: 1.5;
         border-bottom: 1px solid darken($light, 25%);
         margin: 0;
     }
@@ -21,7 +29,7 @@ section#experience-detail {
     small.parent-section {
         display: inline-block;
         width: 75%;
-        margin: 0 0 1rem 0;
+        margin: 0 0 1.5rem 0;
         font-size: .75rem;
         white-space: nowrap;
         color: darken($light, 25%);
@@ -112,86 +120,43 @@ section#experience-detail {
 @include media-breakpoint-up(sm) {}
 
 @include media-breakpoint-up(md) {
-    // section#experience-detail {
-    // .parent-section {
-    //     color: darken($light, 25%);
-    //     font-size: .75rem;
-    //     margin-top: -20px;
-    //     margin-bottom: 1.5rem;
-    //     padding-right: .25rem;
-    //     text-align: right;
-    // }
-    // }
     section#experience-detail {
-        background-color: $white;
-        padding: 1.5rem 0;
-        font-size: .875rem;
-        line-height: 1.35;
-        position: relative;
-        .fa {
-            margin: .5rem 1rem 0 -1rem;
-        }
-        h1 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            display: block;
-            color: $dark;
-            line-height: 1;
-            border-bottom: 1px solid darken($light, 25%);
-            margin: 0;
-        }
-        small.agency-title,
-        small.parent-section {
-            display: inline-block;
-            width: 75%;
-            margin: 0 0 1rem 0;
-            font-size: .75rem;
-            white-space: nowrap;
-            color: darken($light, 25%);
-            padding-left: .25rem;
-        }
-        small.parent-section {
-            margin: 0;
-            width: 25%;
-            padding-right: .25rem;
-            text-align: right;
-        }
-        h2 {
-            font-family: 'Lato-Thin', sans-serif;
-            font-weight: 100;
-            color: $dark;
-            margin-bottom: 1rem;
-            padding: 0;
-        }
-        h3 {
-            font-family: 'Lato-Thin', sans-serif;
-            font-weight: 100;
-            color: $dark;
-            margin: 1.5rem 0 1rem 0;
-            padding: 0;
-            border-bottom: 1px solid rgba($secondary, .5);
-        }
+        // h2 {
+        //     font-family: 'Lato-Thin', sans-serif;
+        //     font-weight: 100;
+        //     color: $dark;
+        //     margin-bottom: 1rem;
+        //     padding: 0;
+        // }
+        // h3 {
+        //     font-family: 'Lato-Thin', sans-serif;
+        //     font-weight: 100;
+        //     color: $dark;
+        //     margin: 1.5rem 0 1rem 0;
+        //     padding: 0;
+        //     border-bottom: 1px solid rgba($secondary, .5);
+        // }
         img.logo {
-            height: auto;
+            //height: auto;
             width: 70%;
             margin: 0 15%;
             //filter: grayscale(100%);
             //opacity: .5;
         }
-        .company-small {
-            font-size: .7rem;
-            color: darken($light, 25%);
-        }
-        .small {
-            font-size: .7rem;
-        }
-        dt {
-            display: block;
-        }
-        dd {
-            display: block;
-            margin-left: .5rem;
-        }
+        // .company-small {
+        //     font-size: .7rem;
+        //     color: darken($light, 25%);
+        // }
+        // .small {
+        //     font-size: .7rem;
+        // }
+        // dt {
+        //     display: block;
+        // }
+        // dd {
+        //     display: block;
+        //     margin-left: .5rem;
+        // }
         ul#nav-experiences {
             li {
                 padding: 0;
