@@ -2,31 +2,41 @@
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 section#experience-detail {
-    background-color: $light;
+    background-color: $white;
     padding: 1rem 0;
     font-size: .875rem;
-    line-height: 1.5;
+    line-height: 1.35;
+    position: relative;
     h1 {
+        font-size: 1.3rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
         display: block;
         color: $dark;
         line-height: 1;
         border-bottom: 1px solid darken($light, 25%);
-        margin-bottom: 1.15rem;
-        small {
-            margin-bottom: -1rem;
-            font-size: .75rem;
-            line-height: .75;
-            white-space: nowrap;
-            display: block;
-            color: darken($light, 25%);
-            padding-left: .25rem;
-        }
+        margin: 0;
+    }
+    small.agency-title,
+    small.parent-section {
+        display: inline-block;
+        width: 75%;
+        margin: 0 0 1rem 0;
+        font-size: .75rem;
+        white-space: nowrap;
+        color: darken($light, 25%);
+        padding-left: .25rem;
+    }
+    small.parent-section {
+        margin: 0;
+        width: 25%;
+        padding-right: .25rem;
+        text-align: right;
     }
     h2 {
+        font-size: 1.2rem;
         font-family: 'Lato-Thin', sans-serif;
-        font-weight: 100;
+        font-weight: 300;
         color: $dark;
         margin-bottom: 1rem;
         padding: 0;
@@ -39,20 +49,17 @@ section#experience-detail {
         padding: 0;
         border-bottom: 1px solid rgba($secondary, .5);
     }
-    .parent-section {
-        color: darken($light, 25%);
-        font-size: .75rem;
-        margin-top: 00px;
-        margin-bottom: 1rem;
-        padding-right: .25rem;
-        text-align: right;
-    }
     img.logo {
         height: auto;
-        width: 70%;
-        margin: 0 15%;
-        //filter: grayscale(100%);
-        //opacity: .5;
+        width: 26%;
+        margin: 0 37%;
+    }
+    img.logo-small {
+        height: auto;
+        width: 20%;
+        filter: grayscale(100%);
+        opacity: .8;
+        margin: .25rem .25rem 0 0;
     }
     .company-small {
         font-size: .7rem;
@@ -105,14 +112,115 @@ section#experience-detail {
 @include media-breakpoint-up(sm) {}
 
 @include media-breakpoint-up(md) {
+    // section#experience-detail {
+    // .parent-section {
+    //     color: darken($light, 25%);
+    //     font-size: .75rem;
+    //     margin-top: -20px;
+    //     margin-bottom: 1.5rem;
+    //     padding-right: .25rem;
+    //     text-align: right;
+    // }
+    // }
     section#experience-detail {
-        .parent-section {
-            color: darken($light, 25%);
+        background-color: $white;
+        padding: 1.5rem 0;
+        font-size: .875rem;
+        line-height: 1.35;
+        position: relative;
+        .fa {
+            margin: .5rem 1rem 0 -1rem;
+        }
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            display: block;
+            color: $dark;
+            line-height: 1;
+            border-bottom: 1px solid darken($light, 25%);
+            margin: 0;
+        }
+        small.agency-title,
+        small.parent-section {
+            display: inline-block;
+            width: 75%;
+            margin: 0 0 1rem 0;
             font-size: .75rem;
-            margin-top: -20px;
-            margin-bottom: 1.5rem;
+            white-space: nowrap;
+            color: darken($light, 25%);
+            padding-left: .25rem;
+        }
+        small.parent-section {
+            margin: 0;
+            width: 25%;
             padding-right: .25rem;
             text-align: right;
+        }
+        h2 {
+            font-family: 'Lato-Thin', sans-serif;
+            font-weight: 100;
+            color: $dark;
+            margin-bottom: 1rem;
+            padding: 0;
+        }
+        h3 {
+            font-family: 'Lato-Thin', sans-serif;
+            font-weight: 100;
+            color: $dark;
+            margin: 1.5rem 0 1rem 0;
+            padding: 0;
+            border-bottom: 1px solid rgba($secondary, .5);
+        }
+        img.logo {
+            height: auto;
+            width: 70%;
+            margin: 0 15%;
+            //filter: grayscale(100%);
+            //opacity: .5;
+        }
+        .company-small {
+            font-size: .7rem;
+            color: darken($light, 25%);
+        }
+        .small {
+            font-size: .7rem;
+        }
+        dt {
+            display: block;
+        }
+        dd {
+            display: block;
+            margin-left: .5rem;
+        }
+        ul#nav-experiences {
+            li {
+                padding: 0;
+                a {
+                    display: block;
+                    text-align: left;
+                    padding: .75rem 1rem;
+                    font-size: .8rem;
+                    color: rgba($dark, 1);
+                    font-weight: 600;
+                    background-color: transparent;
+                    -webkit-transition: all .15s linear;
+                    transition: all .15s linear;
+                    // border-left: 0px solid transparent;
+                    &:hover {
+                        //font-weight: 600;
+                        background-color: darken($light, 5%);
+                        color: $black;
+                        text-decoration: none;
+                        // border-left: 5px solid $primary;
+                    }
+                    &.active {
+                        background-color: lighten($secondary, 10%);
+                        color: $light;
+                        pointer-events: none;
+                        // border-left: 5px solid $primary;
+                    }
+                }
+            }
         }
     }
 }

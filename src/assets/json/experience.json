@@ -7,14 +7,13 @@
         "location": "Remote / Glen Allen",
         "description": [
             { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers and grow the business." },
-            { "text": "I was full stack development utilizing my front end design and development skills while learning ASP.Net MVC 5. My tasks for all sprints included full stack development utizilizing async requests to internal APIs to retrieve JSON data and pass it back to the view model to be displayed in the view." },
-            { "text": "A main responsibility was to research and document new features.  Identifying a need or hinderance, envisioning a solution, researching both, documenting findings, and architecting out how to apply it to the current system." },
+            { "text": "Performed full stack development utilizing my front end design and development skills while learning ASP.Net MVC 5. My tasks for all sprints included full stack development utizilizing async requests to internal APIs to retrieve JSON data and pass it back to the view model to be displayed in the view." },
+            { "text": "Research and documented new features.  Identifying a need or hinderance, envisioning a solution, researching both, documenting findings, and architecting out how to apply it to the current system." },
             { "text": "Working closely with our product owner and stake holders, we designed and developed new features focusing on our user's experiences, satisfaction, abandonment, and conversions." }
         ],
         "achievements": [
             { "text": "Lead corporate redesign of prapay.com.  Initial average increase of $3.5 million in monthly income via payments made through web application after redesign." },
             { "text": "Lead redesign of payment process user experience for the United Kingdom prapay.com web application.  Initial monthly increase of $1 million in income through payments made." },
-            { "text": "Lead User eXperience and User Interface design initiatives for new features." },
             { "text": "Designed and developed a virtual assistant using the W3C speech synthesis and speech recognition APIs." }
         ],
         "contributions": [
@@ -46,13 +45,13 @@
                 "amountUsed": 85
             }, {
                 "title": "Knockout JS",
-                "amountUsed": 25
+                "amountUsed": 35
             }, {
                 "title": "Angular 7",
-                "amountUsed": 25
+                "amountUsed": 65
             }, {
                 "title": "Typescript",
-                "amountUsed": 25
+                "amountUsed": 65
             }, {
                 "title": "JSON",
                 "amountUsed": 85
@@ -80,7 +79,7 @@
                 "amountUsed": 60
             }, {
                 "title": "C# 6",
-                "amountUsed": 60
+                "amountUsed": 70
             }, {
                 "title": "Razor",
                 "amountUsed": 85
@@ -142,7 +141,7 @@
             },
             {
                 "title": "AngularJS",
-                "amountUsed": 60
+                "amountUsed": 85
             },
             {
                 "title": "JSON",
@@ -236,7 +235,7 @@
             },
             {
                 "title": "AngularJS",
-                "amountUsed": 60
+                "amountUsed": 85
             },
             {
                 "title": "JSON",
@@ -281,8 +280,7 @@
         "location": "Glen Allen",
         "description": [
             { "text": "Working in the medical field for GE Healthcare was amazing.  Trips to the hospitals to see our products in action was extremely gratifying and motivating to constantly improve them." },
-            { "text": "My main duties focused on front end design and development.  I worked closely with architects, product owners, and stake holders to help design and develop features that could improve the lives of medical professionals and patients." },
-            { "text": "I had the pleasure of working with many extremely knowledgeable and creative people during my time with True Health and HDL growing both professionaly and personaly with them." }
+            { "text": "My main duties focused on front end design and development.  I worked closely with architects, product owners, and stake holders to help design and develop features that could improve the lives of medical professionals and patients." }
         ],
         "achievements": [
             { "text": "Member of the Global Asset Management team, representing the face of high quality design and development practices." },
@@ -324,7 +322,7 @@
             },
             {
                 "title": "AngularJS",
-                "amountUsed": 60
+                "amountUsed": 85
             },
             {
                 "title": "JSON",
@@ -458,8 +456,8 @@
     },
     {
         "company": "Circuit City",
-        "logo": "firedog.png",
-        "agency": { "title": "firedog.com", "logo": "circuitcity.png" },
+        "logo": "circuitcity.png",
+        "agency": { "title": "firedog.com", "logo": "firedog.png" },
         "jobtitle": "Programmer Analyst",
         "employed": { "startYear": "2008", "endYear": "2010" },
         "supported": ["ios", "chrome", "firefox", "ie 6", "safari"],
@@ -569,17 +567,17 @@
         "supported": ["netscape", "ie 9", "safari"],
         "location": "Charlotte, NC",
         "description": [
-            { "text": "" },
-            { "text": "" },
-            { "text": "" }
+            { "text": "My start as a developer was at First Union.  I was working there at a help desk and started sending HTML code fixes with opened tickets.  I was offered a job as a web developer and accepted." }
+
         ],
         "achievements": [
             { "text": "Ensuring team members adhered to web site style guides while performing proper coding practices and training team members when needed." }
         ],
 
         "contributions": [
-            { "text": "HTML 3, jQuery, CSS 3 for rapid prototyping for clickables demos and final builds." },
-            { "text": "ADA accessability for WCAG 2.0 compliancy." },
+            { "text": "Maintained and expanded firstunion.com." },
+            { "text": "HTML 3, jQuery, CSS for rapid prototyping for clickables demos and final builds." },
+            { "text": "ADA accessability for section 508 compliancy." },
             { "text": "Wireframed, designed, and developed new features to improve our customers experiences." }
         ],
         "technologies": [{

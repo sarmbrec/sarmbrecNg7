@@ -4,9 +4,15 @@
             <div class="col-12 col-sm-7 col-md-8 col-lg-9">
                 <div class="row">
 
-                    <div class="col-12 mt-3" *ngIf="detail.company || detail.agency.title">
-                        <h1 *ngIf="detail.company">{{detail.company}}<span *ngIf="detail.agency"><small><br>{{detail.agency.title}}</small></span></h1>
-                        <div class="parent-section">Experience</div>
+                    <div class="col-12" *ngIf="detail.company || detail.agency.title">
+                        <div class="d-flex">
+                            <!-- <i class="fa fa-chevron-left"></i> -->
+                            <h1 class="w-100" *ngIf="detail.company">{{detail.company}}</h1>
+                        </div>
+                        <div class="d-flex">
+                            <small class="agency-title"><span *ngIf="detail.agency">~ {{detail.agency.title}}</span></small>
+                            <small class="parent-section">Experience</small>
+                        </div>
                     </div>
 
                     <div class="col-12" *ngIf="detail.contributions || detail.jobtitle">
@@ -73,13 +79,12 @@
                 <div class="small text-muted my-3 mx-3">
                     <ng-container *ngIf="detail.company">
                         <dt>Company:</dt>
-                        <dd>{{detail.company}}</dd>
+                        <dd><img class="logo-small" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]"> {{detail.company}}</dd>
                     </ng-container>
                     <ng-container *ngIf="detail.agency">
-                        <dt *ngIf="detail.company != 'Circuit City'">Agency:</dt>
+                        <dt><span *ngIf="detail.company != 'Circuit City'">Agency:</span></dt>
                         <dd>
-                            <!-- {{detail.agency.title}}<br> -->
-                            <img class="w-25" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]">
+                            <img class="logo-small" aria-hidden="true" *ngIf="detail.agency.logo" [src]="['assets/images/logos/experience/' + detail.agency.logo]"> {{detail.agency.title}}
                         </dd>
                     </ng-container>
                     <ng-container *ngIf="detail.jobtitle">
