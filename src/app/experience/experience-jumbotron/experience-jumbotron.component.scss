@@ -7,14 +7,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 568px;
-    //background-attachment: fixed;
     background-color: $primary;
     margin: 0;
-    padding-top: 5vh;
+    padding-top: 25vh;
     text-align: left;
     position: static;
     overflow: hidden;
-    //height: 65vh;
     p {
         font-weight: 100;
         font-size: 1.1rem;
@@ -50,11 +48,11 @@
         background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-steve-jobs;
         background-position: center top;
         background-repeat: no-repeat;
-        background-size: cover; // fix this for ios
+        background-size: cover;
         background-attachment: fixed;
         background-color: $primary;
         margin: 0;
-        padding-top: 10vh;
+        padding-top: 20vh;
         text-align: left;
         p {
             font-weight: 100;
