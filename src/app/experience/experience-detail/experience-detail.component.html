@@ -1,7 +1,7 @@
 <section id="experience-detail" *ngIf="detail$ | async as detail">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+            <div class="col-12 col-md-8 col-lg-9">
                 <div class="row">
 
                     <div class="col-12">
@@ -9,7 +9,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
                                 <li class="breadcrumb-item"><a routerLink="/experience">Experience</a></li>
-                                <li class="breadcrumb-item active sr-only" aria-current="page">{{detail.company}}</li>
+                                <li class="breadcrumb-item active" aria-current="page">{{detail.company}}</li>
                             </ol>
                         </nav>
                     </div>
@@ -66,30 +66,21 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-5 col-md-4 col-lg-3 pt-md-4">
+            <div class="col-12 col-md-4 col-lg-3 pt-md-4">
 
                 <div class="card text-center" *ngIf="detail.logo">
                     <img class="logo" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
                 </div>
                 <hr class="my-3">
 
-                <h4 class="sr-only">Work History</h4>
-                <div class="card">
-                    <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
-                        <li class="list-group-item" *ngFor="let item of items">
-                            <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">
-                                {{item.company}}
-                                <small><br>{{item.jobtitle}}</small>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <hr class="my-3">
 
                 <div class="small text-muted my-3 mx-3">
                     <ng-container *ngIf="detail.company">
                         <dt>Company:</dt>
-                        <dd><img class="logo-small" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]"> {{detail.company}}</dd>
+                        <dd class="d-flex">
+                            <img class="logo-small align-self-center" aria-hidden="true" *ngIf="detail.logo" [src]="['assets/images/logos/experience/' + detail.logo]">
+                            <span class="align-self-center">{{detail.company}}</span>
+                        </dd>
                     </ng-container>
                     <ng-container *ngIf="detail.agency">
                         <dt><span *ngIf="detail.company != 'Circuit City'">Agency:</span></dt>
@@ -118,9 +109,23 @@
                     </ng-container>
                 </div>
 
-
-
                 <hr class="my-3">
+
+
+                <h4 class="sr-only">Work History</h4>
+                <div class="card">
+                    <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
+                        <li class="list-group-item" *ngFor="let item of items">
+                            <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">
+                                {{item.company}}
+                                <small><br>{{item.jobtitle}}</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="my-3">
+
+
 
             </div>
         </div>

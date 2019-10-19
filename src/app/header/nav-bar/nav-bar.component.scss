@@ -21,3 +21,47 @@ a.navbar-brand {
         font-size: .85rem;
     }
 }
+
+.dropdown-item {
+    padding: .75rem 1rem;
+    font-size: .75rem;
+    color: rgba($dark, 1);
+    font-weight: 400;
+    background-color: transparent;
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear;
+    // border-left: 0px solid transparent;
+    &:not(:last-of-type) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+    &:hover {
+        //font-weight: 600;
+        background-color: darken($light, 10%);
+        color: $black;
+        text-decoration: none;
+        // border-left: 5px solid $primary;
+    }
+    &.active {
+        background-color: darken($light, 5%);
+        //background-color: lighten($secondary, 10%);
+        //color: $light;
+        pointer-events: none;
+        // border-left: 5px solid $primary;
+    }
+    .logo-small {
+        height: 40px;
+        width: auto;
+        margin-right: 1rem;
+        // padding: 0 .25rem;
+        filter: grayscale(100%);
+        -webkit-transition: all .15s;
+        transition: all .15s;
+        &.active,
+        &:hover {
+            filter: grayscale(0%);
+            // background-color: $light;
+            // border: 1px solid $light;
+            // border-radius: 40px;
+        }
+    }
+}
