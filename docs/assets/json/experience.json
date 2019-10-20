@@ -5,6 +5,7 @@
         "employed": { "startYear": "2017", "endYear": "2019" },
         "supported": ["ios", "android", "windows", "chrome", "safari", "firefox", "edge", "ie 11"],
         "location": "Remote / Glen Allen",
+        "industry": "Financial",
         "description": [
             { "text": "I started at PRA during the MVP stage of prapay.com. It was an exciting time that allowed for many opportunities and fun challenges to help our customers and grow the business." },
             { "text": "Performing full stack development utilizing my front end design and development skills while learning ASP.Net MVC 5. My tasks for all sprints included full stack development utizilizing async requests to internal APIs to retrieve JSON data and pass it back to the view model to be displayed in the view." },
@@ -94,6 +95,7 @@
         "employed": { "startYear": "2016", "endYear": "2017" },
         "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
         "location": "Remote / City of Richmond",
+        "industry": "Healthcare",
         "description": [
             { "text": "True Health Diagnostics purchased Health Diagnostic Laboratories and I was offered the position of Lead UX Developer." },
             { "text": "My duties focused on front end design and development, mainly development.  I worked with product owners, architects, java / .net developers, and stake holders to help design and develop for both new applications and enhancements to our current ones." },
@@ -184,6 +186,7 @@
         "employed": { "startYear": "2014", "endYear": "2016" },
         "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
         "location": "Remote / City of Richmond",
+        "industry": "Healthcare",
         "description": [
             { "text": "Health Diagnostic Laboratories was an incredible place to work, they had a great mission that helped a lot of people improve their lives.  Leadership there was fantastic, and the atmosphere was extremely condusive to creating and developing." },
             { "text": "My main duties focused on front end design and development.  I worked very closely with our executives, product owners, and stake holders to help design and develop both new applications and enhancements to our current ones." },
@@ -278,6 +281,7 @@
         "employed": { "startYear": "2013", "endYear": "2014" },
         "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
         "location": "Glen Allen",
+        "industry": "Healthcare",
         "description": [
             { "text": "Working in the medical field for GE Healthcare was amazing.  Trips to the hospitals to see our products in action was extremely gratifying and motivating to constantly improve them." },
             { "text": "My main duties focused on front end design and development.  I worked closely with architects, product owners, and stake holders to help design and develop features that could improve the lives of medical professionals and patients." }
@@ -351,6 +355,7 @@
         "employed": { "startYear": "2012", "endYear": "2013" },
         "supported": ["ios", "android", "chrome", "firefox", "edge", "ie 9", "safari"],
         "location": "Remote / New Braunfels, TX",
+        "industry": "Retail",
         "description": [
             { "text": "Worked closely with Senior Leadership, Management, Designers, and Developers to lead the UI/UX development of a custom 960 responsive grid system to meet their requirements for web, mobile, ASP.net and J2EE integration for their multiple ecommerce based websites including walmart.stationery.com, iprint.com, and officedepot.com." },
             { "text": "My main duties focused on front end design and development.  I worked very closely with the Texas team to help design and develop enhancements to integrate their products." },
@@ -406,6 +411,7 @@
         "employed": { "startYear": "2010", "endYear": "2012" },
         "supported": ["ios", "android", "chrome", "firefox", "ie 6", "safari"],
         "location": "Glen Allen",
+        "industry": "Financial",
         "description": [
             { "text": "Capital One was an amazing place that truely embraced technology and professional growth." },
             { "text": "The team collaboration was extremely condusive to learning and improving.  I contribute most of my best practices to my time with them." },
@@ -462,6 +468,7 @@
         "employed": { "startYear": "2008", "endYear": "2010" },
         "supported": ["ios", "chrome", "firefox", "ie 6", "safari"],
         "location": "Glen Allen",
+        "industry": "Retail",
         "description": [
             { "text": "Worked closely with Project Managers, Business Managers, external and internal Business Units to design, develop, and maintain firedog.com." },
             { "text": "Lead design and development for firedog.com." }
@@ -512,6 +519,7 @@
         "employed": { "startYear": "2001", "endYear": "2004" },
         "supported": ["netscape", "ie 9", "safari"],
         "location": "Glen Allen",
+        "industry": "Service",
         "description": [
             { "text": "Routinely met with new and existing customers to discuss their needs, sketch out, design, and built their web sites." },
             { "text": "Designed and developed e-commerce and brocureware websites for local small to medium sized businesses including C&F Bank, Rehrig, and the Richmond Braves." },
@@ -566,6 +574,7 @@
         "employed": { "startYear": "1996", "endYear": "2001" },
         "supported": ["netscape", "ie 9", "safari"],
         "location": "Charlotte, NC",
+        "industry": "Financial",
         "description": [
             { "text": "My start as a developer was at First Union.  I was working there at a help desk and started sending HTML code fixes with opened tickets.  I was offered a job as a web developer and accepted." }
         ],
