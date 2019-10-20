@@ -30,6 +30,9 @@ export class KbDetailComponent implements OnInit {
       switchMap((params: ParamMap) =>
         this.service.geKnowledgeBaseDetailAsync(params.get('id')))
     );
+
+    // TODO: make this default view data driven by category
+    this.getKbData('kb-angular-getstarted.html');
   }
 
   getKbData(url: string) {

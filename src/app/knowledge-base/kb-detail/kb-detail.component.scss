@@ -8,57 +8,75 @@ section#kb-detail {
     //position: relative;
     font-size: .875rem;
     line-height: 1.25;
-    h1 {
-        display: block;
-        color: lighten($dark, 25%);
-        border-bottom: 1px solid darken($light, 25%);
-        margin-bottom: .15rem;
+}
+
+h1 {
+    display: block;
+    color: lighten($dark, 25%);
+    border-bottom: 1px solid darken($light, 25%);
+    margin-bottom: .15rem;
+}
+
+ol {
+    padding-left: .75rem;
+    li {
+        margin-bottom: .5rem;
     }
-    ol {
-        padding-left: .75rem;
-        li {
-            margin-bottom: .5rem;
-        }
+}
+
+.parent-section {
+    color: darken($light, 25%);
+    font-size: .75rem;
+    margin-top: -20px;
+    margin-bottom: 1.5rem;
+    padding-right: .25rem;
+    text-align: right;
+}
+
+.card {
+    text-align: center;
+    img.logo {
+        height: auto;
+        width: 26%;
+        margin: 1rem 37%;
     }
-    .parent-section {
-        color: darken($light, 25%);
+    // img#logo {
+    //     // width: 80%;
+    //     // height: auto;
+    //     // margin: 1rem auto;
+    //     width: 70%;
+    //     margin: 0 15%;
+    // }
+    .sub-title {
         font-size: .75rem;
-        margin-top: -20px;
-        margin-bottom: 1.5rem;
-        padding-right: .25rem;
-        text-align: right;
+        color: darken($light, 25%);
     }
-    .card {
-        text-align: center;
-        img#logo {
-            width: 80%;
-            height: auto;
-            margin: 1rem auto;
-        }
-        .sub-title {
-            font-size: .75rem;
-            color: darken($light, 25%);
-        }
-        ul#ul-item-links {
-            li {
-                padding: 0;
-                a {
-                    display: block;
-                    text-align: left;
-                    padding: .75rem 1rem;
-                    font-size: .8rem;
-                    color: rgba($dark, 1);
-                    background-color: transparent;
-                    -webkit-transition: all .1s linear;
-                    transition: all .1s linear;
-                    border-left: 0px solid transparent;
-                    &:hover {
-                        text-decoration: none;
-                        background-color: $light;
-                        border-left: 5px solid $primary;
-                    }
+    ul#ul-item-links {
+        li {
+            padding: 0;
+            a {
+                display: block;
+                text-align: left;
+                padding: .75rem 1rem;
+                font-size: .8rem;
+                color: rgba($dark, 1);
+                background-color: transparent;
+                -webkit-transition: all .1s linear;
+                transition: all .1s linear;
+                border-left: 0px solid transparent;
+                &:hover {
+                    text-decoration: none;
+                    background-color: $light;
+                    border-left: 5px solid $primary;
                 }
             }
         }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    img.logo {
+        width: 70%;
+        margin: 0 15%;
     }
 }

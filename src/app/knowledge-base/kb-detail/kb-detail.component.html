@@ -4,7 +4,7 @@
             <div class="col-md-8 order-2 order-md-1">
                 <h1 *ngIf="kbDetail.title">{{kbDetail.title}}</h1>
                 <div class="parent-section">Knowledge Base</div>
-                <div class="card">
+                <div class="card text-left">
                     <div class="card-body">
                         <div [innerHtml]="kbHtml"></div>
                     </div>
@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-4 order-1 order-md-2">
                 <div class="card">
-                    <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" id="logo">
+                    <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" class="logo">
                     <p class="sub-title">{{kbDetail.subTitle}}</p>
                     <ul id="ul-item-links" class="list-group list-group-flush" *ngIf="kbDetail.links">
                         <li class="list-group-item" *ngFor="let link of kbDetail.links; index as a">

@@ -6,6 +6,56 @@ section#about {
     background-color: $white;
 }
 
+.albert-einstein {
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), $bg-base64-einstein;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 568px;
+    background-color: $primary;
+    margin: 0;
+    padding-top: 15vh;
+    text-align: right;
+    position: static;
+    overflow: hidden;
+    p {
+        font-weight: 100;
+        font-size: 1.1rem;
+        text-shadow: .1rem .1rem .5rem $black;
+        color: $light;
+        &.lead {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.75rem;
+            text-shadow: .25rem .25rem .75rem rgba($black, .7);
+            line-height: 1.25;
+        }
+    }
+}
+
+.inigo-montoya {
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), $bg-base64-inigo-montoya;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 568px;
+    background-color: $primary;
+    margin: 0;
+    padding-top: 15vh;
+    text-align: right;
+    position: static;
+    overflow: hidden;
+    p {
+        font-weight: 100;
+        font-size: 1.1rem;
+        text-shadow: .1rem .1rem .5rem $black;
+        color: $light;
+        &.lead {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.75rem;
+            text-shadow: .25rem .25rem .75rem rgba($black, .7);
+            line-height: 1.25;
+        }
+    }
+}
+
 .jerry-seinfeld {
     background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .2), rgba($primary, .5)), $bg-base64-seinfeld;
     background-position: center;
@@ -41,6 +91,54 @@ section#about {
             font-size: 1.25rem;
             &.lead {
                 font-size: 3rem;
+            }
+        }
+    }
+    .albert-einstein {
+        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-einstein;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        background-attachment: fixed;
+        background-color: $primary;
+        margin: 0;
+        padding-top: 45vh;
+        text-align: right;
+        p {
+            font-weight: 100;
+            font-size: 1.25rem;
+            text-shadow: .1rem .1rem .5rem $black;
+            color: $light;
+            &.lead {
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                text-shadow: .25rem .25rem .75rem rgba($black, .7);
+                line-height: 1.25;
+            }
+        }
+    }
+    .inigo-montoya {
+        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-inigo-montoya;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        background-attachment: fixed;
+        background-color: $primary;
+        margin: 0;
+        padding-top: 45vh;
+        text-align: right;
+        p {
+            font-weight: 100;
+            font-size: 1.25rem;
+            text-shadow: .1rem .1rem .5rem $black;
+            color: $light;
+            &.lead {
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                text-shadow: .25rem .25rem .75rem rgba($black, .7);
+                line-height: 1.25;
             }
         }
     }

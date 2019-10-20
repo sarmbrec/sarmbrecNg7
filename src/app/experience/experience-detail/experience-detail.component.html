@@ -96,6 +96,10 @@
                         <dt>Location:</dt>
                         <dd>{{detail.location}}</dd>
                     </ng-container>
+                    <ng-container *ngIf="detail.industry">
+                        <dt>Industry:</dt>
+                        <dd>{{detail.industry}}</dd>
+                    </ng-container>
                     <ng-container *ngIf="detail.employed.startYear && detail.employed.endYear">
                         <dt>Employed:</dt>
                         <dd>{{detail.employed.startYear}} - {{detail.employed.endYear}}</dd>

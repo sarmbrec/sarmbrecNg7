@@ -12,13 +12,15 @@
 
                 <li class="nav-item" ngbDropdown *ngIf="experiencesMenu$ | async as items">
 
-                    <a ngbDropdownToggle routerLinkActive="active" class="nav-link" style="cursor: pointer" id="ExperienceDropdown" role="button">
-                    Experience</a>
+                    <!-- routerLinkActive #rla="routerLinkActive"  <a routerLinkActive="active" ngbDropdownToggle class="nav-link" style="cursor: pointer" id="ExperienceDropdown">Experience</a> -->
+                    <a class="nav-link" [ngClass]="{ active: routeHasExperience }" ngbDropdownToggle role='button' style="cursor: pointer" id="ExperienceDropdown">
+                        Experience
+                    </a>
 
                     <div ngbDropdownMenu display="dynamic" placement="bottom-right" aria-labelledby="ExperienceDropdown" class="dropdown-menu dropdown-menu-right shadow">
                         <a *ngFor="let item of items" [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" class="d-flex dropdown-item">
                             <div class="w-25 text-center align-self-center">
-                                <img routerLinkActive="active" class="logo-small" aria-hidden="true" *ngIf="item.logo" [src]="['assets/images/logos/experience/' + item.logo]">
+                                <img class="logo-small" aria-hidden="true" *ngIf="item.logo" [src]="['assets/images/logos/experience/' + item.logo]">
                             </div>
                             <div class="align-self-center">
                                 {{item.company}}
