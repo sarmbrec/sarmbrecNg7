@@ -1,0 +1,51 @@
+<h2>Managing Data</h2>
+<p>
+    <a href="https://angular.io/start/data">https://angular.io/start/data</a>
+</p>
+<p>
+    <a href="">Forked StackBlitz example</a>
+</p>
+
+<p>
+    In this section, you'll create the shopping cart. You'll:
+</p>
+<ul>
+    <li>Update the product details page to include a "Buy" button, which adds the current product to a list of products managed by a cart service.</li>
+    <li>Add a cart component, which displays the items you added to your cart.</li>
+    <li>Add a shipping component, which retrieves shipping prices for the items in the cart by using Angular's HttpClient to retrieve shipping data from a .json file.</li>
+</ul>
+
+<hr>
+
+<h3>Services</h3>
+<p>
+    Services are an integral part of Angular applications. In Angular, a service is an instance of a class that can be made available to any part of your application using Angular's dependency injection system.
+</p>
+<p>
+    Services are the place where you share data between parts of your application. For the online store, the cart service is where you store your cart data and methods.
+</p>
+<h4>Create the shopping cart service</h4>
+<p>Up to this point, users can view product information, and simulate sharing and being notified about product changes. They cannot, however, buy products.</p>
+<p>In this section, you'll add a "Buy" button to the product details page. You'll also set up a cart service to store information about products in the cart.</p>
+
+<p>Later, in the <a href="https://angular.io/start/forms">Forms</a> part of this tutorial, this cart service also will be accessed from the page where the user checks out.</p>
+<ol>
+    <li>
+        <p>Generate a cart service.</p>
+        <ul type="a">
+            <li>
+                <p>Right click on the app folder, choose Angular Generator, and choose Service. Name the new service cart.</p>
+                <code>
+                    import { Injectable } from '@angular/core';<br><br>
+                    @Injectable({<br>
+                        providedIn: 'root'<br>
+                    })<br>
+                    export class CartService {<br><br>                    
+                        constructor() {}<br><br>                    
+                    }
+                </code>
+            </li>
+            <li>If the generated @Injectable() decorator does not include the { providedIn: 'root' } statement, then insert it as shown above.</li>
+        </ul>
+    </li>
+</ol>

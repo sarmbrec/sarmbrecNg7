@@ -1,5 +1,5 @@
 <section id="kb-detail" *ngIf="detail$ | async as kbDetail">
-    <div class="container">
+    <div class="container-fluid px-4">
         <div class="row">
             <div class="col-md-8 order-2 order-md-1">
                 <h1 *ngIf="kbDetail.title">{{kbDetail.title}}</h1>
@@ -25,15 +25,10 @@
                         </li>
                     </ul>
                 </div>
-                <nav class="mt-2">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <a [routerLink]="" style="cursor: pointer" role="button" (click)="getKbData('kb-angular-getstarted.html')">Getting Started</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a [routerLink]="" style="cursor: pointer" role="button" (click)="getKbData('test.html')">Test File</a>
-                        </li>
-                    </ul>
+                <nav class="mt-2 list-group">
+                    <a [routerLink]="" class="list-group-item" style="cursor: pointer" role="button" (click)="getKbData('angular-getstarted.html')">Getting Started</a>
+                    <a [routerLink]="" class="list-group-item" style="cursor: pointer" role="button" (click)="getKbData('angular-routing.html')">Routing</a>
+                    <a [routerLink]="" class="list-group-item" style="cursor: pointer" role="button" (click)="getKbData('angular-managing-data.html')">Managing Data</a>
                 </nav>
                 <!-- <hr class="mt-4 mb-4">
                 <h3>Requirements</h3>

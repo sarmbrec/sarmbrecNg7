@@ -1,9 +1,14 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-@import "../../../assets/css/variables";
+//@import "../../css/variables";
+//$bg-steve-jobs: url('../assets/images/backgrounds/steve-jobs.jpg');
+$bg-albert-einstein: url('../../../assets/images/backgrounds/albert-einstein.jpg');
+$bg-inigo-montoya: url('../../../assets/images/backgrounds/inigo-montoya.jpg');
+$bg-steve-jobs: url('../../../assets/images/backgrounds/steve-jobs.jpg');
+$bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg');
 .steve-jobs {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-steve-jobs;
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-steve-jobs;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 568px;
@@ -45,7 +50,6 @@
 
 @include media-breakpoint-up(md) {
     .steve-jobs {
-        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-steve-jobs;
         background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -85,4 +89,5 @@
 
 @include media-breakpoint-up(xl) {}
 
-@include media-breakpoint-between(md, xl) {}
+@include media-breakpoint-between(md,
+xl) {}

@@ -3,9 +3,7 @@
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 section#kb-detail {
     background-color: $light;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    //position: relative;
+    padding: 1rem 0;
     font-size: .875rem;
     line-height: 1.25;
 }

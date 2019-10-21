@@ -1,13 +1,17 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-@import "../../assets/css/variables";
+@import "../css/variables";
+// $bg-steve-jobs: url('../assets/images/backgrounds/steve-jobs.jpg');
+// $bg-jerry-seinfeld: url('../assets/images/backgrounds/jerry-seinfeld.jpg');
+// $bg-albert-einstein: url('../assets/images/images/backgrounds/albert-einstein.jpg');
+// $bg-inigo-montoya: url('../assets/images/images/backgrounds/inigo-montoya.jpg');
 section#about {
     background-color: $white;
 }
 
 .albert-einstein {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), $bg-base64-einstein;
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), $bg-albert-einstein;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 568px;
@@ -32,7 +36,7 @@ section#about {
 }
 
 .inigo-montoya {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), $bg-base64-inigo-montoya;
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .4), rgba($primary, .5)), $bg-inigo-montoya;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 568px;
@@ -57,7 +61,7 @@ section#about {
 }
 
 .jerry-seinfeld {
-    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .2), rgba($primary, .5)), $bg-base64-seinfeld;
+    background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .3), rgba($black, .2), rgba($primary, .5)), $bg-jerry-seinfeld;
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100vw;
@@ -95,7 +99,7 @@ section#about {
         }
     }
     .albert-einstein {
-        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-einstein;
+        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-albert-einstein;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -119,7 +123,7 @@ section#about {
         }
     }
     .inigo-montoya {
-        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-base64-inigo-montoya;
+        background-image: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5)), $bg-inigo-montoya;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

@@ -32,7 +32,7 @@ export class KbDetailComponent implements OnInit {
     );
 
     // TODO: make this default view data driven by category
-    this.getKbData('kb-angular-getstarted.html');
+    this.getKbData('angular-getstarted.html');
   }
 
   getKbData(url: string) {
