@@ -15,13 +15,6 @@ h1 {
     margin-bottom: .15rem;
 }
 
-ol {
-    padding-left: .75rem;
-    li {
-        margin-bottom: .5rem;
-    }
-}
-
 .parent-section {
     color: darken($light, 25%);
     font-size: .75rem;
@@ -38,13 +31,6 @@ ol {
         width: 26%;
         margin: 1rem 37%;
     }
-    // img#logo {
-    //     // width: 80%;
-    //     // height: auto;
-    //     // margin: 1rem auto;
-    //     width: 70%;
-    //     margin: 0 15%;
-    // }
     .sub-title {
         font-size: .75rem;
         color: darken($light, 25%);

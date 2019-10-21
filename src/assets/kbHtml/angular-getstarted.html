@@ -1,18 +1,20 @@
-<!-- <h2>Getting Started</h2>
+<nav class="nav nav-pills justify-content-end">
+    <a class="nav-item px-2" href="https://angular.io/start">Official Docs</a>
+    <a class="nav-item px-2" href="https://stackblitz.com/edit/angular-rdubma?file=src%2Fapp%2Fproduct-alerts%2Fproduct-alerts.component.html">StackBlitz</a>
+</nav>
 
-<p>
-    <a href="https://angular.io/start">https://angular.io/start</a>
-</p>
-<p>
-    <a href="https://stackblitz.com/edit/angular-rdubma?file=src%2Fapp%2Fproduct-alerts%2Fproduct-alerts.component.html">Forked StackBlitz example</a>
-</p>
+<h2>Getting Started</h2>
+
 <hr>
 
 <h3>Templates</h3>
+
 <p>
     <a href="https://angular.io/guide/template-syntax">Angular's Template Syntax</a>
 </p>
+
 <h4>Five common features of Angular's template syntax:</h4>
+
 <ol>
     <li>*ngFor</li>
     <li>*ngIf</li>
@@ -21,74 +23,67 @@
     <li>Event binding &#40; &#41;</li>
 </ol>
 
-
 <hr>
 
-
 <h3>Components</h3>
+
 <p>
     <a href="https://angular.io/guide/architecture-components">Introduction to Components</a>
 </p>
+
 <p>
     Components define areas of responsibility in the user interface, or UI, that let you reuse sets of UI functionality.
 </p>
+
 <h4>A component consists of three things:</h4>
+
 <ol>
     <li>A Typescript component class that handles data and functionality.</li>
     <li>An HTML template that determines the UI.</li>
     <li>CSS / SASS Component-specific styles that define the look and feel, this is where component CSS resides. An Angular application comprises a tree of components, in which each Angular component has a specific purpose and responsibility.</li>
 </ol>
 
-
 <hr>
 
 <h3>Input</h3>
+
 <p>
     <a href="https://angular.io/guide/component-interaction">Component Interaction</a> - For more information about passing data from a parent to child component, intercepting and acting upon a value from the parent, and detecting and acting on changes
     to input property values.
 </p>
+
 <p>Set up the new product alerts component to receive a product as input:</p>
+
 <ol>
     <li>
         <p>Import Input from @angular/core.</p>
-        <p>
-            <small>src/app/product-list/product-alerts.component.ts</small>
-
-        </p>
-        <pre>
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
-</pre>
+        <p><small>src/app/product-list/product-alerts.component.ts</small></p>
+        <code>
+            import { Component, OnInit } from '@angular/core';<br>
+            import { Input } from '@angular/core';
+        </code>
     </li>
     <li>
-        <p>
-            In the ProductAlertsComponent class definition, define a property named product with an @Input() decorator. The @Input() decorator indicates that the property value passes in from the component's parent, the product list component.
-        </p>
-        <p>
-            <small>src/app/product-list/product-alerts.component.ts</small>
-        </p>
-        <pre>
-export class ProductAlertsComponent implements OnInit {    
-    @Input() product;    
-    constructor() { }
-    ngOnInit() {
-    }
-}
-</pre>
+        <p>In the ProductAlertsComponent class definition, define a property named product with an @Input() decorator. The @Input() decorator indicates that the property value passes in from the component's parent, the product list component.</p>
+        <p><small>src/app/product-list/product-alerts.component.ts</small></p>
+        <code>
+        export class ProductAlertsComponent implements OnInit {<br>
+            @Input() product;<br>
+            constructor() { }<br>
+            ngOnInit() {<br>
+            }<br>
+        }
+        </code>
     </li>
     <li>
-        <p>Define the view for the new product alert component.
-        </p>
-        <p>
-            Open the product-alerts.component.html template and replace the placeholder paragraph with a "Notify Me" button that appears if the product price is over $700.</p>
-        <p>
-            <small>src/app/product-alerts/product-alerts.component.html</small>
-        </p>
-        <pre>
-&lt;p *ngIf="product.price > 700"&gt;
-    &lt;button>Notify Me&lt;/button&gt;
-&lt;/p&gt;
-</pre>
+        <p>Define the view for the new product alert component.</p>
+        <p>Open the product-alerts.component.html template and replace the placeholder paragraph with a "Notify Me" button that appears if the product price is over $700.</p>
+        <p><small>src/app/product-alerts/product-alerts.component.html</small></p>
+        <code>
+        &lt;p *ngIf="product.price > 700"&gt;
+            &lt;button>Notify Me&lt;/button&gt;
+        &lt;/p&gt;
+        </code>
     </li>
     <li>
         <p>Display the new product alert component as a child of the product list.</p>
@@ -97,23 +92,18 @@ export class ProductAlertsComponent implements OnInit {
             <li>To include the new component, use its selector, app-product-alert, as you would an HTML element.</li>
             <li>Pass the current product as input to the component using property binding.</li>
         </ol>
-        <p>
-            <small>src/app/product-list/product-list.component.html</small>
-            <pre>
-&lt;button (click)="share()"&gt;
-    Share
-&lt;/button&gt;
-
-&lt;app-product-alerts
-    [product]="product"&gt;
-&lt;/app-product-alerts&gt;
-</pre>
-        </p>
+        <p><small>src/app/product-list/product-list.component.html</small></p>
+        <code>
+        &lt;button (click)="share()"&gt;
+            Share
+        &lt;/button&gt;
+        <br><br>
+        &lt;app-product-alerts
+            [product]="product"&gt;
+        &lt;/app-product-alerts&gt;
+        </code>
     </li>
 </ol>
-
-
-
 
 <hr>
 
@@ -122,75 +112,74 @@ export class ProductAlertsComponent implements OnInit {
     To make the "Notify Me" button work, you need to configure two things:
 </p>
 <ul>
-    <li>the product alert component to emit an event when the user clicks "Notify Me"</li>
-    <li>the product list component to act on that event</li>
+    <li>
+        ...the product alert component to emit an event when the user clicks "Notify Me"
+    </li>
+    <li>
+        ...the product list component to act on that event
+    </li>
 </ul>
 
 <ol>
-    <li>Open product-alerts.component.ts.</li>
     <li>
-        Import Output and EventEmitter from @angular/core:
-        <br>
-        <small>src/app/product-alerts/product-alerts.component.ts</small>
-        <pre>
-import { Component } from '@angular/core';
-import { Input } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
-</pre>
+        Open product-alerts.component.ts.
     </li>
     <li>
-        In the component class, define a property named notify with an @Output() decorator and an instance of EventEmitter(). This allows the product alert component to emit an event when the value of the notify property changes.
-        <br>
-        <small>src/app/product-alerts/product-alerts.component.ts</small>
-        <pre>
-export class ProductAlertsComponent {
-    @Input() product;
-    @Output() notify = new EventEmitter();
-}</pre>
+        <p>Import Output and EventEmitter from @angular/core:</p>
+        <p><small>src/app/product-alerts/product-alerts.component.ts</small></p>
+        <code>
+        import { Component } from '@angular/core';<br>
+        import { Input } from '@angular/core';<br>
+        import { Output, EventEmitter } from '@angular/core';
+        </code>
     </li>
     <li>
-        In the product alert template, product-alerts.component.html, update the "Notify Me" button with an event binding to call the notify.emit() method.
-        <br>
-        <small>src/app/product-alerts/product-alerts.component.html</small>
-        <pre>
-&lt;p *ngIf="product.price > 700"&gt;
-    &lt;button (click)="notify.emit()"&gt;Notify Me&lt;/button&gt;
-&lt;/p&gt;
-</pre>
+        <p>In the component class, define a property named notify with an @Output() decorator and an instance of EventEmitter(). This allows the product alert component to emit an event when the value of the notify property changes.</p>
+        <p><small>src/app/product-alerts/product-alerts.component.ts</small></p>
+        <code>
+        export class ProductAlertsComponent {<br>
+            @Input() product;<br>
+            @Output() notify = new EventEmitter();<br>
+        }
+        </code>
     </li>
     <li>
-        Next, define the behavior that should happen when the user clicks the button. Recall that it's the parent, product list component—not the product alerts component—that acts when the child raises the event. In product-list.component.ts, define an onNotify()
-        method, similar to the share() method:
-        <small>src/app/product-list/product-list.component.ts</small>
-        <br>
-        <pre>
-export class ProductListComponent {
-    products = products;
-
-    share() {
-        window.alert('The product has been shared!');
-    }
-
-    onNotify() {
-        window.alert('You will be notified when the product goes on sale');
-    }
-}
-</pre>
+        <p>In the product alert template, product-alerts.component.html, update the "Notify Me" button with an event binding to call the notify.emit() method.</p>
+        <p><small>src/app/product-alerts/product-alerts.component.html</small></p>
+        <code>
+            &lt;p *ngIf="product.price > 700"&gt;<br>
+            &lt;button (click)="notify.emit()"&gt;Notify Me&lt;/button&gt;<br>
+            &lt;/p&gt;
+        </code>
     </li>
     <li>
-        Finally, update the product list component to receive output from the product alerts component. In product-list.component.html, bind the app-product-alerts component (which is what displays the "Notify Me" button) to the onNotify() method of the product
-        list component.
-        <br>
-        <small>src/app/product-list/product-list.component.html</small>
-        <pre>
-&lt;button (click)="share()"&gt;
-    Share
-&lt;/button&gt;
-
-&lt;app-product-alerts
-    [product]="product" 
-    (notify)="onNotify()"&gt;
-&lt;/app-product-alerts&gt;
-</pre>
+        <p>Next, define the behavior that should happen when the user clicks the button. Recall that it's the parent, product list component—not the product alerts component—that acts when the child raises the event. In product-list.component.ts, define
+            an onNotify() method, similar to the share() method:</p>
+        <p><small>src/app/product-list/product-list.component.ts</small></p>
+        <code>
+        export class ProductListComponent {<br>
+            products = products;<br><br>
+            share() {<br>
+                window.alert('The product has been shared!');<br>
+            }<br><br>
+            onNotify() {<br>
+                window.alert('You will be notified when the product goes on sale');<br>
+            }<br>
+        }
+        </code>
     </li>
-</ol> -->
+    <li>
+        <p>Finally, update the product list component to receive output from the product alerts component. In product-list.component.html, bind the app-product-alerts component (which is what displays the "Notify Me" button) to the onNotify() method of the
+            product list component.</p>
+        <p><small>src/app/product-list/product-list.component.html</small></p>
+        <code>
+        &lt;button (click)="share()"&gt;<br>
+            Share<br>
+        &lt;/button&gt;<br><br>
+        &lt;app-product-alerts<br>
+            [product]="product" <br>
+            (notify)="onNotify()"&gt;<br>
+        &lt;/app-product-alerts&gt;
+        </code>
+    </li>
+</ol>

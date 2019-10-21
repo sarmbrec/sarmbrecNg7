@@ -1,7 +1,7 @@
 <section id="kb-detail" *ngIf="detail$ | async as kbDetail">
-    <div class="container-fluid px-4">
+    <div class="container">
         <div class="row">
-            <div class="col-md-8 order-2 order-md-1">
+            <div class="col-12 col-md-8 col-lg-9 order-2 order-md-1">
                 <h1 *ngIf="kbDetail.title">{{kbDetail.title}}</h1>
                 <div class="parent-section">Knowledge Base</div>
                 <div class="card text-left">
@@ -10,7 +10,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 order-1 order-md-2">
+            <div class="col-12 col-md-4 col-lg-3 order-1 order-md-2">
                 <div class="card">
                     <img *ngIf="baseUrl + kbDetail.logo" [src]="kbDetail.logo" class="logo">
                     <p class="sub-title">{{kbDetail.subTitle}}</p>
