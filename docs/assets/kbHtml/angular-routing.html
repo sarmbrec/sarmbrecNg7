@@ -1,10 +1,10 @@
-<!-- <h2>Routing</h2>
-<p>
-    <a href="https://angular.io/start/routing">https://angular.io/start/routing</a>
-</p>
-<p>
-    <a href="https://stackblitz.com/edit/angular-rdubma-x8tqus">Forked StackBlitz example</a>
-</p>
+<nav class="nav nav-pills justify-content-end">
+    <a class="nav-item px-2" href="https://angular.io/start/routing">Official Docs</a>
+    <a class="nav-item px-2" href="https://stackblitz.com/edit/angular-rdubma-x8tqus">StackBlitz</a>
+</nav>
+
+<h2>Routing</h2>
+
 <hr>
 
 <h3>Registering a route</h3>
@@ -16,46 +16,45 @@
     <li>Generate a new component for product details. Give the component the name product-details.</li>
     <li>Reminder: In the file list, right-click the app folder, choose Angular Generator and Component.</li>
     <li>
-        In app.module.ts, add a route for product details, with a path of products/:productId and ProductDetailsComponent for the component.
-        <br>
-        <small>src/app/app.module.ts</small>
-        <pre>
-@NgModule({
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        RouterModule.forRoot([
-        { path: '', component: ProductListComponent },
-        { path: 'products/:productId', component: ProductDetailsComponent },
-        ])
-    ],
-</pre>
-        <p>A route associates one or more URL paths with a component.</p>
+        <p>In app.module.ts, add a route for product details, with a path of products/:productId and ProductDetailsComponent for the component.</p>
+        <p><small>src/app/app.module.ts</small></p>
+        <code>
+        @NgModule({<br>
+            imports: [<br>
+                BrowserModule,<br>
+                ReactiveFormsModule,<br>
+                RouterModule.forRoot([<br>
+                { path: '', component: ProductListComponent },<br>
+                { path: 'products/:productId', component: ProductDetailsComponent },<br>
+                ])<br>
+            ],
+        </code> A route associates one or more URL paths with a component.
     </li>
     <li>
-        Define a link using the RouterLink directive. The routerLink defines how the user navigates to the route (or URL) declaratively in the component template.
-        <br><br> We want the user to click a product name to display the details for that product.
+        <p>Define a link using the RouterLink directive. The routerLink defines how the user navigates to the route (or URL) declaratively in the component template.</p>
+        <p>We want the user to click a product name to display the details for that product.</p>
         <ol>
             <li>Open product-list.component.html.</li>
             <li>Update the *ngFor directive to assign each index in the products array to the productId variable when iterating over the list.</li>
             <li>Modify the product name anchor to include a routerLink.</li>
         </ol>
-        <small>src/app/product-list/product-list.component.html</small>
-        <pre>
-&lt;div *ngFor="let product of products; index as productId"&gt;
-&lt;h3&gt;
-&lt;a [title]="product.name + ' details'" [routerLink]="['/products', productId]"&gt;
-&#123;&#123; product.name &#125;&#125;
-&lt;/a&gt;
-&lt;/h3&gt;
-&lt;!-- . . . --&gt;
-&lt;/div&gt;
-</pre>
+        <p><small>src/app/product-list/product-list.component.html</small></p>
+        <code>
+        &lt;div *ngFor="let product of products; index as productId"&gt;<br>
+        &lt;h3&gt;<br>
+        &lt;a [title]="product.name + ' details'" [routerLink]="['/products', productId]"&gt;<br>
+        &#123;&#123; product.name &#125;&#125;<br>
+        &lt;/a&gt;<br>
+        &lt;/h3&gt;<br>
+        &lt;!-- . . . --&gt;<br>
+        &lt;/div&gt;<br>
+        </code>
         <p>The RouterLink directive gives the router control over the anchor element. In this case, the route (URL) contains one fixed segment (/products) and the final segment is variable, inserting the id property of the current product. For example, the
             URL for a product with an id of 1 will be similar to https://getting-started-myfork.stackblitz.io/products/1.</p>
     </li>
-    <li>Test the router by clicking a product name. The app displays the product details component, which currently always says "product-details works!" (We'll fix this in the next section.)
-        <br><br> Notice that the URL in the preview window changes. The final segment is products/1.
+    <li>
+        <p>Test the router by clicking a product name. The app displays the product details component, which currently always says "product-details works!" (We'll fix this in the next section.)</p>
+        <p>Notice that the URL in the preview window changes. The final segment is products/1.</p>
     </li>
 </ol>
 
@@ -65,67 +64,58 @@
 
 <p>The product details component handles the display of each product. The Angular Router displays components based on the browser's URL and your defined routes. You'll use the Angular Router to combine the products data and route information to display the
     specific details for each product.</p>
-
 <ol>
     <li>Open product-details.component.ts</li>
     <li>
-        Arrange to use product data from an external file.
-        <ol type="a">
+        <p>Arrange to use product data from an external file.</p>
+        <ol>
             <li>
-                Import ActivatedRoute from the @angular/router package, and the products array from ../products.
-                <br>
-                <small>src/app/product-details/product-details.component.ts</small>
-                <pre>
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
-import { products } from '../products';
-</pre>
+                <p>Import ActivatedRoute from the @angular/router package, and the products array from ../products.</p>
+                <p><small>src/app/product-details/product-details.component.ts</small></p>
+                <code>
+                import { Component, OnInit } from '@angular/core';<br>
+                import { ActivatedRoute } from '@angular/router';<br><br>
+                import { products } from '../products';<br>
+                </code>
             </li>
             <li>
-                Define the product property and inject the ActivatedRoute into the constructor.
-                <br>
-                <small>src/app/product-details/product-details.component.ts</small>
-                <pre>
-export class ProductDetailsComponent implements OnInit {
-    product;
-    
-    constructor(
-        private route: ActivatedRoute,
-    ) { }
-    
-}
-</pre>
+                <p>Define the product property and inject the ActivatedRoute into the constructor.</p>
+                <p><small>src/app/product-details/product-details.component.ts</small></p>
+                <code>
+                export class ProductDetailsComponent implements OnInit {<br>
+                    product;<br><br>                    
+                    constructor(<br>
+                        private route: ActivatedRoute,<br>
+                    ) { }<br><br>                    
+                }
+                </code>
                 <p>The ActivatedRoute is specific to each routed component loaded by the Angular Router. It contains information about the route, its parameters, and additional data associated with the route.</p>
             </li>
         </ol>
     </li>
     <li>
-        In the ngOnInit() method, subscribe to route params and fetch the product based on the productId.
-        <pre>
-ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-        this.product = products[+params.get('productId')];
-    });
-}
-</pre>
+        <p>In the ngOnInit() method, subscribe to route params and fetch the product based on the productId.</p>
+        <code>
+        ngOnInit() {<br>
+            this.route.paramMap.subscribe(params => {<br>
+                this.product = products[+params.get('productId')];<br>
+            });<br>
+        }
+        </code>
         <p>Angular calls ngOnInit() shortly after creating a component.</p>
         <p>The route parameters correspond to the path variables defined in the route. The productId is provided from the URL that was matched to the route. You use the productId to display the details for each unique product.</p>
         <p>For more information on ngOnInit(), see <a href="https://angular.io/guide/lifecycle-hooks">Lifecycle hooks.</a></p>
     </li>
     <li>
-        Update the template to display product details information inside an *ngIf.
-        <br>
-        <small>src/app/product-details/product-details.component.html</small>
-        <pre>
-&lt;h2>Product Details&lt;/h2&gt;
-
-    &lt;div *ngIf="product"&gt;
-    &lt;h3&gt;{{ product.name }}&lt;/h3&gt;
-    &lt;h4&gt;{{ product.price | currency }}&lt;/h4&gt;
-    &lt;p&gt;{{ product.description }}&lt;/p&gt;
-        
-&lt;/div&gt;
-</pre>
+        <p>Update the template to display product details information inside an *ngIf.</p>
+        <p><small>src/app/product-details/product-details.component.html</small></p>
+        <code>
+        &lt;h2&gt;Product Details&lt;/h2&gt;<br><br>
+            &lt;div *ngIf="product"&gt;<br><br>
+            &lt;h3&gt;{{ product.name }}&lt;/h3&gt;<br>
+            &lt;h4&gt;{{ product.price | currency }}&lt;/h4&gt;<br>
+            &lt;p&gt;{{ product.description }}&lt;/p&gt;<br><br>                
+        &lt;/div&gt;
+        </code>
     </li>
-</ol> -->
+</ol>

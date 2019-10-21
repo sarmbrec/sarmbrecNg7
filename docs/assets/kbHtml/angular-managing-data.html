@@ -1,11 +1,13 @@
-<!-- <h2>Managing Data</h2>
-<p>
-    <a href="https://angular.io/start/data">https://angular.io/start/data</a>
-</p>
-<p>
-    <a href="https://stackblitz.com/edit/angular-rdubma-xivtvr">Forked StackBlitz example</a>
-</p>
+<nav class="nav nav-pills justify-content-end">
+    <a class="nav-item px-2" href="https://angular.io/start/data">Official Docs</a>
+    <a class="nav-item px-2" href="https://stackblitz.com/edit/angular-rdubma-xivtvr">StackBlitz</a>
+</nav>
 
+<h2>Managing Data</h2>
+
+<hr>
+
+<h3>Creating a shopping cart</h3>
 <p>
     In this section, you'll create the shopping cart. You'll:
 </p>
@@ -76,4 +78,519 @@
             }
         </code>
     </li>
-</ol> -->
+</ol>
+
+
+<hr>
+
+<h3>Use the cart service</h3>
+
+<p>
+    In this section, you'll update the product details component to use the cart service. You'll add a "Buy" button to the product details view. When the "Buy" button is clicked, you'll use the cart service to add the current product to the cart.
+</p>
+
+<ol>
+    <li>Open product-details.component.ts.</li>
+    <li>
+        <p>Set up the component to be able to use the cart service.</p>
+        <ul>
+            <li>
+                <p>Import the cart service</p>
+                <p class="small">src/app/product-details/product-details.component.ts</p>
+                <code>
+                import { Component, OnInit } from '@angular/core';<br>
+                import { ActivatedRoute } from '@angular/router';<br><br>                
+                import { products } from '../products';<br>
+                import { CartService } from '../cart.service';
+                </code>
+            </li>
+            <li>
+                <p>Inject the cart service.</p>
+                <code>
+                export class ProductDetailsComponent implements OnInit {<br>
+                    constructor(<br>
+                        private route: ActivatedRoute,<br>
+                        private cartService: CartService<br>
+                    ) { }<br>
+                }
+                </code>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p>Define the addToCart() method, which adds the current product to the cart.</p>
+        <p>The addToCart() method:</p>
+        <ul>
+            <li>Receives the current product</li>
+            <li>Uses the cart service's #addToCart() method to add the product the cart</li>
+            <li>Displays a message that the product has been added to the cart</li>
+        </ul>
+        <code>
+        export class ProductDetailsComponent implements OnInit {<br>
+            addToCart(product) {<br>
+                window.alert('Your product has been added to the cart!');<br>
+                this.cartService.addToCart(product);<br>
+            }<br>
+        }
+        </code>
+    </li>
+</ol>
+
+<hr>
+
+<h2>Create the cart page</h2>
+
+<p>At this point, users can put items in the cart by clicking "Buy", but they can't yet see their cart.</p>
+<p>We'll create the cart page in two steps:</p>
+<ol>
+    <li>Create a cart component and set up routing to the new component. At this point, the cart page will only have default text.</li>
+    <li>Display the cart items.</li>
+</ol>
+
+<h4>Set up the component</h4>
+<p>To create the cart page, you begin by following the same steps you did to create the product details component and to set up routing for the new component.</p>
+<ol>
+    <li>
+        <p>Generate a cart component, named cart.</p>
+        <p>Reminder: In the file list, right-click the app folder, choose Angular Generator and Component.</p>
+        <p class="small">src/app/cart/cart.component.ts</p>
+        <code>
+        import { Component, OnInit } from '@angular/core';<br><br>
+        @Component({<br>
+          selector: 'app-cart',<br>
+          templateUrl: './cart.component.html',<br>
+          styleUrls: ['./cart.component.css']<br>
+        })<br>
+        export class CartComponent implements OnInit {<br><br>        
+          constructor() { }<br>        
+          ngOnInit() {<br>
+          }<br><br>        
+        }
+        </code>
+    </li>
+    <li>
+        <p>Add routing (a URL pattern) for the cart component.</p>
+        <p>Reminder: Open app.module.ts and add a route for the component CartComponent, with a path of cart:</p>
+        <p class="small">src/app/app.module.ts</p>
+        <code>
+        @NgModule({<br>
+            imports: [<br>
+                BrowserModule,<br>
+                ReactiveFormsModule,<br>
+                RouterModule.forRoot([<br>
+                { path: '', component: ProductListComponent },<br>
+                { path: 'products/:productId', component: ProductDetailsComponent },<br>
+                { path: 'cart', component: CartComponent },<br>
+                ])<br>
+            ],
+        </code>
+    </li>
+    <li>
+        <p>To see the new cart component, click the "Checkout" button. You can see the "cart works!" default text, and the URL has the pattern https://getting-started.stackblitz.io/cart, where getting-started.stackblitz.io may be different for your StackBlitz
+            project.
+        </p>
+        <p class="small">(Note: The "Checkout" button that we provided in the top-bar component was already configured with a routerLink for /cart.)</p>
+    </li>
+</ol>
+
+<hr>
+
+<h2>Display the cart items</h2>
+
+<p>Services can be used to share the data across components:</p>
+<ul>
+    <li>The product details component already uses the cart service (CartService) to add products to the cart.</li>
+    <li>In this section, you'll update the cart component to use the cart service to display the products in the cart.</li>
+</ul>
+<ol>
+    <li>Open cart.component.ts.</li>
+    <li>
+        <p>Set up the component to be able to use the cart service. (This is the same way you set up the product details component to use the cart service, above.)</p>
+        <ul>
+            <li>
+                <p>Import the CartService from the cart.service.ts file.</p>
+                <p><small>src/app/cart/cart.component.ts</small></p>
+                <code>
+                    import { Component } from '@angular/core';<br>
+                    import { CartService } from '../cart.service';
+                </code>
+            </li>
+            <li>
+                <p>Inject the CartService to manage cart information.</p>
+                <code>
+                export class CartComponent {<br><br>
+                    constructor(<br>
+                        private cartService: CartService<br>
+                    ) { }<br><br>
+                }
+                </code>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p>Define the items property to store the products in the cart.</p>
+        <code>
+        export class CartComponent {<br>
+            items;<br><br>            
+            constructor(<br>
+                private cartService: CartService<br>
+            ) { }<br><br>
+        }
+        </code>
+    </li>
+    <li>
+        <p>Set the items using the cart service's getItems() method. (You defined this method when you generated cart.service.ts.)</p>
+        <p>The resulting CartComponent class should look like this:</p>
+        <code>
+        export class CartComponent implements OnInit {<br>
+            items;<br><br>            
+            constructor(<br>
+                private cartService: CartService<br>
+            ) { }<br><br>            
+            ngOnInit() {<br>
+                this.items = this.cartService.getItems();<br>
+            }<br>
+        }
+        </code>
+    </li>
+    <li>
+        <p>Update the template with a header ("Cart"), and use a &lt;div&gt; with an *ngFor to display each of the cart items with its name and price.</p>
+        <p>The resulting CartComponent template should look like this:</p>
+        <p class="small">src/app/cart/cart.component.html</p>
+        <code>
+            &lt;h3&gt;Cart&lt;/h3&gt;<br><br>
+            &lt;div class="cart-item" *ngFor="let item of items"&gt;<br><br>
+                &lt;span&gt;&#123;&#123; item.name &#125;&#125;&lt;/span&gt;<br>
+                &lt;span&gt;&#123;&#123; item.price | currency &#125;&#125;&lt;/span&gt;<br><br>
+            &lt;/div&gt;
+        </code>
+    </li>
+    <li>
+        <p>Test your cart component.</p>
+        <p>Click on "My Store" to go to the product list page.</p>
+        <p>Click on a product name to display its details.</p>
+        <p>Click "Buy" to add the product to the cart.</p>
+        <p>Click "Checkout" to see the cart.</p>
+        <p>To add another product, click "My Store" to return to the product list. Repeat the steps above.</p>
+    </li>
+</ol>
+<hr>
+
+<p>Learn more: See <a href="https://angular.io/guide/architecture-services">Introduction to Services and Dependency Injection</a> for more information about services.</p>
+
+<hr>
+
+<h2>Retrieve shipping prices</h2>
+
+<p>Data returned from servers often takes the form of a stream. Streams are useful because they make it easy to transform the data that is returned, and to make modifications to the way data is requested. The Angular HTTP client (HttpClient) is a built-in
+    way to fetch data from external APIs and provide them to your application as a stream.</p>
+
+<p>In this section, you'll use the HTTP client to retrieve shipping prices from an external file.</p>
+
+<h4>Predefined shipping data</h4>
+
+<p>For the purpose of this Getting Started guide, we have provided shipping data in assets/shipping.json. You'll use this data to add shipping prices for items in the cart.</p>
+
+<p class="small mb-1">src/assets/shipping.json</p>
+<code>
+    [<br>
+    {<br>
+        "type": "Overnight",<br>
+        "price": 25.99<br>
+    },<br>
+    {<br>
+        "type": "2-Day",<br>
+        "price": 9.99<br>
+    },<br>
+    {<br>
+        "type": "Postal",<br>
+        "price": 2.99<br>
+    }<br>
+    ]
+</code>
+
+<h3>Enable HttpClient for app</h3>
+
+<p>Before you can use Angular's HTTP client, you must set up your app to use HttpClientModule.</p>
+
+<p>Angular's HttpClientModule registers the providers needed to use a single instance of the HttpClient service throughout your app. The HttpClient service is what you inject into your services to fetch data and interact with external APIs and resources.</p>
+
+<ol>
+    <li>
+        <p>Open app.module.ts.</p>
+        <p>This file contains imports and functionality that is available to the entire app.</p>
+    </li>
+    <li>
+        <p>Import HttpClientModule from the @angular/common/http package.</p>
+        <p class="small">src/app/app.module.ts</p>
+        <code>
+            import { NgModule } from '@angular/core';<br>
+            import { BrowserModule } from '@angular/platform-browser';<br>
+            import { RouterModule } from '@angular/router';<br>
+            import { HttpClientModule } from '@angular/common/http';
+        </code>
+    </li>
+    <li>
+        <p>Add HttpClientModule to the imports array of the app module (@NgModule).</p>
+        <p>This registers Angular's HttpClient providers globally.</p>
+        <code>
+        import { NgModule } from '@angular/core';<br>
+        import { BrowserModule } from '@angular/platform-browser';<br>
+        import { RouterModule } from '@angular/router';<br>
+        import { HttpClientModule } from '@angular/common/http';<br>
+        import { ReactiveFormsModule } from '@angular/forms';<br><br>
+        
+        import { AppComponent } from './app.component';<br>
+        import { TopBarComponent } from './top-bar/top-bar.component';<br>
+        import { ProductListComponent } from './product-list/product-list.component';<br>
+        import { ProductAlertsComponent } from './product-alerts/product-alerts.component';<br>
+        import { ProductDetailsComponent } from './product-details/product-details.component';<br><br>
+        
+        @NgModule({<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;imports: [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;BrowserModule,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;HttpClientModule,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;ReactiveFormsModule,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;RouterModule.forRoot([<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ path: '', component: ProductListComponent },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ path: 'products/:productId', component: ProductDetailsComponent },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ path: 'cart', component: CartComponent },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;])<br>
+          ],<br>
+          declarations: [<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;AppComponent,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;TopBarComponent,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;ProductListComponent,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;ProductAlertsComponent,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;ProductDetailsComponent,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;CartComponent,<br>
+          ],<br>
+          bootstrap: [<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;AppComponent<br>
+          ]<br>
+        })<br>
+        export class AppModule { }
+        </code>
+    </li>
+</ol>
+
+<hr>
+
+<h2>Enable HttpClient for cart service</h2>
+
+<ol>
+    <li>Open cart.service.ts.</li>
+    <li>
+        <p>Import HttpClient from the @angular/common/http package.</p>
+        <p class="small">src/app/cart.service.ts</p>
+        <code>
+        import { Injectable } from '@angular/core';<br><br>
+
+        import { HttpClient } from '@angular/common/http';
+        </code>
+    </li>
+    <li>
+        <p>Inject HttpClient into the constructor of the CartService component class:</p>
+        <code>
+        export class CartService {<br>
+            items = [];<br><br>
+            
+            constructor(<br>
+                private http: HttpClient<br>
+            ) {}<br>
+        }
+        </code>
+    </li>
+</ol>
+<hr>
+<h2>Define the get() method</h2>
+<p>As you've seen, multiple components can leverage the same service. Later in this tutorial, the shipping component will use the cart service to retrieve shipping data via HTTP from the shipping.json file. Here you'll define the get() method that will be
+    used.
+</p>
+<ol>
+    <li>Continue working in cart.service.ts.</li>
+    <li>
+        <p>Below the clearCart() method, define a new getShippingPrices() method that uses the HttpClient#get() method to retrieve the shipping data (types and prices).</p>
+        <p class="small">src/app/cart.service.ts</p>
+        <code>
+                export class CartService {<br>
+                    items = [];<br><br>
+                  
+                    constructor(<br>
+                      private http: HttpClient<br>
+                    ) {}<br><br>
+                  
+                    addToCart(product) {<br>
+                      this.items.push(product);<br>
+                    }<br><br>
+                  
+                    getItems() {<br>
+                      return this.items;<br>
+                    }<br><br>
+                  
+                    clearCart() {<br>
+                      this.items = [];<br>
+                      return this.items;<br>
+                    }<br><br>
+                  
+                    getShippingPrices() {<br>
+                      return this.http.get('/assets/shipping.json');<br>
+                    }<br>
+                  }
+        </code>
+    </li>
+</ol>
+
+<p>
+    Learn more: See the <a href="https://angular.io/guide/http">HttpClient guide</a> for more information about Angular's HttpClient.
+</p>
+
+<hr>
+
+<h2>Define the shipping page</h2>
+
+<p>
+    Now that your app can retrieve shipping data, you'll create a shipping component and associated template.
+</p>
+
+<ol>
+    <li>
+        <p>Generate a new component named shipping.</p>
+        <p>Reminder: In the file list, right-click the app folder, choose Angular Generator and Component.</p>
+        <p class="small">src/app/shipping/shipping.component.ts</p>
+        <code>
+                import { Component, OnInit } from '@angular/core';<br><br>
+
+                @Component({<br>
+                  selector: 'app-shipping',<br>
+                  templateUrl: './shipping.component.html',<br>
+                  styleUrls: ['./shipping.component.css']<br>
+                })<br>
+                export class ShippingComponent implements OnInit {<br><br>
+                
+                  constructor() { }<br><br>
+                
+                  ngOnInit() {<br>
+                  }<br><br>
+                
+                }
+        </code>
+    </li>
+    <li>
+        <p>In app.module.ts, add a route for shipping. Specify a path of shipping and a component of ShippingComponent.</p>
+        <p class="small">src/app/app.module.ts</p>
+        <code>
+                @NgModule({<br>
+                    imports: [<br>
+                      BrowserModule,<br>
+                      HttpClientModule,<br>
+                      ReactiveFormsModule,<br>
+                      RouterModule.forRoot([<br>
+                        { path: '', component: ProductListComponent },<br>
+                        { path: 'products/:productId', component: ProductDetailsComponent },<br>
+                        { path: 'cart', component: CartComponent },<br>
+                        { path: 'shipping', component: ShippingComponent },<br>
+                      ])<br>
+                    ],<br>
+                    declarations: [<br>
+                      AppComponent,<br>
+                      TopBarComponent,<br>
+                      ProductListComponent,<br>
+                      ProductAlertsComponent,<br>
+                      ProductDetailsComponent,<br>
+                      CartComponent,<br>
+                      ShippingComponent<br>
+                    ],<br>
+                    bootstrap: [<br>
+                      AppComponent<br>
+                    ]<br>
+                  })<br>
+                  export class AppModule { }
+        </code>
+        <p>The new shipping component isn't hooked into any other component yet, but you can see it in the preview pane by entering the URL specified by its route. The URL has the pattern: https://getting-started.stackblitz.io/shipping where the getting-started.stackblitz.io
+            part may be different for your StackBlitz project.</p>
+    </li>
+    <li>
+        <p>Modify the shipping component so it uses the cart service to retrieve shipping data via HTTP from the shipping.json file.</p>
+        <ul>
+            <li>
+                <p>Import the cart service.</p>
+                <p class="small">src/app/shipping/shipping.component.ts</p>
+                <code>
+                        import { Component, OnInit } from '@angular/core';<br><br>
+
+                        import { CartService } from '../cart.service';
+                </code>
+            </li>
+            <li>
+                <p>Define a shippingCosts property.</p>
+                <code>
+                    export class ShippingComponent implements OnInit {<br>
+                        shippingCosts;<br>
+                    }
+                </code>
+            </li>
+            <li>
+                <p>Inject the cart service into the ShippingComponent class:</p>
+                <code>
+                constructor(<br>
+                    private cartService: CartService<br>
+                    ) {<br><br>
+
+                    }
+                </code>
+            </li>
+            <li>
+                <p>Set the shippingCosts property using the getShippingPrices() method from cart service.</p>
+                <code>
+                export class ShippingComponent implements OnInit {<br>
+                    shippingCosts;<br><br>
+                    
+                    constructor(<br>
+                        private cartService: CartService<br>
+                    ) {<br>
+                    }<br><br>
+                    
+                    ngOnInit() {<br>
+                        this.shippingCosts = this.cartService.getShippingPrices();<br>
+                    }<br><br>
+                    
+                }
+                </code>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <p>Update the shipping component's template to display the shipping types and prices using async pipe:</p>
+        <p class="small">src/app/shipping/shipping.component.html</p>
+        <code>
+        &lt;h3&gt;Shipping Prices&lt;/h3&gt;<br><br>
+
+        &lt;div class="shipping-item" *ngFor="let shipping of shippingCosts | async"&gt;<br>
+        &lt;span&gt;&#123;&#123; shipping.type &#125;&#125;&lt;/span&gt;
+        &lt;span&gt;&#123;&#123; shipping.price | currency &#125;&#125;&lt;/span&gt;
+        &lt;/div&gt;
+        </code>
+    </li>
+    <li>
+        <p>Add a link from the cart page to the shipping page:</p>
+        <p class="small">src/app/cart/cart.component.html</p>
+        <code>
+            &lt;h3>Cart&lt;/h3&gt;
+
+            &lt;p&gt;
+            &lt;a routerLink="/shipping">Shipping Prices&lt;/a&gt;
+            &lt;/p&gt;
+        
+            &lt;div class="cart-item" *ngFor="let item of items"&gt;
+            &lt;span&gt;&#123;&#123; item.name &#125;&#125;&lt;/span&gt;
+            &lt;span&gt;&#123;&#123; item.price | currency &#125;&#125;&lt;/span&gt;
+            &lt;/div&gt;
+        </code>
+    </li>
+    <li>
+        <p>Test your shipping prices feature:</p>
+        <p>Click on the "Checkout" button to see the updated cart. (Remember that changing the app causes the preview to refresh, which empties the cart.)</p>
+        <p>Click on the link to navigate to the shipping prices.</p>
+    </li>
+</ol>
