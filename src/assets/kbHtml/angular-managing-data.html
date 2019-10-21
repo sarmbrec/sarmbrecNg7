@@ -3,7 +3,7 @@
     <a href="https://angular.io/start/data">https://angular.io/start/data</a>
 </p>
 <p>
-    <a href="">Forked StackBlitz example</a>
+    <a href="https://stackblitz.com/edit/angular-rdubma-xivtvr">Forked StackBlitz example</a>
 </p>
 
 <p>
@@ -45,7 +45,35 @@
                     }
                 </code>
             </li>
-            <li>If the generated @Injectable() decorator does not include the { providedIn: 'root' } statement, then insert it as shown above.</li>
+            <li>
+                <p>If the generated @Injectable() decorator does not include the { providedIn: 'root' } statement, then insert it as shown above.</p>
+            </li>
         </ul>
+    </li>
+    <li>
+        <p>In the CartService class, define an items property to store the list (array) of the current products in the cart.</p>
+        <code>
+        export class CartService {<br>
+            items = [];<br>
+        }<br>
+        </code>
+    </li>
+    <li>
+        <p>Define methods to add items to the cart, return cart items, and clear the cart items:</p>
+        <code>
+            export class CartService {<br>
+                items = [];<br><br>                
+                addToCart(product) {<br>
+                    this.items.push(product);<br>
+                }<br><br>                
+                getItems() {<br>
+                    return this.items;<br>
+                }<br><br>                
+                clearCart() {<br>
+                    this.items = [];<br>
+                    return this.items;<br>
+                }<br>
+            }
+        </code>
     </li>
 </ol>
