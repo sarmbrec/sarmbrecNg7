@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="lead" [innerHTML]="items.leadText"></p>
-                <p [innerHTML]="items.mainText"></p>
-                <p class="small" [innerHTML]="items.smallText"></p>
+                <p class="lead">{{items.leadText}} <small>{{items.leadTextSmall}}</small></p>
+                <p>{{items.mainText}}</p>
+                <p class="small">{{items.smallText}}</p>
             </div>
         </div>
     </div>

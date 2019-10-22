@@ -1,4 +1,7 @@
-$bg-albert-einstein: url('/assets/images/backgrounds/albert-einstein.jpg');
-$bg-inigo-montoya: url('/assets/images/backgrounds/inigo-montoya.jpg');
-$bg-steve-jobs: url('/assets/images/backgrounds/steve-jobs.jpg');
-$bg-jerry-seinfeld: url('/assets/images/backgrounds/jerry-seinfeld.jpg');
+// $bg-albert-einstein: url('/assets/images/backgrounds/albert-einstein.jpg');
+// $bg-inigo-montoya: url('/assets/images/backgrounds/inigo-montoya.jpg');
+// $bg-steve-jobs: url('/assets/images/backgrounds/steve-jobs.jpg');
+// $bg-jerry-seinfeld: url('/assets/images/backgrounds/jerry-seinfeld.jpg');
+$gradient-brand: linear-gradient(to bottom right, rgba($primary, 1), rgba($primary, .1), rgba($black, .4), rgba($primary, .5));
+$gradient-brand-1: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .1), rgba($black, .4), rgba($primary, .5));
+$gradient-brand-sj: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5));

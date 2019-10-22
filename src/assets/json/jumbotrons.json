@@ -2,7 +2,8 @@
 
     {
         "className": "steve-jobs",
-        "leadText": "Creativity<small>is just connecting things.</small>",
+        "leadText": "Creativity",
+        "leadTextSmall": "is just connecting things.",
         "mainText": "When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something...",
         "smallText": "- Steve Jobs"
     },
@@ -21,8 +22,9 @@
     {
         "className": "jerry-seinfeld",
         "leadText": "User Experience",
-        "mainText": "Is like a bad joke...",
-        "smallText": "If you have to explain it then it is not funny."
+        "leadTextSmall": "Is like a bad joke...",
+        "mainText": "If you have to explain it then it is not funny.",
+        "smallText": ""
     }
 
 ]
