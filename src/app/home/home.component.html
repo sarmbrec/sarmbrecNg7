@@ -1,11 +1,4 @@
-<app-jumbotron [items]="jumboTronKB$ | async">
-</app-jumbotron>
-
-
-
-
 <app-carousel *ngIf="knowledgeBaseCards$ | async"></app-carousel>
-
 
 <section id="experienceCards" *ngIf="experienceCards$ | async">
     <div class="container">
