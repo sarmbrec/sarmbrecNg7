@@ -41,7 +41,7 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
     background-image: $gradient-brand-sj, $bg-steve-jobs;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 400px;
+    background-size: cover;
     //background-size: 100% auto;
     background-color: $primary;
     //padding-top: 10rem;
