@@ -1,6 +1,6 @@
 <section id="knowledge-base" *ngIf="kbstack$ | async">
 
-    <app-kb-jumbotron></app-kb-jumbotron>
+    <app-jumbotron [items]="jumboTronKB$ | async"></app-jumbotron>
 
     <div class="container">
         <div class="row px-4">

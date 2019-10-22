@@ -8,6 +8,7 @@ import { KbInterface } from '../interfaces/kb';
 import { FakeUsersListInterface } from '../interfaces/fake-users-list';
 import { environment } from '../../environments/environment';
 import { Carousel } from '../interfaces/carousel';
+import { JumboTron } from '../interfaces/jumbotron';
 import { ContactInterface } from '../interfaces/contact';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -36,6 +37,16 @@ export class DataService {
     console.log('!!!!!!!!!!!!!!!!!!   hello from send email service !!!!!!!!!!!!!!!!!!');
     return this.http.post<ContactInterface>('https://formspree.io/sarmbrec@gmail.com', contactInterface, httpOptions);
   }
+
+  getJumbotronAsync(): Observable<JumboTron[]> {
+    return this.http.get<JumboTron[]>(this.baseUrl + 'assets/json/jumbotrons.json');
+  }
+  getJumbotronItemAsync(id: string) {
+    return this.getJumbotronAsync().pipe(
+      map((data: JumboTron[]) => data.find(item => item.className === id))
+    );
+  }
+
 
   getCarouselListAsync(): Observable<Carousel[]> {
     return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json');

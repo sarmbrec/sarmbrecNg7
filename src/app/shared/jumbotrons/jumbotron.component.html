@@ -1,0 +1,11 @@
+<div class="jumbotron jumbotron-fluid {{items.className}}" *ngIf="items">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="lead" [innerHTML]="items.leadText"></p>
+                <p [innerHTML]="items.mainText"></p>
+                <p class="small" [innerHTML]="items.smallText"></p>
+            </div>
+        </div>
+    </div>
+</div>

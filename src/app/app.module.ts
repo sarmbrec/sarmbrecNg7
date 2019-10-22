@@ -16,27 +16,26 @@ import { KnowledgeBaseComponent } from './knowledge-base/knowledge-base.componen
 import { FooterComponent } from './footer/footer.component';
 import { KbDetailComponent } from './knowledge-base/kb-detail/kb-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DefaultAngularLandingPageComponent } from './home/default-angular-landing-page/default-angular-landing-page.component';
-import { MessagesComponent } from './messages/messages.component';
+
+
 import { TestimonialsComponent } from './about/testimonials/testimonials.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { SocialLinksComponent } from './header/social-links/social-links.component';
-import { NgObservableComponent } from './ng-observable/ng-observable.component';
+
 import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-cards.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ExperienceListComponent } from './experience/experience-list/experience-list.component';
 import { ChartsModule } from 'ng2-charts';
-import { RemoveWhiteSpacesPipe } from './embrace-the-pipe/remove-white-spaces.pipe';
+import { RemoveWhiteSpacesPipe } from './pipe/RemoveWhiteSpacesPipe';
 import { ExperienceDetailComponent } from './experience/experience-detail/experience-detail.component';
-import { ChartsComponent } from './charts/charts.component';
-import { PolarAreaComponent } from './charts/polar-area/polar-area.component';
-import { BarComponent } from './charts/bar/bar.component';
-import { KbJumbotronComponent } from './knowledge-base/kb-jumbotron/kb-jumbotron.component';
-import { ExperienceJumbotronComponent } from './experience/experience-jumbotron/experience-jumbotron.component';
-import { CarouselComponent } from './home/carousel/carousel.component';
+
+import { CarouselComponent } from './shared/carousel/carousel.component';
 import { ListComponent } from './about/testimonials/list/list.component';
-import { TechnologyUsedComponent } from './charts/technology-used/technology-used.component';
+import { TechnologyUsedComponent } from './shared/charts/technology-used/technology-used.component';
+
+import { JumbotronComponent } from './shared/jumbotrons/jumbotron.component';
+
 
 // The App module file is basically where all imports and generated files are recorded
 // with their configuration metadata in the NgModule object.
@@ -49,26 +48,19 @@ import { TechnologyUsedComponent } from './charts/technology-used/technology-use
     ContactComponent,
     HomeComponent,
     KnowledgeBaseComponent,
-    FooterComponent,
     KbDetailComponent,
+    ExperienceComponent,
+    ExperienceDetailComponent,
     PageNotFoundComponent,
-    DefaultAngularLandingPageComponent,
-    MessagesComponent,    
+    FooterComponent,
     TestimonialsComponent,
     HeaderComponent,
     NavBarComponent,
     SocialLinksComponent,
-    NgObservableComponent,
     KbListCardsComponent,
-    ExperienceComponent,
     ExperienceListComponent,
     RemoveWhiteSpacesPipe,
-    ExperienceDetailComponent,
-    ChartsComponent,
-    PolarAreaComponent,
-    BarComponent,
-    KbJumbotronComponent,
-    ExperienceJumbotronComponent,
+    JumbotronComponent,
     CarouselComponent,
     ListComponent,
     TechnologyUsedComponent

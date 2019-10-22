@@ -3,6 +3,8 @@ import { DataService } from '../services/data.service';
 import { KbInterface } from '../interfaces/kb';
 import { Observable } from 'rxjs';
 
+import { JumboTron } from '../interfaces/jumbotron';
+
 @Component({
   selector: 'app-knowledge-base',
   templateUrl: './knowledge-base.component.html',
@@ -13,6 +15,7 @@ export class KnowledgeBaseComponent implements OnInit {
   kbstack$: Observable<KbInterface[]>;
   selectedItem: KbInterface;
   onItemSelected: any;
+  jumboTronKB$: Observable<JumboTron>;
 
   constructor(
     private service: DataService
@@ -20,6 +23,7 @@ export class KnowledgeBaseComponent implements OnInit {
 
   public ngOnInit(): void {
     this.kbstack$ = this.service.getKnowledgeBaseAsync();
+    this.jumboTronKB$ = this.service.getJumbotronItemAsync('steve-jobs');
   }
 
   public selectItem(item: KbInterface): void {

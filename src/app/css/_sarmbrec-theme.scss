@@ -1,0 +1,100 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    background: $primary;
+    background-color: $primary;
+    section {
+        h1 {
+            font-family: 'Lato-Light', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        h2 {
+            font-family: 'Lato-Light', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        h3 {
+            font-family: 'Lato-Light', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        h4 {
+            font-family: 'Lato-Light', sans-serif;
+            font-size: .9rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        h5 {
+            font-family: 'Lato-Light', sans-serif;
+            font-size: .9rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        h6 {
+            font-family: 'Lato-Light', sans-serif;
+            font-size: .8rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+    &.gray-scale-100 {
+        filter: grayscale(100%);
+    }
+    &.gray-scale-75 {
+        filter: grayscale(75%);
+    }
+    &.gray-scale-50 {
+        filter: grayscale(50%);
+    }
+    &.gray-scale-25 {
+        filter: grayscale(25%);
+    }
+    code {
+        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+        font-size: 12px;
+        font-weight: normal;
+        background: $light;
+        border: 1px solid darken($light, 15%);
+        border-radius: .25rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: block;
+    }
+    pre {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+        font-size: .725rem;
+        font-weight: normal;
+        color: darkolivegreen;
+        line-height: 1.5;
+        background: $light;
+        border: 1px solid darken($light, 15%);
+        border-radius: .25rem;
+    }
+}
+
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-between(md, xl) {}

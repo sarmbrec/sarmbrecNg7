@@ -1,0 +1,28 @@
+[
+
+    {
+        "className": "steve-jobs",
+        "leadText": "Creativity<small>is just connecting things.</small>",
+        "mainText": "When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something...",
+        "smallText": "- Steve Jobs"
+    },
+    {
+        "className": "inigo-montoya",
+        "leadText": "Inconceivable?",
+        "mainText": "I do not think it means what you think it means.",
+        "smallText": "- Inigo Montoya"
+    },
+    {
+        "className": "albert-einstein",
+        "leadText": "Any fool can know.",
+        "mainText": "The point is to understand",
+        "smallText": "- Albert Einstein"
+    },
+    {
+        "className": "jerry-seinfeld",
+        "leadText": "User Experience",
+        "mainText": "Is like a bad joke...",
+        "smallText": "If you have to explain it then it is not funny."
+    }
+
+]

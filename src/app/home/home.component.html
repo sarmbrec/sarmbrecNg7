@@ -1,5 +1,6 @@
 <app-carousel *ngIf="knowledgeBaseCards$ | async"></app-carousel>
 
+
 <section id="experienceCards" *ngIf="experienceCards$ | async">
     <div class="container">
         <div class="row">
@@ -11,7 +12,7 @@
     </div>
 </section>
 
-<app-experience-jumbotron *ngIf="experienceCards$ | async"></app-experience-jumbotron>
+<app-jumbotron [items]="jumboTronKB$ | async"></app-jumbotron>
 
 <section id="knowledgeBaseCards" *ngIf="knowledgeBaseCards$ | async">
     <div class="container">
@@ -24,4 +25,4 @@
     </div>
 </section>
 
-<app-kb-jumbotron></app-kb-jumbotron>
+<app-jumbotron [items]="jumboTronEX$ | async"></app-jumbotron>

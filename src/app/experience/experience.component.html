@@ -1,6 +1,6 @@
 <section id="experience" *ngIf="experiences$ | async">
 
-    <app-experience-jumbotron *ngIf="experiences$ | async"></app-experience-jumbotron>
+    <app-jumbotron [items]="jumboTronEX$ | async"></app-jumbotron>
 
     <div class="container" *ngIf="experiences$ | async">
         <div class="row">
