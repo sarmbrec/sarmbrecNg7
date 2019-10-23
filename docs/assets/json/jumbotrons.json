@@ -16,13 +16,13 @@
     {
         "className": "albert-einstein",
         "leadText": "Any fool can know.",
-        "mainText": "The point is to understand",
+        "mainText": "The point is to understand.",
         "smallText": "- Albert Einstein"
     },
     {
         "className": "jerry-seinfeld",
         "leadText": "User Experience",
-        "leadTextSmall": "Is like a bad joke...",
+        "leadTextSmall": "is like a bad joke.",
         "mainText": "If you have to explain it then it is not funny.",
         "smallText": ""
     }
