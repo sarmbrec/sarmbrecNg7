@@ -1,12 +1,9 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { NgbCarousel, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-
 import { environment } from '../../../environments/environment';
-
 import { Carousel } from '../../interfaces/carousel';
 import { Observable } from 'rxjs';
-
 
 @Component({
   selector: 'app-carousel',
@@ -15,13 +12,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./carousel.component.scss'],
   providers: [NgbCarouselConfig]
 })
-export class CarouselComponent implements OnInit {
 
-  //carouselItems: {};
+export class CarouselComponent implements OnInit {
+  baseUrl = environment.baseUrl;
   toggleClassActive = false;
   carouselData$: Observable<Carousel[]>;
-
-  baseUrl = environment.baseUrl;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 

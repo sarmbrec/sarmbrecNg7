@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { KbInterface } from '../interfaces/kb';
 import { Observable } from 'rxjs';
-
 import { JumboTron } from '../interfaces/jumbotron';
 
 @Component({

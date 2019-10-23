@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { Observable } from 'rxjs';
 import { ExperienceMenuInterface } from 'src/app/interfaces/experience-menu';
 import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import {filter} from 'rxjs/operators';
+
+import { NavbarComponent as navbar } from '../../../node_modules/angular-bootstrap-md/navbars/navbar.component';
+
+
+@ViewChild('navbarMain', {static : true})
 
 @Component({
   selector: 'app-nav-bar',

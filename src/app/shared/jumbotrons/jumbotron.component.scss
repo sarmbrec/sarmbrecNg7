@@ -18,7 +18,7 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
     font-weight: 300;
     line-height: 1.35;
     color: $light;
-    text-shadow: .2rem .2rem .25rem $black;
+    text-shadow: .12rem .12rem .125rem $black;
     .leadText {
         margin: 4rem 0 0 0;
         font-size: 2rem;
@@ -26,12 +26,12 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
     }
     .leadTextSmall {
         margin: .25rem 0 1rem 1rem;
-        font-size: .9rem;
+        font-size: 1rem;
         font-weight: 100;
     }
     .mainText {
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 100;
     }
     .smallText {
@@ -59,7 +59,7 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 .jerry-seinfeld {
     background-image: $bg-gradient-brand, $bg-jerry-seinfeld;
-    background-position: center;
+    background-position: center top;
     text-align: right;
     &.jumbotron {
         .leadText {
@@ -125,19 +125,49 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 @include media-breakpoint-up(sm) {
     .jumbotron {
-        background-size: auto 568px;
+        background-size: auto 350px;
     }
 }
 
 @include media-breakpoint-up(md) {
     .jumbotron {
-        background-size: auto 568px;
+        background-size: auto 350px;
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 667px) and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .jumbotron {
+        background-size: auto 350px;
     }
 }
 
 @include media-breakpoint-up(lg) {
     .jumbotron {
-        background-size: auto 680px;
+        //border: 10px solid orange;
+        background-size: auto 420px;
+        .leadText {
+            margin: 4rem 0 0 0;
+            font-size: 2.25rem;
+            font-weight: 100;
+        }
+        .leadTextSmall {
+            margin: .25rem 0 1rem 1rem;
+            font-size: 1rem;
+            font-weight: 100;
+        }
+        .mainText {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 100;
+        }
+        .smallText {
+            margin: 1rem 0 2rem 0;
+            font-size: .9rem;
+            font-weight: 100;
+        }
     }
 }
 
