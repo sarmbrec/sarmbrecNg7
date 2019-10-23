@@ -41,6 +41,39 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
     }
 }
 
+.albert-einstein {
+    background-image: $bg-gradient-brand, $bg-albert-einstein;
+    text-align: right;
+    &.jumbotron {
+        .leadText {
+            margin: 10.5rem 0 0 0;
+        }
+        .mainText {
+            margin: 1rem 0;
+        }
+        .smallText {
+            margin: 1.25rem 0 1rem 0;
+        }
+    }
+}
+
+.jerry-seinfeld {
+    background-image: $bg-gradient-brand, $bg-jerry-seinfeld;
+    background-position: center;
+    text-align: right;
+    &.jumbotron {
+        .leadText {
+            margin: 10rem 0 0 0;
+        }
+        .leadTextSmall {
+            margin: .25rem 0 0 0;
+        }
+        .mainText {
+            margin: 1rem 0 1rem 0;
+        }
+    }
+}
+
 .steve-jobs {
     background-image: $bg-gradient-brand, $bg-steve-jobs;
     &.jumbotron {
@@ -68,22 +101,6 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
     }
 }
 
-.albert-einstein {
-    background-image: $bg-gradient-brand, $bg-albert-einstein;
-    text-align: right;
-    &.jumbotron {
-        .leadText {
-            margin: 10.5rem 0 0 0;
-        }
-        .mainText {
-            margin: 1rem 0;
-        }
-        .smallText {
-            margin: 1.25rem 0 1rem 0;
-        }
-    }
-}
-
 .inigo-montoya {
     background-image: $bg-gradient-brand, $bg-inigo-montoya;
     text-align: right;
@@ -98,10 +115,6 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
             margin: .25rem 0 0 auto;
         }
     }
-}
-
-.jerry-seinfeld {
-    background-image: $bg-gradient-brand, $bg-jerry-seinfeld;
 }
 
 @include media-breakpoint-up(xs) {
