@@ -6,10 +6,10 @@ import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import {filter} from 'rxjs/operators';
 
-import { NavbarComponent as navbar } from '../../../node_modules/angular-bootstrap-md/navbars/navbar.component';
+//import { NavbarComponent as navbar } from '../../../node_modules/angular-bootstrap-md/navbars/navbar.component';
 
 
-@ViewChild('navbarMain', {static : true})
+//@ViewChild('navbarMain', {static : true})
 
 @Component({
   selector: 'app-nav-bar',
