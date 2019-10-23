@@ -7,9 +7,11 @@ $bg-inigo-montoya: url('../../../assets/images/backgrounds/inigo-montoya.jpg');
 $bg-steve-jobs: url('../../../assets/images/backgrounds/steve-jobs.jpg');
 $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg');
 .jumbotron {
-    min-height: 50vh;
     background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: $primary;
+    text-align: left;
     margin: 0;
     padding: 1rem;
     font-family: 'Roboto', sans-serif;
@@ -17,10 +19,6 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
     line-height: 1.35;
     color: $light;
     text-shadow: .2rem .2rem .25rem $black;
-    // p {
-    //     display: block;
-    //     position: absolute;
-    // }
     .leadText {
         margin: 4rem 0 0 0;
         font-size: 2rem;
@@ -45,11 +43,6 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 .steve-jobs {
     background-image: $bg-gradient-brand, $bg-steve-jobs;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $primary;
-    text-align: left;
     &.jumbotron {
         .leadText {
             margin: 4rem 0 0 0;
@@ -77,16 +70,10 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 .albert-einstein {
     background-image: $bg-gradient-brand, $bg-albert-einstein;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    //background-size: auto 768;
-    background-color: $primary;
     text-align: right;
-    padding-top: 10rem;
     &.jumbotron {
         .leadText {
-            margin: 4rem 0 0 0;
+            margin: 10.5rem 0 0 0;
         }
         .mainText {
             margin: 1rem 0;
@@ -99,10 +86,6 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 .inigo-montoya {
     background-image: $bg-gradient-brand, $bg-inigo-montoya;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $primary;
     text-align: right;
     &.jumbotron {
         .leadText {
@@ -119,24 +102,35 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 .jerry-seinfeld {
     background-image: $bg-gradient-brand, $bg-jerry-seinfeld;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $primary;
-    text-align: left;
 }
 
-@include media-breakpoint-up(xs) {}
-
-@include media-breakpoint-up(sm) {}
-
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(xs) {
     .jumbotron {
-        //background-position: center;
-        background-attachment: fixed;
+        background-size: auto 350px;
     }
 }
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(sm) {
+    .jumbotron {
+        background-size: auto 568px;
+    }
+}
 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(md) {
+    .jumbotron {
+        background-size: auto 568px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .jumbotron {
+        background-size: auto 680px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .jumbotron {
+        background-size: 100% auto;
+        //background-attachment: fixed;
+    }
+}
