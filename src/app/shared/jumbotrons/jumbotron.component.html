@@ -2,9 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="lead">{{items.leadText}} <small>{{items.leadTextSmall}}</small></p>
-                <p>{{items.mainText}}</p>
-                <p class="small">{{items.smallText}}</p>
+                <div class="wrapper">
+                    <p *ngIf="items.leadText" class="leadText">{{items.leadText}}</p>
+                    <p *ngIf="items.leadTextSmall" class="leadTextSmall">{{items.leadTextSmall}}</p>
+                    <p *ngIf="items.mainText" class="mainText">{{items.mainText}}</p>
+                    <p *ngIf="items.smallText" class="smallText">{{items.smallText}}</p>
+                </div>
             </div>
         </div>
     </div>

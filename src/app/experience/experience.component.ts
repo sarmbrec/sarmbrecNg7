@@ -22,7 +22,7 @@ export class ExperienceComponent implements OnInit {
 
   public ngOnInit(): void {
     this.experiences$ = this.service.getExperienceAsync();
-    this.jumboTronEX$ = this.service.getJumbotronItemAsync('inigo-montoya');
+    this.jumboTronEX$ = this.service.getJumbotronItemAsync('jerry-seinfeld');
   }
 
 }

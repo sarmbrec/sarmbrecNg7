@@ -23,7 +23,7 @@ export class KnowledgeBaseComponent implements OnInit {
 
   public ngOnInit(): void {
     this.kbstack$ = this.service.getKnowledgeBaseAsync();
-    this.jumboTronKB$ = this.service.getJumbotronItemAsync('steve-jobs');
+    this.jumboTronKB$ = this.service.getJumbotronItemAsync('albert-einstein');
   }
 
   public selectItem(item: KbInterface): void {

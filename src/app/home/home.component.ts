@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   knowledgeBaseCards$: Observable<KbInterface[]>;
   experienceCards$: Observable<ExperienceInterface[]>;
 
-  jumboTronKB$: Observable<JumboTron>;
+  //jumboTronKB$: Observable<JumboTron>;
   jumboTronEX$: Observable<JumboTron>;
 
 
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
     this.experienceCards$ = this.service.getExperienceAsync();
 
-    this.jumboTronKB$ = this.service.getJumbotronItemAsync('steve-jobs');
+    //this.jumboTronKB$ = this.service.getJumbotronItemAsync('steve-jobs');
     this.jumboTronEX$ = this.service.getJumbotronItemAsync('albert-einstein');
 
     // this.jumboTronKB$ = of({
