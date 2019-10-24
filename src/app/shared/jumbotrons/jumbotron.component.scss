@@ -9,7 +9,7 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg');
 .jumbotron {
     overflow: hidden;
-    background-attachment: scroll;
+    //background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-color: $primary;
@@ -110,6 +110,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     /* CSS specific to iOS devices */
     .jumbotron {
         background-size: auto 100%;
+        background-attachment: scroll;
     }
 }
 
@@ -117,6 +118,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     /* CSS for other than iOS devices */
     .jumbotron {
         background-size: cover;
+        background-attachment: fixed;
     }
 }
 
@@ -125,6 +127,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
 
 @media only screen and (min-device-width: 560px) and (max-device-width: 1400px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .jumbotron {
+        background-size: auto 100%;
         height: 80vh;
     }
 }
