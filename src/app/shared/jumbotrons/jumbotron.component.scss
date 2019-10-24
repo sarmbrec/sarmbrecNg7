@@ -6,6 +6,7 @@ $bg-albert-einstein: url('../../../assets/images/backgrounds/albert-einstein.jpg
 $bg-inigo-montoya: url('../../../assets/images/backgrounds/inigo-montoya.jpg');
 $bg-steve-jobs: url('../../../assets/images/backgrounds/steve-jobs.jpg');
 $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg');
+$bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg');
 .jumbotron {
     overflow: hidden;
     background-attachment: scroll;
@@ -61,6 +62,11 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 .inigo-montoya {
     background-image: $bg-gradient-brand, $bg-inigo-montoya;
+    text-align: right;
+}
+
+.data-star-trek {
+    background-image: $bg-gradient-brand, $bg-data-star-trek;
     text-align: right;
 }
 
