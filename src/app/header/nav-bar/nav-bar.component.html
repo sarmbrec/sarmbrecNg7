@@ -9,13 +9,13 @@
         <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarMenuContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a data-target=".show" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
+                    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
                 </li>
 
                 <li class="nav-item" ngbDropdown *ngIf="experiencesMenu$ | async as items">
 
                     <!-- routerLinkActive #rla="routerLinkActive"  <a routerLinkActive="active" ngbDropdownToggle class="nav-link" style="cursor: pointer" id="ExperienceDropdown">Experience</a> -->
-                    <a data-target=".show" class="nav-link" [ngClass]="{ active: routeHasExperience }" ngbDropdownToggle role='button' style="cursor: pointer" id="ExperienceDropdown">
+                    <a class="nav-link" [ngClass]="{ active: routeHasExperience }" ngbDropdownToggle role='button' style="cursor: pointer" id="ExperienceDropdown">
                         Experience
                     </a>
 
@@ -26,7 +26,7 @@
                             </a>
                         </div>
                         <div class="dropdown-divider"></div>
-                        <a data-target=".show" *ngFor="let item of items" [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" class="d-flex dropdown-item">
+                        <a *ngFor="let item of items" [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" class="d-flex dropdown-item">
                             <div class="w-25 text-center align-self-center">
                                 <img class="logo-small" aria-hidden="true" *ngIf="item.logo" [src]="['assets/images/logos/experience/' + item.logo]">
                             </div>
