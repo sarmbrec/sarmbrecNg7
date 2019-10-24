@@ -19,7 +19,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     color: $light;
     text-shadow: .12rem .12rem .125rem $black;
     background-size: 100% auto;
-    min-height: 40vh;
+    height: 50vh;
     .leadText {
         font-size: 1.75rem;
         font-weight: 100;
@@ -66,13 +66,30 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
         }
     }
     @include media-breakpoint-up(lg) {
-        background-size: auto 500px;
+        background-size: auto 550px;
+        //border: 1px solid red;
         @media (orientation: portrait) {
-            background-size: auto 550px;
+            background-size: auto 570px;
+        }
+        @media (orientation: landscape) {
+            background-size: auto 570px;
         }
     }
     @include media-breakpoint-up(xl) {
         background-size: 100% auto;
+        //border: 1px solid green;
+        &.jumbotron {
+            height: 45vh;
+            //border: 10px solid purple;
+        }
+        // @media (orientation: portrait) {
+        //     background-size: auto 570px;
+        //     border: 1px solid purple;
+        // }
+        // @media (orientation: landscape) {
+        //     background-size: auto 570px;
+        //     border: 1px solid black;
+        // }
     }
 }
 

@@ -8,7 +8,7 @@
         },
         "urlDetailView": "angular",
         "subTitle": "One framework, mobile and desktop",
-        "background": "/assets/images/backgrounds/beachhouse.jpg",
+        "background": "/assets/images/backgrounds/picnic-table.jpg",
         "text": "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target.",
         "links": [{
                 "title": "Documentation",
@@ -56,7 +56,7 @@
         },
         "urlDetailView": "angularjs",
         "subTitle": "Superheroic JavaScript MVW Framework",
-        "background": "/assets/images/backgrounds/emma-jenna.jpg",
+        "background": "/assets/images/backgrounds/beachhouse.jpg",
         "text": "What HTML would have been, had it been designed for building web-apps.",
         "links": [{
                 "title": "Documentation",
@@ -79,7 +79,7 @@
         },
         "urlDetailView": "sass",
         "subTitle": "Syntactically Awesome Style Sheets",
-        "background": "/assets/images/backgrounds/beachhouse.jpg",
+        "background": "/assets/images/backgrounds/bubbles.jpg",
         "text": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
         "links": [{
             "title": "Sass",
@@ -96,7 +96,7 @@
         },
         "urlDetailView": "javascript",
         "subTitle": "Fun on a bun",
-        "background": "/assets/images/backgrounds/floodedroad.jpg",
+        "background": "/assets/images/backgrounds/outstanding.jpg",
         "text": "A lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
         "links": [{
             "title": "JavaScript MDN",

@@ -11,14 +11,10 @@
                 <li class="nav-item">
                     <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
                 </li>
-
                 <li class="nav-item" ngbDropdown *ngIf="experiencesMenu$ | async as items">
-
-                    <!-- routerLinkActive #rla="routerLinkActive"  <a routerLinkActive="active" ngbDropdownToggle class="nav-link" style="cursor: pointer" id="ExperienceDropdown">Experience</a> -->
                     <a class="nav-link" [ngClass]="{ active: routeHasExperience }" ngbDropdownToggle role='button' style="cursor: pointer" id="ExperienceDropdown">
                         Experience
                     </a>
-
                     <div ngbDropdownMenu display="dynamic" placement="bottom-right" aria-labelledby="ExperienceDropdown" class="dropdown-menu dropdown-menu-right shadow">
                         <div class="dropdown-item">
                             <a class="btn btn-block btn-light btn-outline-secondary" routerLink="/experience" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -37,24 +33,8 @@
                             </div>
                         </a>
                     </div>
-
                 </li>
-
                 <li class="nav-item"><a routerLink="/knowledge" routerLinkActive="active" class="nav-link">Knowledge Base</a></li>
-                <!-- <li class="nav-item"><a routerLink="/about" routerLinkActive="active" class="nav-link">About</a></li>
-                <li class="nav-item"><a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a></li> -->
-                <!-- TODO: Clean up and remove <li class="nav-item" ngbDropdown>
-                    <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown1" role="button">Routes</a>
-                    <div ngbDropdownMenu display="dynamic" placement="bottom-right" aria-labelledby="navbarDropdown1" class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-                        <a class="dropdown-item" routerLink="/about" routerLinkActive="active">About</a>
-                        <a class="dropdown-item" routerLink="/contact" routerLinkActive="active">Contact</a>
-                        <a class="dropdown-item" routerLink="/applandingpage" routerLinkActive="active">Ng app page</a>
-                        <a class="dropdown-item" routerLink="/heroes" routerLinkActive="active">app-heroes</a>
-                        <a class="dropdown-item" routerLink="/knowledge" routerLinkActive="active">Knowledge Base</a>
-                        <a class="dropdown-item" routerLink="/experience" routerLinkActive="active">Experience</a>
-                    </div>
-                </li> -->
             </ul>
         </div>
     </div>
