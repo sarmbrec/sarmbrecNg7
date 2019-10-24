@@ -19,7 +19,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     color: $light;
     text-shadow: .12rem .12rem .125rem $black;
     background-size: 100% auto;
-    height: 30vh;
+    min-height: 40vh;
     .leadText {
         font-size: 1.75rem;
         font-weight: 100;
@@ -37,18 +37,13 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
         font-weight: 100;
     }
     @include media-breakpoint-up(xs) {
-        background-size: auto 300px;
-    }
-    @include media-breakpoint-up(sm) {
         background-size: auto 400px;
     }
-    @include media-breakpoint-up(md) {
-        //border: 10px solid red;
-        //background-size: auto 500px;
+    @include media-breakpoint-up(sm) {
+        background-size: auto 450px;
     }
-    @include media-breakpoint-up(lg) {
-        //border: 10px solid green;
-        //background-size: auto 600px;
+    @include media-breakpoint-up(md) {
+        background-size: auto 500px;
         .leadText {
             margin: 0 0 1rem 0;
             font-size: 2.25rem;
@@ -70,21 +65,20 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
             font-weight: 100;
         }
     }
-    @include media-breakpoint-up(xl) {
-        // border: 10px solid orange;
-        background-size: 100% auto;
-        &.jumbotron {
-            height: 45vh;
+    @include media-breakpoint-up(lg) {
+        background-size: auto 500px;
+        @media (orientation: portrait) {
+            background-size: auto 550px;
         }
+    }
+    @include media-breakpoint-up(xl) {
+        background-size: 100% auto;
     }
 }
 
 .albert-einstein {
     background-image: $bg-gradient-brand, $bg-albert-einstein;
     text-align: right;
-    &.jumbotron {
-        padding-top: 7rem;
-    }
 }
 
 .jerry-seinfeld {
@@ -94,30 +88,18 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
         background-position: center 20%;
     }
     text-align: right;
-    &.jumbotron {
-        padding-top: 6rem;
-    }
 }
 
 .steve-jobs {
     background-image: $bg-gradient-brand, $bg-steve-jobs;
-    &.jumbotron {
-        padding-top: 6rem;
-    }
 }
 
 .inigo-montoya {
     background-image: $bg-gradient-brand, $bg-inigo-montoya;
     text-align: right;
-    &.jumbotron {
-        padding-top: 6rem;
-    }
 }
 
 .data-star-trek {
     background-image: $bg-gradient-brand, $bg-data-star-trek;
     text-align: right;
-    &.jumbotron {
-        padding-top: 6rem;
-    }
 }
