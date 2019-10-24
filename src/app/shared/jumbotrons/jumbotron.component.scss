@@ -109,6 +109,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
 @supports (-webkit-overflow-scrolling: touch) {
     /* CSS specific to iOS devices */
     .jumbotron {
+        border: 1px solid white;
         background-size: auto 100%;
         background-attachment: scroll;
     }
@@ -117,8 +118,9 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
 @supports not (-webkit-overflow-scrolling: touch) {
     /* CSS for other than iOS devices */
     .jumbotron {
+        border: 1px solid black;
         background-size: cover;
-        background-attachment: fixed;
+        //background-attachment: fixed;
     }
 }
 
@@ -127,7 +129,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
 
 @media only screen and (min-device-width: 560px) and (max-device-width: 1400px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .jumbotron {
-        background-size: auto 100%;
+        background-size: auto 700px;
         height: 80vh;
     }
 }
