@@ -47,77 +47,21 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 .albert-einstein {
     background-image: $bg-gradient-brand, $bg-albert-einstein;
     text-align: right;
-    // &.jumbotron {
-    //     .leadText {
-    //         margin: 10.5rem 0 0 0;
-    //     }
-    //     .mainText {
-    //         margin: 1rem 0;
-    //     }
-    //     .smallText {
-    //         margin: 1.25rem 0 1rem 0;
-    //     }
-    // }
 }
 
 .jerry-seinfeld {
     background-image: $bg-gradient-brand, $bg-jerry-seinfeld;
     background-position: center top;
     text-align: right;
-    // &.jumbotron {
-    //     .leadText {
-    //         margin: 10rem 0 0 0;
-    //     }
-    //     .leadTextSmall {
-    //         margin: .25rem 0 0 0;
-    //     }
-    //     .mainText {
-    //         margin: 1rem 0 1rem 0;
-    //     }
-    // }
 }
 
 .steve-jobs {
     background-image: $bg-gradient-brand, $bg-steve-jobs;
-    // &.jumbotron {
-    //     // .leadText {
-    //     //     //margin: 4rem 0 0 0;
-    //     //     //font-size: 2.5rem;
-    //     //     //font-weight: 100;
-    //     // }
-    //     // .leadTextSmall {
-    //     //     //margin: .25rem 0 0 2rem;
-    //     //     //font-size: .9rem;
-    //     //     //font-weight: 100;
-    //     // }
-    //     // .mainText {
-    //     //     //margin: 1.5rem 0;
-    //     //     //font-size: 1rem;
-    //     //     //font-weight: 100;
-    //     //     //width: 60%;
-    //     // }
-    //     // .smallText {
-    //     //     //margin: 0 0 2rem 0;
-    //     //     //font-size: .9rem;
-    //     //     //font-weight: 100;
-    //     // }
-    // }
 }
 
 .inigo-montoya {
     background-image: $bg-gradient-brand, $bg-inigo-montoya;
     text-align: right;
-    // &.jumbotron {
-    //     .leadText {
-    //         margin: 4rem 0 0 0;
-    //     }
-    //     .leadTextSmall {
-    //         margin: .25rem 0 0 0;
-    //     }
-    //     .mainText {
-    //         margin: .25rem 0 0 auto;
-    //     }
-    // }
 }
 
 @include media-breakpoint-up(xs) {}
@@ -152,6 +96,19 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 }
 
 @include media-breakpoint-up(xl) {
+    // .jumbotron {
+    // }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */
+    .jumbotron {
+        background-size: auto 100%;
+    }
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+    /* CSS for other than iOS devices */
     .jumbotron {
         background-size: cover;
     }
@@ -162,7 +119,6 @@ $bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg')
 
 @media only screen and (min-device-width: 560px) and (max-device-width: 1400px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .jumbotron {
-        background-size: auto 100%;
         height: 80vh;
     }
 }
