@@ -6,6 +6,16 @@
 }
 
 .card {
+    .card-title {
+        font-family: 'Lato-Thin', sans-serif;
+        font-size: 1.15rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: $dark;
+        margin: 0 0 1rem 0;
+        padding: 0;
+        border-bottom: 1px solid rgba($secondary, .5);
+    }
     .card-body {
         font-size: .9rem;
         .logo {

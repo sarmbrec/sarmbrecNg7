@@ -48,18 +48,17 @@
                         </ul>
                     </div>
 
-                    <div class="col-12" *ngIf="detail.technologies">
+                    <div class="col-12 mb-3" *ngIf="detail.technologies">
                         <h3>Technologies</h3>
                         <div class="badge border bg-white shadow-sm m-1 p-2" *ngFor="let item of detail.technologies">{{item.title}}</div>
                     </div>
 
                     <div class="col-12" *ngIf="detail$ | async">
-                        <div>
-                            <h3>Knowledge Base</h3>
-                            <div style="display: block;">
-                                <canvas class="kb-chart" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
-                            </div>
+                        <h3>Knowledge Base</h3>
+                        <div style="display: block;">
+                            <canvas class="kb-chart" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                         </div>
+
                         <hr class="my-3">
                     </div>
 

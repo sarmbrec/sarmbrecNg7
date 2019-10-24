@@ -9,82 +9,112 @@ body {
     line-height: 1.5;
     font-size: 1rem;
     background: $primary;
-    background-color: $primary;
-    section {
+    // background-color: $primary;
+    main {
+        //padding: 2rem;
+        background: $light;
+        section {
+            //position: relative;
+            padding: 1.25rem 0;
+            font-size: .875rem;
+            line-height: 1.35;
+            //background-color: $light;
+        }
+        .breadcrumb {
+            padding: .5rem .75rem;
+            margin: 0 0 1rem 0;
+            background-color: darken($light, 3%);
+            font-size: .7rem;
+        }
         h1 {
-            font-family: 'Lato-Light', sans-serif;
-            font-size: 1.5rem;
+            display: block;
+            margin: 0 0 1rem 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.75rem;
             font-weight: 300;
-            line-height: 1.5;
+            //line-height: 1.5;
+            color: lighten($dark, 20%);
+            border-bottom: 1px solid darken($light, 20%);
         }
         h2 {
-            font-family: 'Lato-Light', sans-serif;
+            font-family: 'Lato-Thin', sans-serif;
             font-size: 1.2rem;
             font-weight: 300;
             line-height: 1.5;
         }
         h3 {
-            font-family: 'Lato-Light', sans-serif;
+            font-family: 'Lato-Thin', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            line-height: 1.5;
+            color: $dark;
+            margin: 0 0 1rem 0;
+            padding: 0;
+            // border-bottom: 1px solid rgba($secondary, .5);
+        }
+        h4 {
+            font-family: 'Lato-Thin', sans-serif;
             font-size: 1rem;
             font-weight: 300;
             line-height: 1.5;
         }
-        h4 {
-            font-family: 'Lato-Light', sans-serif;
-            font-size: .9rem;
-            font-weight: 300;
-            line-height: 1.5;
-        }
         h5 {
-            font-family: 'Lato-Light', sans-serif;
-            font-size: .9rem;
+            font-family: 'Lato-Thin', sans-serif;
+            font-size: 1rem;
             font-weight: 300;
             line-height: 1.5;
         }
         h6 {
-            font-family: 'Lato-Light', sans-serif;
-            font-size: .8rem;
+            font-family: 'Lato-Thin', sans-serif;
+            font-size: 1rem;
             font-weight: 300;
             line-height: 1.5;
         }
+        .small {
+            font-size: .7rem;
+        }
+        code {
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+            font-size: 12px;
+            font-weight: normal;
+            background: $light;
+            border: 1px solid darken($light, 15%);
+            border-radius: .25rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            display: block;
+        }
+        pre {
+            display: block;
+            padding: 1rem;
+            width: 100%;
+            font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+            font-size: .725rem;
+            font-weight: normal;
+            color: darkolivegreen;
+            line-height: 1.5;
+            background: $light;
+            border: 1px solid darken($light, 15%);
+            border-radius: .25rem;
+        }
     }
-    &.gray-scale-100 {
-        filter: grayscale(100%);
-    }
-    &.gray-scale-75 {
-        filter: grayscale(75%);
-    }
-    &.gray-scale-50 {
-        filter: grayscale(50%);
-    }
-    &.gray-scale-25 {
-        filter: grayscale(25%);
-    }
-    code {
-        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
-        font-size: 12px;
-        font-weight: normal;
-        background: $light;
-        border: 1px solid darken($light, 15%);
-        border-radius: .25rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        width: 100%;
-        display: block;
-    }
-    pre {
-        display: block;
-        padding: 1rem;
-        width: 100%;
-        font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
-        font-size: .725rem;
-        font-weight: normal;
-        color: darkolivegreen;
-        line-height: 1.5;
-        background: $light;
-        border: 1px solid darken($light, 15%);
-        border-radius: .25rem;
-    }
+}
+
+.gray-scale-100 {
+    filter: grayscale(100%);
+}
+
+.gray-scale-75 {
+    filter: grayscale(75%);
+}
+
+.gray-scale-50 {
+    filter: grayscale(50%);
+}
+
+.gray-scale-25 {
+    filter: grayscale(25%);
 }
 
 @include media-breakpoint-up(xs) {}

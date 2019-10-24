@@ -49,8 +49,8 @@ export class ExperienceDetailComponent implements OnInit {
       this.barChartOptions = {
         title: {
           display: false,
-          // text: '% used',
-          position: 'bottom'
+          text: 'Used daily',
+          position: 'right'
         },
         layout: {
           padding: {

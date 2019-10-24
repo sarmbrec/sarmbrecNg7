@@ -1,10 +1,11 @@
+<app-jumbotron [items]="jumboTronEX$ | async">
+</app-jumbotron>
+
 <section id="experience" *ngIf="experiences$ | async">
 
-    <app-jumbotron [items]="jumboTronEX$ | async"></app-jumbotron>
-
-    <div class="container" *ngIf="experiences$ | async">
+    <div class="container">
         <div class="row">
-            <div class="col-12 py-4">
+            <div class="col-12">
                 <h1>Experience</h1>
                 <app-experience-list [items]="experiences$ | async"></app-experience-list>
             </div>

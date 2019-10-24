@@ -6,4 +6,5 @@
 // $gradient-brand-1: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .1), rgba($black, .4), rgba($primary, .5));
 // $gradient-brand-sj: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5));
 // $gradient-brand-sa: linear-gradient(to bottom right, rgba($primary, 1), rgba($black, .7), rgba($primary, .5));
-$bg-gradient-brand: linear-gradient(to bottom right, rgba($primary, .9), rgba($black, .5), rgba($primary, .2), rgba($primary, .9));
+// $bg-gradient-brand: linear-gradient(to bottom right, rgba($primary, .9), rgba($black, .5), rgba($primary, .2), rgba($primary, .9));
+$bg-gradient-brand: linear-gradient(to bottom right, rgba($primary, 1) 5%, rgba($black, .2) 70%, rgba($primary, .7));

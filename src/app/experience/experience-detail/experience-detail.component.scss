@@ -1,43 +1,18 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-section#experience-detail {
-    background-color: $white;
-    padding: 0;
-    font-size: .875rem;
-    line-height: 1.35;
-    position: relative;
-}
-
-.fa {
-    // back button
-    margin: .5rem 1rem 0 -1rem;
-}
-
-.breadcrumb {
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-    margin: 1rem 0;
-    font-size: .7rem;
-}
-
-h1 {
-    font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    display: block;
-    color: $dark;
-    line-height: 1.5;
-    border-bottom: 1px solid darken($light, 25%);
-    margin: 0;
-}
-
+// section#experience-detail {
+//     background-color: $white;
+//     padding: 0;
+//     font-size: .875rem;
+//     line-height: 1.35;
+//     position: relative;
+// }
 small.agency-title,
 small.parent-section {
     display: inline-block;
     width: 75%;
-    margin: 0 0 1.5rem 0;
+    margin: -1rem 0 0 0;
     font-size: .75rem;
     white-space: nowrap;
     color: darken($light, 25%);
@@ -45,28 +20,14 @@ small.parent-section {
 }
 
 small.parent-section {
-    margin: 0;
+    margin: -1rem 0 0 0;
     width: 25%;
     padding-right: .25rem;
     text-align: right;
 }
 
-h2 {
-    font-size: 1.2rem;
-    font-family: 'Lato-Thin', sans-serif;
-    font-weight: 300;
-    color: $dark;
-    margin-bottom: 1rem;
-    padding: 0;
-}
-
-h3 {
-    font-family: 'Lato-Thin', sans-serif;
-    font-weight: 100;
-    color: $dark;
-    margin: 1.5rem 0 1rem 0;
-    padding: 0;
-    border-bottom: 1px solid rgba($secondary, .5);
+h2:first-child {
+    margin-top: 1rem;
 }
 
 img.logo {
@@ -86,10 +47,6 @@ img.logo-small {
 .company-small {
     font-size: .7rem;
     color: darken($light, 25%);
-}
-
-.small {
-    font-size: .7rem;
 }
 
 dt,
@@ -138,41 +95,10 @@ ul#nav-experiences {
 @include media-breakpoint-up(sm) {}
 
 @include media-breakpoint-up(md) {
-    // section#experience-detail {}
     img.logo {
         width: 70%;
         margin: 0 15%;
     }
-    // ul#nav-experiences {
-    //     li {
-    //         padding: 0;
-    //         a {
-    //             display: block;
-    //             text-align: left;
-    //             padding: .75rem 1rem;
-    //             font-size: .8rem;
-    //             color: rgba($dark, 1);
-    //             font-weight: 600;
-    //             background-color: transparent;
-    //             -webkit-transition: all .15s linear;
-    //             transition: all .15s linear;
-    //             // border-left: 0px solid transparent;
-    //             &:hover {
-    //                 //font-weight: 600;
-    //                 background-color: darken($light, 5%);
-    //                 color: $black;
-    //                 text-decoration: none;
-    //                 // border-left: 5px solid $primary;
-    //             }
-    //             &.active {
-    //                 background-color: lighten($secondary, 10%);
-    //                 color: $light;
-    //                 pointer-events: none;
-    //                 // border-left: 5px solid $primary;
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 @include media-breakpoint-up(lg) {}

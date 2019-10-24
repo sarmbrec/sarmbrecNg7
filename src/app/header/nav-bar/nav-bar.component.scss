@@ -2,8 +2,13 @@
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
 .navbar {
-    background-color: rgba($primary, .9);
+    background-color: rgba($primary, 1);
     color: $dark;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    // &:hover {
+    //     background-color: rgba($primary, .9);
+    // }
     a.navbar-brand {
         opacity: .7;
         -webkit-transition: all .15s linear;
