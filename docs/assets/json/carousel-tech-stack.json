@@ -34,7 +34,7 @@
         },
         "urlDetailView": "html5",
         "subTitle": "Hypertext Markup Language",
-        "background": "/assets/images/backgrounds/beachhousepelicans.jpg",
+        "background": "/assets/images/backgrounds/honeycomb.jpg",
         "text": "The latest evolution of the standard that defines HTML",
         "links": [{
                 "title": "Semantic HTML Validator",

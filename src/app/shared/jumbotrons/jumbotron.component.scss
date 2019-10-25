@@ -11,6 +11,8 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     background-repeat: no-repeat;
     background-color: $primary;
     background-position: center;
+    background-size: cover;
+    height: 45vh;
     margin: 0;
     padding: 1rem;
     font-family: 'Roboto', sans-serif;
@@ -18,84 +20,46 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     line-height: 1.35;
     color: $light;
     text-shadow: .12rem .12rem .125rem $black;
-    background-size: 100% auto;
-    height: 50vh;
     .leadText {
+        margin: 0 0 1rem 0;
         font-size: 1.75rem;
         font-weight: 100;
-    }
-    .leadTextSmall {
-        font-size: 1rem;
-        font-weight: 100;
-    }
-    .mainText {
-        font-size: 1.1rem;
-        font-weight: 100;
-    }
-    .smallText {
-        font-size: .9rem;
-        font-weight: 100;
-    }
-    @include media-breakpoint-up(xs) {
-        background-size: auto 400px;
-    }
-    @include media-breakpoint-up(sm) {
-        background-size: auto 450px;
-    }
-    @include media-breakpoint-up(md) {
-        background-size: auto 500px;
-        .leadText {
-            margin: 0 0 1rem 0;
-            font-size: 2.25rem;
+        @include media-breakpoint-up(md) {
+            font-size: 2.5rem;
             font-weight: 100;
         }
-        .leadTextSmall {
-            margin: .25rem 0 1rem 1rem;
+    }
+    .leadTextSmall {
+        margin: .25rem 0 0 0;
+        font-size: 1.25rem;
+        font-weight: 100;
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+    }
+    .mainText {
+        margin: 1rem 0;
+        font-size: 1.25rem;
+        font-weight: 100;
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+    }
+    .smallText {
+        margin: 0 0 2rem 0;
+        font-size: .9rem;
+        font-weight: 100;
+        @include media-breakpoint-up(md) {
             font-size: 1rem;
             font-weight: 100;
         }
-        .mainText {
-            margin: 0;
-            font-size: 1.1rem;
-            font-weight: 100;
-        }
-        .smallText {
-            margin: 1rem 0 2rem 0;
-            font-size: .9rem;
-            font-weight: 100;
-        }
-    }
-    @include media-breakpoint-up(lg) {
-        background-size: auto 550px;
-        //border: 1px solid red;
-        @media (orientation: portrait) {
-            background-size: auto 570px;
-        }
-        @media (orientation: landscape) {
-            background-size: auto 570px;
-        }
-    }
-    @include media-breakpoint-up(xl) {
-        background-size: 100% auto;
-        //border: 1px solid green;
-        &.jumbotron {
-            height: 45vh;
-            //border: 10px solid purple;
-        }
-        // @media (orientation: portrait) {
-        //     background-size: auto 570px;
-        //     border: 1px solid purple;
-        // }
-        // @media (orientation: landscape) {
-        //     background-size: auto 570px;
-        //     border: 1px solid black;
-        // }
     }
 }
 
 .albert-einstein {
     background-image: $bg-gradient-brand, $bg-albert-einstein;
-    text-align: right;
 }
 
 .jerry-seinfeld {
@@ -104,7 +68,6 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     @include media-breakpoint-up(xl) {
         background-position: center 20%;
     }
-    text-align: right;
 }
 
 .steve-jobs {
@@ -113,10 +76,8 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
 
 .inigo-montoya {
     background-image: $bg-gradient-brand, $bg-inigo-montoya;
-    text-align: right;
 }
 
 .data-star-trek {
     background-image: $bg-gradient-brand, $bg-data-star-trek;
-    text-align: right;
 }

@@ -46,10 +46,17 @@ section#section-carousel {
                 height: 75vh !important;
                 min-height: $min-height-section-carousel;
                 background-image: none;
-                //background-attachment: fixed;
                 background-position: center bottom;
                 background-size: cover;
                 background-repeat: no-repeat;
+                @supports (-webkit-overflow-scrolling: touch) {
+                    /* CSS specific to iOS devices */
+                    background-attachment: scroll;
+                }
+                @supports not (-webkit-overflow-scrolling: touch) {
+                    /* CSS specific to non iOS devices */
+                    background-attachment: fixed;
+                }
                 &:after {
                     content: "";
                     display: block;
