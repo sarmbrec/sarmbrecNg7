@@ -1,12 +1,7 @@
 @import "./node_modules/bootstrap/scss/_functions.scss";
 @import "./node_modules/bootstrap/scss/_variables.scss";
 @import "./node_modules/bootstrap/scss/_mixins.scss";
-@import "../../css/variables";
-$bg-albert-einstein: url('../../../assets/images/backgrounds/albert-einstein.jpg');
-$bg-inigo-montoya: url('../../../assets/images/backgrounds/inigo-montoya.jpg');
-$bg-steve-jobs: url('../../../assets/images/backgrounds/steve-jobs.jpg');
-$bg-jerry-seinfeld: url('../../../assets/images/backgrounds/jerry-seinfeld.jpg');
-$bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg');
+@import "../../../assets/css/variables";
 .jumbotron {
     background-repeat: no-repeat;
     background-color: $primary;
@@ -20,6 +15,14 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
     line-height: 1.35;
     color: $light;
     text-shadow: .12rem .12rem .125rem $black;
+    // @supports (-webkit-overflow-scrolling: touch) {
+    //     /* CSS specific to iOS devices */
+    //     background-attachment: scroll;
+    // }
+    // @supports not (-webkit-overflow-scrolling: touch) {
+    //     /* CSS specific to non iOS devices */
+    //     background-attachment: fixed;
+    // }
     .leadText {
         margin: 0 0 1rem 0;
         font-size: 1.75rem;
@@ -39,7 +42,7 @@ $bg-data-star-trek: url('../../../assets/images/backgrounds/data-star-trek.jpg')
         }
     }
     .mainText {
-        margin: 1rem 0;
+        margin: 1rem 0 1.25rem 0;
         font-size: 1.25rem;
         font-weight: 100;
         @include media-breakpoint-up(md) {

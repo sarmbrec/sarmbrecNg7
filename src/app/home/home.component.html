@@ -1,4 +1,4 @@
-<app-carousel *ngIf="knowledgeBaseCards$ | async"></app-carousel>
+<app-engagenator></app-engagenator>
 
 <section id="experienceCards" *ngIf="experienceCards$ | async">
     <div class="container">
@@ -23,3 +23,5 @@
         </div>
     </div>
 </section>
+
+<app-carousel *ngIf="knowledgeBaseCards$ | async"></app-carousel>

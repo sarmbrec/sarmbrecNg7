@@ -1,0 +1,85 @@
+<section id="engagenator" *ngIf="engagenatorData$ | async">
+    <!-- <ng-container *ngFor="let item of items"></ng-container> -->
+    <ng-container *ngIf="activeItem">
+        <!-- <div class="item-background" [ngStyle]="{'background-image': 'url(' + baseUrl + activeItem.background + ')'}"> -->
+        <div class="item-background">
+            <div class="item-background-gradient">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-4 col-md-2">
+
+                            <nav *ngIf="engagenatorData$ | async as items">
+                                <ul class="list-group list-group-flush">
+                                    <li *ngFor="let item of items; index as i" class="list-group-item bg-transparent">
+                                        <a class="nav-item text-white-50" [href]="item.urlDetailView">{{item.title}}</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+                        <div class="col-8 col-md-10">
+
+
+                            <div class="col-2">
+                                <i *ngIf="activeItem.logo" id="gear-menu" class="fa fa-gear"></i>
+                                <div *ngIf="activeItem.logo" id="tech-logo" class="highlight-white rounded-circle">
+                                    <img [src]="activeItem.logo" [title]="activeItem.title">
+                                </div>
+                                <small *ngIf="activeItem.logo" class="text-white-50">{{activeItem.title}}</small>
+                            </div>
+
+
+                            <div class="col-10">
+
+
+                                <hr>
+
+
+
+                                <div class="d-flex flex-row" style="height: 100px;" *ngIf="engagenatorData$ | async as items">
+                                    <a href="" *ngFor="let item of items; index as i" [style.height.%]="item.knowledgeLevel * 10" class="flex-fill bar bottom-bar align-self-baseline">
+                                        <!-- {{item.title}} -->
+                                        <img class="logo img-fluid" [src]="item.logo" [title]="item.title">
+                                    </a>
+                                </div>
+
+
+
+                                <hr>
+                                <div class="highlight-white">
+                                    <h1 [ngClass]="{ 'active': toggleClassActive}">{{activeItem.title}}</h1>
+                                    <p [ngClass]="{ 'active': toggleClassActive}">{{activeItem.text}}</p>
+                                    <hr />
+                                    <a *ngFor="let item of activeItem.links; index as i" [hidden]="!toggleClassActive" class="btn btn-outline-dark" [href]="activeItem.url" target="_blank">{{activeItem.title}}</a>
+                                    <a [routerLink]="[ '/knowledge', activeItem.urlDetailView]" class="btn btn-primary">My {{activeItem.title}} Resources</a>
+                                    <div class="message">
+                                        hello message
+                                    </div>
+                                    <button class="btn btn-secondary">Click me</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</section>
+
+<!-- <ngb-carousel *ngIf="engagenatorData$ | async as carouselItems " class="slide ">
+        <ng-template ngbSlide *ngFor="let item of carouselItems; index as i ">
+            <div class="carousel-item-background " [ngStyle]="{ 'background-image': 'url(' + baseUrl + item.background + ')'} ">
+                <div class="carousel-caption " [ngClass]="{ 'active': toggleClassActive} " (click)="toggleActiveClass() ">
+                    <img [src]="baseUrl + item.logo.url " id="logo-techstack " [ngClass]="{ 'active': toggleClassActive} " [ngStyle]="{ 'width':item.logo.width, 'height':item.logo.height} " />
+                    <h1 class="small text-muted " [ngClass]="{ 'active': toggleClassActive} ">{{item.title}}</h1>
+                    <p [ngClass]="{ 'active': toggleClassActive} ">{{item.text}}</p>
+                    <hr />
+                    <a *ngFor="let item of item.links; index as i " [hidden]="!toggleClassActive " class="btn btn-outline-dark " [href]="item.url " target="_blank ">{{item.title}}</a>
+                    <a [routerLink]="[ '/knowledge', item.urlDetailView] " class="btn btn-primary ">My {{item.title}} Resources</a>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel> -->

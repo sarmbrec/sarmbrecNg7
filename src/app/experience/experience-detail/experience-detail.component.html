@@ -56,7 +56,7 @@
                     <div class="col-12" *ngIf="detail$ | async">
                         <h3>Knowledge Base</h3>
                         <div style="display: block;">
-                            <canvas class="kb-chart" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+                            <canvas height="75px" class="kb-chart" baseChart [datasets]="barChartData" [colors]="chartColors" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
                         </div>
 
                         <hr class="my-3">
@@ -117,7 +117,7 @@
 
                 <h4 class="sr-only">Work History</h4>
                 <div class="card">
-                    <ul id="nav-experiences" class="list-group list-group-flush" *ngIf="experiencesMenu$ | async as items">
+                    <ul class="list-group list-group-flush nav-list-group" *ngIf="experiencesMenu$ | async as items">
                         <li class="list-group-item" *ngFor="let item of items">
                             <a [routerLink]="['/experience',item.company | lowercase | removeWhiteSpaces]" routerLinkActive="active" role="button">
                                 {{item.company}}
@@ -126,7 +126,7 @@
                         </li>
                     </ul>
                 </div>
-                <hr class="my-3">
+                <!-- <hr class="my-3"> -->
 
 
 

@@ -1,0 +1,135 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+@import "../../../assets/css/variables";
+section#engagenator {
+    height: $container-height;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+hr {
+    background-color: rgba($white, .2);
+}
+
+#tech-logo {
+    position: relative;
+    z-index: 2;
+    img {
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        min-width: 50px;
+    }
+}
+
+#gear-menu {
+    position: absolute;
+    top: -2rem;
+    left: -.15rem;
+    font-weight: 100;
+    font-size: 12rem;
+    z-index: 1;
+    color: rgba($light, .1);
+}
+
+.item-background {
+    height: $container-height;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: $black;
+    background-position: center center;
+    background-size: cover;
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    @supports (-webkit-overflow-scrolling: touch) {
+        /* CSS specific to iOS devices */
+        background-attachment: scroll;
+    }
+    @supports not (-webkit-overflow-scrolling: touch) {
+        /* CSS specific to non iOS devices */
+        background-attachment: fixed;
+    }
+    background-image: $bg-gradient-brand-carousel,
+    $bg-beachhouse;
+}
+
+.highlight-white {
+    padding: .15rem;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom right, rgba($white, 0), rgba($white, .2), rgba($white, .2), rgba($white, 0));
+    background-size: cover;
+    border: 1px solid rgba($light, .7);
+    border-radius: .25rem;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+a.bar {
+    font-size: .7rem;
+    line-height: .5;
+    color: rgba($white, .5);
+    // writing-mode: vertical-lr;
+    // text-orientation: upright;
+    // width: 2rem;
+    // overflow: hidden;
+    margin: 0 .15rem 0 0;
+    padding: 0;
+    background-color: rbga($white, 0);
+    background-image: linear-gradient(to bottom right, rgba($white, .1), rgba($white, .2), rgba($white, .2), rgba($white, .1));
+    background-size: cover;
+    border: 1px solid rgba($light, .2);
+    border-radius: .25rem .25rem 0 0;
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear;
+    &.bottom-bar {
+        border-radius: 0 0 .25rem .25rem;
+    }
+    &:hover {
+        // background-image: linear-gradient(to bottom right, rgba($white, .4), rgba($white, .5), rgba($white, .5), rgba($white, .4));
+        border: 1px solid rgba($light, .5);
+        background-image: none;
+        background-color: rgba($white, .5);
+        .logo {
+            opacity: .9;
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            // transform: scale(1.5);
+            width: 60%;
+            margin: 20%;
+            // margin-top: -50%;
+        }
+    }
+    &:active {
+        background-image: linear-gradient(to bottom right, rgba($primary, .6), rgba($primary, .7), rgba($primary, .8), rgba($primary, .7));
+        border-color: $primary;
+    }
+    .logo {
+        width: 50%;
+        // height: auto;
+        margin: 25%;
+        opacity: .2;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        // transform: scale(1);
+        -webkit-transition: all .15s linear;
+        transition: all .15s linear;
+    }
+}
+
+@include media-breakpoint-up(xs) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(xl) {}
+
+// @include media-breakpoint-between(md, xl) {}

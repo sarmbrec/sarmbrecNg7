@@ -1,0 +1,21 @@
+@import "./node_modules/bootstrap/scss/_functions.scss";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins.scss";
+#social-icon-links {
+    font-size: 2rem;
+    a {
+        color: lighten($secondary, 20%);
+        display: inline-block;
+        margin-right: .5rem;
+        opacity: .5;
+        line-height: 1;
+        transform: scale(1);
+        transition: all .12s linear;
+        -webkit-transition: all .12s linear;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            text-shadow: 0 .15rem .25rem rgba($black, .15);
+        }
+    }
+}

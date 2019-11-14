@@ -1,4 +1,5 @@
 export interface KbInterface {
+  knowledgeLevel: any;
   category: string;
   title: string;
   subTitle: string;

@@ -51,6 +51,12 @@ export class DataService {
   getCarouselListAsync(): Observable<Carousel[]> {
     return this.http.get<Carousel[]>(this.baseUrl + 'assets/json/carousel-tech-stack.json');
   }
+  getCarouselItemAsync(id: string) {
+    return this.getCarouselListAsync().pipe(
+      map((data: Carousel[]) => data.find(item => item.title.toLowerCase().replace(/ /g, '') === id))
+    );
+  }
+
 
   // TODO: convert to async
   getFakeUsersList() {

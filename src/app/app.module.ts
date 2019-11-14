@@ -20,12 +20,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import { TestimonialsComponent } from './about/testimonials/testimonials.component';
 import { HeaderComponent } from './header/header.component';
-import { NavBarComponent } from './header/nav-bar/nav-bar.component';
-import { SocialLinksComponent } from './header/social-links/social-links.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { SocialLinksComponent } from './shared/social-links/social-links.component';
 
 import { KbListCardsComponent } from './knowledge-base/kb-list-cards/kb-list-cards.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { ExperienceListComponent } from './experience/experience-list/experience-list.component';
+import { ExperienceListComponent } from './shared/experience-list/experience-list.component';
 import { ChartsModule } from 'ng2-charts';
 import { RemoveWhiteSpacesPipe } from './pipe/RemoveWhiteSpacesPipe';
 import { ExperienceDetailComponent } from './experience/experience-detail/experience-detail.component';
@@ -35,6 +35,7 @@ import { ListComponent } from './about/testimonials/list/list.component';
 import { TechnologyUsedComponent } from './shared/charts/technology-used/technology-used.component';
 
 import { JumbotronComponent } from './shared/jumbotrons/jumbotron.component';
+import { EngagenatorComponent } from './shared/engagenator/engagenator.component';
 
 
 // The App module file is basically where all imports and generated files are recorded
@@ -63,7 +64,8 @@ import { JumbotronComponent } from './shared/jumbotrons/jumbotron.component';
     JumbotronComponent,
     CarouselComponent,
     ListComponent,
-    TechnologyUsedComponent
+    TechnologyUsedComponent,
+    EngagenatorComponent
   ],
   imports: [
     BrowserModule,
